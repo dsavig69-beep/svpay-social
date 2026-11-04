@@ -1,0 +1,285 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>v5 3D</title>
+<style>html,body{margin:0;background:transparent}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/","opentype":"./node_modules/opentype.js/dist/opentype.module.js"}}</script>
+</head><body>
+<script type="module">
+import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+import opentype from 'opentype';
+
+const q = new URLSearchParams(location.search);
+const slide = +(q.get('slide') || 1);
+const W = 2160, H = 2700;
+const P = (k, d) => (q.has(k) ? +q.get(k) : d);   // tuning knobs from the URL
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(W, H);
+renderer.setClearColor(0x000000, 0);
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = P('exp', 1.0);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.VSMShadowMap;
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+
+// ---------- studio: bright pearl dome with coloured soft boxes, so glossy edges pick up a holographic sheen
+function studioEnv() {
+  const env = new THREE.Scene();
+  env.add(new THREE.Mesh(new THREE.SphereGeometry(60, 64, 32), new THREE.ShaderMaterial({
+    side: THREE.BackSide, depthWrite: false,
+    vertexShader: 'varying vec3 vP; void main(){ vP = normalize(position); gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.0); }',
+    fragmentShader: `varying vec3 vP;
+      void main(){
+        float y = vP.y*0.5+0.5; float a = atan(vP.z, vP.x)/6.2831+0.5;
+        vec3 top = vec3(1.0); vec3 mid = vec3(0.80,0.82,1.0); vec3 low = vec3(0.62,0.60,0.92);
+        vec3 c = mix(low, mid, smoothstep(0.0,0.5,y)); c = mix(c, top, smoothstep(0.5,1.0,y));
+        vec3 band = mix(mix(vec3(0.35,0.75,1.0), vec3(0.55,0.45,1.0), smoothstep(0.0,0.5,a)), vec3(1.0,0.55,0.80), smoothstep(0.5,1.0,a));
+        c = mix(c, band, 0.6*exp(-pow((y-0.5)*5.0,2.0)));
+        gl_FragColor = vec4(c,1.0);
+      }`
+  })));
+  const box = (w, h, color, k, pos) => { const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: new THREE.Color(color).multiplyScalar(k), side: THREE.DoubleSide })); m.position.set(...pos); m.lookAt(0, 0, 0); env.add(m); };
+  box(34, 10, 0xffffff, 6.0, [0, 36, 14]);        // overhead strip
+  box(4, 34, 0xffffff, P('ls', 6.5), [-26, 8, 30]);        // left strip -> long edge highlight
+  box(4, 34, 0xffffff, 5.0, [28, 8, 26]);         // right strip
+  box(16, 30, 0x6fa2ff, 3.0, [-36, 4, 6]);        // cobalt card left
+  box(16, 30, 0xff7cc8, 3.0, [36, 4, 4]);         // pink card right
+  box(20, 10, 0x8be3ff, 2.6, [-10, -14, 34]);     // cyan bounce low front
+  box(20, 10, 0xb48cff, 2.6, [14, -12, 34]);      // violet bounce low front
+  box(30, 14, 0xffffff, 2.2, [0, 6, -40]);        // back fill
+  const pm = new THREE.PMREMGenerator(renderer);
+  return pm.fromScene(env, 0.015).texture;
+}
+scene.environment = studioEnv();
+scene.environmentIntensity = P('envk', 1.0);
+
+const key = new THREE.DirectionalLight(0xffffff, P('key', 2.2));
+key.castShadow = true; key.shadow.mapSize.set(4096, 4096); key.shadow.radius = 48; key.shadow.blurSamples = 64; key.shadow.bias = -0.0003; key.shadow.normalBias = 0.02;
+const kc = key.shadow.camera; kc.left = -30; kc.right = 30; kc.top = 30; kc.bottom = -30; kc.near = 1; kc.far = 120;
+scene.add(key, key.target);
+const rim = new THREE.DirectionalLight(0xb7a2ff, 1.2); scene.add(rim, rim.target);
+const fill = new THREE.DirectionalLight(0x9fe0ff, 0.7); scene.add(fill, fill.target);
+const aim = (l, p, t = [0, 0, 0]) => { l.position.set(...p); l.target.position.set(...t); };
+
+// ---------- textures + helpers
+function canvasTex(w, h, draw, srgb = true) {
+  const c = document.createElement('canvas'); c.width = w; c.height = h; draw(c.getContext('2d'), w, h);
+  const t = new THREE.CanvasTexture(c); if (srgb) t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 16; return t;
+}
+const HOLO = ['#0f3dff', '#2f2bff', '#6a2dff', '#b52fd6', '#ff3f98'];
+const gradTex = (stops = HOLO, vertical = false) => canvasTex(vertical ? 16 : 1024, vertical ? 1024 : 16, (x, w, h) => {
+  const g = vertical ? x.createLinearGradient(0, h, 0, 0) : x.createLinearGradient(0, 0, w, 0);
+  stops.forEach((c, i) => g.addColorStop(i / (stops.length - 1), c)); x.fillStyle = g; x.fillRect(0, 0, w, h);
+});
+const loadTex = src => new Promise(r => new THREE.TextureLoader().load(src, t => { t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 16; r(t); }));
+const loadImg = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.src = src; });
+
+// background plane fixed to the camera (so glass has something to bend, and colours stay true)
+let cam;
+async function setupCamera(fov, pos, look) {
+  cam = new THREE.PerspectiveCamera(fov, W / H, 0.1, 500);
+  cam.position.set(...pos); cam.lookAt(...look);
+  const bg = await loadTex(`bg_${slide}.png`);
+  const d = 400, hh = 2 * d * Math.tan(THREE.MathUtils.degToRad(fov / 2)), ww = hh * W / H;
+  const plane = new THREE.Mesh(new THREE.PlaneGeometry(ww, hh), new THREE.MeshBasicMaterial({ map: bg, toneMapped: false, depthWrite: false }));
+  plane.position.set(0, 0, -d); plane.renderOrder = -10; cam.add(plane); scene.add(cam);
+}
+function shadowFloor(opacity) {
+  const g = new THREE.Mesh(new THREE.PlaneGeometry(200, 200), new THREE.ShadowMaterial({ opacity, depthWrite: false }));
+  g.rotation.x = -Math.PI / 2; g.receiveShadow = true; g.renderOrder = 5; scene.add(g); return g;
+}
+// a glossy-floor reflection: a mirrored copy whose materials fade out with depth below the floor
+function fadeMat(m, fade, strength) {
+  const c = m.clone(); c.transparent = true; c.depthWrite = false;
+  if (c.transmission) { c.transmission = 0; c.opacity = 1; }
+  c.onBeforeCompile = sh => {
+    sh.uniforms.uFade = { value: fade }; sh.uniforms.uStr = { value: strength };
+    sh.vertexShader = sh.vertexShader.replace('#include <common>', '#include <common>\nvarying float vWY;')
+      .replace('#include <project_vertex>', '#include <project_vertex>\nvWY = (modelMatrix * vec4(transformed, 1.0)).y;');
+    sh.fragmentShader = sh.fragmentShader.replace('#include <common>', '#include <common>\nvarying float vWY; uniform float uFade; uniform float uStr;')
+      .replace('#include <dithering_fragment>', '#include <dithering_fragment>\ngl_FragColor.a *= uStr * pow(1.0 - smoothstep(0.0, uFade, -vWY), 1.6);');
+  };
+  return c;
+}
+function reflect(obj, fade = 2.5, strength = 0.32) {
+  const r = obj.clone(true);
+  r.traverse(o => { if (o.isMesh) { o.castShadow = false; o.receiveShadow = false; o.material = Array.isArray(o.material) ? o.material.map(m => fadeMat(m, fade, strength)) : fadeMat(o.material, fade, strength); o.renderOrder = 1; } });
+  const holder = new THREE.Group(); holder.scale.y = -1; holder.add(r); scene.add(holder); return holder;
+}
+
+// ---------- 3D type from the real Inter Tight ExtraBold
+let FONT;
+async function font() { if (!FONT) { const buf = await (await fetch('node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff')).arrayBuffer(); FONT = opentype.parse(buf); } return FONT; }
+async function text3D(str, { size = 4, depth = 1.0, bevel = 0.08, track = -0.04, front, side }) {
+  const f = await font();
+  const path = f.getPath(str, 0, 0, 100, { kerning: true, letterSpacing: track });
+  const sp = new THREE.ShapePath();
+  for (const c of path.commands) {
+    if (c.type === 'M') sp.moveTo(c.x, -c.y);
+    else if (c.type === 'L') sp.lineTo(c.x, -c.y);
+    else if (c.type === 'Q') sp.quadraticCurveTo(c.x1, -c.y1, c.x, -c.y);
+    else if (c.type === 'C') sp.bezierCurveTo(c.x1, -c.y1, c.x2, -c.y2, c.x, -c.y);
+  }
+  const shapes = sp.toShapes(false);
+  const k = size / 100;
+  const geo = new THREE.ExtrudeGeometry(shapes, { depth: depth / k, bevelEnabled: true, bevelThickness: bevel / k, bevelSize: bevel * 0.7 / k, bevelSegments: 8, curveSegments: 20 });
+  geo.scale(k, k, k); geo.computeBoundingBox();
+  const bb = geo.boundingBox; geo.translate(-(bb.min.x + bb.max.x) / 2, -bb.min.y, -(bb.min.z + bb.max.z) / 2);
+  geo.computeBoundingBox(); geo.computeVertexNormals();
+  // planar UVs across the whole word, so the gradient runs left to right over every letter (front, bevel and sides)
+  const bb2 = geo.boundingBox, w = bb2.max.x - bb2.min.x, h = bb2.max.y - bb2.min.y;
+  const pos = geo.attributes.position, uv = geo.attributes.uv;
+  for (let i = 0; i < pos.count; i++) uv.setXY(i, (pos.getX(i) - bb2.min.x) / w, (pos.getY(i) - bb2.min.y) / h);
+  uv.needsUpdate = true;
+  const m = new THREE.Mesh(geo, [front, side]); m.castShadow = true; m.receiveShadow = true;
+  return m;
+}
+const candyFront = (stops = HOLO) => { const t = gradTex(stops); return new THREE.MeshPhysicalMaterial({ map: t, emissive: 0xffffff, emissiveMap: t, emissiveIntensity: P('emi', 0.22), roughness: 0.28, metalness: 0.0, clearcoat: 1, clearcoatRoughness: 0.05, iridescence: 0.35, iridescenceIOR: 1.4, iridescenceThicknessRange: [200, 700] }); };
+const pearlSide = () => new THREE.MeshPhysicalMaterial({ color: 0xe9e6ff, roughness: 0.16, metalness: 0.3, clearcoat: 1, clearcoatRoughness: 0.04, iridescence: 1, iridescenceIOR: 1.6, iridescenceThicknessRange: [320, 1000], sheen: 0.6, sheenColor: new THREE.Color(0xc9b8ff), sheenRoughness: 0.35 });
+const glass = (o = {}) => new THREE.MeshPhysicalMaterial(Object.assign({ color: 0xffffff, roughness: 0.04, transmission: 1, thickness: 1.0, ior: 1.5, iridescence: 0.7, iridescenceIOR: 1.4, iridescenceThicknessRange: [180, 820], clearcoat: 1, clearcoatRoughness: 0.03, attenuationColor: new THREE.Color(0x9a8cff), attenuationDistance: 2.4 }, o));
+
+// =====================================================================
+const jelly = (stops = HOLO, o = {}) => { const t = gradTex(stops); return new THREE.MeshPhysicalMaterial(Object.assign({ map: t, roughness: 0.12, transmission: P('jt', 0.38), thickness: 2.5, ior: 1.45, attenuationColor: new THREE.Color(0x6a3dff), attenuationDistance: 1.2, clearcoat: 1, clearcoatRoughness: 0.03, iridescence: 0.5, iridescenceThicknessRange: [200, 700] }, o)); };
+const pearl = (o = {}) => new THREE.MeshPhysicalMaterial(Object.assign({ color: 0xf1efff, roughness: 0.2, metalness: 0.25, clearcoat: 1, clearcoatRoughness: 0.04, iridescence: 1, iridescenceIOR: 1.6, iridescenceThicknessRange: [320, 1100], sheen: 0.5, sheenColor: new THREE.Color(0xd2c4ff), sheenRoughness: 0.4 }, o));
+// project a world point to 1080x1350 slide coordinates (for the text overlay)
+const toSlide = v => { const p = v.clone().project(cam); return [Math.round((p.x * 0.5 + 0.5) * 1080), Math.round((-p.y * 0.5 + 0.5) * 1350)]; };
+function planarUV(geo) {
+  geo.computeBoundingBox(); const b = geo.boundingBox, w = b.max.x - b.min.x, h = b.max.y - b.min.y;
+  const pos = geo.attributes.position, uv = geo.attributes.uv;
+  for (let i = 0; i < pos.count; i++) uv.setXY(i, (pos.getX(i) - b.min.x) / w, (pos.getY(i) - b.min.y) / h);
+  uv.needsUpdate = true;
+}
+function sector(R, a0, a1, depth, bevel) {
+  const sh = new THREE.Shape(); sh.moveTo(0, 0); sh.absarc(0, 0, R, a0, a1, false); sh.lineTo(0, 0);
+  const g = new THREE.ExtrudeGeometry(sh, { depth, bevelEnabled: true, bevelThickness: bevel, bevelSize: bevel * 0.8, bevelSegments: 10, curveSegments: 160 });
+  g.translate(0, 0, -depth / 2); planarUV(g); g.computeVertexNormals(); return g;
+}
+function numerals(str, size, ry) {
+  return text3D(str, { size, depth: 1.8, bevel: 0.3, track: P('tr', 0.0), front: jelly(), side: jelly() }).then(t => { t.rotation.y = ry; return t; });
+}
+
+async function s1() {   // "$1.62B": glossy jelly numerals on a mirror floor
+  await setupCamera(26, [0, 5, 40], [0, 2.2, 0]);
+  const t = await numerals('$1.62B', P('sz', 4.3), P('ry', 0.2)); t.position.y = 0; scene.add(t);
+  reflect(t, P('rf', 2.0), P('rs', 0.2)); shadowFloor(0.2);
+  aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
+}
+
+// ---------- one coin design used across the carousel
+const silver = () => new THREE.MeshPhysicalMaterial({ color: 0xeeeeff, metalness: 1.0, roughness: P('cr', 0.17), iridescence: 1, iridescenceIOR: 1.7, iridescenceThicknessRange: [260, 900], clearcoat: 1, clearcoatRoughness: 0.04 });
+const coinGeoCache = {};
+function coinBody(R, D) { const k = R + ':' + D; if (!coinGeoCache[k]) coinGeoCache[k] = sector(R, 0, Math.PI * 2, D, Math.min(0.18, D * 0.3)); return coinGeoCache[k]; }
+async function coin(R, D, bodyMat, dollarMat, faces = 2) {
+  const g = new THREE.Group();
+  const b = new THREE.Mesh(coinBody(R, D), bodyMat); b.castShadow = true; b.receiveShadow = true; g.add(b);
+  // a raised rim ring on each face
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(R * 0.86, R * 0.035, 16, 160), dollarMat);
+  for (let f = 0; f < faces; f++) {
+    const z = (f ? -1 : 1) * (D / 2 + Math.min(0.18, D * 0.3) * 0.9);
+    const r2 = ring.clone(); r2.position.z = z; g.add(r2);
+    const d = await text3D('$', { size: R * 1.05, depth: R * 0.05, bevel: R * 0.018, front: dollarMat, side: dollarMat });
+    d.geometry.computeBoundingBox(); const h = d.geometry.boundingBox.max.y;
+    d.position.set(0, -h / 2, z); if (f) { d.rotation.y = Math.PI; } d.castShadow = true; g.add(d);
+  }
+  return g;
+}
+
+async function s2() {   // $2.62 of every $100: a 10 x 10 grid of coins, 2.62 of them pink
+  await setupCamera(P('fov', 30), [0, P('cy', 17), P('cz', 27)], [0, 0, P('lz', -1.2)]);
+  const R = P('cr2', 0.74), D = 0.28, gap = P('gp', 1.7), bev = 0.07;
+  const blue = jelly(['#2a5bff', '#4b46ff', '#7a3dff'], { transmission: 0.0, roughness: 0.18 });
+  const pink = jelly(['#ff1f7a', '#ff3d9e', '#d93cff'], { emissive: 0xff2f8f, emissiveIntensity: 0.3, transmission: 0.0, roughness: 0.18 });
+  const full = sector(R, 0, Math.PI * 2, D, bev);
+  const g = new THREE.Group();
+  const order = [];   // pink coins sit at the front-right corner, where the eye lands
+  for (let r = 0; r < 10; r++) for (let c = 0; c < 10; c++) order.push([r, c]);
+  for (const [r, c] of order) {
+    const x = (c - 4.5) * gap, z = (r - 4.5) * gap;
+    const front = r === 9, idx = front ? 9 - c : -1;    // 0,1 = whole pink coins, 2 = the 62% coin
+    const lift = idx >= 0 && idx <= 2 ? P('lift', 0.55) : 0;
+    const place = m => { m.rotation.x = -Math.PI / 2; m.position.set(x, D / 2 + bev + lift, z); if (lift) { m.rotation.z = 0.0; m.rotation.y = 0.12; } m.castShadow = true; m.receiveShadow = true; g.add(m); };
+    if (idx === 0 || idx === 1) place(new THREE.Mesh(full, pink));
+    else if (idx === 2) {
+      const a = Math.PI * 2 * 0.62, s0 = Math.PI / 2;
+      place(new THREE.Mesh(sector(R, s0, s0 + a, D, bev), pink));
+      place(new THREE.Mesh(sector(R, s0 + a, s0 + Math.PI * 2, D, bev), blue));
+    } else place(new THREE.Mesh(full, blue));
+  }
+  g.rotation.y = P('ry', -0.32); g.position.set(P('tx', 0.4), 0, P('tz', -1.5)); scene.add(g);
+  shadowFloor(0.16);
+  aim(key, [8, 26, 12]); aim(rim, [-18, 10, -10]); aim(fill, [10, 4, 20]);
+  scene.updateMatrixWorld(true);
+  const pinkC = new THREE.Vector3((9 - 4.5 - 1) * gap, D, (9 - 4.5) * gap).applyMatrix4(g.matrixWorld);
+  window.__info = { pink: toSlide(pinkC) };
+}
+
+async function s3() {   // a stack of 17 coins: 13 for card banks, networks and costs, 4 left for Toast (76.5% / 23.5%)
+  await setupCamera(26, [0, P('cy', 10), 40], [0, P('ly', 5.0), 0]);
+  const R = P('R', 2.7), D = 0.5, step = 0.62, N = 17, NT = 4;
+  const lowMat = jelly(['#2a5bff', '#4b46ff', '#6c3dff'], { transmission: 0.0, roughness: 0.2 });
+  const hiMat = jelly(['#ff2f8a', '#ff4fb0', '#e04bff'], { emissive: 0xff3c9c, emissiveIntensity: 0.22, transmission: 0.0, roughness: 0.2 });
+  const emb = jelly(HOLO, { transmission: 0.0 });
+  const g = new THREE.Group();
+  for (let i = 0; i < N; i++) {
+    const top = i === N - 1, toast = i >= N - NT;
+    const c = top ? await coin(R, D, hiMat, emb, 1) : new THREE.Mesh(coinBody(R, D), toast ? hiMat : lowMat);
+    if (!top) { c.castShadow = true; c.receiveShadow = true; }
+    c.rotation.x = -Math.PI / 2; c.rotation.z = i * 0.37;
+    c.position.set(Math.sin(i * 2.1) * 0.07, D / 2 + 0.18 + i * step, Math.cos(i * 1.7) * 0.07);
+    g.add(c);
+  }
+  g.position.set(P('tx', 2.6), 0, 0); scene.add(g);
+  reflect(g, 4, 0.26); shadowFloor(0.15);
+  aim(key, [10, 26, 14]); aim(rim, [-18, 10, -10]); aim(fill, [12, 3, 20]);
+  scene.updateMatrixWorld(true);
+  const yOf = i => D / 2 + 0.18 + i * step;
+  const L = (y) => toSlide(new THREE.Vector3(-R - 0.2, y, 0).applyMatrix4(g.matrixWorld));
+  window.__info = { lowMid: L(yOf((N - NT - 1) / 2)), lowTop: L(yOf(N - NT - 1) + D / 2), hiMid: L(yOf(N - NT + (NT - 1) / 2)), hiTop: L(yOf(N - 1) + D / 2), base: L(0) };
+}
+
+async function s4() {   // "$13,000" with silver coins lifting off and flying away
+  await setupCamera(26, [0, 5, 40], [0, 2.4, 0]);
+  const t = await numerals('$13,000', P('sz', 3.75), P('ry', -0.2)); scene.add(t);
+  reflect(t, P('rf', 2.0), P('rs', 0.2)); shadowFloor(0.2);
+  const emb = pearl(), body = jelly(HOLO, { transmission: 0.45 });
+  for (const [x, y, z, k, r] of [[4.9, 5.0, 1.2, 0.95, [1.15, 0.5, 0.4]], [6.2, 6.1, -0.2, 0.8, [0.45, 1.0, 0.9]], [6.6, 7.3, -2.5, 0.62, [1.35, 0.25, 0.3]]]) {
+    const c = await coin(1.25 * k, 0.32 * k, body, emb); c.position.set(x, y, z); c.rotation.set(...r); scene.add(c);
+  }
+  aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
+}
+
+async function s5() {   // a giant jelly "%" sign
+  await setupCamera(26, [0, 5, 40], [0, 4.4, 0]);
+  const t = await text3D('%', { size: P('sz', 12), depth: 2.6, bevel: 0.4, front: jelly(), side: jelly() });
+  t.rotation.set(0, P('ry', -0.35), P('rz', 0.0)); t.position.set(P('tx', 1.2), 0, 0); scene.add(t);
+  reflect(t, 4, 0.3); shadowFloor(0.15);
+  aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
+}
+
+async function s6() {   // the phone with SVPay's savings calculator
+  await setupCamera(26, [0, 4, 40], [0, 5.6, 0]);
+  const shot = await loadImg('screen.png');
+  const g = new THREE.Group();
+  const rr = (w, h, r) => { const s2 = new THREE.Shape(); const x = -w / 2, y = -h / 2; s2.moveTo(x + r, y); s2.lineTo(x + w - r, y); s2.absarc(x + w - r, y + r, r, -Math.PI / 2, 0); s2.lineTo(x + w, y + h - r); s2.absarc(x + w - r, y + h - r, r, 0, Math.PI / 2); s2.lineTo(x + r, y + h); s2.absarc(x + r, y + h - r, r, Math.PI / 2, Math.PI); s2.lineTo(x, y + r); s2.absarc(x + r, y + r, r, Math.PI, Math.PI * 1.5); return s2; };
+  const fg = new THREE.ExtrudeGeometry(rr(5.44, 11.44, 0.86), { depth: 0.36, bevelEnabled: true, bevelThickness: 0.1, bevelSize: 0.08, bevelSegments: 8, curveSegments: 48 }); fg.translate(0, 0, -0.18);
+  const frame = new THREE.Mesh(fg, pearl({ color: 0xeceeff, metalness: 0.55, roughness: 0.16 }));
+  frame.castShadow = true; g.add(frame);
+  const scr = canvasTex(1100, 2283, (x, w, h) => {
+    x.clearRect(0, 0, w, h); x.fillStyle = '#ffffff'; x.beginPath(); x.roundRect(0, 0, w, h, 150); x.fill();
+    x.save(); x.beginPath(); x.roundRect(14, 14, w - 28, h - 28, 136); x.clip(); x.drawImage(shot, 14, 14, w - 28, h - 28); x.restore();
+    x.fillStyle = '#1a2148'; x.beginPath(); x.roundRect(w / 2 - 120, 50, 240, 66, 33); x.fill();
+  });
+  const screen = new THREE.Mesh(new THREE.PlaneGeometry(5.36, 11.13), new THREE.MeshBasicMaterial({ map: scr, toneMapped: false, transparent: true, alphaTest: 0.02 }));
+  screen.position.z = 0.296; g.add(screen);
+  const gloss = new THREE.Mesh(new THREE.PlaneGeometry(5.36, 11.13), new THREE.MeshPhysicalMaterial({ color: 0xffffff, roughness: 0.02, transparent: true, opacity: 0.08, clearcoat: 1, depthWrite: false }));
+  gloss.position.z = 0.302; g.add(gloss);
+  g.rotation.set(P('rx', 0.0), P('ry', -0.32), P('rz', 0.0)); g.position.set(P('tx', 2.2), 5.8, 0); scene.add(g);
+  reflect(g, 4.5, 0.22); shadowFloor(0.13);
+  aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
+}
+
+await ({ 1: s1, 2: s2, 3: s3, 4: s4, 5: s5, 6: s6 })[slide]();
+renderer.render(scene, cam);
+window.__done = true;
+</script>
+</body></html>

@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Inter Tight";font-weight:800;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2)}
+@font-face{font-family:"Inter Tight";font-weight:700;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2)}
+@font-face{font-family:"Inter";font-weight:500;src:url(node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:"Inter";font-weight:600;src:url(node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
+*{box-sizing:border-box;margin:0}
+body{width:980px;height:2120px;overflow:hidden;font-family:Inter;color:#0A1633;
+ background:radial-gradient(700px 600px at 85% 8%,#D9D0FF,transparent 70%),radial-gradient(800px 700px at 0% 70%,#CDEBFF,transparent 70%),#F5F6FC}
+.wrap{padding:190px 70px 80px}
+.status{position:absolute;top:58px;left:90px;right:90px;display:flex;justify-content:space-between;font:600 34px/1 Inter}
+.logo{height:86px}
+.h{font:800 92px/1 "Inter Tight";letter-spacing:-.035em;margin-top:70px}
+.sub{font:500 38px/1.35 Inter;color:#3B4868;margin-top:22px}
+.card{margin-top:64px;background:rgba(255,255,255,.7);border:3px solid #fff;border-radius:56px;padding:50px 54px;box-shadow:0 40px 80px -30px rgba(40,60,150,.3)}
+.lab{font:600 32px/1 Inter;color:#6B7694;text-transform:uppercase;letter-spacing:.1em}
+.val{font:800 84px/1 "Inter Tight";letter-spacing:-.03em;margin-top:18px}
+.row{display:flex;justify-content:space-between;align-items:flex-end}
+.slider{height:18px;border-radius:9px;background:#E3E7F5;margin-top:34px;position:relative}
+.slider i{position:absolute;left:0;top:0;bottom:0;width:50%;border-radius:9px;background:linear-gradient(90deg,#1F6BFF,#6E5BFF,#B46BFF)}
+.slider b{position:absolute;left:50%;top:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:#fff;box-shadow:0 6px 18px rgba(30,50,140,.35)}
+.res{margin-top:52px;border-radius:56px;padding:64px 54px;background:linear-gradient(110deg,#1F6BFF,#5B5CFF 40%,#A66BFF 75%,#FF7FB6);color:#fff;box-shadow:0 40px 80px -30px rgba(60,80,230,.6)}
+.res .lab{color:rgba(255,255,255,.85)}
+.big{font:800 180px/.95 "Inter Tight";letter-spacing:-.05em;margin-top:18px}
+.btn{margin-top:60px;height:140px;border-radius:70px;background:rgba(255,255,255,.85);border:3px solid #fff;box-shadow:0 30px 60px -28px rgba(40,60,150,.35);display:flex;align-items:center;justify-content:center;gap:22px;font:800 48px/1 "Inter Tight";letter-spacing:-.02em}
+.ht{background:linear-gradient(100deg,#1F5BFF,#5A4DFF 40%,#9B5CFF 75%,#F06BB4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.url{margin-top:64px;text-align:center;font:600 32px/1 Inter;color:#6B7694;letter-spacing:.01em}
+</style></head><body>
+<div class="status"><span>9:41</span><span>●●●</span></div>
+<div class="wrap">
+<img class="logo" src="svpay-logo.png">
+<div class="h">Savings calculator</div>
+<div class="sub">What would your shop keep?</div>
+<div class="card"><div class="lab">Yearly card sales</div><div class="val">$500,000</div><div class="slider"><i></i><b></b></div></div>
+<div class="card" style="margin-top:28px"><div class="row"><div><div class="lab">Fees you pay now</div><div class="val">2.6%</div></div><div style="font:600 34px/1.3 Inter;color:#6B7694;text-align:right">your all-in<br>card rate</div></div></div>
+<div class="res"><div class="lab">You could keep up to</div><div class="big">$13,000</div><div style="font:600 36px/1.3 Inter;margin-top:14px;color:rgba(255,255,255,.92)">a year. About $1,083 a month.</div></div>
+<div class="btn"><span class="ht">Get started →</span></div>
+<div class="url">www.svpay.app</div>
+</div></body></html>

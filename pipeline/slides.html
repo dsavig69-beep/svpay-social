@@ -1,0 +1,175 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>SVPay Toast Q3 carousel v5</title>
+<style>
+@font-face{font-family:"Inter Tight";font-weight:600;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:700;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:800;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:500;src:url(node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:600;src:url(node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;src:url(node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2) format("woff2")}
+:root{
+  --ink:#0A1230; --ink2:#323D5C; --ink3:#5F6A88;
+  --blue:#2350FF; --pink:#FF2F8F;
+  --holo:linear-gradient(100deg,#0F3DFF 0%,#3B2BFF 30%,#7A2DFF 60%,#D23BD0 82%,#FF3F98 100%);
+  --hot:linear-gradient(100deg,#FF1F7A,#FF3D9E 55%,#D93CFF);
+  --glass:rgba(255,255,255,.62); --glass-line:rgba(255,255,255,.95);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#E9ECF5;font-family:"Inter",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:#F6F7FC;margin:0 0 40px}
+.hero{position:absolute;inset:0;width:1080px;height:1350px;display:block}
+.abs{position:absolute}
+.top{position:absolute;left:72px;right:72px;top:60px;height:58px;display:flex;align-items:center;justify-content:space-between}
+.chip{display:flex;align-items:center;gap:16px;height:58px;padding:0 22px 0 20px;border-radius:999px}
+.chip img{height:30px;width:auto;display:block}
+.chip .sep{width:2px;height:26px;background:rgba(10,18,48,.14);border-radius:2px}
+.chip span{font:600 21px/1 "Inter";letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+.tag{display:flex;align-items:center;gap:14px;font:600 22px/1 "Inter";letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.tag i{width:13px;height:13px;border-radius:50%;background:var(--holo);box-shadow:0 0 0 6px rgba(35,80,255,.13)}
+.count{font:700 22px/1 "Inter Tight";letter-spacing:.06em;color:var(--ink3)}
+.count b{color:var(--ink)}
+.glass{background:var(--glass);border:2px solid var(--glass-line);
+  box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 30px 70px -30px rgba(40,50,150,.34),0 8px 24px -12px rgba(40,50,150,.2);
+  backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%)}
+.d{font-family:"Inter Tight";font-weight:800;letter-spacing:-.04em;line-height:.94;color:var(--ink)}
+.serif{font-family:"Instrument Serif";font-style:italic;font-weight:400;letter-spacing:-.01em;color:var(--blue)}
+.kick{font:600 20px/1 "Inter";letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
+.holo{background:var(--holo);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-right:.04em}
+.hot{background:var(--hot);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-right:.04em}
+.body{font:500 28px/1.42 "Inter";color:var(--ink2)}
+.src{font:500 19px/1.4 "Inter";color:var(--ink3)}
+.src b{font-weight:600;color:var(--ink2)}
+.logo{position:absolute;left:72px;bottom:50px;height:76px;width:auto;display:block}
+.url{position:absolute;right:72px;bottom:72px;font:700 24px/1 "Inter Tight";letter-spacing:-.01em;color:var(--ink2)}
+.pill{display:inline-flex;align-items:center;gap:12px;height:62px;padding:0 26px;border-radius:999px;font:600 24px/1 "Inter";color:var(--ink)}
+.lead{position:absolute;height:2px;background:linear-gradient(90deg,rgba(10,18,48,.0),rgba(10,18,48,.35))}
+.dot{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(10,18,48,.18)}
+</style></head><body>
+
+<!-- 1 · HOOK -->
+<section class="slide" id="s1">
+<img class="hero" src="hero_1.png" alt="">
+<div class="top"><div class="chip glass"><img src="toast-logo.png" alt="Toast"><div class="sep"></div><span>Q3 2026 results</span></div><div class="count"><b>1</b> / 6</div></div>
+<div class="abs d" style="left:72px;top:212px;font-size:116px">In 3 months,<br>Toast took in</div>
+<div class="abs d" style="left:72px;top:905px;font-size:116px">from payments.</div>
+<div class="abs src" style="left:76px;top:1046px;width:560px">Toast’s financial technology revenue, mostly card processing, July to September 2026.<br><b>Source:</b> Toast Q3 2026 results, SEC Form 8-K</div>
+<div class="abs pill glass" style="right:72px;top:1060px;gap:14px">What it means for your shop <svg width="26" height="26" viewBox="0 0 24 24" fill="none" style="display:block"><path d="M4 12h15M13 5.5 19.5 12 13 18.5" stroke="#3B2BFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="abs src" style="right:72px;bottom:110px;font-size:16px">SVPay is not affiliated with Toast.</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 2 · THE SLICE -->
+<section class="slide" id="s2">
+<img class="hero" src="hero_2.png" alt="">
+<div class="top"><div class="chip glass"><img src="toast-logo.png" alt="Toast"><div class="sep"></div><span>Q3 2026 results</span></div><div class="count"><b>2</b> / 6</div></div>
+<div class="abs" style="left:72px;top:872px;width:940px">
+ <div class="serif" style="font-size:54px">On average, that’s</div>
+ <div style="display:flex;align-items:baseline;gap:22px;margin-top:2px">
+  <div class="d hot" style="font-size:188px;letter-spacing:-.05em">$2.62</div>
+  <div class="d" style="font-size:62px;letter-spacing:-.03em">per $100</div>
+ </div>
+ <p class="body" style="margin-top:12px;width:900px;font-size:25px">Restaurants ran <b style="color:var(--ink)">$61.8B</b> through Toast in 3 months, up 20% from a year ago. Toast’s payment revenue was <b style="color:var(--ink)">$1.62B</b>, mostly from card processing.</p>
+</div>
+<div class="abs src" style="right:72px;bottom:110px;font-size:16px">SVPay is not affiliated with Toast.</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 3 · THE STACK -->
+<section class="slide" id="s3">
+<img class="hero" src="hero_3.png" alt="">
+<div class="top"><div class="chip glass"><img src="toast-logo.png" alt="Toast"><div class="sep"></div><span>Q3 2026 results</span></div><div class="count"><b>3</b> / 6</div></div>
+<div class="abs" style="left:72px;top:160px">
+ <div class="serif" style="font-size:54px">Where the $1.62B went</div>
+</div>
+<div class="abs" id="lbHi" style="left:72px;width:380px">
+ <div class="d hot" style="font-size:92px">$380M</div>
+ <div style="font:600 25px/1.3 Inter;color:var(--ink2);margin-top:8px">left for Toast<br><span style="color:var(--ink3);font-weight:500">(gross profit)</span></div>
+</div>
+<div class="abs" id="lbLo" style="left:72px;width:380px">
+ <div class="d holo" style="font-size:92px">$1.24B</div>
+ <div style="font:600 25px/1.3 Inter;color:var(--ink2);margin-top:8px">to card-issuing banks,<br>card networks and<br>other costs</div>
+</div>
+<div class="lead" id="lnHi"></div><div class="dot" id="dtHi"></div>
+<div class="lead" id="lnLo"></div><div class="dot" id="dtLo"></div>
+<div class="abs" style="left:72px;top:952px;width:470px">
+ <div class="d" style="font-size:76px;line-height:1.02">You pay the<br>whole stack.</div>
+ <div class="src" style="margin-top:14px"><b>Source:</b> Toast Q3 2026 results, SEC Form 8-K</div>
+</div>
+<div class="abs src" style="right:72px;bottom:110px;font-size:16px">SVPay is not affiliated with Toast.</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 4 · YOUR SHOP -->
+<section class="slide" id="s4">
+<img class="hero" src="hero_4.png" alt="">
+<div class="top"><div class="tag"><i></i>What it means for you</div><div class="count"><b>4</b> / 6</div></div>
+<div class="abs" style="left:72px;top:160px;width:940px">
+ <div class="serif" style="font-size:54px">Now run it on your shop</div>
+ <div class="d" style="font-size:64px;margin-top:14px;letter-spacing:-.035em;line-height:1.04">On $500,000 a year in card<br>sales, a 2.6% rate costs</div>
+</div>
+<div class="abs d" style="left:72px;top:905px;font-size:96px">every year.</div>
+<div class="abs" style="left:72px;top:1052px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;width:940px">
+ <span class="kick" style="margin-right:6px">That could be</span>
+ <div class="pill glass">A cook’s raise</div><div class="pill glass">A new fryer</div><div class="pill glass">A year of marketing</div>
+</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 5 · YOUR TURN -->
+<section class="slide" id="s5">
+<img class="hero" src="hero_5.png" alt="">
+<div class="top"><div class="tag"><i></i>What it means for you</div><div class="count"><b>5</b> / 6</div></div>
+<div class="abs d" style="left:72px;top:170px;font-size:104px">What’s your<br><span class="holo">all-in rate?</span></div>
+<div class="abs glass" style="left:72px;top:500px;width:430px;padding:30px 34px 30px;border-radius:32px">
+ <div class="kick" style="font-size:17px;margin-bottom:22px">The math</div>
+ <div style="font:700 36px/1 'Inter Tight';letter-spacing:-.02em">Total fees</div>
+ <div style="font:700 36px/1 'Inter Tight';letter-spacing:-.02em;margin-top:16px"><span style="color:var(--ink3);font-weight:600">÷</span> Total card sales</div>
+ <div style="font:700 36px/1 'Inter Tight';letter-spacing:-.02em;margin-top:16px"><span style="color:var(--ink3);font-weight:600">×</span> 100</div>
+ <div style="height:2px;background:repeating-linear-gradient(90deg,rgba(10,18,48,.22) 0 12px,transparent 12px 22px);margin:22px 0 20px"></div>
+ <div class="holo" style="font:800 40px/1 'Inter Tight';letter-spacing:-.025em">= Your all-in rate</div>
+</div>
+<div class="abs" style="left:76px;top:905px;width:430px">
+ <div class="kick" style="font-size:17px">Example</div>
+ <p class="body" style="margin-top:12px;font-size:25px">$1,300 in fees ÷ $50,000 in card sales × 100 = <b style="color:var(--ink)">2.6%</b></p>
+ <p class="body" style="margin-top:16px;font-size:25px">Grab last month’s statement and do the math.</p>
+</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 6 · CTA -->
+<section class="slide" id="s6">
+<img class="hero" src="hero_6.png" alt="SVPay savings calculator on a phone">
+<div class="top"><div class="tag"><i></i>What it means for you</div><div class="count"><b>6</b> / 6</div></div>
+<div class="abs d" style="left:72px;top:170px;font-size:88px;width:520px">See what<br>your shop<br>would <span class="holo">keep.</span></div>
+<div class="abs" style="left:72px;top:520px;width:470px;border-radius:30px;padding:24px 24px 24px 28px;background:var(--holo);display:flex;align-items:center;justify-content:space-between;gap:14px;box-shadow:0 30px 60px -24px rgba(70,50,230,.55),0 1px 0 rgba(255,255,255,.5) inset">
+ <div><div style="font:600 20px/1 Inter;color:rgba(255,255,255,.92)">Free savings calculator</div><div style="font:800 27px/1.1 'Inter Tight';color:#fff;letter-spacing:-.02em;margin-top:10px">www.svpay.app/<br>savings-calculator</div></div>
+ <div style="width:66px;height:66px;flex:none;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" style="display:block"><path d="M4 12h15M13 5.5 19.5 12 13 18.5" stroke="#2350FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+<div class="abs" style="left:72px;top:722px;width:460px">
+ <div style="font:800 46px/1.05 'Inter Tight';letter-spacing:-.03em">Payments,<br><span class="serif" style="font-size:58px">without the fee.</span></div>
+ <div style="font:600 24px/1.4 Inter;color:var(--ink2);margin-top:22px">SVPay charges shops no<br>processing fees.</div>
+ <div style="font:500 22px/1.4 Inter;color:var(--ink3);margin-top:14px">Created by a nurse, not a hedge fund.</div>
+</div>
+<div class="abs src" style="left:76px;top:1112px;width:470px;font-size:16px">Example: $500,000 a year in card sales at a 2.6% all-in rate, all moved to SVPay on the free Starter plan.</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<script>
+window.place = (I3) => {
+  // slide 3: labels sit level with each part of the stack, with a leader line to its edge
+  const put = (lb, ln, dt, pt) => {
+    const L = document.getElementById(lb), N = document.getElementById(ln), D = document.getElementById(dt);
+    const h = L.offsetHeight; L.style.top = (pt[1] - 50) + 'px';
+    const x0 = 72 + 330, x1 = pt[0] - 10, y = pt[1];
+    N.style.left = x0 + 'px'; N.style.top = y + 'px'; N.style.width = Math.max(0, x1 - x0) + 'px';
+    D.style.left = x1 + 'px'; D.style.top = y + 'px';
+  };
+  put('lbHi', 'lnHi', 'dtHi', I3.hiMid); put('lbLo', 'lnLo', 'dtLo', I3.lowMid);
+};
+</script>
+</body></html>

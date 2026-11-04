@@ -1,0 +1,33 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{margin:0}body{width:6480px;height:1350px;overflow:hidden;background:#F7F8FD;position:relative}
+.b{position:absolute;border-radius:50%;filter:blur(110px)}
+.s{position:absolute;border-radius:50%;filter:blur(60px)}
+.noise{position:absolute;inset:0;opacity:.055;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.12 0 0 0 0 0.3 0 0 0 1 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+.top{position:absolute;left:0;right:0;top:0;height:520px;background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,0))}
+</style></head><body>
+<!-- S1 (0-1080): hero numerals centred ~y 640 -->
+<div class="b" style="width:1150px;height:760px;left:-60px;top:300px;background:radial-gradient(closest-side,#7FA2FF 0%,rgba(150,120,255,.85) 45%,rgba(255,140,205,.0) 100%)"></div>
+<div class="s" style="width:520px;height:420px;left:640px;top:380px;background:radial-gradient(closest-side,rgba(255,128,196,.9),transparent)"></div>
+<div class="s" style="width:520px;height:420px;left:-80px;top:520px;background:radial-gradient(closest-side,rgba(96,214,255,.85),transparent)"></div>
+<!-- S2 (1080-2160) -->
+<div class="b" style="width:1100px;height:1000px;left:1500px;top:420px;background:radial-gradient(closest-side,#8EA8FF 0%,rgba(170,128,255,.8) 50%,transparent 100%)"></div>
+<div class="s" style="width:560px;height:520px;left:1960px;top:560px;background:radial-gradient(closest-side,rgba(255,140,200,.85),transparent)"></div>
+<div class="s" style="width:560px;height:520px;left:1380px;top:900px;background:radial-gradient(closest-side,rgba(98,216,255,.8),transparent)"></div>
+<!-- S3 (2160-3240) -->
+<div class="b" style="width:1000px;height:1100px;left:2500px;top:250px;background:radial-gradient(closest-side,#86A0FF 0%,rgba(160,120,255,.8) 50%,transparent 100%)"></div>
+<div class="s" style="width:520px;height:520px;left:2560px;top:300px;background:radial-gradient(closest-side,rgba(255,150,205,.8),transparent)"></div>
+<div class="s" style="width:520px;height:520px;left:2900px;top:880px;background:radial-gradient(closest-side,rgba(98,216,255,.8),transparent)"></div>
+<!-- S4 (3240-4320) -->
+<div class="b" style="width:1200px;height:800px;left:3180px;top:420px;background:radial-gradient(closest-side,#7FA0FF 0%,rgba(156,120,255,.85) 48%,transparent 100%)"></div>
+<div class="s" style="width:560px;height:460px;left:3880px;top:300px;background:radial-gradient(closest-side,rgba(255,132,200,.9),transparent)"></div>
+<div class="s" style="width:520px;height:420px;left:3180px;top:700px;background:radial-gradient(closest-side,rgba(98,216,255,.85),transparent)"></div>
+<!-- S5 (4320-5400) -->
+<div class="b" style="width:1100px;height:1000px;left:4700px;top:200px;background:radial-gradient(closest-side,#8AA6FF 0%,rgba(168,124,255,.8) 50%,transparent 100%)"></div>
+<div class="s" style="width:520px;height:520px;left:5050px;top:250px;background:radial-gradient(closest-side,rgba(255,146,204,.85),transparent)"></div>
+<div class="s" style="width:520px;height:520px;left:4750px;top:640px;background:radial-gradient(closest-side,rgba(98,216,255,.8),transparent)"></div>
+<!-- S6 (5400-6480) -->
+<div class="b" style="width:1100px;height:1100px;left:5850px;top:300px;background:radial-gradient(closest-side,#86A2FF 0%,rgba(165,122,255,.82) 50%,transparent 100%)"></div>
+<div class="s" style="width:560px;height:520px;left:6150px;top:380px;background:radial-gradient(closest-side,rgba(255,140,200,.85),transparent)"></div>
+<div class="s" style="width:520px;height:520px;left:5800px;top:900px;background:radial-gradient(closest-side,rgba(98,216,255,.8),transparent)"></div>
+<div class="top"></div><div class="noise"></div>
+</body></html>
