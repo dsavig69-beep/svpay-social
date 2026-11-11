@@ -4,7 +4,7 @@ Images for SVPay's social posts (www.svpay.app). Everything here is public, so M
 
 - `posts/<date>-<topic>/` holds each post's slides (`slide-1.jpg` …, 2160×2700, 4:5) and its caption.
 - `pipeline/` is how the slides are made: 3D scenes in three.js, rendered in headless Chromium, with the text laid over in HTML.
-- `STANDARDS.md` is the quality bar every post has to clear before it goes out.
+- `STANDARDS.md` is the quality bar every post has to clear before it goes out; `ALGORITHM.md` and `checks/` are how it is enforced (887 checks, 115 hard gates).
 
 Company logos used on news slides are supplied for each post and are not stored here. SVPay is not affiliated with the companies it reports on.
 

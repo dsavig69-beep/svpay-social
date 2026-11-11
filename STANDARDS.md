@@ -23,10 +23,11 @@ Each post has to beat the one before it. The goal is a reader who stops scrollin
 - Big type, few words. Body copy 25px or more at 1080 wide.
 
 ## Before it goes out
+Every post runs the algorithm in `ALGORITHM.md`: 887 checks, 115 hard gates, script checks first (`checks/check_post.py`), then a judge and a three-reader panel, then `checks/score.py`. A post publishes on its own only when every gate passes, every category clears its minimum and Q is 0.85 or higher. This replaces the old 1-10 reviewer, which let the Nov 11 card-fees post through.
+
 1. Render at 2160×2700 and look at every slide at full size, plus close-up crops.
-2. An independent reviewer (one that did not make the slides) scores it from 1 to 10 and lists every factual, copy and visual problem.
-3. Fix every factual and copy problem. Fix every visual problem that hurts the read. Re-check.
-4. Captions match the slides, carry the source, and link to www.svpay.app with tracking.
+2. Run the script checks, the judge and the panel. Fix what fails, with the failing words quoted. At most 2 rewrites.
+3. Captions match the slides, carry the source, and link to www.svpay.app with tracking.
 
 ## Keep improving
 - Before each new post, check how the last posts did (reach, saves, shares, comments, link clicks) and write down what to repeat and what to drop.
@@ -34,3 +35,4 @@ Each post has to beat the one before it. The goal is a reader who stops scrollin
 
 ## Log
 - **2026-11-04, Toast Q3 (6 slides).** First 3D carousel. Reviewer's first pass: 6/10. Fixed before posting: savings said as "up to" with a footnote; the hook reworded to what the filing supports ("took in $1.62B from payments"); "× 100" added to the rate formula; "card-issuing banks"; 100-coin grid to show $2.62 per $100 honestly; solid coins so the colour split falls on a coin edge; softer shadows and weaker reflections behind text; one consistent frame and the disclaimer on every Toast slide. Next time: start from these fixes, and try a cover slide with even more contrast in the hook.
+- **2026-11-11, card fees on sales tax and tips (no slides).** Published text only on LinkedIn, Facebook and Google Business Profile; the founder rejected it as low quality and generic. It fails 11 gates of the new algorithm: text only, an out-of-date law status, an unfound quote, unsourced bills, a no-fee promise with no line on how SVPay makes money, "not just the symptom", "As a nurse, I learned...", "here's my unpopular take", "Here's something most people don't know". From now on the algorithm in ALGORITHM.md decides what publishes.

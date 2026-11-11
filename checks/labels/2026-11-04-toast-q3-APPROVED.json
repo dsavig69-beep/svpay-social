@@ -1,0 +1,133 @@
+{
+ "date": "2026-11-04",
+ "slug": "toast-q3-fintech-revenue",
+ "kind": "news",
+ "topic": "toast-q3",
+ "format": "data",
+ "label": "APPROVE",
+ "label_by": "founder",
+ "label_reason": "Founder approved the 3D Toast carousel on Nov 4, 2026 and set it as the visual baseline.",
+ "networks": {
+  "linkedin": {
+   "text": "Restaurants ran $61.8 billion through Toast in three months.\nToast took in $1.62 billion from payments.\n\nThat's from Toast's Q3 report, out yesterday.\n\nAbout 189,000 locations use Toast.\n$1.24 billion of that $1.62 billion went to card-issuing banks, card networks and other costs.\n$380 million was left for Toast.\nThe restaurant pays the whole stack either way.\n\nToast's net income: $169 million, up from $105 million a year ago.\n\nFair is fair: Toast builds good software, and restaurants pick it for a reason.\n\nBut here's what I can't get past.\n\nEvery one of those payments was a meal someone cooked, served and cleaned up after.\nAnd a slice of every ticket went to fees: about $2.62 of every $100.\n\nDo the math on your own shop.\nOn $500,000 a year in card sales, a 2.6% all-in rate is $13,000.\nThat's a cook's raise. A new fryer. A year of marketing.\n\nAs a nurse, I learned to watch the numbers nobody else checks.\nFees are one of those numbers.\n\nFull disclosure: I started SVPay so shops can take payments without that fee.\n\nRestaurant owners: divide last month's total fees by total card sales, then multiply by 100.\nWhat all-in rate did you get?\n\n#SmallBusiness #Restaurants #Payments",
+   "first_comment": "Source: Toast's Q3 2026 results (SEC filing): https://www.sec.gov/Archives/edgar/data/0001650164/000165016426000214/tost-20260930xexhibit991.htm\n\nSee what your shop would keep: https://www.svpay.app/toast-fee-calculator?utm_source=linkedin&utm_medium=social&utm_campaign=news_20261104&utm_content=toast-q3-fintech-revenue",
+   "media": [
+    "posts/2026-11-04-toast-q3/slide-1.jpg",
+    "posts/2026-11-04-toast-q3/slide-2.jpg",
+    "posts/2026-11-04-toast-q3/slide-3.jpg",
+    "posts/2026-11-04-toast-q3/slide-4.jpg",
+    "posts/2026-11-04-toast-q3/slide-5.jpg",
+    "posts/2026-11-04-toast-q3/slide-6.jpg"
+   ],
+   "alt": [
+    "In 3 months, Toast took in $1.62B from payments.",
+    "100 coins, 2.62 of them pink: $2.62 per $100 on average.",
+    "Where the $1.62B went: $1.24B to card-issuing banks, card networks and other costs; $380M left for Toast.",
+    "On $500,000 a year in card sales, a 2.6% rate costs $13,000 every year.",
+    "What's your all-in rate? Total fees divided by total card sales, times 100.",
+    "See what your shop would keep at www.svpay.app/savings-calculator."
+   ],
+   "pdf_title": "Toast took in $1.62B from payments in 3 months"
+  },
+  "instagram": {
+   "text": "In 3 months, Toast took in $1.62 billion from payments.\n\nThat's Toast's financial technology revenue for July to September 2026, mostly card processing, from its Q3 report. On average, that's $2.62 of every $100 restaurants ran through Toast.\n\nWhere it went: $1.24 billion to card-issuing banks, card networks and other costs. $380 million was left for Toast. Either way, the restaurant pays the whole stack.\n\nNow run it on your shop. On $500,000 a year in card sales, a 2.6% all-in rate is $13,000. That's a cook's raise, a new fryer, or a year of marketing.\n\nWhat's your all-in rate? Total fees ÷ total card sales × 100. Tell us what you got.\n\nSee what your shop would keep: link in bio.\nPayments, without the fee.\n\nSource: Toast Q3 2026 results (SEC Form 8-K). SVPay is not affiliated with Toast.\n\n#RestaurantOwners #SmallBusiness #CardFees",
+   "media": [
+    "posts/2026-11-04-toast-q3/slide-1.jpg",
+    "posts/2026-11-04-toast-q3/slide-2.jpg",
+    "posts/2026-11-04-toast-q3/slide-3.jpg",
+    "posts/2026-11-04-toast-q3/slide-4.jpg",
+    "posts/2026-11-04-toast-q3/slide-5.jpg",
+    "posts/2026-11-04-toast-q3/slide-6.jpg"
+   ],
+   "alt": [
+    "In 3 months, Toast took in $1.62B from payments.",
+    "100 coins, 2.62 of them pink: $2.62 per $100 on average.",
+    "Where the $1.62B went: $1.24B to card-issuing banks, card networks and other costs; $380M left for Toast.",
+    "On $500,000 a year in card sales, a 2.6% rate costs $13,000 every year.",
+    "What's your all-in rate? Total fees divided by total card sales, times 100.",
+    "See what your shop would keep at www.svpay.app/savings-calculator."
+   ]
+  }
+ },
+ "facts": [
+  {
+   "text": "Toast Q3 2026: $61.8B gross payment volume, $1.62B financial technology revenue, $1.24B costs, net income $169M vs $105M, about 189,000 locations",
+   "numbers": [
+    "$61.8 billion",
+    "$1.62 billion",
+    "$1.24 billion",
+    "$380 million",
+    "$169 million",
+    "$105 million",
+    "189,000",
+    "$61.8B",
+    "$1.62B",
+    "$1.24B",
+    "$380M"
+   ],
+   "source_url": "https://www.sec.gov/Archives/edgar/data/0001650164/000165016426000214/tost-20260930xexhibit991.htm",
+   "source_date": "2026-11-03"
+  },
+  {
+   "text": "Worked example: a shop with $500,000 a year in card sales at a 2.6% all-in rate",
+   "numbers": [
+    "$500,000",
+    "2.6%",
+    "$13,000",
+    "$2.62"
+   ],
+   "example": true
+  }
+ ],
+ "math": [
+  {
+   "expr": "1.62/61.8*100",
+   "shown": "2.62"
+  },
+  {
+   "expr": "500000*0.026",
+   "shown": "$13,000"
+  },
+  {
+   "expr": "1.62-1.24",
+   "shown": "0.38"
+  }
+ ],
+ "slides": [
+  {
+   "file": "posts/2026-11-04-toast-q3/slide-1.jpg",
+   "role": "hook",
+   "text": "In 3 months, Toast took in $1.62B from payments."
+  },
+  {
+   "file": "posts/2026-11-04-toast-q3/slide-2.jpg",
+   "role": "stakes",
+   "text": "$2.62 of every $100. On average, per $100 restaurants ran through Toast, July to September 2026.",
+   "has_stat": true,
+   "source_line": "Source: Toast Q3 2026 results (SEC Form 8-K), Nov 2026"
+  },
+  {
+   "file": "posts/2026-11-04-toast-q3/slide-3.jpg",
+   "role": "proof",
+   "text": "Where the $1.62B went: $1.24B to card-issuing banks, card networks and other costs. $380M left for Toast. You pay the whole stack.",
+   "has_stat": true,
+   "source_line": "Source: Toast Q3 2026 results (SEC Form 8-K)"
+  },
+  {
+   "file": "posts/2026-11-04-toast-q3/slide-4.jpg",
+   "role": "payoff",
+   "text": "On $500,000 a year in card sales, a 2.6% rate costs $13,000 every year. A cook's raise, a new fryer or a year of marketing.",
+   "example": true
+  },
+  {
+   "file": "posts/2026-11-04-toast-q3/slide-5.jpg",
+   "role": "howto",
+   "text": "What's your all-in rate? Total fees / total card sales x 100."
+  },
+  {
+   "file": "posts/2026-11-04-toast-q3/slide-6.jpg",
+   "role": "cta",
+   "text": "See what your shop would keep. www.svpay.app Payments, without the fee."
+  }
+ ]
+}
