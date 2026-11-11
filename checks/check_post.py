@@ -7,7 +7,11 @@ the panel (see ALGORITHM.md); this script never edits a post.
 
 Usage:
     python3 checks/check_post.py post.json [--history history.json] [--private-terms terms.txt]
-                                           [--offline] [--out report.json]
+                                           [--link-results links.json] [--offline] [--out report.json]
+
+--link-results: a JSON object {"<url>": true | false | <HTTP status>} from opening each link with a web tool, for
+runs where this script cannot reach the web itself. A link it lists as true or 200 passes; anything else fails. A link
+it doesn't list is fetched here, and a network error counts as a failure.
 
 Exit code: 0 when no gate fails, 1 when any gate fails, 2 when the package itself is malformed.
 The IDs match checks/criteria.json (887 criteria, from the Nov 11, 2026 research).
@@ -579,7 +583,8 @@ def copy_checks(rep: Report, where: str, text: str, first_comment: str = ""):
 
 
 # ----------------------------------------------------------------------------------------------- package checks
-def check_package(pkg: dict, rep: Report, history: list[dict] | None, private_terms: list[str], offline: bool):
+def check_package(pkg: dict, rep: Report, history: list[dict] | None, private_terms: list[str], offline: bool,
+                  link_results: dict | None = None):
     nets = pkg.get("networks", {})
     kind = pkg.get("kind", "news")
     facts = pkg.get("facts", [])
@@ -647,7 +652,7 @@ def check_package(pkg: dict, rep: Report, history: list[dict] | None, private_te
     check_slides(rep, slides, nets, kind)
     check_facts(rep, pkg, facts, all_text, slide_text)
     if not offline:
-        check_links(rep, nets)
+        check_links(rep, nets, link_results or {})
 
     # history-based post checks
     if history is not None:
@@ -850,16 +855,21 @@ def check_facts(rep: Report, pkg: dict, facts: list[dict], all_text: str, slide_
                 "a no-fee promise with no line on how SVPay makes money", "all")
 
 
-def check_links(rep: Report, nets: dict):
+def check_links(rep: Report, nets: dict, known: dict | None = None):
     urls = set()
     for v in nets.values():
         urls |= set(URL_RE.findall(v.get("text", "") + "\n" + v.get("first_comment", "") + "\n" + v.get("reply", "")))
         urls |= {u for u in v.get("media_urls", [])}
         if v.get("cta_url"):
             urls.add(v["cta_url"])
+    known = {k.rstrip(".,)"): v for k, v in (known or {}).items()}
     bad = []
     for u in sorted(urls):
         u = u.rstrip(".,)")
+        if u in known:
+            if known[u] is not True and known[u] != 200:
+                bad.append(f"{u} {known[u]}")
+            continue
         try:
             req = urllib.request.Request(u, method="GET", headers={"User-Agent": "svpay-post-check/1.0"})
             with urllib.request.urlopen(req, timeout=20) as r:
@@ -877,6 +887,7 @@ def main():
     ap.add_argument("--history")
     ap.add_argument("--private-terms")
     ap.add_argument("--offline", action="store_true")
+    ap.add_argument("--link-results")
     ap.add_argument("--out")
     a = ap.parse_args()
     try:
@@ -887,7 +898,8 @@ def main():
     history = json.load(open(a.history, encoding="utf-8")) if a.history and os.path.exists(a.history) else None
     terms = [l.strip() for l in open(a.private_terms, encoding="utf-8")] if a.private_terms and os.path.exists(a.private_terms) else []
     rep = Report()
-    check_package(pkg, rep, history, terms, a.offline)
+    links = json.load(open(a.link_results, encoding="utf-8")) if a.link_results and os.path.exists(a.link_results) else {}
+    check_package(pkg, rep, history, terms, a.offline, links)
     fails = [r for r in rep.results if r["status"] == "fail"]
     gates = rep.gates_failed()
     out = {"package": os.path.basename(a.package), "checks_run": len(rep.results),
