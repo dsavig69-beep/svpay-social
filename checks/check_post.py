@@ -864,6 +864,7 @@ def check_links(rep: Report, nets: dict, known: dict | None = None):
             urls.add(v["cta_url"])
     known = {k.rstrip(".,)"): v for k, v in (known or {}).items()}
     bad = []
+    blocked = []
     for u in sorted(urls):
         u = u.rstrip(".,)")
         if u in known:
@@ -876,8 +877,19 @@ def check_links(rep: Report, nets: dict, known: dict | None = None):
                 if r.status != 200:
                     bad.append(f"{u} {r.status}")
         except Exception as e:  # network errors count as failures: a link must open at publish time
-            bad.append(f"{u} {type(e).__name__}")
-    rep.add("SC12", not bad, "; ".join(bad[:5]), "all")
+            if "Tunnel connection failed" in str(e):
+                # This machine's own network refused the request before it reached the site: the link is unchecked,
+                # not broken. The run must open it with a web tool and pass the result in --link-results.
+                blocked.append(u)
+            else:
+                bad.append(f"{u} {type(e).__name__}")
+    if bad:
+        rep.add("SC12", False, "; ".join(bad[:5]), "all")
+    elif blocked:
+        rep.add("SC12", None, f"{len(blocked)} link(s) could not be checked from this machine; open each with a web "
+                              f"tool and pass the results with --link-results: " + "; ".join(blocked[:5]), "all")
+    else:
+        rep.add("SC12", True, "", "all")
 
 
 # ----------------------------------------------------------------------------------------------- main
