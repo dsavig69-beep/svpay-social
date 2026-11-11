@@ -6,7 +6,8 @@ card-fees post through. That post fails 11 gates (`checks/labels/2026-11-11-tax-
 
 - `checks/criteria.json`: all 887 criteria (ID, the check, pass threshold, weight 1-5, tier, gate, score category).
 - `checks/check_post.py`: the script tier, run on the post package (below). Exit code 1 means a gate failed.
-- `checks/judge_batches.py judge` / `panel`: the judge-tier and panel-tier checks, 15 per batch.
+- `checks/judge_batches.py judge` / `panel`: the judge-tier and panel-tier checks, 15 per batch (`--skip-visuals` / `--only-visuals` split the judge's work in two).
+- `checks/merge.py`: merges the judges' and the panel's answers into `judge.json` and `panel.json`.
 - `checks/score.py`: combines the three into PUBLISH, HOLD or REWRITE.
 - `checks/labels/`: posts the founder has labeled (APPROVE or REJECT, with his reason). They anchor the judges.
 
@@ -18,8 +19,8 @@ card-fees post through. That post fails 11 gates (`checks/labels/2026-11-11-tax-
 | 2. Write | Draft 3 candidates. Each network gets its own version (at most 60% shared 3-word runs between any two). | Never: "not X, it's Y", "As a nurse, I learned...", "here's my unpopular take", "Here's something most people don't know", "Agree?/Thoughts?", unnamed "experts say". |
 | 3. Render | Slides from `pipeline/` at 2160x2700. LinkedIn: one 4:5 portrait image for a news take, or an 8-12 page PDF for a data or explainer post. Instagram 5-10 slides. X at most 4 images, each 5 MB or less. Google Business Profile one JPG or PNG, 10 KB-5 MB. Alt text on every image. | No text-only post on any network except X. |
 | 4. Script checks | `python3 checks/check_post.py post.json --history history.json --private-terms /tmp/private_terms.txt --out script.json` | Any gate failure: rewrite before any judge runs. |
-| 5. Judge | A fresh reviewer that did not write the post. It reads `checks/judge_batches.py judge` and rules on every check in batches of at most 15: reason first, then pass, fail or na, quoting the failing words. It sees the labeled posts in `checks/labels/` as anchors. It never edits. | Output `judge.json`. |
-| 6. Panel | 3 more fresh reviewers, each reading as a different person (a busy shop owner, a payments professional, a skeptic who spots generic, machine-made copy fast). Each answers the panel checks and compares the post with the 5 reference posts, in both orders. | At least 2 of 3 say it reads as written by a person; the post wins or ties at least 3 of 5 references. Output `panel.json`. |
+| 5. Judge | A fresh reviewer that did not write the post. It reads `checks/judge_batches.py judge` and rules on every check in batches of at most 15: reason first, then pass, fail or na, quoting the failing words. It sees the labeled posts in `checks/labels/` as anchors. It never edits. | `merge.py judge` writes `judge.json`. |
+| 6. Panel | 3 more fresh reviewers, each reading as a different person (a busy shop owner, a payments professional, a skeptic who spots generic, machine-made copy fast). Each answers the panel checks and compares the post with the 5 reference posts, in both orders. | At least 2 of 3 say it reads as written by a person; the post wins or ties at least 3 of 5 references. `merge.py panel` writes `panel.json`. |
 | 7. Score | `python3 checks/score.py script.json judge.json panel.json --out decision.json` | See the decision table. |
 | 8. Publish | Metricool publishes. One hour after each slot: the post renders, its link works, nothing is cut off. | Fix or delete within 1 hour. |
 | 9. Learn | Results at 24 h, 72 h and 7 days, as rates per network. | Learning never relaxes a gate or a copy rule. |
