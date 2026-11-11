@@ -1,0 +1,7 @@
+{
+  "_why": "Lines a post may use word for word to say how SVPay makes money and what is free. Chosen Nov 11, 2026 from the founder's pricing decision (Nov 8: 'Never paid by volume') and www.svpay.app/pricing ('Simple pricing. Never per sale.'; '0% processing fees and $0 to cash out, on every plan.'; Starter free, Growth and Pro paid). The founder asked Claude to choose. They satisfy CR13, CR14, CR34, CO04 and CO06 when used next to the claim. Re-check the prices on www.svpay.app/pricing before quoting any dollar amount.",
+  "how_svpay_makes_money": "SVPay makes money from paid software plans, never from a cut of your sales.",
+  "pricing_full": "Payments made with SVPay have 0% processing fees and $0 to cash out, on every plan. SVPay makes money from paid software plans (Starter is free; Growth and Pro add staff, locations and tools), never from a cut of your sales.",
+  "free_calculator": "The savings calculator is free to use; SVPay's Growth and Pro plans are paid.",
+  "zero_fee_condition": "0% processing fees apply to payments made with SVPay, not to card payments."
+}

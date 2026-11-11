@@ -75,7 +75,11 @@ card-fees post through. That post fails 11 gates (`checks/labels/2026-11-11-tax-
 3. **LinkedIn:** one 4:5 portrait image for news takes; an 8-12 page PDF for data or explainer posts; never text only.
 4. **The nurse credential:** at most 1 post in 4, only with a specific ICU detail that changes the argument, never right before the pitch.
 5. **New post formats:** the first post of a new format is held for the founder's one-tap approval.
-6. **How SVPay works:** only the founder-approved plain sentence, and only when a post explains how zero fees work.
+6. **How SVPay works:** only the founder-approved plain sentence, and only when a post explains how zero fees work. There is none yet for what SVPay runs on, so posts don't explain it.
+
+## Approved lines (pricing, free, no fees)
+
+`checks/approved_lines.json` holds the lines a post may use word for word whenever it says "no fees", "without the fee", "$0", "free" or anything about price (CR13, CR14, CR34, CO04, CO06). They were chosen on Nov 11, 2026 from the founder's pricing decision ("Never paid by volume") and www.svpay.app/pricing, because the founder asked Claude to choose. Use them next to the claim, not in a footnote. A pricing sentence that is not one of these lines fails the judge. Avoid "free" unless the `free_calculator` or `pricing_full` line sits next to it.
 
 ## Network specs
 
