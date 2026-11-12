@@ -66,7 +66,9 @@ def ig_aspect(post):
 
 @check("QF04", scope="post")
 def size_caps(post):
-    return each(post, CAPS, lambda n, p, i: ok(i["bytes"] <= 0.9 * CAPS[n], f"{i['bytes'] // 1000} KB of {CAPS[n] // 1000} KB", i["bytes"]))
+    # ruling 3: the master goes to LinkedIn when it is under 5 MB, so LinkedIn's cap carries no 10% headroom
+    return each(post, CAPS, lambda n, p, i: ok(i["bytes"] < CAPS[n] if n == "linkedin" else i["bytes"] <= 0.9 * CAPS[n],
+                                               f"{i['bytes'] // 1000} KB of {CAPS[n] // 1000} KB", i["bytes"]))
 
 
 @check("QF05", scope="post")
@@ -115,10 +117,10 @@ def master_to_li_x(post):
     def f(net, p, i):
         big = i["size"] == (2160, 2700)
         if big:
-            return ok(i["bytes"] < 0.9 * 5_000_000, f"master {i['bytes'] // 1000} KB")
+            return ok(i["bytes"] < 5_000_000, f"master {i['bytes'] // 1000} KB")
         master = p.replace("-1440", "")
         if os.path.exists(master) and master != p:
-            return ok(os.path.getsize(master) >= 0.9 * 5_000_000, f"1440 file sent although the master is {os.path.getsize(master) // 1000} KB")
+            return ok(os.path.getsize(master) >= 5_000_000, f"1440 file sent although the master is {os.path.getsize(master) // 1000} KB")
         return ok(i["size"] == (1440, 1800), f"{i['size']}")
     return each(post, ["linkedin", "x"], f)
 

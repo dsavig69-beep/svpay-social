@@ -475,6 +475,7 @@ def crop_sheet(post):
     sheet = Image.new("RGB", (330 * len(tiles), 430), "white")
     for i, t in enumerate(tiles):
         sheet.paste(t, (330 * i, 0))
+    os.makedirs(folder, exist_ok=True)
     out = os.path.join(folder, os.path.splitext(os.path.basename(post.slides[0].dir))[0] + "-crops.jpg")
     sheet.save(out, quality=80)
-    return ok(os.path.exists(out), out)
+    return ok(os.path.exists(out), os.path.basename(out))

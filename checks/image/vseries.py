@@ -53,18 +53,22 @@ def texts(sl, skip=()):
     return [e for e in sl.elements if e["role"] not in skip and e["text"].strip()]
 
 
+def is_logo(i):
+    return "logo" in i.get("cls", "") or "logo" in os.path.basename(i.get("src", "")).lower()
+
+
 def images(sl, kind=None):
     ims = sl.manifest.get("images", []) if sl.manifest else []
     if kind == "logo":
-        return [i for i in ims if "logo" in i.get("cls", "")]
+        return [i for i in ims if is_logo(i)]
     if kind == "third":
-        return [i for i in ims if "logo" in i.get("cls", "") and "svpay" not in i.get("src", "").lower()]
+        return [i for i in ims if is_logo(i) and "svpay" not in i.get("src", "").lower()]
     if kind == "svpay":
-        return [i for i in ims if "logo" in i.get("cls", "") and "svpay" in i.get("src", "").lower()]
+        return [i for i in ims if is_logo(i) and "svpay" in i.get("src", "").lower()]
     if kind == "photo":
         return [i for i in ims if any(k in i.get("cls", "") for k in ("photo", "bts", "portrait", "screenshot", "mockup", "phone"))]
     if kind == "content":   # pictures that are not the full-bleed background or hero render
-        return [i for i in ims if not (i["w"] >= W - 2 and i["h"] >= H - 2) and "logo" not in i.get("cls", "")]
+        return [i for i in ims if not (i["w"] >= W - 2 and i["h"] >= H - 2) and not is_logo(i)]
     return ims
 
 
@@ -1879,3 +1883,20 @@ def li_from_founder(post):
     if not acct:
         return na("no LinkedIn account named in the package")
     return ok(acct in ("founder", "personal"), f"posts from {acct}")
+
+
+@check("V-H01", scope="slide")
+def money_slide(post, sl):
+    if not sl.manifest:
+        return needm(sl)
+    hn = hero_number(sl)
+    if not hn or "$" not in hn["text"]:
+        return na("not a money slide")
+    hs = headline_size(sl)
+    big = [e for e in sl.elements if e["role"] not in SPOTS and NUM_TOKEN.search(e["text"]) and e["size"] >= 0.8 * hn["size"] and e is not hn.get("el")]
+    ratio = hn["size"] / hs if hs else 99
+    hb = hn["box"]
+    near = [e for e in sl.elements if e is not hn.get("el") and e["role"] not in SPOTS and gap(hb, box(e)) <= 300 and not NUM_TOKEN.fullmatch(e["text"].strip())]
+    lab = min(near, key=lambda e: gap(hb, box(e))) if near else None
+    nw = len(lab["text"].split()) if lab else 0
+    return ok(not big and ratio >= 3 and 3 <= nw <= 8, f"hero {hn['text']} {ratio:.1f}x the headline, label of {nw} words" + (f", {len(big)} other big numbers" if big else ""))

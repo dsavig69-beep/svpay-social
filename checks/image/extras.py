@@ -642,3 +642,109 @@ def baseline_grid(post):
                 if d > 2:
                     bad.append(f"{sl.where} '{ln['text'][:12]}' {d:.0f}px")
     return ok(not bad, "; ".join(bad[:4]))
+
+
+# ------------------------------------------------------------------ "up to" figures and published rates (MC-H02, MC-H03, MC-S11)
+def upto_elements(sl):
+    return [e for e in sl.elements if re.search(r"(?i)\bup to\b", e["text"])]
+
+
+def savings_slide(post, sl):
+    from .words import img_text, savings_claims
+    t = img_text(post, sl) or ""
+    return bool(savings_claims(t) or savings_claims(t.replace("\n", " ")))     # "Save up to" and the figure are often two elements
+
+
+@check("MC-H02", scope="slide")
+def upto_size(post, sl):
+    if not sl.manifest:
+        return needm(sl)
+    ups = upto_elements(sl)
+    if not ups or not savings_slide(post, sl):
+        return na("no 'up to' savings figure")
+    hn = hero_number(sl)
+    if not hn:
+        return na("no hero number")
+    from .textpx import font_metrics, measure
+    rows = {r["el"]["id"]: r for r in measure(sl)} if sl.has("mask", "bg") else {}
+    bad = []
+    e = ups[0]
+    r0 = (e.get("runs") or [e])[0]
+    fm = font_metrics(post, sl, r0["family"], r0["weight"])
+    cap = e["size"] * (fm["cap"] / fm["upm"] if fm and fm["cap"] else 0.72)
+    if cap < hn["cap"] / 3 or cap < 187:
+        bad.append(f"'up to' cap height {cap:.0f}px vs hero {hn['cap']:.0f}px")
+    from .vseries import css_rgb
+    c1 = css_rgb(r0.get("color") or e.get("color"))
+    if hn.get("el") is not None:
+        c2 = css_rgb(((hn["el"].get("runs") or [hn["el"]])[0]).get("color"))
+        if c1 is not None and c2 is not None:
+            from .core import de00 as _de
+            hue = lambda c: float(np.degrees(np.arctan2(*to_lab(c[None, None])[0, 0][[2, 1]])) % 360)
+            dh = abs((hue(c1) - hue(c2) + 180) % 360 - 180)
+            if dh > 30 and float(_de(to_lab(c1[None, None]), to_lab(c2[None, None]))) > 20:
+                bad.append(f"'up to' in another color family ({dh:.0f}° hue apart)")
+    r = rows.get(e["id"])
+    if r is None:
+        return Outcome(NEEDS, "needs passes: mask and bg")
+    if r.get("wcag_worst") is not None and r["wcag_worst"] < 4.5:
+        bad.append(f"'up to' contrast {r['wcag_worst']:.2f}:1")
+    return ok(not bad, "; ".join(bad))
+
+
+@check("MC-H03", scope="slide")
+def upto_not_covered(post, sl):
+    if not sl.manifest:
+        return needm(sl)
+    ups = upto_elements(sl)
+    if not ups or not savings_slide(post, sl):
+        return na("no 'up to' savings figure")
+    hn = hero_number(sl)
+    if not hn or not hn.get("is3d"):
+        return na("the hero number is not a 3D numeral")
+    hm = hero_mask(sl)
+    if hm is None:
+        return Outcome(NEEDS, "needs passes: 3D id pass")
+    px = 0
+    for e in ups:
+        for l in e["lines"]:
+            x0, y0 = int(l["x"] * sl.scale), int(l["y"] * sl.scale)
+            px += int(hm[max(0, y0):int((l["y"] + l["h"]) * sl.scale), max(0, x0):int((l["x"] + l["w"]) * sl.scale)].sum())
+    return ok(px == 0, f"{px}px of 'up to' overlap the 3D numeral", px)
+
+
+RATE_RE = re.compile(r"(\d+(?:\.\d+)?)\s*%\s*\+\s*(\$\s?\d*\.?\d+|\d+\s?¢)")
+
+
+@check("MC-S11", scope="post")
+def full_rate_formula(post):
+    from .words import img_text
+    rows = []
+    entries = [m for m in post.pkg.get("math", []) if isinstance(m.get("rate"), dict)]
+    for m in entries:
+        rt = m["rate"]
+        pct, fixed = float(rt.get("pct", 0)), float(rt.get("fixed", 0))
+        if not fixed:
+            continue
+        sales, n = float(m.get("sales", 0)), float(m.get("transactions", 0))
+        want = sales * pct / 100 + n * fixed
+        try:
+            shown = float(re.sub(r"[^\d.]", "", str(m.get("shown", ""))))
+        except ValueError:
+            shown = None
+        pct_only = any(re.search(r"(?i)percentage part only", img_text(post, s) or "") for s in post.slides)
+        good = pct_only or (shown is not None and abs(shown - want) <= max(1.0, 0.005 * want))
+        r = ok(good, f"{m.get('expr', '')} shows {m.get('shown')}, full formula gives {want:,.2f}")
+        rows.append(r)
+    # a published rate on the image (2.6% + 15¢) used in the math without its fixed part
+    for sl in post.slides:
+        t = img_text(post, sl) or ""
+        for mm in RATE_RE.finditer(t):
+            pct = mm.group(1)
+            uses = [m for m in post.pkg.get("math", []) if re.search(r"(?<![\d.])0?\.?0?" + re.escape(str(float(pct) / 100)).lstrip("0") + r"\b|\b" + re.escape(pct) + r"\s*/\s*100", m.get("expr", ""))]
+            for m in uses:
+                if "+" not in m.get("expr", "") and not re.search(r"(?i)percentage part only", t):
+                    r = ok(False, f"{m['expr']} drops the fixed part of {mm.group(0)}")
+                    r.where = sl.where
+                    rows.append(r)
+    return rows or na("no fee computed from a published rate")

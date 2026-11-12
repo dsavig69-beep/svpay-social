@@ -349,6 +349,26 @@
     "tier": "Script"
    }
   },
+  "QF04": {
+   "why": "ruling 3: the master goes to LinkedIn when it is under 5 MB, so the LinkedIn cap has no 10% headroom",
+   "before": {
+    "test": "Per-network size cap with 10% headroom: file bytes against network caps of 8 MB (Instagram, Threads), 5 MB (LinkedIn) and 30 MB (Facebook). X and GBP are already covered by V-A04",
+    "pass": "bytes <= 0.9 x cap",
+    "weight": 5,
+    "gate": true,
+    "tier": "Script"
+   }
+  },
+  "QF05": {
+   "why": "merged F-GB02, F-GB03; the gate uses Google's hard minimum (250 px), as the script always did",
+   "before": {
+    "test": "GBP file floor and resolution: GBP file bytes and short side",
+    "pass": ">= 10 KB and short side >= 720 px. The 5 MB maximum is already covered by V-A04",
+    "weight": 3,
+    "gate": true,
+    "tier": "Script"
+   }
+  },
   "F-IG02": {
    "why": "ruling 3",
    "before": {
