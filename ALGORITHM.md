@@ -100,6 +100,18 @@ card-fees post through. That post fails 11 gates (`checks/labels/2026-11-11-tax-
 - At most 2 variables per post, at most 4 options each; Thompson sampling picks the next option.
 - Learning can move a soft check's weight by 1 step a month at most. It never touches a gate or a copy rule.
 
+## Lessons from the first runs (Nov 11, 2026)
+
+The first post under the algorithm (FTC v. Riverside Payments) went through two rewrites and three rounds of fresh reviewers and was skipped: the readers split 2 to 1 on "written by a person", and one gate (CR06) still failed. What every reviewer said, and the rule it becomes:
+
+- **Voice by account.** LinkedIn is the founder's own profile: first person, and it says he started SVPay. Facebook, Instagram, X, Threads and Google Business Profile are SVPay's accounts: write them as SVPay ("we"), not as the founder. Pasting "I started SVPay, which builds..." into every network read as a template to every reader.
+- **One real detail beats polish.** The readers who said "machine-written" all pointed to the same gap: nothing only Derrik or SVPay could say. Each post needs one true, specific thing from SVPay itself (a number from the pricing page, how SVPay handles the issue in the story, or a founder fact from his facts log). Never invent one; when none exists, pick a story where SVPay has a real angle.
+- **Court cases:** every network that names a lawsuit states where it stands (for example "filed with a proposed settlement that still needs a judge"), not only the first comment (CR06). Pair a denial with that status.
+- **Attribute every allegation** ("the FTC says", "the complaint says") and keep the source's own hedges ("about", "approximately") on every number.
+- **No set-piece closers or bridge lines** ("This case shows why.", "Those answers take a few minutes..."), no "my advice is simple", no closing question repeated across networks.
+- **3D:** only extruded numerals have rendered clean so far. Arrows, question marks and coins showed seams and stair-step bevels (V-I07). Data marks are flat 2D. Every glyph is extruded on its own with even gaps.
+- **Text on slides:** measure contrast on the rendered pixels and check letter spacing in crops before review; the script tier does not measure either yet.
+
 ## Known limits (Nov 11, 2026)
 
 - The research calls for reviewers from at least 2 independent setups. Today the judge and the panel share one setup, kept independent by giving each a fresh start with no view of the drafting. Add a second, independent reviewer when one is available.
