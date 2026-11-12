@@ -188,10 +188,31 @@ async function coin(R, D, bodyMat, dollarMat, faces = 2) {
 // Numerals: a deep extrusion (chunky, like the Nov 4 deck) with a narrow bevel and tracking 0.16, so no glyph cuts
 // through itself or its neighbour (V-I07); each number is scaled to a set width so it never crowds the text.
 const gloss = () => jelly(HOLO, { roughness: 0.05, clearcoatRoughness: 0.02, iridescence: 0.6 });   // the Nov 4 jelly, a touch shinier
+// Each glyph is extruded on its own and placed with the same gap between neighbouring glyph boxes, so the spacing
+// reads even ("5" and "0" were crowded with font kerning); baselines stay shared, and the gradient runs across the word.
 async function fitNumerals(str, width, ry = 0) {
-  const t = await text3D(str, { size: 4, depth: P('dp', 2.3), bevel: P('bv', 0.4), bevelRatio: P('br', 0.18), track: P('tr', 0.17), front: gloss(), side: gloss() });
-  t.geometry.computeBoundingBox(); const b = t.geometry.boundingBox; const k = width / (b.max.x - b.min.x);
-  t.scale.setScalar(k); t.rotation.y = ry; return t;
+  const f = await font(); const depth = P('dp', 2.3), bevel = P('bv', 0.4), ratio = P('br', 0.18), gap = P('gap', 13);   // font units (size 100)
+  const geos = []; let x = 0;
+  for (const ch of str) {
+    const path = f.getPath(ch, 0, 0, 100); const sp = new THREE.ShapePath();
+    for (const c of path.commands) {
+      if (c.type === 'M') sp.moveTo(c.x, -c.y); else if (c.type === 'L') sp.lineTo(c.x, -c.y);
+      else if (c.type === 'Q') sp.quadraticCurveTo(c.x1, -c.y1, c.x, -c.y); else if (c.type === 'C') sp.bezierCurveTo(c.x1, -c.y1, c.x2, -c.y2, c.x, -c.y);
+    }
+    const g = new THREE.ExtrudeGeometry(sp.toShapes(false), { depth: depth * 25, bevelEnabled: true, bevelThickness: bevel * 25, bevelSize: bevel * ratio * 25, bevelSegments: 8, curveSegments: 32 });
+    g.computeBoundingBox(); const bb = g.boundingBox; g.translate(x - bb.min.x, 0, 0); x += (bb.max.x - bb.min.x) + gap; geos.push(g);
+  }
+  const all = new THREE.Box3(); geos.forEach(g => { g.computeBoundingBox(); all.union(g.boundingBox); });
+  const W0 = all.max.x - all.min.x, H0 = all.max.y - all.min.y, k = width / W0;
+  const grp = new THREE.Group(); const mat = gloss();
+  for (const g of geos) {
+    g.translate(-(all.min.x + all.max.x) / 2, -all.min.y, -(all.min.z + all.max.z) / 2);
+    const pos = g.attributes.position, uv = g.attributes.uv;
+    for (let i = 0; i < pos.count; i++) uv.setXY(i, (pos.getX(i) + W0 / 2) / W0, pos.getY(i) / H0);
+    uv.needsUpdate = true; g.computeVertexNormals();
+    const m = new THREE.Mesh(g, mat); m.castShadow = true; m.receiveShadow = true; grp.add(m);
+  }
+  grp.scale.setScalar(k); grp.rotation.y = ry; return grp;
 }
 function bounds(obj) {   // the object's box on the 1080x1350 slide, for checking text clearance
   scene.updateMatrixWorld(true); const b = new THREE.Box3().setFromObject(obj); const pts = [];
