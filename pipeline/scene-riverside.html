@@ -224,7 +224,7 @@ async function s2() {   // "paid more": a chunky jelly arrow rising to the right
 
 async function s4() {   // leased, not owned: two jelly bars from the floor, about $2,256 paid vs about $400 to buy
   await setupCamera(26, [0, 6, 40], [0, P('ly', 4.4), 0]);
-  const H = P('H', 8.4), bw = 2.3, bd = 2.0;
+  const H = P('H', 7.2), bw = 2.3, bd = 2.0;
   const bar = (h, mat, x) => { const g = new RoundedBoxGeometry(bw, h, bd, 6, 0.28); planarUV(g); const m = new THREE.Mesh(g, mat); m.position.set(x, h / 2, 0); m.castShadow = true; m.receiveShadow = true; scene.add(m); return m; };
   const tall = bar(H, jelly(['#ff1f7a', '#ff3d9e', '#d93cff'], { emissive: 0xff2f8f, emissiveIntensity: 0.16 }, ), P('xa', 1.9));
   const short = bar(H * 400 / 2256, jelly(['#2a5bff', '#4b46ff', '#7a3dff']), P('xb', 5.2));
@@ -246,8 +246,8 @@ async function s5() {   // a jelly question mark, right of the glass card (never
 
 async function s6() {   // one SVPay coin, top right, beside the headline
   await setupCamera(26, [0, 4, 40], [0, 4.6, 0]);
-  const c = await coin(P('R', 2.15), 0.56, jelly(HOLO, { transmission: 0.35 }), pearl());
-  c.rotation.set(P('rx', -0.12), P('ry', -0.42), P('rz', 0.1)); c.position.set(P('tx', 3.75), P('ty', 7.7), 0); scene.add(c);
+  const c = await coin(P('R', 1.75), 0.5, jelly(HOLO, { transmission: 0.35 }), pearl());
+  c.rotation.set(P('rx', -0.12), P('ry', -0.42), P('rz', 0.1)); c.position.set(P('tx', 3.75), P('ty', 8.6), 0); scene.add(c);
   aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
   window.__info = { box: bounds(c) };
 }
