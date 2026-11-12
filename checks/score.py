@@ -2,7 +2,12 @@
 """Combine the script report, the judge's verdicts and the panel's verdicts into the publish decision.
 
 Usage:
-    python3 checks/score.py script_report.json judge.json panel.json [--out decision.json]
+    python3 checks/score.py script_report.json judge.json panel.json [--out decision.json] [--light]
+
+--light is the daily process the founder chose on Nov 12, 2026 (ALGORITHM.md, "The light process"): one fresh reviewer
+instead of two judges and a panel of three. Facts, legal claims, copy rules and every script gate still block. The taste
+gates in TASTE only lower the score, a reviewer who would flag the post as AI-written sends it to the founder (HOLD),
+reference comparisons are not run, and only a post below LIGHT_REWRITE_BELOW or a blocking failure is rewritten.
 
 judge.json: [{"id": "W-A20", "where": "linkedin", "verdict": "pass"|"fail"|"na", "reason": "...", "quote": "..."}, ...]
     One entry per judge-tier criterion that applies (see criteria.json, tier "Judge"). The reason comes first, then the
@@ -25,6 +30,11 @@ WEIGHTS = {"writing": 0.30, "audience_value": 0.25, "visuals": 0.20, "platform_f
 MINIMUMS = {"writing": 0.85, "audience_value": 0.75, "visuals": 0.80, "platform_fit": 0.75, "brand": 0.80, "compliance": 0.95}
 PUBLISH_AT = 0.85
 HOLD_AT = 0.75
+# The light process (founder, Nov 12, 2026): these taste gates score but never block. SG-H05 (would a daily ChatGPT
+# user flag it as AI-written?) goes to the founder instead: HOLD, never a rewrite loop.
+TASTE = {"V-L07", "V-I07"}
+FOUNDER_DECIDES = {"SG-H05"}
+LIGHT_REWRITE_BELOW = 0.70
 
 
 def verdicts(script, judge, panel):
@@ -55,8 +65,10 @@ def verdicts(script, judge, panel):
     return v
 
 
-def decide(script, judge, panel):
+def decide(script, judge, panel, light=False):
     v = verdicts(script, judge, panel)
+    if light:
+        return decide_light(v, panel)
     # A panel gate question carried 2 of 3 is a split, not a failure: it HOLDs (ALGORITHM.md). Only a panel gate
     # carried by fewer than 2 of 3, or any script or judge gate, fails.
     panel_ids = {p["id"] for p in panel.get("per_check", [])}
@@ -122,17 +134,61 @@ def decide(script, judge, panel):
                           "test": CRITERIA[cid]["test"], "why": x["why"][:3]} for cid, x in worst]}
 
 
+def decide_light(v, panel):
+    soft = TASTE | FOUNDER_DECIDES
+    gate = lambda cid: CRITERIA[cid].get("gate") and cid not in soft
+    gates = sorted(cid for cid, x in v.items() if gate(cid) and x["credit"] < 1)
+    not_ai = panel.get("not_ai_votes")
+    judges = panel.get("judges") or 1
+    ai_flag = (not_ai is not None and not_ai * 2 < judges) or v.get("SG-H05", {}).get("credit", 1) < 0.5
+    cats = {}
+    for cat in list(WEIGHTS) + ["compliance"]:
+        items = [(cid, x) for cid, x in v.items() if CRITERIA[cid].get("category") == cat and not gate(cid)]
+        tw = sum(int(CRITERIA[cid]["weight"]) for cid, _ in items)
+        cats[cat] = round(sum(int(CRITERIA[cid]["weight"]) * x["credit"] for cid, x in items) / tw, 3) if tw else None
+    missing = [c for c in WEIGHTS if cats.get(c) is None]
+    q = None if missing else round(math.exp(sum(WEIGHTS[c] * math.log(max(cats[c], 1e-6)) for c in WEIGHTS)), 3)
+    below = {c: cats[c] for c in MINIMUMS if cats.get(c) is not None and cats[c] < MINIMUMS[c]}
+    if gates:
+        decision, why = "REWRITE", "gate failed: " + ", ".join(gates)
+    elif "compliance" in below:
+        decision, why = "REWRITE", f"compliance {below['compliance']} below {MINIMUMS['compliance']}"
+    elif missing:
+        decision, why = "HOLD", "not every category was scored: " + ", ".join(missing)
+    elif q < LIGHT_REWRITE_BELOW:
+        decision, why = "REWRITE", f"Q {q} below {LIGHT_REWRITE_BELOW}"
+    elif below or q < PUBLISH_AT or ai_flag:
+        decision = "HOLD"
+        parts = []
+        if below:
+            parts.append("below a minimum: " + ", ".join(f"{c} {s}" for c, s in below.items()))
+        if q < PUBLISH_AT:
+            parts.append(f"Q {q} below {PUBLISH_AT}")
+        if ai_flag:
+            parts.append("the reviewer would flag it as AI-written (SG-H05)")
+        why = "for the founder: " + "; ".join(parts)
+    else:
+        decision, why = "PUBLISH", f"no blocking gate, every minimum met, Q {q}, the reviewer read it as a person"
+    worst = sorted(((cid, x) for cid, x in v.items() if x["credit"] < 1),
+                   key=lambda t: (not gate(t[0]), -int(CRITERIA[t[0]]["weight"])))[:30]
+    return {"decision": decision, "why": why, "Q": q, "categories": cats, "minimums": MINIMUMS, "process": "light",
+            "gates_failed": gates, "criteria_scored": len(v),
+            "fix_list": [{"id": cid, "gate": bool(gate(cid)), "weight": CRITERIA[cid]["weight"],
+                          "test": CRITERIA[cid]["test"], "why": x["why"][:3]} for cid, x in worst]}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("script")
     ap.add_argument("judge")
     ap.add_argument("panel")
     ap.add_argument("--out")
+    ap.add_argument("--light", action="store_true")
     a = ap.parse_args()
     script = json.load(open(a.script, encoding="utf-8"))
     judge = json.load(open(a.judge, encoding="utf-8")) if os.path.exists(a.judge) else []
     panel = json.load(open(a.panel, encoding="utf-8")) if os.path.exists(a.panel) else {}
-    out = decide(script, judge, panel)
+    out = decide(script, judge, panel, light=a.light)
     txt = json.dumps(out, indent=1, ensure_ascii=False)
     if a.out:
         open(a.out, "w", encoding="utf-8").write(txt)

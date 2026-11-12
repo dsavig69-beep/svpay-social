@@ -43,6 +43,27 @@ post through. That post fails 11 gates (`checks/labels/2026-11-11-tax-tips-REJEC
 - **Minimums:** Writing 0.85, Brand 0.80, Visuals 0.80, Platform fit 0.75, Audience value 0.75, compliance checks that are not gates 0.95.
 - **Compliance** can block a post but never adds points.
 
+## The light process (founder, Nov 12, 2026): every daily run uses this
+
+On Nov 12 the full process (two judges, a panel of three, up to two rewrites, 15 fresh reviewers in the worst case)
+cost too much and still skipped the post. The founder: "With this kind of struggle, we are never going to publish any
+posts, ever." Daily runs now use this; the full process above stays for a new template or a new post type.
+
+| Step | What happens |
+|---|---|
+| Write | 3 hooks, one candidate. Script checks (`check_post.py`) until 0 gates fail. |
+| Render | As above, with the passes. |
+| One review | ONE fresh reviewer that did not write the post reads `python3 checks/judge_batches.py review` (the judge and panel checks in one list), the slides, the facts log and the two labeled posts. It answers every check (reason first, then pass, fail or na, quoting the words) and, as one reader, `reads_as_person` and `original`. No reference comparisons. It returns two files: the judge list and one panel answer. `merge.py judge review-judge.json --out judge.json`; `merge.py panel review-panel.json --out panel.json`. |
+| Score | `python3 checks/score.py script.json judge.json panel.json --light --out decision.json` |
+| Fix | REWRITE means one fix pass on exactly what blocked, then the script checks and the score again with the SAME review answers updated only for the fixed checks (no new reviewer). Still REWRITE: skip the slot. |
+
+What blocks and what only scores:
+- **Blocks (REWRITE):** every script gate (facts log, sources, law status, copy rules, private names, contrast, files, links), every judge or panel gate on facts, legal claims and compliance (for example W-H05 hook claim true, SC16 nothing simulated shown as real, W-G10 no patient detail, CO11 nobody would think SVPay is a bank), and the compliance category below 0.95.
+- **Scores only:** the taste gates V-L07 (cold "I want to swipe" score) and V-I07 (3D clipping), the "original" vote, every non-gate check.
+- **Goes to the founder (HOLD as a Metricool draft):** the reviewer would flag it as AI-written (SG-H05), Q 0.70-0.85, or a category minimum missed. He publishes it with one tap or tells Claude "publish it".
+- **Publishes on its own:** no blocking gate, every minimum met, Q 0.85 or more, and the reviewer read it as a person.
+- **Rewrites:** Q below 0.70, or a blocking gate. One fix pass at most.
+
 ## The package (`post.json`)
 
 ```json
