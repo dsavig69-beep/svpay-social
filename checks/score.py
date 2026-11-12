@@ -57,11 +57,19 @@ def verdicts(script, judge, panel):
 
 def decide(script, judge, panel):
     v = verdicts(script, judge, panel)
-    gates = sorted(cid for cid, x in v.items() if CRITERIA[cid].get("gate") and x["credit"] < 1)
-    # SG-H05: the panel's "not AI" verdict is a gate (at least 2 of 3).
+    # A panel gate question carried 2 of 3 is a split, not a failure: it HOLDs (ALGORITHM.md). Only a panel gate
+    # carried by fewer than 2 of 3, or any script or judge gate, fails.
+    panel_ids = {p["id"] for p in panel.get("per_check", [])}
+    split_gates = sorted(cid for cid, x in v.items() if CRITERIA[cid].get("gate") and cid in panel_ids
+                         and 0.66 <= x["credit"] < 1 and all(w.startswith("panel") for w in x["why"]))
+    gates = sorted(cid for cid, x in v.items() if CRITERIA[cid].get("gate") and x["credit"] < 1 and cid not in split_gates)
+    # SG-H05: the panel's "not AI" verdict is a gate (at least 2 of 3), decided by the votes.
     not_ai = panel.get("not_ai_votes")
-    if not_ai is not None and not_ai < 2:
-        gates.append("SG-H05")
+    if not_ai is not None:
+        gates = [g for g in gates if g != "SG-H05"]
+        split_gates = [g for g in split_gates if g != "SG-H05"]
+        if not_ai < 2:
+            gates.append("SG-H05")
     cats = {}
     for cat in list(WEIGHTS) + ["compliance"]:
         items = [(cid, x) for cid, x in v.items() if CRITERIA[cid].get("category") == cat and not CRITERIA[cid].get("gate")]
@@ -77,7 +85,7 @@ def decide(script, judge, panel):
     below = {c: cats[c] for c in MINIMUMS if cats.get(c) is not None and cats[c] < MINIMUMS[c]}
     near = {c: s for c, s in below.items() if MINIMUMS[c] - s <= 0.05}
     refs = panel.get("refs_won_or_tied")
-    split = not_ai == 2 or panel.get("original_votes") == 2
+    split = not_ai == 2 or panel.get("original_votes") == 2 or bool(split_gates)
 
     if gates:
         decision = "REWRITE"
@@ -99,7 +107,7 @@ def decide(script, judge, panel):
         if q < PUBLISH_AT:
             parts.append(f"Q {q} below {PUBLISH_AT}")
         if split:
-            parts.append("2-1 panel split")
+            parts.append("2-1 panel split" + (f" on {', '.join(split_gates)}" if split_gates else ""))
         if refs is not None and refs < 3:
             parts.append(f"won or tied {refs} of 5 reference posts")
         why = "; ".join(parts)
