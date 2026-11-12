@@ -261,8 +261,8 @@ class Slide:
         self._c = {}
 
     def release(self):
-        """Drop the full-size images; keep the small parsed files (manifest, scene)."""
-        keep = {k: v for k, v in self._c.items() if k in ("man", "scene")}
+        """Drop the full-size images; keep the small parsed files (manifest, scene) and the pass match."""
+        keep = {k: v for k, v in self._c.items() if k in ("man", "scene", "match")}
         self._c = keep
 
     # ---- files
@@ -291,10 +291,36 @@ class Slide:
     def scene(self):
         if "scene" not in self._c:
             p = self.p3("scene.json")
-            self._c["scene"] = json.load(open(p, encoding="utf-8")) if p and os.path.exists(p) else None
+            self._c["scene"] = json.load(open(p, encoding="utf-8")) if p and os.path.exists(p) and self.passes_match else None
         return self._c["scene"]
 
+    @property
+    def passes_match(self):
+        """True when the passes were rendered from this very image: outside the text, the text-free background must
+        equal the final image. A re-render that does not reproduce the slide (a 3D knob that was never recorded, a
+        changed scene) would otherwise be measured against the wrong pixels, so its passes count as missing."""
+        if "match" not in self._c:
+            p = self._p("bg.png") if os.path.exists(self._p("bg.png")) else self._p("bg.jpg")
+            mp = self._p("mask.png")
+            if not os.path.exists(p) or not os.path.exists(mp):
+                self._c["match"] = True          # nothing to compare: has() reports the missing passes
+            else:
+                from scipy import ndimage as ndi
+                f = resize_area(self.final, self.final.shape[1] // 4, self.final.shape[0] // 4).astype(np.int16)
+                b = load_rgb(p)
+                if b.shape != self.final.shape:
+                    self._c["match"] = False
+                else:
+                    b = resize_area(b, f.shape[1], f.shape[0]).astype(np.int16)
+                    t = np.asarray(Image.open(mp).convert("L").resize((f.shape[1], f.shape[0]), Image.BOX)) < 250
+                    out = ~ndi.binary_dilation(t, iterations=3)
+                    d = np.abs(f - b).max(-1)[out]
+                    self._c["match"] = bool(d.size == 0 or (d.mean() <= 4 and (d > 20).mean() <= 0.01))
+        return self._c["match"]
+
     def has(self, *names):
+        if any(n != "manifest" for n in names) and not self.passes_match:
+            return False
         for n in names:
             if n in ("bg", "mask", "unclipped"):
                 if not os.path.exists(self._p(n + ".png")) and not (n == "bg" and os.path.exists(self._p("bg.jpg"))):
@@ -338,6 +364,8 @@ class Slide:
 
     def img(self, name):
         key = "img:" + name
+        if not self.passes_match:
+            return None
         if key not in self._c:
             p = self._p(name + ".png") if name in ("bg", "mask", "unclipped") else self.p3(name + ".png")
             if name == "bg" and not os.path.exists(p):
@@ -347,6 +375,8 @@ class Slide:
 
     def raw(self, name):
         key = "raw:" + name
+        if not self.passes_match:
+            return None
         if key not in self._c:
             p = self.p3(name + ".png")
             self._c[key] = np.asarray(Image.open(p)) if p and os.path.exists(p) else None

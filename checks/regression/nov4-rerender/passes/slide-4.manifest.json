@@ -1,0 +1,1954 @@
+{
+ "size": [
+  2160,
+  2700
+ ],
+ "text": [
+  {
+   "id": 0,
+   "mids": [
+    "0"
+   ],
+   "role": "label",
+   "text": "WHAT IT MEANS FOR YOU",
+   "lines": [
+    {
+     "text": "WHAT IT MEANS FOR YOU",
+     "x": 198,
+     "y": 152,
+     "w": 695.3125,
+     "h": 52,
+     "chars": [
+      [
+       "W",
+       198,
+       152,
+       51.1,
+       52
+      ],
+      [
+       "H",
+       249,
+       152,
+       39,
+       52
+      ],
+      [
+       "A",
+       288,
+       152,
+       34.3,
+       52
+      ],
+      [
+       "T",
+       322.3,
+       152,
+       35.3,
+       52
+      ],
+      [
+       "I",
+       374.8,
+       152,
+       18.4,
+       52
+      ],
+      [
+       "T",
+       393.1,
+       152,
+       35.2,
+       52
+      ],
+      [
+       "M",
+       445.6,
+       152,
+       46.8,
+       52
+      ],
+      [
+       "E",
+       492.3,
+       152,
+       32.8,
+       52
+      ],
+      [
+       "A",
+       525.1,
+       152,
+       38.2,
+       52
+      ],
+      [
+       "N",
+       563.3,
+       152,
+       39.6,
+       52
+      ],
+      [
+       "S",
+       602.8,
+       152,
+       34.8,
+       52
+      ],
+      [
+       "F",
+       654.9,
+       152,
+       32.1,
+       52
+      ],
+      [
+       "O",
+       686.9,
+       152,
+       40,
+       52
+      ],
+      [
+       "R",
+       726.9,
+       152,
+       34.9,
+       52
+      ],
+      [
+       "Y",
+       779,
+       152,
+       35.8,
+       52
+      ],
+      [
+       "O",
+       814.8,
+       152,
+       40,
+       52
+      ],
+      [
+       "U",
+       854.8,
+       152,
+       38.6,
+       52
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 198,
+    "y": 152,
+    "w": 695.3125,
+    "h": 52
+   },
+   "container": {
+    "x": 144,
+    "y": 156,
+    "w": 749.3125,
+    "h": 44
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 44,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "0",
+     "text": "What it means for you",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 6.16,
+     "line_height": 44,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "uppercase",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 1,
+   "mids": [
+    "1",
+    "2"
+   ],
+   "role": "counter",
+   "text": "4 / 6",
+   "lines": [
+    {
+     "text": "4 / 6",
+     "x": 1912.6875,
+     "y": 152,
+     "w": 103.3125,
+     "h": 52,
+     "chars": [
+      [
+       "4",
+       1912.7,
+       152,
+       31.8,
+       52
+      ],
+      [
+       "/",
+       1955.8,
+       152,
+       18.4,
+       52
+      ],
+      [
+       "6",
+       1985.6,
+       152,
+       30.4,
+       52
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1912.6875,
+    "y": 152,
+    "w": 103.3125,
+    "h": 52
+   },
+   "container": {
+    "x": 1912.6875,
+    "y": 156,
+    "w": 103.3125,
+    "h": 44
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 44,
+   "family": "\"Inter Tight\"",
+   "weight": 700,
+   "color": "rgb(95, 106, 136)",
+   "runs": [
+    {
+     "mid": "1",
+     "text": "/ 6",
+     "family": "\"Inter Tight\"",
+     "weight": 700,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 2.64,
+     "line_height": 44,
+     "color": "rgb(95, 106, 136)",
+     "fill": "rgb(95, 106, 136)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "2",
+     "text": "4",
+     "family": "\"Inter Tight\"",
+     "weight": 900,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 2.64,
+     "line_height": 44,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 2,
+   "mids": [
+    "3"
+   ],
+   "role": "body",
+   "text": "Now run it on your shop",
+   "lines": [
+    {
+     "text": "Now run it on your shop",
+     "x": 144,
+     "y": 320,
+     "w": 907.53125,
+     "h": 140,
+     "chars": [
+      [
+       "N",
+       144,
+       320,
+       56.2,
+       140
+      ],
+      [
+       "o",
+       200.2,
+       320,
+       43.7,
+       140
+      ],
+      [
+       "w",
+       243.8,
+       320,
+       64.7,
+       140
+      ],
+      [
+       "r",
+       325.8,
+       320,
+       38.7,
+       140
+      ],
+      [
+       "u",
+       364.4,
+       320,
+       53.8,
+       140
+      ],
+      [
+       "n",
+       418.2,
+       320,
+       55.2,
+       140
+      ],
+      [
+       "i",
+       490.7,
+       320,
+       30.1,
+       140
+      ],
+      [
+       "t",
+       520.7,
+       320,
+       28.3,
+       140
+      ],
+      [
+       "o",
+       566.3,
+       320,
+       43.7,
+       140
+      ],
+      [
+       "n",
+       609.9,
+       320,
+       55.2,
+       140
+      ],
+      [
+       "y",
+       682.4,
+       320,
+       42.8,
+       140
+      ],
+      [
+       "o",
+       725.1,
+       320,
+       43.7,
+       140
+      ],
+      [
+       "u",
+       768.8,
+       320,
+       53.8,
+       140
+      ],
+      [
+       "r",
+       822.6,
+       320,
+       38.7,
+       140
+      ],
+      [
+       "s",
+       878.5,
+       320,
+       31.6,
+       140
+      ],
+      [
+       "h",
+       910,
+       320,
+       50.3,
+       140
+      ],
+      [
+       "o",
+       960.3,
+       320,
+       43.7,
+       140
+      ],
+      [
+       "p",
+       1004,
+       320,
+       47.5,
+       140
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 320,
+    "w": 907.53125,
+    "h": 140
+   },
+   "container": {
+    "x": 144,
+    "y": 320,
+    "w": 1880,
+    "h": 140
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 108,
+   "family": "\"Instrument Serif\"",
+   "weight": 400,
+   "color": "rgb(35, 80, 255)",
+   "runs": [
+    {
+     "mid": "3",
+     "text": "Now run it on your shop",
+     "family": "\"Instrument Serif\"",
+     "weight": 400,
+     "style": "italic",
+     "size": 108,
+     "letter_spacing": -1.08,
+     "line_height": null,
+     "color": "rgb(35, 80, 255)",
+     "fill": "rgb(35, 80, 255)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 3,
+   "mids": [
+    "4"
+   ],
+   "role": "headline",
+   "text": "On $500,000 a year in card sales, a 2.6% rate costs",
+   "lines": [
+    {
+     "text": "On $500,000 a year in card",
+     "x": 144,
+     "y": 476,
+     "w": 1530.65625,
+     "h": 154,
+     "chars": [
+      [
+       "O",
+       144,
+       476,
+       92.8,
+       154
+      ],
+      [
+       "n",
+       236.8,
+       476,
+       73.4,
+       154
+      ],
+      [
+       "$",
+       329.7,
+       476,
+       76.5,
+       154
+      ],
+      [
+       "5",
+       406.2,
+       476,
+       76.6,
+       154
+      ],
+      [
+       "0",
+       482.7,
+       476,
+       82.7,
+       154
+      ],
+      [
+       "0",
+       565.4,
+       476,
+       78.8,
+       154
+      ],
+      [
+       ",",
+       644.2,
+       476,
+       35.6,
+       154
+      ],
+      [
+       "0",
+       679.7,
+       476,
+       82.7,
+       154
+      ],
+      [
+       "0",
+       762.4,
+       476,
+       82.8,
+       154
+      ],
+      [
+       "0",
+       845.1,
+       476,
+       82.8,
+       154
+      ],
+      [
+       "a",
+       947.3,
+       476,
+       67.5,
+       154
+      ],
+      [
+       "y",
+       1034.3,
+       476,
+       66,
+       154
+      ],
+      [
+       "e",
+       1100.3,
+       476,
+       68.9,
+       154
+      ],
+      [
+       "a",
+       1169.2,
+       476,
+       67.5,
+       154
+      ],
+      [
+       "r",
+       1236.6,
+       476,
+       45.9,
+       154
+      ],
+      [
+       "i",
+       1302,
+       476,
+       28.3,
+       154
+      ],
+      [
+       "n",
+       1330.3,
+       476,
+       73.4,
+       154
+      ],
+      [
+       "c",
+       1423.2,
+       476,
+       68.2,
+       154
+      ],
+      [
+       "a",
+       1491.4,
+       476,
+       67.5,
+       154
+      ],
+      [
+       "r",
+       1558.8,
+       476,
+       42.3,
+       154
+      ],
+      [
+       "d",
+       1601.1,
+       476,
+       73.6,
+       154
+      ]
+     ]
+    },
+    {
+     "text": "sales, a 2.6% rate costs",
+     "x": 144,
+     "y": 609.09375,
+     "w": 1298.5625,
+     "h": 154,
+     "chars": [
+      [
+       "s",
+       144,
+       609.1,
+       65.5,
+       154
+      ],
+      [
+       "a",
+       209.5,
+       609.1,
+       67.5,
+       154
+      ],
+      [
+       "l",
+       277,
+       609.1,
+       28.3,
+       154
+      ],
+      [
+       "e",
+       305.2,
+       609.1,
+       68.9,
+       154
+      ],
+      [
+       "s",
+       374.1,
+       609.1,
+       65.6,
+       154
+      ],
+      [
+       ",",
+       439.7,
+       609.1,
+       33.7,
+       154
+      ],
+      [
+       "a",
+       492.8,
+       609.1,
+       67.5,
+       154
+      ],
+      [
+       "2",
+       579.8,
+       609.1,
+       73.7,
+       154
+      ],
+      [
+       ".",
+       653.4,
+       609.1,
+       33.5,
+       154
+      ],
+      [
+       "6",
+       686.9,
+       609.1,
+       78.8,
+       154
+      ],
+      [
+       "%",
+       765.7,
+       609.1,
+       103.9,
+       154
+      ],
+      [
+       "r",
+       889.1,
+       609.1,
+       43.3,
+       154
+      ],
+      [
+       "a",
+       932.3,
+       609.1,
+       67.5,
+       154
+      ],
+      [
+       "t",
+       999.8,
+       609.1,
+       42,
+       154
+      ],
+      [
+       "e",
+       1041.8,
+       609.1,
+       68.9,
+       154
+      ],
+      [
+       "c",
+       1130.2,
+       609.1,
+       68.2,
+       154
+      ],
+      [
+       "o",
+       1198.4,
+       609.1,
+       71.3,
+       154
+      ],
+      [
+       "s",
+       1269.6,
+       609.1,
+       65.6,
+       154
+      ],
+      [
+       "t",
+       1335.1,
+       609.1,
+       41.9,
+       154
+      ],
+      [
+       "s",
+       1377,
+       609.1,
+       65.6,
+       154
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 476,
+    "w": 1530.65625,
+    "h": 287.09375
+   },
+   "container": {
+    "x": 144,
+    "y": 488,
+    "w": 1880,
+    "h": 266.1875
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 128,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "4",
+     "text": "On $500,000 a year in cardsales, a 2.6% rate costs",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 128,
+     "letter_spacing": -4.48,
+     "line_height": 133.12,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 4,
+   "mids": [
+    "5"
+   ],
+   "role": "headline",
+   "text": "every year.",
+   "lines": [
+    {
+     "text": "every year.",
+     "x": 144,
+     "y": 1784,
+     "w": 911.53125,
+     "h": 232,
+     "chars": [
+      [
+       "e",
+       144,
+       1784,
+       99.1,
+       232
+      ],
+      [
+       "v",
+       243.1,
+       1784,
+       98,
+       232
+      ],
+      [
+       "e",
+       341.1,
+       1784,
+       102.4,
+       232
+      ],
+      [
+       "r",
+       443.4,
+       1784,
+       71,
+       232
+      ],
+      [
+       "y",
+       514.4,
+       1784,
+       101.3,
+       232
+      ],
+      [
+       "y",
+       644,
+       1784,
+       98,
+       232
+      ],
+      [
+       "e",
+       742,
+       1784,
+       102.4,
+       232
+      ],
+      [
+       "a",
+       844.3,
+       1784,
+       100.3,
+       232
+      ],
+      [
+       "r",
+       944.6,
+       1784,
+       55.8,
+       232
+      ],
+      [
+       ".",
+       1000.4,
+       1784,
+       55.2,
+       232
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 1784,
+    "w": 911.53125,
+    "h": 232
+   },
+   "container": {
+    "x": 144,
+    "y": 1810,
+    "w": 911.53125,
+    "h": 180.46875
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 192,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "5",
+     "text": "every year.",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 192,
+     "letter_spacing": -7.68,
+     "line_height": 180.48,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 5,
+   "mids": [
+    "6"
+   ],
+   "role": "label",
+   "text": "THAT COULD BE",
+   "lines": [
+    {
+     "text": "THAT COULD BE",
+     "x": 144,
+     "y": 2142,
+     "w": 392.9375,
+     "h": 48,
+     "chars": [
+      [
+       "T",
+       144,
+       2142,
+       32,
+       48
+      ],
+      [
+       "H",
+       176,
+       2142,
+       35.4,
+       48
+      ],
+      [
+       "A",
+       211.4,
+       2142,
+       31.3,
+       48
+      ],
+      [
+       "T",
+       242.6,
+       2142,
+       32,
+       48
+      ],
+      [
+       "C",
+       290.3,
+       2142,
+       35.1,
+       48
+      ],
+      [
+       "O",
+       325.4,
+       2142,
+       36.4,
+       48
+      ],
+      [
+       "U",
+       361.7,
+       2142,
+       35.1,
+       48
+      ],
+      [
+       "L",
+       396.8,
+       2142,
+       28.3,
+       48
+      ],
+      [
+       "D",
+       425,
+       2142,
+       34.5,
+       48
+      ],
+      [
+       "B",
+       475.1,
+       2142,
+       32,
+       48
+      ],
+      [
+       "E",
+       507.1,
+       2142,
+       29.8,
+       48
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 2142,
+    "w": 392.9375,
+    "h": 48
+   },
+   "container": {
+    "x": 144,
+    "y": 2146,
+    "w": 392.9375,
+    "h": 40
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 40,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(95, 106, 136)",
+   "runs": [
+    {
+     "mid": "6",
+     "text": "That could be",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 40,
+     "letter_spacing": 5.6,
+     "line_height": 40,
+     "color": "rgb(95, 106, 136)",
+     "fill": "rgb(95, 106, 136)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "uppercase",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 6,
+   "mids": [
+    "7"
+   ],
+   "role": "cta",
+   "text": "A cook’s raise",
+   "lines": [
+    {
+     "text": "A cook’s raise",
+     "x": 628.9375,
+     "y": 2136,
+     "w": 323.375,
+     "h": 58,
+     "chars": [
+      [
+       "A",
+       628.9,
+       2136,
+       34.9,
+       58
+      ],
+      [
+       "c",
+       675.9,
+       2136,
+       28,
+       58
+      ],
+      [
+       "o",
+       703.9,
+       2136,
+       29.3,
+       58
+      ],
+      [
+       "o",
+       733.1,
+       2136,
+       29.3,
+       58
+      ],
+      [
+       "k",
+       762.3,
+       2136,
+       27.4,
+       58
+      ],
+      [
+       "’",
+       789.7,
+       2136,
+       10.7,
+       58
+      ],
+      [
+       "s",
+       800.3,
+       2136,
+       26.4,
+       58
+      ],
+      [
+       "r",
+       838.8,
+       2136,
+       18.6,
+       58
+      ],
+      [
+       "a",
+       857.4,
+       2136,
+       27.6,
+       58
+      ],
+      [
+       "i",
+       885,
+       2136,
+       12.6,
+       58
+      ],
+      [
+       "s",
+       897.5,
+       2136,
+       26.4,
+       58
+      ],
+      [
+       "e",
+       923.9,
+       2136,
+       28.4,
+       58
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 628.9375,
+    "y": 2136,
+    "w": 323.375,
+    "h": 58
+   },
+   "container": {
+    "x": 572.9375,
+    "y": 2104,
+    "w": 435.375,
+    "h": 124
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 48,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "7",
+     "text": "A cook’s raise",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 48,
+     "letter_spacing": 0,
+     "line_height": 48,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 7,
+   "mids": [
+    "8"
+   ],
+   "role": "cta",
+   "text": "A new fryer",
+   "lines": [
+    {
+     "text": "A new fryer",
+     "x": 1088.3125,
+     "y": 2136,
+     "w": 269.6875,
+     "h": 58,
+     "chars": [
+      [
+       "A",
+       1088.3,
+       2136,
+       34.9,
+       58
+      ],
+      [
+       "n",
+       1135.3,
+       2136,
+       29.4,
+       58
+      ],
+      [
+       "e",
+       1164.7,
+       2136,
+       27.7,
+       58
+      ],
+      [
+       "w",
+       1192.3,
+       2136,
+       40.3,
+       58
+      ],
+      [
+       "f",
+       1244.7,
+       2136,
+       18.7,
+       58
+      ],
+      [
+       "r",
+       1263.4,
+       2136,
+       19.8,
+       58
+      ],
+      [
+       "y",
+       1283.2,
+       2136,
+       27.4,
+       58
+      ],
+      [
+       "e",
+       1310.5,
+       2136,
+       28.4,
+       58
+      ],
+      [
+       "r",
+       1338.9,
+       2136,
+       19.1,
+       58
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1088.3125,
+    "y": 2136,
+    "w": 269.6875,
+    "h": 58
+   },
+   "container": {
+    "x": 1032.3125,
+    "y": 2104,
+    "w": 381.6875,
+    "h": 124
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 48,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "8",
+     "text": "A new fryer",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 48,
+     "letter_spacing": 0,
+     "line_height": 48,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 8,
+   "mids": [
+    "9"
+   ],
+   "role": "cta",
+   "text": "A year of marketing",
+   "lines": [
+    {
+     "text": "A year of marketing",
+     "x": 1494,
+     "y": 2136,
+     "w": 456.03125,
+     "h": 58,
+     "chars": [
+      [
+       "A",
+       1494,
+       2136,
+       34.9,
+       58
+      ],
+      [
+       "y",
+       1541,
+       2136,
+       27.4,
+       58
+      ],
+      [
+       "e",
+       1568.3,
+       2136,
+       28.9,
+       58
+      ],
+      [
+       "a",
+       1597.2,
+       2136,
+       27.6,
+       58
+      ],
+      [
+       "r",
+       1624.8,
+       2136,
+       19.1,
+       58
+      ],
+      [
+       "o",
+       1655.9,
+       2136,
+       29.3,
+       58
+      ],
+      [
+       "f",
+       1685.2,
+       2136,
+       18.7,
+       58
+      ],
+      [
+       "m",
+       1715.9,
+       2136,
+       43.2,
+       58
+      ],
+      [
+       "a",
+       1759.1,
+       2136,
+       27.6,
+       58
+      ],
+      [
+       "r",
+       1786.7,
+       2136,
+       19.8,
+       58
+      ],
+      [
+       "k",
+       1806.5,
+       2136,
+       26.3,
+       58
+      ],
+      [
+       "e",
+       1832.7,
+       2136,
+       28.4,
+       58
+      ],
+      [
+       "t",
+       1861.1,
+       2136,
+       17,
+       58
+      ],
+      [
+       "i",
+       1878.1,
+       2136,
+       12.6,
+       58
+      ],
+      [
+       "n",
+       1890.6,
+       2136,
+       29.4,
+       58
+      ],
+      [
+       "g",
+       1920,
+       2136,
+       30,
+       58
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1494,
+    "y": 2136,
+    "w": 456.03125,
+    "h": 58
+   },
+   "container": {
+    "x": 1438,
+    "y": 2104,
+    "w": 568.03125,
+    "h": 124
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 48,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "9",
+     "text": "A year of marketing",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 48,
+     "letter_spacing": 0,
+     "line_height": 48,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 9,
+   "mids": [
+    "10"
+   ],
+   "role": "footer",
+   "text": "www.svpay.app",
+   "lines": [
+    {
+     "text": "www.svpay.app",
+     "x": 1664.15625,
+     "y": 2502,
+     "w": 351.84375,
+     "h": 58,
+     "chars": [
+      [
+       "w",
+       1664.2,
+       2502,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1702.9,
+       2502,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1741.7,
+       2502,
+       35.3,
+       58
+      ],
+      [
+       ".",
+       1776.9,
+       2502,
+       14.2,
+       58
+      ],
+      [
+       "s",
+       1791,
+       2502,
+       24.9,
+       58
+      ],
+      [
+       "v",
+       1815.9,
+       2502,
+       26.1,
+       58
+      ],
+      [
+       "p",
+       1842,
+       2502,
+       28.2,
+       58
+      ],
+      [
+       "a",
+       1870.2,
+       2502,
+       25.1,
+       58
+      ],
+      [
+       "y",
+       1895.2,
+       2502,
+       24.3,
+       58
+      ],
+      [
+       ".",
+       1919.5,
+       2502,
+       14.2,
+       58
+      ],
+      [
+       "a",
+       1933.6,
+       2502,
+       26,
+       58
+      ],
+      [
+       "p",
+       1959.6,
+       2502,
+       28.3,
+       58
+      ],
+      [
+       "p",
+       1987.8,
+       2502,
+       28.2,
+       58
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1664.15625,
+    "y": 2502,
+    "w": 351.84375,
+    "h": 58
+   },
+   "container": {
+    "x": 1664.15625,
+    "y": 2508,
+    "w": 351.84375,
+    "h": 48
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 48,
+   "family": "\"Inter Tight\"",
+   "weight": 700,
+   "color": "rgb(50, 61, 92)",
+   "runs": [
+    {
+     "mid": "10",
+     "text": "www.svpay.app",
+     "family": "\"Inter Tight\"",
+     "weight": 700,
+     "style": "normal",
+     "size": 48,
+     "letter_spacing": -0.48,
+     "line_height": 48,
+     "color": "rgb(50, 61, 92)",
+     "fill": "rgb(50, 61, 92)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  }
+ ],
+ "panels": [
+  {
+   "x": 572.9375,
+   "y": 2104,
+   "w": 435.375,
+   "h": 124,
+   "radius": 1998,
+   "backdrop": "blur(24px) saturate(1.6)",
+   "background": "rgba(255, 255, 255, 0.62)",
+   "border": "2px rgba(255, 255, 255, 0.95)",
+   "box_shadow": "rgba(255, 255, 255, 0.95) 0px 1px 0px 0px inset, rgba(40, 50, 150, 0.34) 0px 30px 70px -30px, rgba(40, 50, 150, 0.2) 0px 8px 24px -12px",
+   "cls": "pill glass"
+  },
+  {
+   "x": 1032.3125,
+   "y": 2104,
+   "w": 381.6875,
+   "h": 124,
+   "radius": 1998,
+   "backdrop": "blur(24px) saturate(1.6)",
+   "background": "rgba(255, 255, 255, 0.62)",
+   "border": "2px rgba(255, 255, 255, 0.95)",
+   "box_shadow": "rgba(255, 255, 255, 0.95) 0px 1px 0px 0px inset, rgba(40, 50, 150, 0.34) 0px 30px 70px -30px, rgba(40, 50, 150, 0.2) 0px 8px 24px -12px",
+   "cls": "pill glass"
+  },
+  {
+   "x": 1438,
+   "y": 2104,
+   "w": 568.03125,
+   "h": 124,
+   "radius": 1998,
+   "backdrop": "blur(24px) saturate(1.6)",
+   "background": "rgba(255, 255, 255, 0.62)",
+   "border": "2px rgba(255, 255, 255, 0.95)",
+   "box_shadow": "rgba(255, 255, 255, 0.95) 0px 1px 0px 0px inset, rgba(40, 50, 150, 0.34) 0px 30px 70px -30px, rgba(40, 50, 150, 0.2) 0px 8px 24px -12px",
+   "cls": "pill glass"
+  }
+ ],
+ "images": [
+  {
+   "src": "hero_4.png",
+   "cls": "hero",
+   "complete": true,
+   "natural": [
+    2160,
+    2700
+   ],
+   "x": 0,
+   "y": 0,
+   "w": 2160,
+   "h": 2700
+  },
+  {
+   "src": "svpay-logo.png",
+   "cls": "logo",
+   "complete": true,
+   "natural": [
+    1774,
+    759
+   ],
+   "x": 144,
+   "y": 2448,
+   "w": 355.25,
+   "h": 152
+  }
+ ],
+ "svgs": [],
+ "hero": "hero_4.png",
+ "fonts": {
+  "status": "loaded",
+  "faces": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "status": "loaded"
+   }
+  ],
+  "files": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "src": "node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2"
+   }
+  ]
+ },
+ "images_complete": true,
+ "slide": "slide-4",
+ "section": "s4",
+ "file": "slides.html",
+ "failed_requests": [],
+ "capture": {
+  "scale": 2,
+  "viewport": [
+   1080,
+   1400
+  ],
+  "width": 2160,
+  "height": 2700,
+  "chromium": "153.0.8010.12",
+  "fonts_ready_before_capture": true
+ }
+}

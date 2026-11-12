@@ -1,0 +1,2222 @@
+{
+ "size": [
+  2160,
+  2700
+ ],
+ "text": [
+  {
+   "id": 0,
+   "mids": [
+    "0"
+   ],
+   "role": "label",
+   "text": "Q3 2026 RESULTS",
+   "lines": [
+    {
+     "text": "Q3 2026 RESULTS",
+     "x": 496,
+     "y": 153,
+     "w": 436.0625,
+     "h": 50,
+     "chars": [
+      [
+       "Q",
+       496,
+       153,
+       36.7,
+       50
+      ],
+      [
+       "3",
+       532.7,
+       153,
+       30.9,
+       50
+      ],
+      [
+       "2",
+       578.3,
+       153,
+       30.4,
+       50
+      ],
+      [
+       "0",
+       608.7,
+       153,
+       31.9,
+       50
+      ],
+      [
+       "2",
+       640.6,
+       153,
+       30.4,
+       50
+      ],
+      [
+       "6",
+       671,
+       153,
+       31.1,
+       50
+      ],
+      [
+       "R",
+       716.8,
+       153,
+       31.6,
+       50
+      ],
+      [
+       "E",
+       748.4,
+       153,
+       29.7,
+       50
+      ],
+      [
+       "S",
+       778.1,
+       153,
+       31.6,
+       50
+      ],
+      [
+       "U",
+       809.6,
+       153,
+       35.1,
+       50
+      ],
+      [
+       "L",
+       844.7,
+       153,
+       24.1,
+       50
+      ],
+      [
+       "T",
+       868.8,
+       153,
+       31.8,
+       50
+      ],
+      [
+       "S",
+       900.5,
+       153,
+       31.5,
+       50
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 496,
+    "y": 153,
+    "w": 436.0625,
+    "h": 50
+   },
+   "container": {
+    "x": 496,
+    "y": 157,
+    "w": 436.0625,
+    "h": 42
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 42,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(50, 61, 92)",
+   "runs": [
+    {
+     "mid": "0",
+     "text": "Q3 2026 results",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 42,
+     "letter_spacing": 4.2,
+     "line_height": 42,
+     "color": "rgb(50, 61, 92)",
+     "fill": "rgb(50, 61, 92)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "uppercase",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 1,
+   "mids": [
+    "1",
+    "2"
+   ],
+   "role": "counter",
+   "text": "2 / 6",
+   "lines": [
+    {
+     "text": "2 / 6",
+     "x": 1914.96875,
+     "y": 152,
+     "w": 101.03125,
+     "h": 52,
+     "chars": [
+      [
+       "2",
+       1915,
+       152,
+       29.5,
+       52
+      ],
+      [
+       "/",
+       1955.8,
+       152,
+       18.4,
+       52
+      ],
+      [
+       "6",
+       1985.6,
+       152,
+       30.4,
+       52
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1914.96875,
+    "y": 152,
+    "w": 101.03125,
+    "h": 52
+   },
+   "container": {
+    "x": 1914.96875,
+    "y": 156,
+    "w": 101.03125,
+    "h": 44
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 44,
+   "family": "\"Inter Tight\"",
+   "weight": 700,
+   "color": "rgb(95, 106, 136)",
+   "runs": [
+    {
+     "mid": "1",
+     "text": "/ 6",
+     "family": "\"Inter Tight\"",
+     "weight": 700,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 2.64,
+     "line_height": 44,
+     "color": "rgb(95, 106, 136)",
+     "fill": "rgb(95, 106, 136)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "2",
+     "text": "2",
+     "family": "\"Inter Tight\"",
+     "weight": 900,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 2.64,
+     "line_height": 44,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 2,
+   "mids": [
+    "3"
+   ],
+   "role": "body",
+   "text": "On average, that’s",
+   "lines": [
+    {
+     "text": "On average, that’s",
+     "x": 144,
+     "y": 1744,
+     "w": 663.875,
+     "h": 140,
+     "chars": [
+      [
+       "O",
+       144,
+       1744,
+       57.3,
+       140
+      ],
+      [
+       "n",
+       201.2,
+       1744,
+       55.2,
+       140
+      ],
+      [
+       "a",
+       273.7,
+       1744,
+       50.2,
+       140
+      ],
+      [
+       "v",
+       323.8,
+       1744,
+       43.4,
+       140
+      ],
+      [
+       "e",
+       367.2,
+       1744,
+       36.5,
+       140
+      ],
+      [
+       "r",
+       403.7,
+       1744,
+       36.8,
+       140
+      ],
+      [
+       "a",
+       440.4,
+       1744,
+       48.2,
+       140
+      ],
+      [
+       "g",
+       488.6,
+       1744,
+       40.9,
+       140
+      ],
+      [
+       "e",
+       529.5,
+       1744,
+       36.6,
+       140
+      ],
+      [
+       ",",
+       566.1,
+       1744,
+       22.6,
+       140
+      ],
+      [
+       "t",
+       605.9,
+       1744,
+       28.3,
+       140
+      ],
+      [
+       "h",
+       634.2,
+       1744,
+       50.4,
+       140
+      ],
+      [
+       "a",
+       684.5,
+       1744,
+       48.8,
+       140
+      ],
+      [
+       "t",
+       733.3,
+       1744,
+       28.3,
+       140
+      ],
+      [
+       "’",
+       761.6,
+       1744,
+       14.7,
+       140
+      ],
+      [
+       "s",
+       776.3,
+       1744,
+       31.6,
+       140
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 1744,
+    "w": 663.875,
+    "h": 140
+   },
+   "container": {
+    "x": 144,
+    "y": 1744,
+    "w": 1880,
+    "h": 140
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 108,
+   "family": "\"Instrument Serif\"",
+   "weight": 400,
+   "color": "rgb(35, 80, 255)",
+   "runs": [
+    {
+     "mid": "3",
+     "text": "On average, that’s",
+     "family": "\"Instrument Serif\"",
+     "weight": 400,
+     "style": "italic",
+     "size": 108,
+     "letter_spacing": -1.08,
+     "line_height": null,
+     "color": "rgb(35, 80, 255)",
+     "fill": "rgb(35, 80, 255)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 3,
+   "mids": [
+    "4"
+   ],
+   "role": "headline",
+   "text": "$2.62",
+   "lines": [
+    {
+     "text": "$2.62",
+     "x": 144,
+     "y": 1836,
+     "w": 958.75,
+     "h": 454,
+     "chars": [
+      [
+       "$",
+       144,
+       1836,
+       219,
+       454
+      ],
+      [
+       "2",
+       362.9,
+       1836,
+       210.7,
+       454
+      ],
+      [
+       ".",
+       573.6,
+       1836,
+       92.7,
+       454
+      ],
+      [
+       "6",
+       666.3,
+       1836,
+       225.8,
+       454
+      ],
+      [
+       "2",
+       892,
+       1836,
+       210.7,
+       454
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 1836,
+    "w": 958.75,
+    "h": 454
+   },
+   "container": {
+    "x": 144,
+    "y": 1888,
+    "w": 973.78125,
+    "h": 353.4375
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 376,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgba(0, 0, 0, 0)",
+   "runs": [
+    {
+     "mid": "4",
+     "text": "$2.62",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 376,
+     "letter_spacing": -18.8,
+     "line_height": 353.44,
+     "color": "rgba(0, 0, 0, 0)",
+     "fill": "rgba(0, 0, 0, 0)",
+     "gradient_text": "linear-gradient(100deg, rgb(255, 31, 122), rgb(255, 61, 158) 55%, rgb(217, 60, 255))",
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 4,
+   "mids": [
+    "5"
+   ],
+   "role": "headline",
+   "text": "per $100",
+   "lines": [
+    {
+     "text": "per $100",
+     "x": 1161.78125,
+     "y": 2080,
+     "w": 487.625,
+     "h": 150,
+     "chars": [
+      [
+       "p",
+       1161.8,
+       2080,
+       71.9,
+       150
+      ],
+      [
+       "e",
+       1233.7,
+       2080,
+       67.4,
+       150
+      ],
+      [
+       "r",
+       1301,
+       2080,
+       45.1,
+       150
+      ],
+      [
+       "$",
+       1365.6,
+       2080,
+       74.7,
+       150
+      ],
+      [
+       "1",
+       1440.3,
+       2080,
+       47.7,
+       150
+      ],
+      [
+       "0",
+       1487.9,
+       2080,
+       80.8,
+       150
+      ],
+      [
+       "0",
+       1568.6,
+       2080,
+       80.8,
+       150
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1161.78125,
+    "y": 2080,
+    "w": 487.625,
+    "h": 150
+   },
+   "container": {
+    "x": 1161.78125,
+    "y": 2098,
+    "w": 487.625,
+    "h": 116.53125
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 124,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "5",
+     "text": "per $100",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 124,
+     "letter_spacing": -3.72,
+     "line_height": 116.56,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 5,
+   "mids": [
+    "6",
+    "7",
+    "8"
+   ],
+   "role": "body",
+   "text": "Restaurants ran $61.8B through Toast in 3 months, up 20% from a year ago. Toast’s payment revenue was $1.62B, mostly from card processing.",
+   "lines": [
+    {
+     "text": "Restaurants ran $61.8B through Toast in 3 months, up 20% from a year",
+     "x": 144,
+     "y": 2269.4375,
+     "w": 1693.1875,
+     "h": 60,
+     "chars": [
+      [
+       "R",
+       144,
+       2269.4,
+       31.7,
+       60
+      ],
+      [
+       "e",
+       175.7,
+       2269.4,
+       29.4,
+       60
+      ],
+      [
+       "s",
+       205.1,
+       2269.4,
+       27,
+       60
+      ],
+      [
+       "t",
+       232,
+       2269.4,
+       17.3,
+       60
+      ],
+      [
+       "a",
+       249.3,
+       2269.4,
+       28.4,
+       60
+      ],
+      [
+       "u",
+       277.7,
+       2269.4,
+       30.1,
+       60
+      ],
+      [
+       "r",
+       307.7,
+       2269.4,
+       19.2,
+       60
+      ],
+      [
+       "a",
+       326.8,
+       2269.4,
+       28.4,
+       60
+      ],
+      [
+       "n",
+       355.3,
+       2269.4,
+       30.1,
+       60
+      ],
+      [
+       "t",
+       385.3,
+       2269.4,
+       16.6,
+       60
+      ],
+      [
+       "s",
+       401.9,
+       2269.4,
+       26.9,
+       60
+      ],
+      [
+       "r",
+       442.2,
+       2269.4,
+       19.2,
+       60
+      ],
+      [
+       "a",
+       461.3,
+       2269.4,
+       28.4,
+       60
+      ],
+      [
+       "n",
+       489.7,
+       2269.4,
+       30.1,
+       60
+      ],
+      [
+       "$",
+       533.1,
+       2269.4,
+       32.5,
+       60
+      ],
+      [
+       "6",
+       565.6,
+       2269.4,
+       32,
+       60
+      ],
+      [
+       "1",
+       597.6,
+       2269.4,
+       21.2,
+       60
+      ],
+      [
+       ".",
+       618.7,
+       2269.4,
+       14.7,
+       60
+      ],
+      [
+       "8",
+       633.3,
+       2269.4,
+       32,
+       60
+      ],
+      [
+       "B",
+       665.3,
+       2269.4,
+       33,
+       60
+      ],
+      [
+       "t",
+       711.7,
+       2269.4,
+       17.1,
+       60
+      ],
+      [
+       "h",
+       728.7,
+       2269.4,
+       30.1,
+       60
+      ],
+      [
+       "r",
+       758.8,
+       2269.4,
+       18.4,
+       60
+      ],
+      [
+       "o",
+       777.2,
+       2269.4,
+       30.2,
+       60
+      ],
+      [
+       "u",
+       807.4,
+       2269.4,
+       30.1,
+       60
+      ],
+      [
+       "g",
+       837.5,
+       2269.4,
+       31,
+       60
+      ],
+      [
+       "h",
+       868.4,
+       2269.4,
+       30.1,
+       60
+      ],
+      [
+       "T",
+       911.8,
+       2269.4,
+       28.8,
+       60
+      ],
+      [
+       "o",
+       940.6,
+       2269.4,
+       30.7,
+       60
+      ],
+      [
+       "a",
+       971.3,
+       2269.4,
+       28.4,
+       60
+      ],
+      [
+       "s",
+       999.7,
+       2269.4,
+       27,
+       60
+      ],
+      [
+       "t",
+       1026.6,
+       2269.4,
+       17.1,
+       60
+      ],
+      [
+       "i",
+       1056.9,
+       2269.4,
+       12.6,
+       60
+      ],
+      [
+       "n",
+       1069.5,
+       2269.4,
+       30.1,
+       60
+      ],
+      [
+       "3",
+       1112.9,
+       2269.4,
+       31.4,
+       60
+      ],
+      [
+       "m",
+       1157.6,
+       2269.4,
+       44.4,
+       60
+      ],
+      [
+       "o",
+       1202,
+       2269.4,
+       30.3,
+       60
+      ],
+      [
+       "n",
+       1232.3,
+       2269.4,
+       30.1,
+       60
+      ],
+      [
+       "t",
+       1262.3,
+       2269.4,
+       17.1,
+       60
+      ],
+      [
+       "h",
+       1279.4,
+       2269.4,
+       30.1,
+       60
+      ],
+      [
+       "s",
+       1309.5,
+       2269.4,
+       26.9,
+       60
+      ],
+      [
+       ",",
+       1336.4,
+       2269.4,
+       14.7,
+       60
+      ],
+      [
+       "u",
+       1364.4,
+       2269.4,
+       30.1,
+       60
+      ],
+      [
+       "p",
+       1394.4,
+       2269.4,
+       30.9,
+       60
+      ],
+      [
+       "2",
+       1438.7,
+       2269.4,
+       30.8,
+       60
+      ],
+      [
+       "0",
+       1469.5,
+       2269.4,
+       32.3,
+       60
+      ],
+      [
+       "%",
+       1501.8,
+       2269.4,
+       49.7,
+       60
+      ],
+      [
+       "f",
+       1564.8,
+       2269.4,
+       19,
+       60
+      ],
+      [
+       "r",
+       1583.7,
+       2269.4,
+       18.4,
+       60
+      ],
+      [
+       "o",
+       1602.1,
+       2269.4,
+       30.2,
+       60
+      ],
+      [
+       "m",
+       1632.3,
+       2269.4,
+       44.4,
+       60
+      ],
+      [
+       "a",
+       1690.1,
+       2269.4,
+       28.4,
+       60
+      ],
+      [
+       "y",
+       1731.8,
+       2269.4,
+       27.8,
+       60
+      ],
+      [
+       "e",
+       1759.6,
+       2269.4,
+       29.9,
+       60
+      ],
+      [
+       "a",
+       1789.4,
+       2269.4,
+       28.4,
+       60
+      ],
+      [
+       "r",
+       1817.8,
+       2269.4,
+       19.3,
+       60
+      ]
+     ]
+    },
+    {
+     "text": "ago. Toast’s payment revenue was $1.62B, mostly from card processing.",
+     "x": 144,
+     "y": 2340.4375,
+     "w": 1730.78125,
+     "h": 60,
+     "chars": [
+      [
+       "a",
+       144,
+       2340.4,
+       28.4,
+       60
+      ],
+      [
+       "g",
+       172.4,
+       2340.4,
+       31,
+       60
+      ],
+      [
+       "o",
+       203.4,
+       2340.4,
+       30.2,
+       60
+      ],
+      [
+       ".",
+       233.6,
+       2340.4,
+       14.7,
+       60
+      ],
+      [
+       "T",
+       261.5,
+       2340.4,
+       28.8,
+       60
+      ],
+      [
+       "o",
+       290.3,
+       2340.4,
+       30.7,
+       60
+      ],
+      [
+       "a",
+       321,
+       2340.4,
+       28.4,
+       60
+      ],
+      [
+       "s",
+       349.3,
+       2340.4,
+       27,
+       60
+      ],
+      [
+       "t",
+       376.3,
+       2340.4,
+       17.3,
+       60
+      ],
+      [
+       "’",
+       393.5,
+       2340.4,
+       10.2,
+       60
+      ],
+      [
+       "s",
+       403.7,
+       2340.4,
+       27,
+       60
+      ],
+      [
+       "p",
+       443.9,
+       2340.4,
+       31.4,
+       60
+      ],
+      [
+       "a",
+       475.3,
+       2340.4,
+       27.6,
+       60
+      ],
+      [
+       "y",
+       502.9,
+       2340.4,
+       28.8,
+       60
+      ],
+      [
+       "m",
+       531.7,
+       2340.4,
+       44.4,
+       60
+      ],
+      [
+       "e",
+       576.1,
+       2340.4,
+       29.4,
+       60
+      ],
+      [
+       "n",
+       605.5,
+       2340.4,
+       30.1,
+       60
+      ],
+      [
+       "t",
+       635.5,
+       2340.4,
+       17.1,
+       60
+      ],
+      [
+       "r",
+       665.9,
+       2340.4,
+       18.4,
+       60
+      ],
+      [
+       "e",
+       684.3,
+       2340.4,
+       28.4,
+       60
+      ],
+      [
+       "v",
+       712.7,
+       2340.4,
+       27.8,
+       60
+      ],
+      [
+       "e",
+       740.5,
+       2340.4,
+       29.4,
+       60
+      ],
+      [
+       "n",
+       769.8,
+       2340.4,
+       30.1,
+       60
+      ],
+      [
+       "u",
+       799.9,
+       2340.4,
+       30.1,
+       60
+      ],
+      [
+       "e",
+       830,
+       2340.4,
+       29.4,
+       60
+      ],
+      [
+       "w",
+       872.7,
+       2340.4,
+       41.4,
+       60
+      ],
+      [
+       "a",
+       914.1,
+       2340.4,
+       28.4,
+       60
+      ],
+      [
+       "s",
+       942.5,
+       2340.4,
+       27,
+       60
+      ],
+      [
+       "$",
+       982.8,
+       2340.4,
+       32.5,
+       60
+      ],
+      [
+       "1",
+       1015.3,
+       2340.4,
+       21.2,
+       60
+      ],
+      [
+       ".",
+       1036.4,
+       2340.4,
+       14.6,
+       60
+      ],
+      [
+       "6",
+       1051,
+       2340.4,
+       32,
+       60
+      ],
+      [
+       "2",
+       1083,
+       2340.4,
+       31.2,
+       60
+      ],
+      [
+       "B",
+       1114.1,
+       2340.4,
+       33,
+       60
+      ],
+      [
+       ",",
+       1147.1,
+       2340.4,
+       14.7,
+       60
+      ],
+      [
+       "m",
+       1175.1,
+       2340.4,
+       44.4,
+       60
+      ],
+      [
+       "o",
+       1219.5,
+       2340.4,
+       30.2,
+       60
+      ],
+      [
+       "s",
+       1249.7,
+       2340.4,
+       27,
+       60
+      ],
+      [
+       "t",
+       1276.6,
+       2340.4,
+       17.1,
+       60
+      ],
+      [
+       "l",
+       1293.7,
+       2340.4,
+       13,
+       60
+      ],
+      [
+       "y",
+       1306.6,
+       2340.4,
+       28.8,
+       60
+      ],
+      [
+       "f",
+       1348.7,
+       2340.4,
+       19,
+       60
+      ],
+      [
+       "r",
+       1367.7,
+       2340.4,
+       18.4,
+       60
+      ],
+      [
+       "o",
+       1386,
+       2340.4,
+       30.3,
+       60
+      ],
+      [
+       "m",
+       1416.3,
+       2340.4,
+       44.4,
+       60
+      ],
+      [
+       "c",
+       1474,
+       2340.4,
+       29.4,
+       60
+      ],
+      [
+       "a",
+       1503.3,
+       2340.4,
+       28.4,
+       60
+      ],
+      [
+       "r",
+       1531.7,
+       2340.4,
+       18.4,
+       60
+      ],
+      [
+       "d",
+       1550.1,
+       2340.4,
+       30.9,
+       60
+      ],
+      [
+       "p",
+       1594.3,
+       2340.4,
+       30.9,
+       60
+      ],
+      [
+       "r",
+       1625.3,
+       2340.4,
+       18.4,
+       60
+      ],
+      [
+       "o",
+       1643.6,
+       2340.4,
+       30.3,
+       60
+      ],
+      [
+       "c",
+       1673.8,
+       2340.4,
+       28.9,
+       60
+      ],
+      [
+       "e",
+       1702.7,
+       2340.4,
+       29.4,
+       60
+      ],
+      [
+       "s",
+       1732.1,
+       2340.4,
+       27,
+       60
+      ],
+      [
+       "s",
+       1759,
+       2340.4,
+       26.9,
+       60
+      ],
+      [
+       "i",
+       1785.9,
+       2340.4,
+       12.7,
+       60
+      ],
+      [
+       "n",
+       1798.5,
+       2340.4,
+       30.1,
+       60
+      ],
+      [
+       "g",
+       1828.6,
+       2340.4,
+       31,
+       60
+      ],
+      [
+       ".",
+       1859.6,
+       2340.4,
+       15.2,
+       60
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 2269.4375,
+    "w": 1730.78125,
+    "h": 131
+   },
+   "container": {
+    "x": 144,
+    "y": 2265.4375,
+    "w": 1800,
+    "h": 142
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 50,
+   "family": "Inter",
+   "weight": 500,
+   "color": "rgb(50, 61, 92)",
+   "runs": [
+    {
+     "mid": "6",
+     "text": "Restaurants ran  through Toast in 3 months, up 20% from a year ago. Toast’s payment revenue was , mostly from card processing.",
+     "family": "Inter",
+     "weight": 500,
+     "style": "normal",
+     "size": 50,
+     "letter_spacing": 0,
+     "line_height": 71,
+     "color": "rgb(50, 61, 92)",
+     "fill": "rgb(50, 61, 92)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "7",
+     "text": "$61.8B",
+     "family": "Inter",
+     "weight": 700,
+     "style": "normal",
+     "size": 50,
+     "letter_spacing": 0,
+     "line_height": 71,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "8",
+     "text": "$1.62B",
+     "family": "Inter",
+     "weight": 700,
+     "style": "normal",
+     "size": 50,
+     "letter_spacing": 0,
+     "line_height": 71,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 6,
+   "mids": [
+    "9"
+   ],
+   "role": "source",
+   "text": "SVPay is not affiliated with Toast.",
+   "lines": [
+    {
+     "text": "SVPay is not affiliated with Toast.",
+     "x": 1507.15625,
+     "y": 2437.21875,
+     "w": 508.84375,
+     "h": 40,
+     "chars": [
+      [
+       "S",
+       1507.2,
+       2437.2,
+       20.7,
+       40
+      ],
+      [
+       "V",
+       1527.8,
+       2437.2,
+       22.7,
+       40
+      ],
+      [
+       "P",
+       1550.5,
+       2437.2,
+       20.4,
+       40
+      ],
+      [
+       "a",
+       1570.9,
+       2437.2,
+       17.7,
+       40
+      ],
+      [
+       "y",
+       1588.6,
+       2437.2,
+       18.4,
+       40
+      ],
+      [
+       "i",
+       1615.5,
+       2437.2,
+       8.1,
+       40
+      ],
+      [
+       "s",
+       1623.6,
+       2437.2,
+       17.3,
+       40
+      ],
+      [
+       "n",
+       1649.3,
+       2437.2,
+       19.3,
+       40
+      ],
+      [
+       "o",
+       1668.6,
+       2437.2,
+       19.3,
+       40
+      ],
+      [
+       "t",
+       1687.9,
+       2437.2,
+       10.9,
+       40
+      ],
+      [
+       "a",
+       1707.3,
+       2437.2,
+       18.2,
+       40
+      ],
+      [
+       "f",
+       1725.5,
+       2437.2,
+       10.9,
+       40
+      ],
+      [
+       "f",
+       1736.4,
+       2437.2,
+       12.3,
+       40
+      ],
+      [
+       "i",
+       1748.6,
+       2437.2,
+       8.1,
+       40
+      ],
+      [
+       "l",
+       1756.7,
+       2437.2,
+       8.1,
+       40
+      ],
+      [
+       "i",
+       1764.7,
+       2437.2,
+       8.1,
+       40
+      ],
+      [
+       "a",
+       1772.8,
+       2437.2,
+       18.2,
+       40
+      ],
+      [
+       "t",
+       1791,
+       2437.2,
+       10.6,
+       40
+      ],
+      [
+       "e",
+       1801.5,
+       2437.2,
+       18.8,
+       40
+      ],
+      [
+       "d",
+       1820.3,
+       2437.2,
+       19.8,
+       40
+      ],
+      [
+       "w",
+       1848.7,
+       2437.2,
+       26.5,
+       40
+      ],
+      [
+       "i",
+       1875.2,
+       2437.2,
+       8.1,
+       40
+      ],
+      [
+       "t",
+       1883.3,
+       2437.2,
+       10.9,
+       40
+      ],
+      [
+       "h",
+       1894.2,
+       2437.2,
+       19.3,
+       40
+      ],
+      [
+       "T",
+       1921.9,
+       2437.2,
+       18.4,
+       40
+      ],
+      [
+       "o",
+       1940.3,
+       2437.2,
+       19.7,
+       40
+      ],
+      [
+       "a",
+       1960,
+       2437.2,
+       18.2,
+       40
+      ],
+      [
+       "s",
+       1978.2,
+       2437.2,
+       17.3,
+       40
+      ],
+      [
+       "t",
+       1995.4,
+       2437.2,
+       10.9,
+       40
+      ],
+      [
+       ".",
+       2006.3,
+       2437.2,
+       9.7,
+       40
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1507.15625,
+    "y": 2437.21875,
+    "w": 508.84375,
+    "h": 40
+   },
+   "container": {
+    "x": 1507.15625,
+    "y": 2435.21875,
+    "w": 508.84375,
+    "h": 44.78125
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 32,
+   "family": "Inter",
+   "weight": 500,
+   "color": "rgb(95, 106, 136)",
+   "runs": [
+    {
+     "mid": "9",
+     "text": "SVPay is not affiliated with Toast.",
+     "family": "Inter",
+     "weight": 500,
+     "style": "normal",
+     "size": 32,
+     "letter_spacing": 0,
+     "line_height": 44.8,
+     "color": "rgb(95, 106, 136)",
+     "fill": "rgb(95, 106, 136)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 7,
+   "mids": [
+    "10"
+   ],
+   "role": "footer",
+   "text": "www.svpay.app",
+   "lines": [
+    {
+     "text": "www.svpay.app",
+     "x": 1664.15625,
+     "y": 2502,
+     "w": 351.84375,
+     "h": 58,
+     "chars": [
+      [
+       "w",
+       1664.2,
+       2502,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1702.9,
+       2502,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1741.7,
+       2502,
+       35.3,
+       58
+      ],
+      [
+       ".",
+       1776.9,
+       2502,
+       14.2,
+       58
+      ],
+      [
+       "s",
+       1791,
+       2502,
+       24.9,
+       58
+      ],
+      [
+       "v",
+       1815.9,
+       2502,
+       26.1,
+       58
+      ],
+      [
+       "p",
+       1842,
+       2502,
+       28.2,
+       58
+      ],
+      [
+       "a",
+       1870.2,
+       2502,
+       25.1,
+       58
+      ],
+      [
+       "y",
+       1895.2,
+       2502,
+       24.3,
+       58
+      ],
+      [
+       ".",
+       1919.5,
+       2502,
+       14.2,
+       58
+      ],
+      [
+       "a",
+       1933.6,
+       2502,
+       26,
+       58
+      ],
+      [
+       "p",
+       1959.6,
+       2502,
+       28.3,
+       58
+      ],
+      [
+       "p",
+       1987.8,
+       2502,
+       28.2,
+       58
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1664.15625,
+    "y": 2502,
+    "w": 351.84375,
+    "h": 58
+   },
+   "container": {
+    "x": 1664.15625,
+    "y": 2508,
+    "w": 351.84375,
+    "h": 48
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 48,
+   "family": "\"Inter Tight\"",
+   "weight": 700,
+   "color": "rgb(50, 61, 92)",
+   "runs": [
+    {
+     "mid": "10",
+     "text": "www.svpay.app",
+     "family": "\"Inter Tight\"",
+     "weight": 700,
+     "style": "normal",
+     "size": 48,
+     "letter_spacing": -0.48,
+     "line_height": 48,
+     "color": "rgb(50, 61, 92)",
+     "fill": "rgb(50, 61, 92)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  }
+ ],
+ "panels": [
+  {
+   "x": 144,
+   "y": 120,
+   "w": 836.0625,
+   "h": 116,
+   "radius": 1998,
+   "backdrop": "blur(24px) saturate(1.6)",
+   "background": "rgba(255, 255, 255, 0.62)",
+   "border": "2px rgba(255, 255, 255, 0.95)",
+   "box_shadow": "rgba(255, 255, 255, 0.95) 0px 1px 0px 0px inset, rgba(40, 50, 150, 0.34) 0px 30px 70px -30px, rgba(40, 50, 150, 0.2) 0px 8px 24px -12px",
+   "cls": "chip glass"
+  }
+ ],
+ "images": [
+  {
+   "src": "hero_2.png",
+   "cls": "hero",
+   "complete": true,
+   "natural": [
+    2160,
+    2700
+   ],
+   "x": 0,
+   "y": 0,
+   "w": 2160,
+   "h": 2700
+  },
+  {
+   "src": "toast-logo.png",
+   "cls": "",
+   "complete": true,
+   "natural": [
+    240,
+    60
+   ],
+   "x": 188,
+   "y": 148,
+   "w": 240,
+   "h": 60
+  },
+  {
+   "src": "svpay-logo.png",
+   "cls": "logo",
+   "complete": true,
+   "natural": [
+    1774,
+    759
+   ],
+   "x": 144,
+   "y": 2448,
+   "w": 355.25,
+   "h": 152
+  }
+ ],
+ "svgs": [],
+ "hero": "hero_2.png",
+ "fonts": {
+  "status": "loaded",
+  "faces": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "status": "loaded"
+   }
+  ],
+  "files": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "src": "node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2"
+   }
+  ]
+ },
+ "images_complete": true,
+ "slide": "slide-2",
+ "section": "s2",
+ "file": "slides.html",
+ "failed_requests": [],
+ "capture": {
+  "scale": 2,
+  "viewport": [
+   1080,
+   1400
+  ],
+  "width": 2160,
+  "height": 2700,
+  "chromium": "153.0.8010.12",
+  "fonts_ready_before_capture": true
+ }
+}

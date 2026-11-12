@@ -112,6 +112,17 @@ class NeedsPasses(unittest.TestCase):
         res = statuses(build(strip_passes=True), ["T-O09"])
         self.assertTrue(all(r[0] in ("needs_passes", "fail", "na") for r in res["T-O09"]), res["T-O09"])
 
+    def test_passes_from_another_render_count_as_missing(self):
+        """A re-render that does not reproduce the slide (Nov 4: 3D knobs never recorded) must not be measured."""
+        d = os.path.join(TMP, "mismatch")
+        pkg, _ = synth.make_post(d)
+        from PIL import Image
+        bg = os.path.join(d, "passes", "slide-1.bg.png")
+        Image.open(bg).transform((synth.W, synth.H), Image.AFFINE, (1, 0, 120, 0, 1, 0)).save(bg)
+        res = statuses(pkg, ["V-D01", "R-A08"])
+        for gid in ("V-D01", "R-A08"):
+            self.assertEqual(worst([r for r in res[gid] if r[1] == "slide 1"]), "needs_passes", (gid, res[gid]))
+
     def test_non_gate_without_passes_is_not_scored(self):
         res = statuses(build(strip_passes=True), ["T-K03", "T-L02"])
         self.assertTrue(all(r[0] == "na" for v in res.values() for r in v), res)

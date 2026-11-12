@@ -1,0 +1,2301 @@
+{
+ "size": [
+  2160,
+  2700
+ ],
+ "text": [
+  {
+   "id": 0,
+   "mids": [
+    "0"
+   ],
+   "role": "label",
+   "text": "BEFORE YOU SIGN",
+   "lines": [
+    {
+     "text": "BEFORE YOU SIGN",
+     "x": 198,
+     "y": 152,
+     "w": 488.25,
+     "h": 52,
+     "chars": [
+      [
+       "B",
+       198,
+       152,
+       35.2,
+       52
+      ],
+      [
+       "E",
+       233.2,
+       152,
+       32.8,
+       52
+      ],
+      [
+       "F",
+       265.9,
+       152,
+       32.1,
+       52
+      ],
+      [
+       "O",
+       298,
+       152,
+       40,
+       52
+      ],
+      [
+       "R",
+       337.9,
+       152,
+       34.9,
+       52
+      ],
+      [
+       "E",
+       372.8,
+       152,
+       32.8,
+       52
+      ],
+      [
+       "Y",
+       422.9,
+       152,
+       35.8,
+       52
+      ],
+      [
+       "O",
+       458.7,
+       152,
+       40,
+       52
+      ],
+      [
+       "U",
+       498.6,
+       152,
+       38.6,
+       52
+      ],
+      [
+       "S",
+       554.4,
+       152,
+       34.8,
+       52
+      ],
+      [
+       "I",
+       589.2,
+       152,
+       18.4,
+       52
+      ],
+      [
+       "G",
+       607.5,
+       152,
+       39.2,
+       52
+      ],
+      [
+       "N",
+       646.7,
+       152,
+       39.6,
+       52
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 198,
+    "y": 152,
+    "w": 488.25,
+    "h": 52
+   },
+   "container": {
+    "x": 144,
+    "y": 156,
+    "w": 542.25,
+    "h": 44
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 44,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "0",
+     "text": "Before you sign",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 6.16,
+     "line_height": 44,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "uppercase",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 1,
+   "mids": [
+    "1",
+    "2"
+   ],
+   "role": "counter",
+   "text": "5 / 6",
+   "lines": [
+    {
+     "text": "5 / 6",
+     "x": 1913.96875,
+     "y": 152,
+     "w": 102.03125,
+     "h": 52,
+     "chars": [
+      [
+       "5",
+       1914,
+       152,
+       30.5,
+       52
+      ],
+      [
+       "/",
+       1955.8,
+       152,
+       18.4,
+       52
+      ],
+      [
+       "6",
+       1985.6,
+       152,
+       30.4,
+       52
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1913.96875,
+    "y": 152,
+    "w": 102.03125,
+    "h": 52
+   },
+   "container": {
+    "x": 1913.96875,
+    "y": 156,
+    "w": 102.03125,
+    "h": 44
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 44,
+   "family": "\"Inter Tight\"",
+   "weight": 700,
+   "color": "rgb(95, 106, 136)",
+   "runs": [
+    {
+     "mid": "1",
+     "text": "/ 6",
+     "family": "\"Inter Tight\"",
+     "weight": 700,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 2.64,
+     "line_height": 44,
+     "color": "rgb(95, 106, 136)",
+     "fill": "rgb(95, 106, 136)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "2",
+     "text": "5",
+     "family": "\"Inter Tight\"",
+     "weight": 900,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 2.64,
+     "line_height": 44,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 2,
+   "mids": [
+    "3",
+    "4"
+   ],
+   "role": "headline",
+   "text": "Get 4 answers in writing.",
+   "lines": [
+    {
+     "text": "Get 4 answers",
+     "x": 144,
+     "y": 314,
+     "w": 1200.21875,
+     "h": 232,
+     "chars": [
+      [
+       "G",
+       144,
+       314,
+       134.1,
+       232
+      ],
+      [
+       "e",
+       278.1,
+       314,
+       102.4,
+       232
+      ],
+      [
+       "t",
+       380.4,
+       314,
+       63.1,
+       232
+      ],
+      [
+       "4",
+       471.8,
+       314,
+       119.5,
+       232
+      ],
+      [
+       "a",
+       619.6,
+       314,
+       100.3,
+       232
+      ],
+      [
+       "n",
+       719.8,
+       314,
+       109.2,
+       232
+      ],
+      [
+       "s",
+       829,
+       314,
+       97.4,
+       232
+      ],
+      [
+       "w",
+       926.3,
+       314,
+       150.4,
+       232
+      ],
+      [
+       "e",
+       1076.7,
+       314,
+       102.4,
+       232
+      ],
+      [
+       "r",
+       1179.1,
+       314,
+       67.8,
+       232
+      ],
+      [
+       "s",
+       1246.8,
+       314,
+       97.4,
+       232
+      ]
+     ]
+    },
+    {
+     "text": "in writing.",
+     "x": 144,
+     "y": 494.46875,
+     "w": 819.28125,
+     "h": 232,
+     "chars": [
+      [
+       "i",
+       144,
+       494.5,
+       41.5,
+       232
+      ],
+      [
+       "n",
+       185.4,
+       494.5,
+       109.2,
+       232
+      ],
+      [
+       "w",
+       322.9,
+       494.5,
+       152.6,
+       232
+      ],
+      [
+       "r",
+       475.4,
+       494.5,
+       67.8,
+       232
+      ],
+      [
+       "i",
+       543.2,
+       494.5,
+       41.5,
+       232
+      ],
+      [
+       "t",
+       584.7,
+       494.5,
+       63.1,
+       232
+      ],
+      [
+       "i",
+       647.8,
+       494.5,
+       41.5,
+       232
+      ],
+      [
+       "n",
+       689.2,
+       494.5,
+       109.2,
+       232
+      ],
+      [
+       "g",
+       798.3,
+       494.5,
+       109.8,
+       232
+      ],
+      [
+       ".",
+       908.1,
+       494.5,
+       55.2,
+       232
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 314,
+    "w": 1200.21875,
+    "h": 412.46875
+   },
+   "container": {
+    "x": 144,
+    "y": 340,
+    "w": 1200.21875,
+    "h": 360.9375
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 192,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "3",
+     "text": "Get 4 answers",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 192,
+     "letter_spacing": -7.68,
+     "line_height": 180.48,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "4",
+     "text": "in writing.",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 192,
+     "letter_spacing": -7.68,
+     "line_height": 180.48,
+     "color": "rgba(0, 0, 0, 0)",
+     "fill": "rgba(0, 0, 0, 0)",
+     "gradient_text": "linear-gradient(100deg, rgb(15, 61, 255) 0%, rgb(59, 43, 255) 30%, rgb(122, 45, 255) 60%, rgb(210, 59, 208) 82%, rgb(255, 63, 152) 100%)",
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 3,
+   "mids": [
+    "5"
+   ],
+   "role": "body",
+   "text": "1",
+   "lines": [
+    {
+     "text": "1",
+     "x": 250.875,
+     "y": 982,
+     "w": 18.21875,
+     "h": 52,
+     "chars": [
+      [
+       "1",
+       250.9,
+       982,
+       18.2,
+       52
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 250.875,
+    "y": 982,
+    "w": 18.21875,
+    "h": 52
+   },
+   "container": {
+    "x": 216,
+    "y": 964,
+    "w": 88,
+    "h": 88
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "center",
+   "white_space": "normal",
+   "size": 44,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(255, 255, 255)",
+   "runs": [
+    {
+     "mid": "5",
+     "text": "1",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 0,
+     "line_height": 88,
+     "color": "rgb(255, 255, 255)",
+     "fill": "rgb(255, 255, 255)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 4,
+   "mids": [
+    "6"
+   ],
+   "role": "body",
+   "text": "Your all-in rate",
+   "lines": [
+    {
+     "text": "Your all-in rate",
+     "x": 336,
+     "y": 974,
+     "w": 381.78125,
+     "h": 66,
+     "chars": [
+      [
+       "Y",
+       336,
+       974,
+       33.2,
+       66
+      ],
+      [
+       "o",
+       369.2,
+       974,
+       32.9,
+       66
+      ],
+      [
+       "u",
+       402.1,
+       974,
+       33.1,
+       66
+      ],
+      [
+       "r",
+       435.1,
+       974,
+       21.5,
+       66
+      ],
+      [
+       "a",
+       470.2,
+       974,
+       31.1,
+       66
+      ],
+      [
+       "l",
+       501.2,
+       974,
+       14.2,
+       66
+      ],
+      [
+       "l",
+       515.3,
+       974,
+       14.2,
+       66
+      ],
+      [
+       "-",
+       529.4,
+       974,
+       25.2,
+       66
+      ],
+      [
+       "i",
+       554.6,
+       974,
+       14.2,
+       66
+      ],
+      [
+       "n",
+       568.7,
+       974,
+       33.1,
+       66
+      ],
+      [
+       "r",
+       615.3,
+       974,
+       21,
+       66
+      ],
+      [
+       "a",
+       636.3,
+       974,
+       31,
+       66
+      ],
+      [
+       "t",
+       667.3,
+       974,
+       18.6,
+       66
+      ],
+      [
+       "e",
+       685.8,
+       974,
+       32,
+       66
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 336,
+    "y": 974,
+    "w": 381.78125,
+    "h": 66
+   },
+   "container": {
+    "x": 336,
+    "y": 972,
+    "w": 381.78125,
+    "h": 70.1875
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 54,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "6",
+     "text": "Your all-in rate",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 54,
+     "letter_spacing": 0,
+     "line_height": 70.2,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 5,
+   "mids": [
+    "7"
+   ],
+   "role": "body",
+   "text": "2",
+   "lines": [
+    {
+     "text": "2",
+     "x": 246.5625,
+     "y": 1102,
+     "w": 26.875,
+     "h": 52,
+     "chars": [
+      [
+       "2",
+       246.6,
+       1102,
+       26.9,
+       52
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 246.5625,
+    "y": 1102,
+    "w": 26.875,
+    "h": 52
+   },
+   "container": {
+    "x": 216,
+    "y": 1084,
+    "w": 88,
+    "h": 88
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "center",
+   "white_space": "normal",
+   "size": 44,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(255, 255, 255)",
+   "runs": [
+    {
+     "mid": "7",
+     "text": "2",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 0,
+     "line_height": 88,
+     "color": "rgb(255, 255, 255)",
+     "fill": "rgb(255, 255, 255)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 6,
+   "mids": [
+    "8"
+   ],
+   "role": "body",
+   "text": "Every fee, by name",
+   "lines": [
+    {
+     "text": "Every fee, by name",
+     "x": 336,
+     "y": 1094,
+     "w": 498.9375,
+     "h": 66,
+     "chars": [
+      [
+       "E",
+       336,
+       1094,
+       32.7,
+       66
+      ],
+      [
+       "v",
+       368.7,
+       1094,
+       30.7,
+       66
+      ],
+      [
+       "e",
+       399.4,
+       1094,
+       32,
+       66
+      ],
+      [
+       "r",
+       431.3,
+       1094,
+       22.3,
+       66
+      ],
+      [
+       "y",
+       453.6,
+       1094,
+       31.8,
+       66
+      ],
+      [
+       "f",
+       499,
+       1094,
+       19.7,
+       66
+      ],
+      [
+       "e",
+       518.7,
+       1094,
+       32,
+       66
+      ],
+      [
+       "e",
+       550.6,
+       1094,
+       32,
+       66
+      ],
+      [
+       ",",
+       582.5,
+       1094,
+       16.1,
+       66
+      ],
+      [
+       "b",
+       612.2,
+       1094,
+       32.8,
+       66
+      ],
+      [
+       "y",
+       644.9,
+       1094,
+       31.8,
+       66
+      ],
+      [
+       "n",
+       690.3,
+       1094,
+       33.1,
+       66
+      ],
+      [
+       "a",
+       723.3,
+       1094,
+       31,
+       66
+      ],
+      [
+       "m",
+       754.3,
+       1094,
+       48.7,
+       66
+      ],
+      [
+       "e",
+       803,
+       1094,
+       32,
+       66
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 336,
+    "y": 1094,
+    "w": 498.9375,
+    "h": 66
+   },
+   "container": {
+    "x": 336,
+    "y": 1092,
+    "w": 498.9375,
+    "h": 70.1875
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 54,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "8",
+     "text": "Every fee, by name",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 54,
+     "letter_spacing": 0,
+     "line_height": 70.2,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 7,
+   "mids": [
+    "9"
+   ],
+   "role": "body",
+   "text": "3",
+   "lines": [
+    {
+     "text": "3",
+     "x": 245.9375,
+     "y": 1222,
+     "w": 28.125,
+     "h": 52,
+     "chars": [
+      [
+       "3",
+       245.9,
+       1222,
+       28.1,
+       52
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 245.9375,
+    "y": 1222,
+    "w": 28.125,
+    "h": 52
+   },
+   "container": {
+    "x": 216,
+    "y": 1204,
+    "w": 88,
+    "h": 88
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "center",
+   "white_space": "normal",
+   "size": 44,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(255, 255, 255)",
+   "runs": [
+    {
+     "mid": "9",
+     "text": "3",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 0,
+     "line_height": 88,
+     "color": "rgb(255, 255, 255)",
+     "fill": "rgb(255, 255, 255)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 8,
+   "mids": [
+    "10"
+   ],
+   "role": "body",
+   "text": "Contract length and renewal",
+   "lines": [
+    {
+     "text": "Contract length and",
+     "x": 336,
+     "y": 1214,
+     "w": 517.3125,
+     "h": 66,
+     "chars": [
+      [
+       "C",
+       336,
+       1214,
+       39.8,
+       66
+      ],
+      [
+       "o",
+       375.8,
+       1214,
+       32.9,
+       66
+      ],
+      [
+       "n",
+       408.7,
+       1214,
+       33.1,
+       66
+      ],
+      [
+       "t",
+       441.7,
+       1214,
+       19.1,
+       66
+      ],
+      [
+       "r",
+       460.8,
+       1214,
+       21,
+       66
+      ],
+      [
+       "a",
+       481.7,
+       1214,
+       31,
+       66
+      ],
+      [
+       "c",
+       512.7,
+       1214,
+       31.5,
+       66
+      ],
+      [
+       "t",
+       544.2,
+       1214,
+       19.1,
+       66
+      ],
+      [
+       "l",
+       576.8,
+       1214,
+       14.2,
+       66
+      ],
+      [
+       "e",
+       591,
+       1214,
+       31.9,
+       66
+      ],
+      [
+       "n",
+       622.9,
+       1214,
+       33.1,
+       66
+      ],
+      [
+       "g",
+       655.9,
+       1214,
+       33.8,
+       66
+      ],
+      [
+       "t",
+       689.7,
+       1214,
+       19.2,
+       66
+      ],
+      [
+       "h",
+       708.9,
+       1214,
+       33.1,
+       66
+      ],
+      [
+       "a",
+       755.5,
+       1214,
+       31,
+       66
+      ],
+      [
+       "n",
+       786.6,
+       1214,
+       33.1,
+       66
+      ],
+      [
+       "d",
+       819.6,
+       1214,
+       33.7,
+       66
+      ]
+     ]
+    },
+    {
+     "text": "renewal",
+     "x": 336,
+     "y": 1284.1875,
+     "w": 206.71875,
+     "h": 66,
+     "chars": [
+      [
+       "r",
+       336,
+       1284.2,
+       20.3,
+       66
+      ],
+      [
+       "e",
+       356.3,
+       1284.2,
+       31.9,
+       66
+      ],
+      [
+       "n",
+       388.2,
+       1284.2,
+       33.1,
+       66
+      ],
+      [
+       "e",
+       421.2,
+       1284.2,
+       31.1,
+       66
+      ],
+      [
+       "w",
+       452.3,
+       1284.2,
+       45.3,
+       66
+      ],
+      [
+       "a",
+       497.5,
+       1284.2,
+       31,
+       66
+      ],
+      [
+       "l",
+       528.5,
+       1284.2,
+       14.2,
+       66
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 336,
+    "y": 1214,
+    "w": 517.3125,
+    "h": 136.1875
+   },
+   "container": {
+    "x": 336,
+    "y": 1212,
+    "w": 736,
+    "h": 140.375
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 54,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "10",
+     "text": "Contract length and renewal",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 54,
+     "letter_spacing": 0,
+     "line_height": 70.2,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 9,
+   "mids": [
+    "11"
+   ],
+   "role": "body",
+   "text": "4",
+   "lines": [
+    {
+     "text": "4",
+     "x": 245.40625,
+     "y": 1402.375,
+     "w": 29.15625,
+     "h": 52,
+     "chars": [
+      [
+       "4",
+       245.4,
+       1402.4,
+       29.2,
+       52
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 245.40625,
+    "y": 1402.375,
+    "w": 29.15625,
+    "h": 52
+   },
+   "container": {
+    "x": 216,
+    "y": 1384.375,
+    "w": 88,
+    "h": 88
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "center",
+   "white_space": "normal",
+   "size": 44,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(255, 255, 255)",
+   "runs": [
+    {
+     "mid": "11",
+     "text": "4",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 0,
+     "line_height": 88,
+     "color": "rgb(255, 255, 255)",
+     "fill": "rgb(255, 255, 255)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 10,
+   "mids": [
+    "12"
+   ],
+   "role": "body",
+   "text": "The cost to leave, lease included",
+   "lines": [
+    {
+     "text": "The cost to leave, lease",
+     "x": 336,
+     "y": 1394.375,
+     "w": 614.1875,
+     "h": 66,
+     "chars": [
+      [
+       "T",
+       336,
+       1394.4,
+       35.7,
+       66
+      ],
+      [
+       "h",
+       371.6,
+       1394.4,
+       33.1,
+       66
+      ],
+      [
+       "e",
+       404.7,
+       1394.4,
+       32,
+       66
+      ],
+      [
+       "c",
+       450.2,
+       1394.4,
+       31.5,
+       66
+      ],
+      [
+       "o",
+       481.7,
+       1394.4,
+       32.9,
+       66
+      ],
+      [
+       "s",
+       514.6,
+       1394.4,
+       29.7,
+       66
+      ],
+      [
+       "t",
+       544.2,
+       1394.4,
+       19.1,
+       66
+      ],
+      [
+       "t",
+       576.9,
+       1394.4,
+       18.6,
+       66
+      ],
+      [
+       "o",
+       595.4,
+       1394.4,
+       32.9,
+       66
+      ],
+      [
+       "l",
+       641.9,
+       1394.4,
+       14.2,
+       66
+      ],
+      [
+       "e",
+       656.1,
+       1394.4,
+       32.5,
+       66
+      ],
+      [
+       "a",
+       688.5,
+       1394.4,
+       30.2,
+       66
+      ],
+      [
+       "v",
+       718.6,
+       1394.4,
+       30.7,
+       66
+      ],
+      [
+       "e",
+       749.3,
+       1394.4,
+       32,
+       66
+      ],
+      [
+       ",",
+       781.3,
+       1394.4,
+       16.1,
+       66
+      ],
+      [
+       "l",
+       811,
+       1394.4,
+       14.2,
+       66
+      ],
+      [
+       "e",
+       825.1,
+       1394.4,
+       32.5,
+       66
+      ],
+      [
+       "a",
+       857.6,
+       1394.4,
+       31,
+       66
+      ],
+      [
+       "s",
+       888.6,
+       1394.4,
+       29.7,
+       66
+      ],
+      [
+       "e",
+       918.2,
+       1394.4,
+       32,
+       66
+      ]
+     ]
+    },
+    {
+     "text": "included",
+     "x": 336,
+     "y": 1464.5625,
+     "w": 225.15625,
+     "h": 66,
+     "chars": [
+      [
+       "i",
+       336,
+       1464.6,
+       14.2,
+       66
+      ],
+      [
+       "n",
+       350.1,
+       1464.6,
+       33.1,
+       66
+      ],
+      [
+       "c",
+       383.2,
+       1464.6,
+       31.5,
+       66
+      ],
+      [
+       "l",
+       414.6,
+       1464.6,
+       14.2,
+       66
+      ],
+      [
+       "u",
+       428.8,
+       1464.6,
+       33.1,
+       66
+      ],
+      [
+       "d",
+       461.8,
+       1464.6,
+       33.7,
+       66
+      ],
+      [
+       "e",
+       495.5,
+       1464.6,
+       32,
+       66
+      ],
+      [
+       "d",
+       527.4,
+       1464.6,
+       33.7,
+       66
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 336,
+    "y": 1394.375,
+    "w": 614.1875,
+    "h": 136.1875
+   },
+   "container": {
+    "x": 336,
+    "y": 1392.375,
+    "w": 736,
+    "h": 140.375
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 54,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "12",
+     "text": "The cost to leave, lease included",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 54,
+     "letter_spacing": 0,
+     "line_height": 70.2,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 11,
+   "mids": [
+    "13"
+   ],
+   "role": "body",
+   "text": "Ask every processor, SVPay included.",
+   "lines": [
+    {
+     "text": "Ask every processor, SVPay included.",
+     "x": 152,
+     "y": 1644,
+     "w": 1027.65625,
+     "h": 68,
+     "chars": [
+      [
+       "A",
+       152,
+       1644,
+       40.3,
+       68
+      ],
+      [
+       "s",
+       192.3,
+       1644,
+       30.8,
+       68
+      ],
+      [
+       "k",
+       223.1,
+       1644,
+       31.9,
+       68
+      ],
+      [
+       "e",
+       269.1,
+       1644,
+       32.1,
+       68
+      ],
+      [
+       "v",
+       301.2,
+       1644,
+       31.8,
+       68
+      ],
+      [
+       "e",
+       333,
+       1644,
+       33.2,
+       68
+      ],
+      [
+       "r",
+       366.1,
+       1644,
+       23.1,
+       68
+      ],
+      [
+       "y",
+       389.2,
+       1644,
+       33,
+       68
+      ],
+      [
+       "p",
+       436.3,
+       1644,
+       35,
+       68
+      ],
+      [
+       "r",
+       471.2,
+       1644,
+       21,
+       68
+      ],
+      [
+       "o",
+       492.2,
+       1644,
+       34.1,
+       68
+      ],
+      [
+       "c",
+       526.3,
+       1644,
+       32.7,
+       68
+      ],
+      [
+       "e",
+       558.9,
+       1644,
+       33.2,
+       68
+      ],
+      [
+       "s",
+       592,
+       1644,
+       30.8,
+       68
+      ],
+      [
+       "s",
+       622.8,
+       1644,
+       30.8,
+       68
+      ],
+      [
+       "o",
+       653.6,
+       1644,
+       34.1,
+       68
+      ],
+      [
+       "r",
+       687.7,
+       1644,
+       18.8,
+       68
+      ],
+      [
+       ",",
+       706.4,
+       1644,
+       16.8,
+       68
+      ],
+      [
+       "S",
+       737.2,
+       1644,
+       36.5,
+       68
+      ],
+      [
+       "V",
+       773.6,
+       1644,
+       40.8,
+       68
+      ],
+      [
+       "P",
+       814.4,
+       1644,
+       35.7,
+       68
+      ],
+      [
+       "a",
+       850,
+       1644,
+       31.3,
+       68
+      ],
+      [
+       "y",
+       881.2,
+       1644,
+       33,
+       68
+      ],
+      [
+       "i",
+       928.3,
+       1644,
+       14.7,
+       68
+      ],
+      [
+       "n",
+       942.9,
+       1644,
+       34.3,
+       68
+      ],
+      [
+       "c",
+       977.2,
+       1644,
+       32.7,
+       68
+      ],
+      [
+       "l",
+       1009.8,
+       1644,
+       14.7,
+       68
+      ],
+      [
+       "u",
+       1024.5,
+       1644,
+       34.3,
+       68
+      ],
+      [
+       "d",
+       1058.8,
+       1644,
+       35,
+       68
+      ],
+      [
+       "e",
+       1093.7,
+       1644,
+       33.1,
+       68
+      ],
+      [
+       "d",
+       1126.8,
+       1644,
+       35,
+       68
+      ],
+      [
+       ".",
+       1161.8,
+       1644,
+       17.9,
+       68
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 152,
+    "y": 1644,
+    "w": 1027.65625,
+    "h": 68
+   },
+   "container": {
+    "x": 152,
+    "y": 1640,
+    "w": 1120,
+    "h": 79.5
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 56,
+   "family": "Inter",
+   "weight": 500,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "13",
+     "text": "Ask every processor, SVPay included.",
+     "family": "Inter",
+     "weight": 700,
+     "style": "normal",
+     "size": 56,
+     "letter_spacing": 0,
+     "line_height": 79.52,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 12,
+   "mids": [
+    "14"
+   ],
+   "role": "footer",
+   "text": "www.svpay.app",
+   "lines": [
+    {
+     "text": "www.svpay.app",
+     "x": 1664.15625,
+     "y": 2502,
+     "w": 351.84375,
+     "h": 58,
+     "chars": [
+      [
+       "w",
+       1664.2,
+       2502,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1702.9,
+       2502,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1741.7,
+       2502,
+       35.3,
+       58
+      ],
+      [
+       ".",
+       1776.9,
+       2502,
+       14.2,
+       58
+      ],
+      [
+       "s",
+       1791,
+       2502,
+       24.9,
+       58
+      ],
+      [
+       "v",
+       1815.9,
+       2502,
+       26.1,
+       58
+      ],
+      [
+       "p",
+       1842,
+       2502,
+       28.2,
+       58
+      ],
+      [
+       "a",
+       1870.2,
+       2502,
+       25.1,
+       58
+      ],
+      [
+       "y",
+       1895.2,
+       2502,
+       24.3,
+       58
+      ],
+      [
+       ".",
+       1919.5,
+       2502,
+       14.2,
+       58
+      ],
+      [
+       "a",
+       1933.6,
+       2502,
+       26,
+       58
+      ],
+      [
+       "p",
+       1959.6,
+       2502,
+       28.3,
+       58
+      ],
+      [
+       "p",
+       1987.8,
+       2502,
+       28.2,
+       58
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1664.15625,
+    "y": 2502,
+    "w": 351.84375,
+    "h": 58
+   },
+   "container": {
+    "x": 1664.15625,
+    "y": 2508,
+    "w": 351.84375,
+    "h": 48
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 48,
+   "family": "\"Inter Tight\"",
+   "weight": 700,
+   "color": "rgb(50, 61, 92)",
+   "runs": [
+    {
+     "mid": "14",
+     "text": "www.svpay.app",
+     "family": "\"Inter Tight\"",
+     "weight": 700,
+     "style": "normal",
+     "size": 48,
+     "letter_spacing": -0.48,
+     "line_height": 48,
+     "color": "rgb(50, 61, 92)",
+     "fill": "rgb(50, 61, 92)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  }
+ ],
+ "panels": [
+  {
+   "x": 144,
+   "y": 900,
+   "w": 1000,
+   "h": 704.75,
+   "radius": 64,
+   "backdrop": "blur(24px) saturate(1.6)",
+   "background": "rgba(255, 255, 255, 0.62)",
+   "border": "2px rgba(255, 255, 255, 0.95)",
+   "box_shadow": "rgba(255, 255, 255, 0.95) 0px 1px 0px 0px inset, rgba(40, 50, 150, 0.34) 0px 30px 70px -30px, rgba(40, 50, 150, 0.2) 0px 8px 24px -12px",
+   "cls": "abs glass"
+  }
+ ],
+ "images": [
+  {
+   "src": "rv_hero_5.png",
+   "cls": "hero",
+   "complete": true,
+   "natural": [
+    2160,
+    2700
+   ],
+   "x": 0,
+   "y": 0,
+   "w": 2160,
+   "h": 2700
+  },
+  {
+   "src": "svpay-logo.png",
+   "cls": "logo",
+   "complete": true,
+   "natural": [
+    1774,
+    759
+   ],
+   "x": 144,
+   "y": 2448,
+   "w": 355.25,
+   "h": 152
+  }
+ ],
+ "svgs": [],
+ "hero": "rv_hero_5.png",
+ "fonts": {
+  "status": "loaded",
+  "faces": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "status": "loaded"
+   }
+  ],
+  "files": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "src": "node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2"
+   }
+  ]
+ },
+ "images_complete": true,
+ "slide": "slide-5",
+ "section": "s5",
+ "file": "slides-riverside.html",
+ "failed_requests": [],
+ "capture": {
+  "scale": 2,
+  "viewport": [
+   1080,
+   1400
+  ],
+  "width": 2160,
+  "height": 2700,
+  "chromium": "153.0.8010.12",
+  "fonts_ready_before_capture": true
+ }
+}

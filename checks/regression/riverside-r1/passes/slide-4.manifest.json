@@ -1,0 +1,2382 @@
+{
+ "size": [
+  2160,
+  2700
+ ],
+ "text": [
+  {
+   "id": 0,
+   "mids": [
+    "0"
+   ],
+   "role": "label",
+   "text": "PROPOSED SETTLEMENT",
+   "lines": [
+    {
+     "text": "PROPOSED SETTLEMENT",
+     "x": 198,
+     "y": 152,
+     "w": 662.8125,
+     "h": 52,
+     "chars": [
+      [
+       "P",
+       198,
+       152,
+       34.6,
+       52
+      ],
+      [
+       "R",
+       232.5,
+       152,
+       34.9,
+       52
+      ],
+      [
+       "O",
+       267.4,
+       152,
+       40,
+       52
+      ],
+      [
+       "P",
+       307.4,
+       152,
+       34.6,
+       52
+      ],
+      [
+       "O",
+       341.9,
+       152,
+       40,
+       52
+      ],
+      [
+       "S",
+       381.9,
+       152,
+       34.8,
+       52
+      ],
+      [
+       "E",
+       416.7,
+       152,
+       32.8,
+       52
+      ],
+      [
+       "D",
+       449.5,
+       152,
+       38,
+       52
+      ],
+      [
+       "S",
+       504.7,
+       152,
+       34.8,
+       52
+      ],
+      [
+       "E",
+       539.4,
+       152,
+       32.8,
+       52
+      ],
+      [
+       "T",
+       572.2,
+       152,
+       35.3,
+       52
+      ],
+      [
+       "T",
+       607.4,
+       152,
+       35.2,
+       52
+      ],
+      [
+       "L",
+       642.6,
+       152,
+       31.1,
+       52
+      ],
+      [
+       "E",
+       673.7,
+       152,
+       32.8,
+       52
+      ],
+      [
+       "M",
+       706.5,
+       152,
+       46.8,
+       52
+      ],
+      [
+       "E",
+       753.2,
+       152,
+       32.8,
+       52
+      ],
+      [
+       "N",
+       786,
+       152,
+       39.6,
+       52
+      ],
+      [
+       "T",
+       825.6,
+       152,
+       35.2,
+       52
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 198,
+    "y": 152,
+    "w": 662.8125,
+    "h": 52
+   },
+   "container": {
+    "x": 144,
+    "y": 156,
+    "w": 716.8125,
+    "h": 44
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 44,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "0",
+     "text": "Proposed settlement",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 6.16,
+     "line_height": 44,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "uppercase",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 1,
+   "mids": [
+    "1",
+    "2"
+   ],
+   "role": "counter",
+   "text": "4 / 6",
+   "lines": [
+    {
+     "text": "4 / 6",
+     "x": 1912.6875,
+     "y": 152,
+     "w": 103.3125,
+     "h": 52,
+     "chars": [
+      [
+       "4",
+       1912.7,
+       152,
+       31.8,
+       52
+      ],
+      [
+       "/",
+       1955.8,
+       152,
+       18.4,
+       52
+      ],
+      [
+       "6",
+       1985.6,
+       152,
+       30.4,
+       52
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1912.6875,
+    "y": 152,
+    "w": 103.3125,
+    "h": 52
+   },
+   "container": {
+    "x": 1912.6875,
+    "y": 156,
+    "w": 103.3125,
+    "h": 44
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 44,
+   "family": "\"Inter Tight\"",
+   "weight": 700,
+   "color": "rgb(95, 106, 136)",
+   "runs": [
+    {
+     "mid": "1",
+     "text": "/ 6",
+     "family": "\"Inter Tight\"",
+     "weight": 700,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 2.64,
+     "line_height": 44,
+     "color": "rgb(95, 106, 136)",
+     "fill": "rgb(95, 106, 136)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "2",
+     "text": "4",
+     "family": "\"Inter Tight\"",
+     "weight": 900,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 2.64,
+     "line_height": 44,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 2,
+   "mids": [
+    "3"
+   ],
+   "role": "headline",
+   "text": "$600,000",
+   "lines": [
+    {
+     "text": "$600,000",
+     "x": 144,
+     "y": 346,
+     "w": 1116.0625,
+     "h": 290,
+     "chars": [
+      [
+       "$",
+       144,
+       346,
+       142.2,
+       290
+      ],
+      [
+       "6",
+       286.2,
+       346,
+       146.5,
+       290
+      ],
+      [
+       "0",
+       432.6,
+       346,
+       153.9,
+       290
+      ],
+      [
+       "0",
+       586.5,
+       346,
+       146.5,
+       290
+      ],
+      [
+       ",",
+       733,
+       346,
+       65.4,
+       290
+      ],
+      [
+       "0",
+       798.4,
+       346,
+       153.9,
+       290
+      ],
+      [
+       "0",
+       952.3,
+       346,
+       153.9,
+       290
+      ],
+      [
+       "0",
+       1106.2,
+       346,
+       153.9,
+       290
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 346,
+    "w": 1116.0625,
+    "h": 290
+   },
+   "container": {
+    "x": 144,
+    "y": 380,
+    "w": 1125.65625,
+    "h": 225.59375
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 240,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgba(0, 0, 0, 0)",
+   "runs": [
+    {
+     "mid": "3",
+     "text": "$600,000",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 240,
+     "letter_spacing": -9.6,
+     "line_height": 225.6,
+     "color": "rgba(0, 0, 0, 0)",
+     "fill": "rgba(0, 0, 0, 0)",
+     "gradient_text": "linear-gradient(100deg, rgb(255, 31, 122), rgb(255, 61, 158) 55%, rgb(217, 60, 255))",
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 3,
+   "mids": [
+    "4"
+   ],
+   "role": "body",
+   "text": "to settle with the FTC and Washington.",
+   "lines": [
+    {
+     "text": "to settle with the FTC",
+     "x": 144,
+     "y": 625.59375,
+     "w": 966.3125,
+     "h": 126,
+     "chars": [
+      [
+       "t",
+       144,
+       625.6,
+       34.7,
+       126
+      ],
+      [
+       "o",
+       178.7,
+       625.6,
+       58.4,
+       126
+      ],
+      [
+       "s",
+       253.4,
+       625.6,
+       53.8,
+       126
+      ],
+      [
+       "e",
+       307.2,
+       625.6,
+       56.5,
+       126
+      ],
+      [
+       "t",
+       363.7,
+       625.6,
+       35.3,
+       126
+      ],
+      [
+       "t",
+       398.9,
+       625.6,
+       36.4,
+       126
+      ],
+      [
+       "l",
+       435.3,
+       625.6,
+       23.5,
+       126
+      ],
+      [
+       "e",
+       458.8,
+       625.6,
+       56.5,
+       126
+      ],
+      [
+       "w",
+       531.6,
+       625.6,
+       83.7,
+       126
+      ],
+      [
+       "i",
+       615.3,
+       625.6,
+       23.5,
+       126
+      ],
+      [
+       "t",
+       638.8,
+       625.6,
+       36.4,
+       126
+      ],
+      [
+       "h",
+       675.2,
+       625.6,
+       60.3,
+       126
+      ],
+      [
+       "t",
+       751.8,
+       625.6,
+       36.4,
+       126
+      ],
+      [
+       "h",
+       788.3,
+       625.6,
+       60.3,
+       126
+      ],
+      [
+       "e",
+       848.6,
+       625.6,
+       56.5,
+       126
+      ],
+      [
+       "F",
+       921.4,
+       625.6,
+       54.8,
+       126
+      ],
+      [
+       "T",
+       976.2,
+       625.6,
+       61.1,
+       126
+      ],
+      [
+       "C",
+       1037.2,
+       625.6,
+       73.1,
+       126
+      ]
+     ]
+    },
+    {
+     "text": "and Washington.",
+     "x": 144,
+     "y": 735.8125,
+     "w": 788,
+     "h": 126,
+     "chars": [
+      [
+       "a",
+       144,
+       735.8,
+       55.3,
+       126
+      ],
+      [
+       "n",
+       199.3,
+       735.8,
+       60.2,
+       126
+      ],
+      [
+       "d",
+       259.5,
+       735.8,
+       60.3,
+       126
+      ],
+      [
+       "W",
+       336.2,
+       735.8,
+       98.2,
+       126
+      ],
+      [
+       "a",
+       434.3,
+       735.8,
+       55.3,
+       126
+      ],
+      [
+       "s",
+       489.7,
+       735.8,
+       53.8,
+       126
+      ],
+      [
+       "h",
+       543.4,
+       735.8,
+       60.3,
+       126
+      ],
+      [
+       "i",
+       603.7,
+       735.8,
+       23.5,
+       126
+      ],
+      [
+       "n",
+       627.2,
+       735.8,
+       60.2,
+       126
+      ],
+      [
+       "g",
+       687.4,
+       735.8,
+       60.5,
+       126
+      ],
+      [
+       "t",
+       747.9,
+       735.8,
+       34.7,
+       126
+      ],
+      [
+       "o",
+       782.5,
+       735.8,
+       58.4,
+       126
+      ],
+      [
+       "n",
+       840.9,
+       735.8,
+       60.2,
+       126
+      ],
+      [
+       ".",
+       901.1,
+       735.8,
+       30.9,
+       126
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 625.59375,
+    "w": 966.3125,
+    "h": 236.21875
+   },
+   "container": {
+    "x": 144,
+    "y": 633.59375,
+    "w": 1120,
+    "h": 220.4375
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 104,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "4",
+     "text": "to settle with the FTCand Washington.",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 104,
+     "letter_spacing": -3.12,
+     "line_height": 110.24,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 4,
+   "mids": [
+    "5",
+    "6"
+   ],
+   "role": "body",
+   "text": "If a judge approves, customers get 60 days to end the processing contract, no termination fee.",
+   "lines": [
+    {
+     "text": "If a judge approves, customers get",
+     "x": 144,
+     "y": 926.03125,
+     "w": 927.53125,
+     "h": 68,
+     "chars": [
+      [
+       "I",
+       144,
+       926,
+       15.3,
+       68
+      ],
+      [
+       "f",
+       159.3,
+       926,
+       21.3,
+       68
+      ],
+      [
+       "a",
+       195.4,
+       926,
+       31.8,
+       68
+      ],
+      [
+       "j",
+       242.2,
+       926,
+       14.1,
+       68
+      ],
+      [
+       "u",
+       256.3,
+       926,
+       33.7,
+       68
+      ],
+      [
+       "d",
+       289.9,
+       926,
+       34.7,
+       68
+      ],
+      [
+       "g",
+       324.6,
+       926,
+       34.7,
+       68
+      ],
+      [
+       "e",
+       359.3,
+       926,
+       32.9,
+       68
+      ],
+      [
+       "a",
+       407.1,
+       926,
+       31.8,
+       68
+      ],
+      [
+       "p",
+       438.9,
+       926,
+       34.7,
+       68
+      ],
+      [
+       "p",
+       473.5,
+       926,
+       34.7,
+       68
+      ],
+      [
+       "r",
+       508.1,
+       926,
+       20.6,
+       68
+      ],
+      [
+       "o",
+       528.7,
+       926,
+       32.8,
+       68
+      ],
+      [
+       "v",
+       561.5,
+       926,
+       31.2,
+       68
+      ],
+      [
+       "e",
+       592.6,
+       926,
+       32.9,
+       68
+      ],
+      [
+       "s",
+       625.5,
+       926,
+       30.2,
+       68
+      ],
+      [
+       ",",
+       655.7,
+       926,
+       16.4,
+       68
+      ],
+      [
+       "c",
+       687,
+       926,
+       32.3,
+       68
+      ],
+      [
+       "u",
+       719.3,
+       926,
+       33.7,
+       68
+      ],
+      [
+       "s",
+       753,
+       926,
+       30.2,
+       68
+      ],
+      [
+       "t",
+       783.2,
+       926,
+       18.5,
+       68
+      ],
+      [
+       "o",
+       801.7,
+       926,
+       33.8,
+       68
+      ],
+      [
+       "m",
+       835.5,
+       926,
+       49.8,
+       68
+      ],
+      [
+       "e",
+       885.2,
+       926,
+       32.9,
+       68
+      ],
+      [
+       "r",
+       918.1,
+       926,
+       21.7,
+       68
+      ],
+      [
+       "s",
+       939.8,
+       926,
+       30.2,
+       68
+      ],
+      [
+       "g",
+       984.9,
+       926,
+       34.7,
+       68
+      ],
+      [
+       "e",
+       1019.6,
+       926,
+       32.9,
+       68
+      ],
+      [
+       "t",
+       1052.5,
+       926,
+       19.1,
+       68
+      ]
+     ]
+    },
+    {
+     "text": "60 days to end the processing",
+     "x": 144,
+     "y": 1005.53125,
+     "w": 812.8125,
+     "h": 68,
+     "chars": [
+      [
+       "6",
+       144,
+       1005.5,
+       35.8,
+       68
+      ],
+      [
+       "0",
+       179.8,
+       1005.5,
+       37,
+       68
+      ],
+      [
+       "d",
+       230.8,
+       1005.5,
+       35,
+       68
+      ],
+      [
+       "a",
+       265.8,
+       1005.5,
+       31.3,
+       68
+      ],
+      [
+       "y",
+       297,
+       1005.5,
+       33,
+       68
+      ],
+      [
+       "s",
+       330,
+       1005.5,
+       30.8,
+       68
+      ],
+      [
+       "t",
+       375.7,
+       1005.5,
+       18.6,
+       68
+      ],
+      [
+       "o",
+       394.2,
+       1005.5,
+       33.8,
+       68
+      ],
+      [
+       "e",
+       443,
+       1005.5,
+       32.9,
+       68
+      ],
+      [
+       "n",
+       475.8,
+       1005.5,
+       33.7,
+       68
+      ],
+      [
+       "d",
+       509.5,
+       1005.5,
+       34.7,
+       68
+      ],
+      [
+       "t",
+       559.1,
+       1005.5,
+       19.1,
+       68
+      ],
+      [
+       "h",
+       578.2,
+       1005.5,
+       33.7,
+       68
+      ],
+      [
+       "e",
+       611.9,
+       1005.5,
+       32.9,
+       68
+      ],
+      [
+       "p",
+       659.7,
+       1005.5,
+       34.7,
+       68
+      ],
+      [
+       "r",
+       694.3,
+       1005.5,
+       20.6,
+       68
+      ],
+      [
+       "o",
+       714.9,
+       1005.5,
+       33.8,
+       68
+      ],
+      [
+       "c",
+       748.8,
+       1005.5,
+       32.3,
+       68
+      ],
+      [
+       "e",
+       781.1,
+       1005.5,
+       32.9,
+       68
+      ],
+      [
+       "s",
+       814,
+       1005.5,
+       30.2,
+       68
+      ],
+      [
+       "s",
+       844.1,
+       1005.5,
+       30.2,
+       68
+      ],
+      [
+       "i",
+       874.3,
+       1005.5,
+       14.1,
+       68
+      ],
+      [
+       "n",
+       888.4,
+       1005.5,
+       33.7,
+       68
+      ],
+      [
+       "g",
+       922.1,
+       1005.5,
+       34.7,
+       68
+      ]
+     ]
+    },
+    {
+     "text": "contract, no termination fee.",
+     "x": 144,
+     "y": 1085.03125,
+     "w": 758.5,
+     "h": 68,
+     "chars": [
+      [
+       "c",
+       144,
+       1085,
+       32.3,
+       68
+      ],
+      [
+       "o",
+       176.3,
+       1085,
+       33.8,
+       68
+      ],
+      [
+       "n",
+       210.1,
+       1085,
+       33.7,
+       68
+      ],
+      [
+       "t",
+       243.8,
+       1085,
+       19.1,
+       68
+      ],
+      [
+       "r",
+       262.9,
+       1085,
+       21.4,
+       68
+      ],
+      [
+       "a",
+       284.3,
+       1085,
+       31.8,
+       68
+      ],
+      [
+       "c",
+       316.1,
+       1085,
+       32.3,
+       68
+      ],
+      [
+       "t",
+       348.4,
+       1085,
+       19.1,
+       68
+      ],
+      [
+       ",",
+       367.5,
+       1085,
+       16.4,
+       68
+      ],
+      [
+       "n",
+       398.8,
+       1085,
+       33.7,
+       68
+      ],
+      [
+       "o",
+       432.5,
+       1085,
+       33.8,
+       68
+      ],
+      [
+       "t",
+       481.3,
+       1085,
+       18.5,
+       68
+      ],
+      [
+       "e",
+       499.8,
+       1085,
+       32.9,
+       68
+      ],
+      [
+       "r",
+       532.7,
+       1085,
+       22.4,
+       68
+      ],
+      [
+       "m",
+       555,
+       1085,
+       49.8,
+       68
+      ],
+      [
+       "i",
+       604.8,
+       1085,
+       14.2,
+       68
+      ],
+      [
+       "n",
+       618.9,
+       1085,
+       33.7,
+       68
+      ],
+      [
+       "a",
+       652.6,
+       1085,
+       31.8,
+       68
+      ],
+      [
+       "t",
+       684.3,
+       1085,
+       19.1,
+       68
+      ],
+      [
+       "i",
+       703.4,
+       1085,
+       14.2,
+       68
+      ],
+      [
+       "o",
+       717.5,
+       1085,
+       33.8,
+       68
+      ],
+      [
+       "n",
+       751.3,
+       1085,
+       33.7,
+       68
+      ],
+      [
+       "f",
+       800,
+       1085,
+       19.8,
+       68
+      ],
+      [
+       "e",
+       819.7,
+       1085,
+       32.9,
+       68
+      ],
+      [
+       "e",
+       852.6,
+       1085,
+       32.9,
+       68
+      ],
+      [
+       ".",
+       885.5,
+       1085,
+       17,
+       68
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 926.03125,
+    "w": 927.53125,
+    "h": 227
+   },
+   "container": {
+    "x": 144,
+    "y": 922.03125,
+    "w": 1000,
+    "h": 238.5
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 56,
+   "family": "Inter",
+   "weight": 500,
+   "color": "rgb(50, 61, 92)",
+   "runs": [
+    {
+     "mid": "5",
+     "text": "If a judge approves, customers get  to end the processing contract, no termination fee.",
+     "family": "Inter",
+     "weight": 500,
+     "style": "normal",
+     "size": 56,
+     "letter_spacing": 0,
+     "line_height": 79.52,
+     "color": "rgb(50, 61, 92)",
+     "fill": "rgb(50, 61, 92)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "6",
+     "text": "60 days",
+     "family": "Inter",
+     "weight": 700,
+     "style": "normal",
+     "size": 56,
+     "letter_spacing": 0,
+     "line_height": 79.52,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 5,
+   "mids": [
+    "7"
+   ],
+   "role": "body",
+   "text": "Machine leases aren’t covered.",
+   "lines": [
+    {
+     "text": "Machine leases aren’t covered.",
+     "x": 144,
+     "y": 1200.53125,
+     "w": 834.15625,
+     "h": 68,
+     "chars": [
+      [
+       "M",
+       144,
+       1200.5,
+       51.1,
+       68
+      ],
+      [
+       "a",
+       195.1,
+       1200.5,
+       31.8,
+       68
+      ],
+      [
+       "c",
+       226.9,
+       1200.5,
+       32.3,
+       68
+      ],
+      [
+       "h",
+       259.2,
+       1200.5,
+       33.7,
+       68
+      ],
+      [
+       "i",
+       292.9,
+       1200.5,
+       14.1,
+       68
+      ],
+      [
+       "n",
+       307,
+       1200.5,
+       33.7,
+       68
+      ],
+      [
+       "e",
+       340.7,
+       1200.5,
+       32.9,
+       68
+      ],
+      [
+       "l",
+       388.5,
+       1200.5,
+       14.1,
+       68
+      ],
+      [
+       "e",
+       402.6,
+       1200.5,
+       33.5,
+       68
+      ],
+      [
+       "a",
+       436.1,
+       1200.5,
+       31.8,
+       68
+      ],
+      [
+       "s",
+       467.9,
+       1200.5,
+       30.2,
+       68
+      ],
+      [
+       "e",
+       498,
+       1200.5,
+       32.9,
+       68
+      ],
+      [
+       "s",
+       530.9,
+       1200.5,
+       30.2,
+       68
+      ],
+      [
+       "a",
+       576,
+       1200.5,
+       31.8,
+       68
+      ],
+      [
+       "r",
+       607.8,
+       1200.5,
+       20.6,
+       68
+      ],
+      [
+       "e",
+       628.4,
+       1200.5,
+       32.9,
+       68
+      ],
+      [
+       "n",
+       661.3,
+       1200.5,
+       32.5,
+       68
+      ],
+      [
+       "’",
+       693.8,
+       1200.5,
+       16.2,
+       68
+      ],
+      [
+       "t",
+       710,
+       1200.5,
+       19.1,
+       68
+      ],
+      [
+       "c",
+       744,
+       1200.5,
+       32.3,
+       68
+      ],
+      [
+       "o",
+       776.3,
+       1200.5,
+       32.8,
+       68
+      ],
+      [
+       "v",
+       809,
+       1200.5,
+       31.2,
+       68
+      ],
+      [
+       "e",
+       840.2,
+       1200.5,
+       32.9,
+       68
+      ],
+      [
+       "r",
+       873.1,
+       1200.5,
+       20.6,
+       68
+      ],
+      [
+       "e",
+       893.7,
+       1200.5,
+       32.9,
+       68
+      ],
+      [
+       "d",
+       926.5,
+       1200.5,
+       34.7,
+       68
+      ],
+      [
+       ".",
+       961.2,
+       1200.5,
+       17,
+       68
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 1200.53125,
+    "w": 834.15625,
+    "h": 68
+   },
+   "container": {
+    "x": 144,
+    "y": 1196.53125,
+    "w": 1000,
+    "h": 79.5
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 56,
+   "family": "Inter",
+   "weight": 500,
+   "color": "rgb(50, 61, 92)",
+   "runs": [
+    {
+     "mid": "7",
+     "text": "Machine leases aren’t covered.",
+     "family": "Inter",
+     "weight": 500,
+     "style": "normal",
+     "size": 56,
+     "letter_spacing": 0,
+     "line_height": 79.52,
+     "color": "rgb(50, 61, 92)",
+     "fill": "rgb(50, 61, 92)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 6,
+   "mids": [
+    "8",
+    "9"
+   ],
+   "role": "source",
+   "text": "Sources: FTC press release, Nov 2, 2026; OPB, Nov 6, 2026",
+   "lines": [
+    {
+     "text": "Sources: FTC press release, Nov 2, 2026; OPB, Nov 6, 2026",
+     "x": 152,
+     "y": 2174,
+     "w": 1089.1875,
+     "h": 46,
+     "chars": [
+      [
+       "S",
+       152,
+       2174,
+       24.7,
+       46
+      ],
+      [
+       "o",
+       176.7,
+       2174,
+       23.2,
+       46
+      ],
+      [
+       "u",
+       199.8,
+       2174,
+       23.3,
+       46
+      ],
+      [
+       "r",
+       223.1,
+       2174,
+       14.3,
+       46
+      ],
+      [
+       "c",
+       237.3,
+       2174,
+       22.2,
+       46
+      ],
+      [
+       "e",
+       259.5,
+       2174,
+       22.5,
+       46
+      ],
+      [
+       "s",
+       282,
+       2174,
+       20.9,
+       46
+      ],
+      [
+       ":",
+       302.8,
+       2174,
+       12.1,
+       46
+      ],
+      [
+       "F",
+       325.1,
+       2174,
+       22.4,
+       46
+      ],
+      [
+       "T",
+       347.5,
+       2174,
+       23.7,
+       46
+      ],
+      [
+       "C",
+       371.1,
+       2174,
+       27.9,
+       46
+      ],
+      [
+       "p",
+       409.1,
+       2174,
+       23.5,
+       46
+      ],
+      [
+       "r",
+       432.6,
+       2174,
+       14,
+       46
+      ],
+      [
+       "e",
+       446.6,
+       2174,
+       22.3,
+       46
+      ],
+      [
+       "s",
+       468.9,
+       2174,
+       20.5,
+       46
+      ],
+      [
+       "s",
+       489.4,
+       2174,
+       20.5,
+       46
+      ],
+      [
+       "r",
+       520,
+       2174,
+       14,
+       46
+      ],
+      [
+       "e",
+       534,
+       2174,
+       22.3,
+       46
+      ],
+      [
+       "l",
+       556.3,
+       2174,
+       9.6,
+       46
+      ],
+      [
+       "e",
+       565.8,
+       2174,
+       22.7,
+       46
+      ],
+      [
+       "a",
+       588.5,
+       2174,
+       21.6,
+       46
+      ],
+      [
+       "s",
+       610.1,
+       2174,
+       20.5,
+       46
+      ],
+      [
+       "e",
+       630.6,
+       2174,
+       22.3,
+       46
+      ],
+      [
+       ",",
+       652.9,
+       2174,
+       11.2,
+       46
+      ],
+      [
+       "N",
+       674.2,
+       2174,
+       28.8,
+       46
+      ],
+      [
+       "o",
+       702.9,
+       2174,
+       22.3,
+       46
+      ],
+      [
+       "v",
+       725.2,
+       2174,
+       21.8,
+       46
+      ],
+      [
+       "2",
+       757.1,
+       2174,
+       23.4,
+       46
+      ],
+      [
+       ",",
+       780.5,
+       2174,
+       11.2,
+       46
+      ],
+      [
+       "2",
+       801.8,
+       2174,
+       23.5,
+       46
+      ],
+      [
+       "0",
+       825.2,
+       2174,
+       24.6,
+       46
+      ],
+      [
+       "2",
+       849.8,
+       2174,
+       23.4,
+       46
+      ],
+      [
+       "6",
+       873.2,
+       2174,
+       24,
+       46
+      ],
+      [
+       ";",
+       897.1,
+       2174,
+       12,
+       46
+      ],
+      [
+       "O",
+       919.2,
+       2174,
+       29.2,
+       46
+      ],
+      [
+       "P",
+       948.3,
+       2174,
+       24.4,
+       46
+      ],
+      [
+       "B",
+       972.7,
+       2174,
+       25,
+       46
+      ],
+      [
+       ",",
+       997.7,
+       2174,
+       11.2,
+       46
+      ],
+      [
+       "N",
+       1018.9,
+       2174,
+       28.8,
+       46
+      ],
+      [
+       "o",
+       1047.7,
+       2174,
+       22.3,
+       46
+      ],
+      [
+       "v",
+       1069.9,
+       2174,
+       21.9,
+       46
+      ],
+      [
+       "6",
+       1101.9,
+       2174,
+       22.8,
+       46
+      ],
+      [
+       ",",
+       1124.6,
+       2174,
+       11.2,
+       46
+      ],
+      [
+       "2",
+       1145.8,
+       2174,
+       23.5,
+       46
+      ],
+      [
+       "0",
+       1169.3,
+       2174,
+       24.5,
+       46
+      ],
+      [
+       "2",
+       1193.8,
+       2174,
+       23.5,
+       46
+      ],
+      [
+       "6",
+       1217.2,
+       2174,
+       24,
+       46
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 152,
+    "y": 2174,
+    "w": 1089.1875,
+    "h": 46
+   },
+   "container": {
+    "x": 152,
+    "y": 2172,
+    "w": 1520,
+    "h": 53.1875
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 38,
+   "family": "Inter",
+   "weight": 500,
+   "color": "rgb(95, 106, 136)",
+   "runs": [
+    {
+     "mid": "8",
+     "text": "FTC press release, Nov 2, 2026; OPB, Nov 6, 2026",
+     "family": "Inter",
+     "weight": 500,
+     "style": "normal",
+     "size": 38,
+     "letter_spacing": 0,
+     "line_height": 53.2,
+     "color": "rgb(95, 106, 136)",
+     "fill": "rgb(95, 106, 136)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "9",
+     "text": "Sources:",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 38,
+     "letter_spacing": 0,
+     "line_height": 53.2,
+     "color": "rgb(50, 61, 92)",
+     "fill": "rgb(50, 61, 92)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 7,
+   "mids": [
+    "10"
+   ],
+   "role": "footer",
+   "text": "www.svpay.app",
+   "lines": [
+    {
+     "text": "www.svpay.app",
+     "x": 1664.15625,
+     "y": 2502,
+     "w": 351.84375,
+     "h": 58,
+     "chars": [
+      [
+       "w",
+       1664.2,
+       2502,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1702.9,
+       2502,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1741.7,
+       2502,
+       35.3,
+       58
+      ],
+      [
+       ".",
+       1776.9,
+       2502,
+       14.2,
+       58
+      ],
+      [
+       "s",
+       1791,
+       2502,
+       24.9,
+       58
+      ],
+      [
+       "v",
+       1815.9,
+       2502,
+       26.1,
+       58
+      ],
+      [
+       "p",
+       1842,
+       2502,
+       28.2,
+       58
+      ],
+      [
+       "a",
+       1870.2,
+       2502,
+       25.1,
+       58
+      ],
+      [
+       "y",
+       1895.2,
+       2502,
+       24.3,
+       58
+      ],
+      [
+       ".",
+       1919.5,
+       2502,
+       14.2,
+       58
+      ],
+      [
+       "a",
+       1933.6,
+       2502,
+       26,
+       58
+      ],
+      [
+       "p",
+       1959.6,
+       2502,
+       28.3,
+       58
+      ],
+      [
+       "p",
+       1987.8,
+       2502,
+       28.2,
+       58
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1664.15625,
+    "y": 2502,
+    "w": 351.84375,
+    "h": 58
+   },
+   "container": {
+    "x": 1664.15625,
+    "y": 2508,
+    "w": 351.84375,
+    "h": 48
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 48,
+   "family": "\"Inter Tight\"",
+   "weight": 700,
+   "color": "rgb(50, 61, 92)",
+   "runs": [
+    {
+     "mid": "10",
+     "text": "www.svpay.app",
+     "family": "\"Inter Tight\"",
+     "weight": 700,
+     "style": "normal",
+     "size": 48,
+     "letter_spacing": -0.48,
+     "line_height": 48,
+     "color": "rgb(50, 61, 92)",
+     "fill": "rgb(50, 61, 92)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  }
+ ],
+ "panels": [],
+ "images": [
+  {
+   "src": "rv_hero_4.png",
+   "cls": "hero",
+   "complete": true,
+   "natural": [
+    2160,
+    2700
+   ],
+   "x": 0,
+   "y": 0,
+   "w": 2160,
+   "h": 2700
+  },
+  {
+   "src": "svpay-logo.png",
+   "cls": "logo",
+   "complete": true,
+   "natural": [
+    1774,
+    759
+   ],
+   "x": 144,
+   "y": 2448,
+   "w": 355.25,
+   "h": 152
+  }
+ ],
+ "svgs": [],
+ "hero": "rv_hero_4.png",
+ "fonts": {
+  "status": "loaded",
+  "faces": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "status": "loaded"
+   }
+  ],
+  "files": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "src": "node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2"
+   }
+  ]
+ },
+ "images_complete": true,
+ "slide": "slide-4",
+ "section": "s4",
+ "file": "slides-riverside.html",
+ "failed_requests": [],
+ "capture": {
+  "scale": 2,
+  "viewport": [
+   1080,
+   1400
+  ],
+  "width": 2160,
+  "height": 2700,
+  "chromium": "153.0.8010.12",
+  "fonts_ready_before_capture": true
+ }
+}
