@@ -26,11 +26,11 @@ CHECK = os.path.join(REPO, "checks", "check_post.py")
 CRIT = {c["id"]: c for c in json.load(open(os.path.join(REPO, "checks", "criteria.json"), encoding="utf-8"))}
 
 
-def gate_rows(report):
+def gate_rows(report, statuses=("fail", "needs_passes")):
     rows = []
     for r in report.get("results", []):
         c = CRIT.get(r["id"])
-        if c and c.get("gate") and r["status"] in ("fail", "needs_passes"):
+        if c and c.get("gate") and r["status"] in statuses:
             rows.append((r["id"], r["where"], r.get("detail", "")))
     return rows
 
@@ -45,6 +45,7 @@ def run_case(name, case):
     subprocess.run(cmd, cwd=REPO, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=3600)
     rep = json.load(open(out, encoding="utf-8"))
     gates = gate_rows(rep)
+    measured = gate_rows(rep, ("fail",))      # a rejected slide is caught only by a measured failure, never by "needs passes"
     problems = []
     if "no_gates" in case:
         prefixes = tuple(case["no_gates"])
@@ -52,7 +53,7 @@ def run_case(name, case):
         if bad:
             problems.append("gates fail on the approved deck: " + ", ".join(bad))
     for slide, want in case.get("fail_on", {}).items():
-        hit = sorted({g for g, w, _ in gates if g in want and where_matches(w, slide)})
+        hit = sorted({g for g, w, _ in measured if g in want and where_matches(w, slide)})
         if not hit:
             problems.append(f"{slide} fails none of {', '.join(want)}")
     if "gates_fail" in case:
@@ -60,7 +61,7 @@ def run_case(name, case):
         miss = [g for g in case["gates_fail"] if g not in failed]
         if miss:
             problems.append("expected gates did not fail: " + ", ".join(miss))
-    caught = {slide: sorted({g for g, w, _ in gates if g in want and where_matches(w, slide)}) for slide, want in case.get("fail_on", {}).items()}
+    caught = {slide: sorted({g for g, w, _ in measured if g in want and where_matches(w, slide)}) for slide, want in case.get("fail_on", {}).items()}
     return {"case": name, "package": case["package"], "pass": not problems, "problems": problems, "caught": caught,
             "gates_failed": sorted({g for g, _, _ in gates})}
 
