@@ -470,7 +470,15 @@
   "QR04": "a process check (determinism)",
   "QR05": "a process check (pinned WebGL renderer)"
  },
- "gates_demoted_at_calibration": {},
+ "gates_demoted_at_calibration": {
+  "V-D01": "fails the approved Nov 4 deck on its own pixels (worst-case 2.5-3.9:1 on the disclaimer, the italic serif lines, 'THAT COULD BE' and the gradient '$2.62'); stays a weight-5 check",
+  "T-S05": "fails the approved Nov 4 deck: its 32px 'SVPay is not affiliated with Toast.' line has an 18px x-height",
+  "T-O01": "fails the approved Nov 4 deck: Tesseract misreads its large gradient '$2.62', 'In 3 months' and the ÷ sign; OCR limits, not the slide",
+  "T-O03": "fails the approved Nov 4 deck: Tesseract cannot read its large gradient '$2.62' digits",
+  "T-O11": "fails the approved Nov 4 deck for the same OCR misreads as T-O01",
+  "V-C20": "fails the approved Nov 4 deck: exact OCR of '$2.62' and the ÷ sign fails; OCR limits, not the slide",
+  "R-X01": "fails the approved Nov 4 deck: its pastel gradient numerals separate on 46-82% of their outline (the house style)"
+ },
  "gates_kept": [
   "F-GB07",
   "F-IG07",
@@ -575,7 +583,6 @@
   "R-P06",
   "R-S01",
   "R-S02",
-  "R-X01",
   "R-Z03",
   "R-Z04",
   "R-Z05",
@@ -583,12 +590,19 @@
   "T-D04",
   "T-N06",
   "T-N08",
-  "T-O01",
-  "T-O03",
   "T-O05",
   "T-O09",
-  "T-O10",
-  "T-O11",
-  "T-S05"
- ]
+  "T-O10"
+ ],
+ "gates_scoped_at_calibration": {
+  "R-D01": "The approved Nov 4 deck was rendered with the scene code that had the same shadow camera (+-30) and bevels that were fixed on Nov 11 (8369ffb, 213cd9f), so these V-I07 gates fail it too; as weighted checks they would not stop the rejected Nov 11 renders. They apply to posts dated Nov 11, 2026 or later, like R-D11.",
+  "R-N01": "The approved Nov 4 deck was rendered with the scene code that had the same shadow camera (+-30) and bevels that were fixed on Nov 11 (8369ffb, 213cd9f), so these V-I07 gates fail it too; as weighted checks they would not stop the rejected Nov 11 renders. They apply to posts dated Nov 11, 2026 or later, like R-D11.",
+  "R-Z06": "The approved Nov 4 deck was rendered with the scene code that had the same shadow camera (+-30) and bevels that were fixed on Nov 11 (8369ffb, 213cd9f), so these V-I07 gates fail it too; as weighted checks they would not stop the rejected Nov 11 renders. They apply to posts dated Nov 11, 2026 or later, like R-D11.",
+  "R-Z03": "The approved Nov 4 deck was rendered with the scene code that had the same shadow camera (+-30) and bevels that were fixed on Nov 11 (8369ffb, 213cd9f), so these V-I07 gates fail it too; as weighted checks they would not stop the rejected Nov 11 renders. They apply to posts dated Nov 11, 2026 or later, like R-D11.",
+  "R-Z04": "The approved Nov 4 deck was rendered with the scene code that had the same shadow camera (+-30) and bevels that were fixed on Nov 11 (8369ffb, 213cd9f), so these V-I07 gates fail it too; as weighted checks they would not stop the rejected Nov 11 renders. They apply to posts dated Nov 11, 2026 or later, like R-D11.",
+  "R-S01": "The approved Nov 4 deck was rendered with the scene code that had the same shadow camera (+-30) and bevels that were fixed on Nov 11 (8369ffb, 213cd9f), so these V-I07 gates fail it too; as weighted checks they would not stop the rejected Nov 11 renders. They apply to posts dated Nov 11, 2026 or later, like R-D11.",
+  "R-S02": "The approved Nov 4 deck was rendered with the scene code that had the same shadow camera (+-30) and bevels that were fixed on Nov 11 (8369ffb, 213cd9f), so these V-I07 gates fail it too; as weighted checks they would not stop the rejected Nov 11 renders. They apply to posts dated Nov 11, 2026 or later, like R-D11.",
+  "R-G01": "The approved Nov 4 deck was rendered with the scene code that had the same shadow camera (+-30) and bevels that were fixed on Nov 11 (8369ffb, 213cd9f), so these V-I07 gates fail it too; as weighted checks they would not stop the rejected Nov 11 renders. They apply to posts dated Nov 11, 2026 or later, like R-D11.",
+  "R-G02": "The approved Nov 4 deck was rendered with the scene code that had the same shadow camera (+-30) and bevels that were fixed on Nov 11 (8369ffb, 213cd9f), so these V-I07 gates fail it too; as weighted checks they would not stop the rejected Nov 11 renders. They apply to posts dated Nov 11, 2026 or later, like R-D11."
+ }
 }

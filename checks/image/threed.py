@@ -1948,3 +1948,31 @@ def iridescence_on_meaning(post, sl):
     m = sl.id_map[::2, ::2, 2] > 0
     share = (irid & m).sum() / irid.sum()
     return ok(share >= 0.9, f"{share:.0%} of iridescent pixels on numerals", round(float(share), 3))
+
+
+# ------------------------------------------------------------------ calibration: the V-I07 gates apply from Nov 11, 2026
+# These gates catch the 3D artifacts the founder rejected on Nov 11 (V-I07: seams, bevels that cut through a glyph,
+# glyphs that interpenetrate, z-fighting, glass over a glyph, the shadow-camera line). The approved Nov 4 deck was made
+# with the scene code that had the same shadow camera and bevels (fixed on Nov 11 in 8369ffb and 213cd9f), so these
+# gates fail it too; as weighted checks they would no longer stop the rejected renders either. They apply to posts dated
+# Nov 11, 2026 or later, like R-D11 (calibration, ruling 4); on earlier posts they are not scored.
+V_I07_FROM = NUMERAL_RULE_FROM
+V_I07_GATES = ("R-D01", "R-N01", "R-Z06", "R-Z03", "R-Z04", "R-S01", "R-S02", "R-G01", "R-G02")
+
+
+def _from_nov11(fn):
+    def wrap(post, sl):
+        if (post.date or "9999") < V_I07_FROM:
+            return na(f"applies to posts dated {V_I07_FROM} or later (V-I07 lessons; the Nov 4 deck predates them)")
+        return fn(post, sl)
+    wrap.__name__ = fn.__name__
+    return wrap
+
+
+def _scope_v_i07():
+    from . import REGISTRY
+    for cid in V_I07_GATES:
+        REGISTRY[cid] = [(_from_nov11(fn), scope) for fn, scope in REGISTRY.get(cid, [])]
+
+
+_scope_v_i07()

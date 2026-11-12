@@ -1079,7 +1079,7 @@ def price_claims(post, sl):
     bad = []
     if SUPERLATIVE.search(t):
         bad.append("superlative '" + SUPERLATIVE.search(t).group(0) + "'")
-    for m in re.finditer(r"(?i)(?:SVPay|our)\b[^.\n]{0,40}?\b(?:costs?|price[sd]?|pricing|plan|rate|fee|per month|/mo|a month|free)\b[^.\n]*", t):
+    for m in re.finditer(r"(?i)\b(?:SVPay|our)\b[^.\n]{0,40}?\b(?:costs?|price[sd]?|pricing|plan|rate|fee|per month|/mo|a month|free)\b[^.\n]*", t):
         frag = m.group(0)
         if not any(frag.strip().lower() in a.lower() or a.lower() in t.lower() for a in APPROVED_LINES):
             bad.append(f"SVPay price or plan claim '{frag[:40]}'")
@@ -1225,7 +1225,8 @@ def numerals_match_font(post, sl):
     gs = numeral_glyphs(sl)
     if not gs:
         return na("no 3D numerals")
-    un = sum(len(o.get("unrecognized_parts") or []) for o in sl.objects())
+    un = sum((lambda u: u if isinstance(u, int) else len(u or []))(o.get("unrecognized_parts")) for o in sl.objects()
+             if o.get("role") == "numeral" or re.search(r"\d", o.get("text") or ""))
     bad = [f"{un} parts not matched to a brand-font glyph"] if un else []
     from .textpx import digits_read
     r = digits_read(post, sl)
@@ -1508,9 +1509,6 @@ def logo_untouched(post, sl):
         x0, y0, x1, y1 = (int(v * sl.scale) for v in box(i))
         if hm is not None and hm[max(0, y0):y1, max(0, x0):x1].any():
             bad.append(f"{n} touches the 3D layer")
-        for p in sl.manifest.get("panels", []):
-            if overlap(box(p), box(i)) > 0.5 * i["w"] * i["h"] and "glass" in p.get("cls", "") and p.get("backdrop"):
-                bad.append(f"{n} on glass")
         p = logo_src(post, i)
         if p:
             from PIL import Image

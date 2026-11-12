@@ -1,40 +1,130 @@
 {
- "_why": "What the regression set must show (checks/regression/run.py). The rejected Nov 11 Riverside renders were rejected for V-I07 (3D artifacts); each slide must fail a gate that names that artifact. The approved Nov 4 deck must fail no image gate except the compliance and number gates listed in 'allowed' (ruling 4 keeps those as gates).",
+ "_why": "What the regression set must show (checks/regression/run.py). The rejected Nov 11 Riverside renders were rejected for V-I07 (3D artifacts); each slide must fail a gate that names that artifact. The approved Nov 4 deck (re-rendered with its passes) must fail no image gate except the compliance and number gates ruling 4 keeps (listed in 'allowed', with why) and F-SW05, which fails only because the re-render's 3D framing differs from the approved JPGs (the Nov 4 render knobs were not recorded).",
  "cases": {
   "nov4": {
    "package": "checks/regression/nov4-rerender/post.json",
-   "no_gates": ["V-", "F-", "T-", "R-", "MC-", "QF", "QM", "QB", "QS", "QA", "QR", "QD", "SC"],
-   "allowed": []
+   "no_gates": [
+    "V-",
+    "F-",
+    "T-",
+    "R-",
+    "MC-",
+    "QF",
+    "QM",
+    "QB",
+    "QS",
+    "QA",
+    "QR",
+    "QD",
+    "SC"
+   ],
+   "allowed": [
+    "MC-I08",
+    "MC-K01",
+    "MC-S01",
+    "V-G08",
+    "V-H17",
+    "V-K12",
+    "F-SW05"
+   ],
+   "allowed_why": {
+    "MC-I08": "compliance: slide 4's worked example has no on-slide 'Example' label or footnote (V-H17 already failed it before)",
+    "MC-K01": "compliance (ruling 5): slide 6 says 'Free, no processing fees' outside the approved lines",
+    "MC-S01": "number accuracy: '3 months', '20%', '$1,300' and '$50,000' are on the slides but not in the Nov 4 facts log",
+    "V-G08": "compliance: slide 6's 'SVPay on the free Starter plan' is not an approved pricing line",
+    "V-H17": "compliance, failed before this round: slide 4's hypothetical has no 'Example' label",
+    "V-K12": "compliance: the Toast logo slides carry 'SVPay is not affiliated with Toast.' at 32px, under the 61px rule",
+    "F-SW05": "re-render only: its 3D framing is larger than the approved JPGs, so coins and '$13,000' reach the slide edge"
+   }
   },
   "riverside-r1": {
    "package": "checks/regression/riverside-r1/post.json",
    "fail_on": {
-    "slide 2": ["R-D01", "R-D02", "R-A08", "T-D04", "R-N01"],
-    "slide 3": ["R-D01", "R-D02", "R-A08", "T-D04", "R-N01", "R-S02"],
-    "slide 6": ["R-N01", "R-N07", "R-D11", "R-Z06"]
+    "slide 2": [
+     "R-D01",
+     "R-D02",
+     "R-A08",
+     "T-D04",
+     "R-N01"
+    ],
+    "slide 3": [
+     "R-D01",
+     "R-D02",
+     "R-A08",
+     "T-D04",
+     "R-N01",
+     "R-S02"
+    ],
+    "slide 6": [
+     "R-N01",
+     "R-N07",
+     "R-D11",
+     "R-Z06"
+    ]
    }
   },
   "riverside-r2": {
    "package": "checks/regression/riverside-r2/post.json",
    "fail_on": {
-    "slide 2": ["R-N01", "R-N07", "R-D11"],
-    "slide 4": ["R-N01", "R-N07", "R-D11"],
-    "slide 5": ["R-N01", "R-N07", "R-D11", "R-D01"],
-    "slide 6": ["R-N01", "R-N07", "R-D11", "R-Z06"]
+    "slide 2": [
+     "R-N01",
+     "R-N07",
+     "R-D11"
+    ],
+    "slide 4": [
+     "R-N01",
+     "R-N07",
+     "R-D11"
+    ],
+    "slide 5": [
+     "R-N01",
+     "R-N07",
+     "R-D11",
+     "R-D01"
+    ],
+    "slide 6": [
+     "R-N01",
+     "R-N07",
+     "R-D11",
+     "R-Z06"
+    ]
    }
   },
   "riverside-r3": {
    "package": "posts/2026-11-11-riverside-ftc-processor-fees/post.json",
    "fail_on": {
-    "slide 1": ["R-S02", "R-S01"],
-    "slide 1-single": ["R-S02", "R-S01"],
-    "slide 1-gbp": ["R-S02", "R-S01"],
-    "slide 3": ["R-S02", "R-S01"]
+    "slide 1": [
+     "R-S02",
+     "R-S01"
+    ],
+    "slide 1-single": [
+     "R-S02",
+     "R-S01"
+    ],
+    "slide 1-gbp": [
+     "R-S02",
+     "R-S01"
+    ],
+    "slide 3": [
+     "R-S02",
+     "R-S01"
+    ]
    }
   },
   "tax-tips": {
    "package": "checks/labels/2026-11-11-tax-tips-REJECTED.json",
-   "gates_fail": ["W-B05", "W-C01", "W-G05", "W-B04", "W-H07", "V-A18", "CR11", "PP12", "CR06", "CR13"]
+   "gates_fail": [
+    "W-B05",
+    "W-C01",
+    "W-G05",
+    "W-B04",
+    "W-H07",
+    "V-A18",
+    "CR11",
+    "PP12",
+    "CR06",
+    "CR13"
+   ]
   }
  }
 }

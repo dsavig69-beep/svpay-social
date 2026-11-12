@@ -1707,8 +1707,9 @@ def digits_read(post, sl):
         def gen():
             for sc in (3, 4):
                 small = resize_area(sl.final, sl.size[0] // sc, sl.size[1] // sc)
-                yield from ocr_variants(small, box, 1.0 / sc, pad=10, psms=(7,), whitelist="0123456789$%.,")
-        if not any(reads.append(g) or re.sub(r"[^\d]", "", g) == want for g in gen()):
+                yield from ocr_variants(small, box, 1.0 / sc, pad=10, psms=(7,), whitelist="0123456789$%.,BMK")
+        # a letter suffix ($1.62B) must not be read as a digit: compare the digits of the numeric part only
+        if not any(reads.append(g) or re.sub(r"[^\d]", "", re.sub(r"[BMK]+$", "", g.strip())) == want for g in gen()):
             bad.append(f"3D {txt} read {sorted(set(reads))[:3]}")
     if not sl.manifest and not sl.objects():
         if not sl.text:
