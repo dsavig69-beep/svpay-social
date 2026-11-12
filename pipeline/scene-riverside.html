@@ -51,7 +51,7 @@ function studioEnv() {
   return pm.fromScene(env, 0.015).texture;
 }
 scene.environment = studioEnv();
-scene.environmentIntensity = P('envk', 1.0);
+scene.environmentIntensity = P('envk', 1.25);
 
 const key = new THREE.DirectionalLight(0xffffff, P('key', 2.2));
 key.castShadow = true; key.shadow.mapSize.set(4096, 4096); key.shadow.radius = 48; key.shadow.blurSamples = 64; key.shadow.bias = -0.0003; key.shadow.normalBias = 0.02;
@@ -163,7 +163,12 @@ function numerals(str, size, ry) {
 // ---------- one coin design used across the carousel
 const silver = () => new THREE.MeshPhysicalMaterial({ color: 0xeeeeff, metalness: 1.0, roughness: P('cr', 0.17), iridescence: 1, iridescenceIOR: 1.7, iridescenceThicknessRange: [260, 900], clearcoat: 1, clearcoatRoughness: 0.04 });
 const coinGeoCache = {};
-function coinBody(R, D) { const k = R + ':' + D; if (!coinGeoCache[k]) coinGeoCache[k] = sector(R, 0, Math.PI * 2, D, Math.min(0.18, D * 0.3)); return coinGeoCache[k]; }
+function disc(R, depth, bevel) {   // a whole coin body from a plain circle: sector() starts at the centre, which leaves a seam on the face
+  const sh = new THREE.Shape(); sh.absarc(0, 0, R, 0, Math.PI * 2, false);
+  const g = new THREE.ExtrudeGeometry(sh, { depth, bevelEnabled: true, bevelThickness: bevel, bevelSize: bevel * 0.8, bevelSegments: 10, curveSegments: 160 });
+  g.translate(0, 0, -depth / 2); planarUV(g); g.computeVertexNormals(); return g;
+}
+function coinBody(R, D) { const k = R + ':' + D; if (!coinGeoCache[k]) coinGeoCache[k] = disc(R, D, Math.min(0.18, D * 0.3)); return coinGeoCache[k]; }
 async function coin(R, D, bodyMat, dollarMat, faces = 2) {
   const g = new THREE.Group();
   const b = new THREE.Mesh(coinBody(R, D), bodyMat); b.castShadow = true; b.receiveShadow = true; g.add(b);
@@ -180,10 +185,11 @@ async function coin(R, D, bodyMat, dollarMat, faces = 2) {
 }
 
 // ---------- Nov 11, 2026 post (FTC and Washington v. Riverside Payments)
-// Numerals stand face-on (ry 0) with tracking 0.14 and a narrow bevel, so no glyph cuts through itself or its
-// neighbour (V-I07); each number is scaled to a set width so it never crowds the text above and below it.
+// Numerals: a deep extrusion (chunky, like the Nov 4 deck) with a narrow bevel and tracking 0.16, so no glyph cuts
+// through itself or its neighbour (V-I07); each number is scaled to a set width so it never crowds the text.
+const gloss = () => jelly(HOLO, { roughness: 0.05, clearcoatRoughness: 0.02, iridescence: 0.6 });   // the Nov 4 jelly, a touch shinier
 async function fitNumerals(str, width, ry = 0) {
-  const t = await text3D(str, { size: 4, depth: P('dp', 1.5), bevel: P('bv', 0.16), bevelRatio: P('br', 0.18), track: P('tr', 0.14), front: jelly(), side: jelly() });
+  const t = await text3D(str, { size: 4, depth: P('dp', 2.3), bevel: P('bv', 0.4), bevelRatio: P('br', 0.18), track: P('tr', 0.17), front: gloss(), side: gloss() });
   t.geometry.computeBoundingBox(); const b = t.geometry.boundingBox; const k = width / (b.max.x - b.min.x);
   t.scale.setScalar(k); t.rotation.y = ry; return t;
 }
@@ -192,51 +198,56 @@ function bounds(obj) {   // the object's box on the 1080x1350 slide, for checkin
   for (const x of [b.min.x, b.max.x]) for (const y of [b.min.y, b.max.y]) for (const z of [b.min.z, b.max.z]) pts.push(toSlide(new THREE.Vector3(x, y, z)));
   return { x0: Math.min(...pts.map(p => p[0])), x1: Math.max(...pts.map(p => p[0])), y0: Math.min(...pts.map(p => p[1])), y1: Math.max(...pts.map(p => p[1])) };
 }
-async function numberSlide(str, width, look) {
-  await setupCamera(26, [0, 5, 40], [0, look, 0]);
-  const t = await fitNumerals(str, P('w', width), P('ry', 0)); scene.add(t);
-  reflect(t, P('rf', 1.1), P('rs', 0.12)); shadowFloor(0.18);   // a short, faint reflection: the text below never sits on it
+async function numberSlide(str, width, look, ry) {
+  await setupCamera(26, [0, P('cy', 6.2), 40], [0, look, 0]);
+  const t = await fitNumerals(str, P('w', width), P('ry', ry)); scene.add(t);
+  reflect(t, P('rf', 1.1), P('rs', 0.12)); shadowFloor(0.2);   // a short, faint reflection: the text below never sits on it
   aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
   window.__info = { box: bounds(t) };
 }
-const s1 = () => numberSlide('$2,250', 11.6, 2.0);   // one shop's lease total
-const s2 = () => numberSlide('60%', 9.4, 2.0);        // the savings pitch
-const s3 = () => numberSlide('$695', 9.0, 2.0);       // the cost to leave
+const s1 = () => numberSlide('$2,250', 11.4, 2.0, 0.12);   // one shop's lease total
+const s3 = () => numberSlide('$695', 8.6, 2.0, -0.12);     // the cost to leave
 
-async function s4() {   // a stack of coins for the $600,000 settlement, standing right of the text
-  await setupCamera(26, [0, P('cy', 10), 40], [0, P('ly', 5.0), 0]);
-  const R = P('R', 2.3), D = 0.5, step = 0.62, N = 12;
-  const body = jelly(['#2a5bff', '#4b46ff', '#6c3dff'], { transmission: 0.0, roughness: 0.2 });
-  const emb = pearl();
-  const g = new THREE.Group();
-  for (let i = 0; i < N; i++) {
-    const top = i === N - 1;
-    const c = top ? await coin(R, D, body, emb, 1) : new THREE.Mesh(coinBody(R, D), body);
-    if (!top) { c.castShadow = true; c.receiveShadow = true; }
-    c.rotation.x = -Math.PI / 2; c.rotation.z = i * 0.37;
-    c.position.set(Math.sin(i * 2.1) * 0.07, D / 2 + 0.18 + i * step, Math.cos(i * 1.7) * 0.07);
-    g.add(c);
-  }
-  g.position.set(P('tx', 4.0), 0, 0); scene.add(g);
-  reflect(g, 4, 0.26); shadowFloor(0.15);
-  aim(key, [10, 26, 14]); aim(rim, [-18, 10, -10]); aim(fill, [12, 3, 20]);
-  window.__info = { box: bounds(g) };
+async function s2() {   // "paid more": a chunky jelly arrow rising to the right of the headline
+  await setupCamera(26, [0, 5, 40], [0, P('ly', 3.6), 0]);
+  const sh = new THREE.Shape(), w = 1.05, hw = 2.25, h = 7.8, hh = 2.7;   // shaft half-width, head half-width, height, head height
+  sh.moveTo(-w, 0); sh.lineTo(w, 0); sh.lineTo(w, h - hh); sh.lineTo(hw, h - hh); sh.lineTo(0, h); sh.lineTo(-hw, h - hh); sh.lineTo(-w, h - hh); sh.lineTo(-w, 0);
+  const g = new THREE.ExtrudeGeometry(sh, { depth: 2.0, bevelEnabled: true, bevelThickness: 0.3, bevelSize: 0.22, bevelSegments: 10, curveSegments: 24 });
+  g.translate(0, 0, -1.0); planarUV(g); g.computeVertexNormals();
+  const m = new THREE.Mesh(g, jelly(['#ff1f7a', '#ff3d9e', '#d93cff'], { emissive: 0xff2f8f, emissiveIntensity: 0.18 }));
+  m.castShadow = true; m.receiveShadow = true;
+  m.position.set(P('tx', 3.3), 0.3, 0); m.rotation.set(0, P('ry', -0.42), P('rz', -0.12)); scene.add(m);
+  reflect(m, 3, 0.22); shadowFloor(0.16);
+  aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
+  window.__info = { box: bounds(m) };
 }
 
-async function s5() {   // a jelly question mark, right of the glass card (never behind it)
-  await setupCamera(26, [0, 5, 40], [0, 4.4, 0]);
-  const t = await text3D('?', { size: P('sz', 9), depth: 2.0, bevel: 0.3, bevelRatio: 0.25, front: jelly(), side: jelly() });
-  t.rotation.set(0, P('ry', -0.3), 0); t.position.set(P('tx', 3.9), 0, 0); scene.add(t);
-  reflect(t, 4, 0.3); shadowFloor(0.15);
+async function s4() {   // leased, not owned: two jelly bars from the floor, about $2,256 paid vs about $400 to buy
+  await setupCamera(26, [0, 6, 40], [0, P('ly', 4.4), 0]);
+  const H = P('H', 8.4), bw = 2.3, bd = 2.0;
+  const bar = (h, mat, x) => { const g = new RoundedBoxGeometry(bw, h, bd, 6, 0.28); planarUV(g); const m = new THREE.Mesh(g, mat); m.position.set(x, h / 2, 0); m.castShadow = true; m.receiveShadow = true; scene.add(m); return m; };
+  const tall = bar(H, jelly(['#ff1f7a', '#ff3d9e', '#d93cff'], { emissive: 0xff2f8f, emissiveIntensity: 0.16 }, ), P('xa', 1.9));
+  const short = bar(H * 400 / 2256, jelly(['#2a5bff', '#4b46ff', '#7a3dff']), P('xb', 5.2));
+  const grp = new THREE.Group(); scene.updateMatrixWorld(true);
+  reflect(tall, 3, 0.2); reflect(short, 3, 0.2); shadowFloor(0.16);
+  aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
+  scene.updateMatrixWorld(true);
+  window.__info = { tall: bounds(tall), short: bounds(short), tallTop: toSlide(new THREE.Vector3(tall.position.x, H, bd / 2)), shortTop: toSlide(new THREE.Vector3(short.position.x, H * 400 / 2256, bd / 2)) };
+}
+
+async function s5() {   // a jelly question mark, right of the glass card (never behind it), sitting low to fill the slide
+  await setupCamera(26, [0, 5, 40], [0, P('ly', 3.4), 0]);
+  const t = await text3D('?', { size: P('sz', 9), depth: 2.4, bevel: 0.45, bevelRatio: 0.25, front: gloss(), side: gloss() });
+  t.rotation.set(0, P('ry', -0.3), 0); t.position.set(P('tx', 3.65), 0, 0); scene.add(t);
+  reflect(t, 3, 0.25); shadowFloor(0.15);
   aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
   window.__info = { box: bounds(t) };
 }
 
-async function s6() {   // one large SVPay coin, tilted toward the viewer
+async function s6() {   // one SVPay coin, top right, beside the headline
   await setupCamera(26, [0, 4, 40], [0, 4.6, 0]);
-  const c = await coin(P('R', 2.6), 0.62, jelly(HOLO, { transmission: 0.35 }), pearl());
-  c.rotation.set(P('rx', -0.12), P('ry', -0.42), P('rz', 0.1)); c.position.set(P('tx', 3.1), P('ty', 5.2), 0); scene.add(c);
-  reflect(c, 4.5, 0.22); shadowFloor(0.13);
+  const c = await coin(P('R', 2.15), 0.56, jelly(HOLO, { transmission: 0.35 }), pearl());
+  c.rotation.set(P('rx', -0.12), P('ry', -0.42), P('rz', 0.1)); c.position.set(P('tx', 3.75), P('ty', 7.7), 0); scene.add(c);
   aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
   window.__info = { box: bounds(c) };
 }
