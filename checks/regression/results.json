@@ -1,0 +1,141 @@
+{
+ "all_pass": true,
+ "summary": "5 of 5 regression cases pass",
+ "three_revision": "160",
+ "cases": [
+  {
+   "case": "nov4",
+   "package": "checks/regression/nov4-rerender/post.json",
+   "pass": true,
+   "problems": [],
+   "caught": {},
+   "gates_failed": [
+    "CR13",
+    "MC-I08",
+    "MC-K01",
+    "MC-S01",
+    "V-G08",
+    "V-H17",
+    "V-K12",
+    "W-G05"
+   ]
+  },
+  {
+   "case": "riverside-r1",
+   "package": "checks/regression/riverside-r1/post.json",
+   "pass": true,
+   "problems": [],
+   "caught": {
+    "slide 2": [
+     "R-D01",
+     "R-N01"
+    ],
+    "slide 3": [
+     "R-D01",
+     "R-S02"
+    ],
+    "slide 6": [
+     "R-D11",
+     "R-N01",
+     "R-Z06"
+    ]
+   },
+   "gates_failed": [
+    "R-D01",
+    "R-D11",
+    "R-N01",
+    "R-S01",
+    "R-S02",
+    "R-Z04",
+    "R-Z06",
+    "T-D04"
+   ]
+  },
+  {
+   "case": "riverside-r2",
+   "package": "checks/regression/riverside-r2/post.json",
+   "pass": true,
+   "problems": [],
+   "caught": {
+    "slide 2": [
+     "R-D11"
+    ],
+    "slide 4": [
+     "R-D11",
+     "R-N01"
+    ],
+    "slide 5": [
+     "R-D01",
+     "R-D11",
+     "R-N01"
+    ],
+    "slide 6": [
+     "R-D11",
+     "R-N01",
+     "R-Z06"
+    ]
+   },
+   "gates_failed": [
+    "MC-S05",
+    "R-D01",
+    "R-D11",
+    "R-N01",
+    "R-S01",
+    "R-S02",
+    "R-Z04",
+    "R-Z06"
+   ]
+  },
+  {
+   "case": "riverside-r3",
+   "package": "posts/2026-11-11-riverside-ftc-processor-fees/post.json",
+   "pass": true,
+   "problems": [],
+   "caught": {
+    "slide 1": [
+     "R-S01",
+     "R-S02"
+    ],
+    "slide 1-single": [
+     "R-S01",
+     "R-S02"
+    ],
+    "slide 1-gbp": [
+     "R-S01",
+     "R-S02"
+    ],
+    "slide 3": [
+     "R-S01",
+     "R-S02"
+    ]
+   },
+   "gates_failed": [
+    "MC-L02",
+    "R-D01",
+    "R-N01",
+    "R-S01",
+    "R-S02",
+    "R-Z04"
+   ]
+  },
+  {
+   "case": "tax-tips",
+   "package": "checks/labels/2026-11-11-tax-tips-REJECTED.json",
+   "pass": true,
+   "problems": [],
+   "caught": {},
+   "gates_failed": [
+    "CR06",
+    "CR11",
+    "CR13",
+    "PP12",
+    "V-A18",
+    "W-B04",
+    "W-B05",
+    "W-C01",
+    "W-G05",
+    "W-H07"
+   ]
+  }
+ ]
+}

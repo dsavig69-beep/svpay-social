@@ -1,7 +1,7 @@
 # The SVPay post algorithm
 
-Every post is checked against 1,578 criteria before it publishes; 227 of them are hard gates, and any one gate failing
-blocks the post. 911 of them check the images (139 gates), and 761 of those run in the script tier on the rendered
+Every post is checked against 1,578 criteria before it publishes; 226 of them are hard gates, and any one gate failing
+blocks the post. 911 of them check the images (138 gates), and 761 of those run in the script tier on the rendered
 pixels. It replaces the old "independent reviewer scores 1-10, ship at 9" step, which let the Nov 11, 2026 card-fees
 post through. That post fails 11 gates (`checks/labels/2026-11-11-tax-tips-REJECTED.json`).
 
@@ -99,7 +99,7 @@ Optional fields the image checks read when a post has them: `charts` (declared c
 
 ## Image checks (Nov 11 research round)
 
-The five image-research files and the 220 V checks were merged into 911 image checks: 694 new, 92 researched checks dropped as duplicates (the most specific one kept; the others are listed in its `merged` field), 3 V checks replaced. Gates are only for compliance breaches, wrong or untraceable numbers, unreadable or clipped text, broken 3D and placeholder leaks (139 image gates). Calibration (ruling 4) on the approved Nov 4 deck, re-rendered with its passes (`checks/regression/nov4-rerender`): 7 gates that failed it became weight-5 checks (V-D01, T-S05, T-O01, T-O03, T-O11, V-C20, R-X01); the compliance and number gates it fails stay gates (MC-I08, MC-K01, MC-S01, V-G08, V-H17, V-K12); the 9 V-I07 gates (R-D01, R-N01, R-Z03, R-Z04, R-Z06, R-S01, R-S02, R-G01, R-G02) apply to posts dated Nov 11, 2026 or later, because the Nov 4 scene had the same shadow camera and bevels fixed that day. Every rejected Nov 11 slide fails a gate on the reason it was rejected (`flock /home/claude/work/heavy.lock python3 checks/regression/run.py`). Checks that need a tool this machine cannot install return "tool not installed" and never fail a post (`checks/image/stubs.py`). The merge log is `checks/image/merge_log.json`.
+The five image-research files and the 220 V checks were merged into 911 image checks: 694 new, 92 researched checks dropped as duplicates (the most specific one kept; the others are listed in its `merged` field), 3 V checks replaced. Gates are only for compliance breaches, wrong or untraceable numbers, unreadable or clipped text, broken 3D and placeholder leaks (138 image gates). Calibration (ruling 4) on the approved Nov 4 deck, re-rendered with its passes (`checks/regression/nov4-rerender`): 8 gates that failed it became weighted checks (V-D01, T-S05, T-O01, T-O03, T-O11, V-C20, R-X01, F-SW05); the compliance and number gates it fails stay gates (MC-I08, MC-K01, MC-S01, V-G08, V-H17, V-K12); the 9 V-I07 gates (R-D01, R-N01, R-Z03, R-Z04, R-Z06, R-S01, R-S02, R-G01, R-G02) apply to posts dated Nov 11, 2026 or later, because the Nov 4 scene had the same shadow camera and bevels fixed that day. Every rejected Nov 11 slide fails a gate on the reason it was rejected (`flock /home/claude/work/heavy.lock python3 checks/regression/run.py`). Checks that need a tool this machine cannot install return "tool not installed" and never fail a post (`checks/image/stubs.py`). The merge log is `checks/image/merge_log.json`.
 
 - **F-IG** Instagram carousels (39, 2 gates): slide-1 hook words, swipe flow, counters, carousel length and API limits.
 - **F-LD** LinkedIn documents (17, 1 gate): PDF pages, title, page order, size, PDF share of LinkedIn posts.
@@ -107,7 +107,7 @@ The five image-research files and the 220 V checks were merged into 911 image ch
 - **F-X** X images (10, 2 gates): image count, crops in the timeline, paired images, threads.
 - **F-TH** Threads images (2): image count and the single-image cut.
 - **F-GB** Google Business Profile images (16, 1 gate): 4:3 file, size floor, no filters, no duplicates, posting pace.
-- **F-SW** Swipe cues and seams (9, 1 gate): panorama seams line up, a cue that the deck continues.
+- **F-SW** Swipe cues and seams (9): panorama seams line up, a cue that the deck continues.
 - **F-TN** Thumbnails and crops (15, 1 gate): the hook survives the grid, square and timeline crops.
 - **T-S** Type size (measured) (12): x-height and stems on the pixels, size floors by role.
 - **T-C** Contrast (measured) (21): WCAG and APCA on the text-free background, after delivery compression.

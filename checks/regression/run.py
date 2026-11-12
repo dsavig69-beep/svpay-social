@@ -2,7 +2,7 @@
 """The checker's regression set: the founder-approved Nov 4 deck, the rejected Nov 11 renders and the rejected
 Nov 11 tax-tips post. Run it under the heavy lock (it renders nothing, but it runs every check on every slide):
 
-    flock /home/claude/work/heavy.lock python3 checks/regression/run.py [--only nov4,r1]
+    flock /home/claude/work/heavy.lock python3 checks/regression/run.py [--only nov4,riverside-r1] [--reuse]
 
 expected.json says what each case must show:
   "no_gates"         no gate in this list of groups may fail (the approved deck: every gate passes on it)
@@ -39,10 +39,11 @@ def where_matches(where, slide):
     return where == slide or where.endswith(": " + slide) or where.replace("slide ", "slide-") == slide
 
 
-def run_case(name, case):
+def run_case(name, case, reuse=False):
     out = os.path.join(tempfile.gettempdir(), f"svpay-regression-{name}.json")
-    cmd = [sys.executable, CHECK, os.path.join(REPO, case["package"]), "--offline", "--out", out]
-    subprocess.run(cmd, cwd=REPO, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=3600)
+    if not (reuse and os.path.exists(out)):
+        cmd = [sys.executable, CHECK, os.path.join(REPO, case["package"]), "--offline", "--out", out]
+        subprocess.run(cmd, cwd=REPO, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=3600)
     rep = json.load(open(out, encoding="utf-8"))
     gates = gate_rows(rep)
     measured = gate_rows(rep, ("fail",))      # a rejected slide is caught only by a measured failure, never by "needs passes"
@@ -69,12 +70,13 @@ def run_case(name, case):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", help="comma-separated case names")
+    ap.add_argument("--reuse", action="store_true", help="re-score the last reports (after a change to criteria.json only)")
     a = ap.parse_args()
     exp = json.load(open(os.path.join(HERE, "expected.json"), encoding="utf-8"))
     names = [n for n in exp["cases"] if not a.only or n in a.only.split(",")]
     rows = []
     for n in names:
-        r = run_case(n, exp["cases"][n])
+        r = run_case(n, exp["cases"][n], a.reuse)
         rows.append(r)
         print(f"{'PASS' if r['pass'] else 'FAIL'} {n}: " + ("; ".join(r["problems"]) or ", ".join(f"{s}: {'/'.join(g)}" for s, g in r["caught"].items()) or "ok"))
     rev = None

@@ -23,7 +23,7 @@ Each post has to beat the one before it. The goal is a reader who stops scrollin
 - Big type, few words. Body copy 25px or more at 1080 wide.
 
 ## Before it goes out
-Every post runs the algorithm in `ALGORITHM.md`: 1,578 checks, 227 hard gates, script checks first (`checks/check_post.py`), then a judge and a three-reader panel, then `checks/score.py`. A post publishes on its own only when every gate passes, every category clears its minimum and Q is 0.85 or higher. This replaces the old 1-10 reviewer, which let the Nov 11 card-fees post through.
+Every post runs the algorithm in `ALGORITHM.md`: 1,578 checks, 226 hard gates, script checks first (`checks/check_post.py`), then a judge and a three-reader panel, then `checks/score.py`. A post publishes on its own only when every gate passes, every category clears its minimum and Q is 0.85 or higher. This replaces the old 1-10 reviewer, which let the Nov 11 card-fees post through.
 
 1. Render at 2160×2700 and look at every slide at full size, plus close-up crops.
 2. Run the script checks, the judge and the panel. Fix what fails, with the failing words quoted. At most 2 rewrites.

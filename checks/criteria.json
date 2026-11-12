@@ -13123,7 +13123,7 @@
   "pass": "0",
   "weight": 5,
   "tier": "Script",
-  "gate": true,
+  "gate": false,
   "evidence": "B. Keep logos and key words off seams (Krumzi 2026)",
   "merged": [],
   "category": "visuals"

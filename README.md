@@ -4,7 +4,7 @@ Images for SVPay's social posts (www.svpay.app). Everything here is public, so M
 
 - `posts/<date>-<topic>/` holds each post's slides (`slide-1.jpg` …, 2160×2700, 4:5) and its caption.
 - `pipeline/` is how the slides are made: 3D scenes in three.js, rendered in headless Chromium, with the text laid over in HTML.
-- `STANDARDS.md` is the quality bar every post has to clear before it goes out; `ALGORITHM.md` and `checks/` are how it is enforced (1,578 checks, 227 hard gates).
+- `STANDARDS.md` is the quality bar every post has to clear before it goes out; `ALGORITHM.md` and `checks/` are how it is enforced (1,578 checks, 226 hard gates).
 
 Company logos used on news slides are supplied for each post and are not stored here. SVPay is not affiliated with the companies it reports on.
 
@@ -33,6 +33,6 @@ Headless Chromium needs WebGL through SwiftShader (`run3d.js` passes the flags).
   "needs passes" and counts as failing.
 - **Pre-sizing** (`export.py`): Instagram, Facebook and Threads get the 1440×1800 JPEG (quality 92, 4:4:4); LinkedIn
   and X get the 2160×2700 master when it is under 5 MB, else the 1440 file.
-- **Tests:** `python3 -m unittest discover -s checks/tests -t .` (synthetic slides, no render needed), and
+- **Tests:** `python3 -m unittest discover -s checks/tests` (synthetic slides, no render needed), and
   `flock /home/claude/work/heavy.lock python3 checks/regression/run.py` for the regression set (approved Nov 4 deck,
   rejected Nov 11 renders).

@@ -26,6 +26,7 @@ REPO = os.path.dirname(os.path.dirname(HERE))
 CHECKS = os.path.dirname(HERE)
 GOLDEN = os.path.join(HERE, "expected_synth.json")
 IMAGE_ID = re.compile(r"^(V-|F-|T-|R-|MC-|Q[A-Z]\d)")
+REPO_STATE = {"R-P02", "R-P04"}     # read checks/regression/results.json, not the slide: not pinned
 ALL_DEFECTS = ("low_contrast", "tiny_text", "split_number", "clipped", "placeholder", "fonts_not_loaded", "shadow_line", "sliver", "question_mark",
                "zfight", "glass_over_glyph")
 
@@ -96,7 +97,7 @@ class Synthetic(unittest.TestCase):
             json.dump(now, open(GOLDEN, "w", encoding="utf-8"), indent=0, sort_keys=True)
         want = json.load(open(GOLDEN, encoding="utf-8"))
         diff = [(name, cid, want[name].get(cid), now[name].get(cid)) for name in want for cid in sorted(set(want[name]) | set(now[name]))
-                if want[name].get(cid) != now[name].get(cid)]
+                if want[name].get(cid) != now[name].get(cid) and cid not in REPO_STATE]
         self.assertEqual(diff, [])
 
     def test_defects_fail_more_gates_than_clean(self):

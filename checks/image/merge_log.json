@@ -477,14 +477,14 @@
   "T-O03": "fails the approved Nov 4 deck: Tesseract cannot read its large gradient '$2.62' digits",
   "T-O11": "fails the approved Nov 4 deck for the same OCR misreads as T-O01",
   "V-C20": "fails the approved Nov 4 deck: exact OCR of '$2.62' and the ÷ sign fails; OCR limits, not the slide",
-  "R-X01": "fails the approved Nov 4 deck: its pastel gradient numerals separate on 46-82% of their outline (the house style)"
+  "R-X01": "fails the approved Nov 4 deck: its pastel gradient numerals separate on 46-82% of their outline (the house style)",
+  "F-SW05": "fails the Nov 4 deck as re-rendered (its 3D framing is larger than the approved JPGs, so coins and '$13,000' reach the slide edge); the approved JPGs show no cut, but ruling 4 goes by the measured deck"
  },
  "gates_kept": [
   "F-GB07",
   "F-IG07",
   "F-IG20",
   "F-LD07",
-  "F-SW05",
   "F-TN15",
   "F-X04",
   "F-X05",

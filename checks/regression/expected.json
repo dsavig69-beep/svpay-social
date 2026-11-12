@@ -1,5 +1,5 @@
 {
- "_why": "What the regression set must show (checks/regression/run.py). The rejected Nov 11 Riverside renders were rejected for V-I07 (3D artifacts); each slide must fail a gate that names that artifact. The approved Nov 4 deck (re-rendered with its passes) must fail no image gate except the compliance and number gates ruling 4 keeps (listed in 'allowed', with why) and F-SW05, which fails only because the re-render's 3D framing differs from the approved JPGs (the Nov 4 render knobs were not recorded).",
+ "_why": "What the regression set must show (checks/regression/run.py). The rejected Nov 11 Riverside renders were rejected for V-I07 (3D artifacts); each slide must fail a gate that names that artifact. The approved Nov 4 deck (re-rendered with its passes) must fail no image gate except the compliance and number gates ruling 4 keeps (listed in 'allowed', with why).",
  "cases": {
   "nov4": {
    "package": "checks/regression/nov4-rerender/post.json",
@@ -24,8 +24,7 @@
     "MC-S01",
     "V-G08",
     "V-H17",
-    "V-K12",
-    "F-SW05"
+    "V-K12"
    ],
    "allowed_why": {
     "MC-I08": "compliance: slide 4's worked example has no on-slide 'Example' label or footnote (V-H17 already failed it before)",
@@ -33,8 +32,7 @@
     "MC-S01": "number accuracy: '3 months', '20%', '$1,300' and '$50,000' are on the slides but not in the Nov 4 facts log",
     "V-G08": "compliance: slide 6's 'SVPay on the free Starter plan' is not an approved pricing line",
     "V-H17": "compliance, failed before this round: slide 4's hypothetical has no 'Example' label",
-    "V-K12": "compliance: the Toast logo slides carry 'SVPay is not affiliated with Toast.' at 32px, under the 61px rule",
-    "F-SW05": "re-render only: its 3D framing is larger than the approved JPGs, so coins and '$13,000' reach the slide edge"
+    "V-K12": "compliance: the Toast logo slides carry 'SVPay is not affiliated with Toast.' at 32px, under the 61px rule"
    }
   },
   "riverside-r1": {

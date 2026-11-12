@@ -1339,7 +1339,14 @@ def decimal_visible(post, sl):
         if not dec:
             return na("no decimal points")
         got = " ".join(w["text"] for w in o)
-        return estimate(all(d in got for d in dec), "decimals read by OCR")
+        # a decimal counts as lost only when OCR read the digits around it without the point; a number OCR did not
+        # read at all is inconclusive (large gradient numerals often defeat Tesseract), so the gate waits for the passes
+        lost = [d for d in dec if d not in got and d.replace(".", "") in got.replace(",", "")]
+        if lost:
+            return estimate(False, "decimal point lost in OCR read: " + ", ".join(lost))
+        if any(d not in got for d in dec):
+            return need(sl, "mask")
+        return estimate(True, "decimals read by OCR")
     bad, n = [], 0
     for r in measure(sl):
         for line, cs in digit_comps(r):

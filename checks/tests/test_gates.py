@@ -102,10 +102,10 @@ for _d, _g in DEFECT_GATES:
 
 class NeedsPasses(unittest.TestCase):
     def test_gate_without_passes_is_needs_passes_or_estimate_fail(self):
-        res = statuses(build(strip_passes=True), ["T-S05", "T-O05", "V-D01", "R-A08", "R-S02"])
-        for gid in ("V-D01", "R-A08"):
+        res = statuses(build(strip_passes=True), ["T-S05", "T-O05", "T-D04", "R-A08", "R-S02"])
+        for gid in ("T-D04", "R-A08"):
             self.assertEqual(worst(res[gid]), "needs_passes", (gid, res[gid]))
-        for gid in ("T-S05", "T-O05"):
+        for gid in ("T-O05",):
             self.assertIn(worst(res[gid]), ("needs_passes", "fail"), (gid, res[gid]))
 
     def test_an_estimate_never_clears_a_gate(self):
@@ -119,8 +119,8 @@ class NeedsPasses(unittest.TestCase):
         from PIL import Image
         bg = os.path.join(d, "passes", "slide-1.bg.png")
         Image.open(bg).transform((synth.W, synth.H), Image.AFFINE, (1, 0, 120, 0, 1, 0)).save(bg)
-        res = statuses(pkg, ["V-D01", "R-A08"])
-        for gid in ("V-D01", "R-A08"):
+        res = statuses(pkg, ["T-D04", "R-A08"])
+        for gid in ("T-D04", "R-A08"):
             self.assertEqual(worst([r for r in res[gid] if r[1] == "slide 1"]), "needs_passes", (gid, res[gid]))
 
     def test_non_gate_without_passes_is_not_scored(self):

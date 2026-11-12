@@ -1504,12 +1504,6 @@
 "slide 1": "pass",
 "slide 2": "pass"
 },
-"R-P02": {
-"post": "fail"
-},
-"R-P04": {
-"post": "na"
-},
 "R-P06": {
 "slide 1": "pass",
 "slide 2": "pass"
@@ -4110,12 +4104,6 @@
 "R-P01": {
 "slide 1": "pass",
 "slide 2": "pass"
-},
-"R-P02": {
-"post": "fail"
-},
-"R-P04": {
-"post": "na"
 },
 "R-P06": {
 "slide 1": "fail",
