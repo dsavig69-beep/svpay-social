@@ -1,0 +1,246 @@
+{
+ "date": "2026-11-11",
+ "slug": "riverside-ftc-processor-fees",
+ "kind": "news",
+ "topic": "riverside-ftc-processor-fees",
+ "format": "news",
+ "skeleton": "number-hook/news/fine-print/how-to/ask",
+ "closing_question_format": "your-number",
+ "why_now": "The proposed order is still waiting on a judge (FTC case page re-checked Nov 11, 2026: pending), so Riverside customers' 60-day window to end the contract without the $695 fee has not opened yet; OPB reported Nov 6 that it could be approved any day.",
+ "networks": {
+  "linkedin": {
+   "text": "One business in a new FTC complaint paid about $47 a month for 4 years to lease a card machine. That's roughly $2,250 for a terminal that cost about $400 new.\n\nThe lease came bundled with a card processing deal from Riverside Payments, which the Federal Trade Commission (FTC) and Washington state sued on Nov 2. The complaint says Riverside's quote sheets at times promised to cut up to 60% of a shop's card fees, and that shops that switched typically ended up paying more.\n\nThe rest of the fine print, as the FTC describes it: activation, batch, inactivity and data-security non-compliance fees left off the quote. A 26-page contract that ran 3 years and renewed on its own. $695 to leave. And a lease, through an affiliate, that ran a year past the contract, even though the pitch said shops could cancel at any time without penalty.\n\nRiverside, its leasing affiliate and their two operators agreed to a proposed settlement. The order, which a judge still has to approve, has them pay $600,000 and gives customers 60 days to end the processing contract with no termination fee. According to OPB, it doesn't cover the machine leases.\n\nFull disclosure: I started SVPay, which competes with processors like Riverside. So hold us to the same test as anyone. Before you sign, get four answers in writing: your all-in rate on a real statement (total fees ÷ card sales × 100), every fee by name, how long the contract runs and whether it renews on its own, and what it costs to leave, including any lease on the card machine.\n\nPull your last statement this week. How many separate fee lines are on it?\n\n#SmallBusiness #Payments",
+   "first_comment": "Sources: FTC press release and complaint, FTC and Washington v. Riverside Payments (Nov 2, 2026): https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-washington-take-action-against-payment-processor-deceiving-small-businesses-about-costs\nOPB (Nov 6, 2026): https://www.opb.org/article/2026/11/06/vancouver-credit-card-processor-misleads-customers/\n\nSee what your shop would keep: https://www.svpay.app/savings-calculator?utm_source=linkedin&utm_medium=social&utm_campaign=news_20261111&utm_content=riverside-ftc-processor-fees",
+   "media": [
+    "checks/regression/riverside-r1/slide-1-single.jpg"
+   ],
+   "alt": [
+    "Glossy 3D numerals reading $2,250 on a light background. Text: One shop paid about $2,250 to lease a card machine that cost about $400 new. Over 4 years, at about $47 a month. Source: FTC complaint, FTC and Washington v. Riverside Payments, Nov 2, 2026. SVPay is not affiliated with Riverside Payments."
+   ]
+  },
+  "facebook": {
+   "text": "One business in a new FTC complaint paid about $47 a month for 4 years to lease a card machine. That's roughly $2,250 for a terminal that cost about $400 new.\n\nThe lease came with a card processing deal from Riverside Payments. On Nov 2, the Federal Trade Commission (FTC) and Washington state sued the company, saying its quote sheets at times promised to cut up to 60% of a shop's card fees while shops that switched typically paid more. The FTC says the contract ran 3 years, renewed on its own, and cost $695 to leave.\n\nRiverside agreed to a proposed $600,000 settlement. If a judge approves it, customers get 60 days to end the processing contract with no termination fee.\n\nI started SVPay, so I'm not neutral on this. Whoever brings your shop a quote, us included, ask for your all-in rate on a real statement, every fee by name, the contract length and the cost to leave. Is your card machine leased or owned?\n\n#SmallBusiness #ShopLocal",
+   "first_comment": "See what your shop would keep: https://www.svpay.app/savings-calculator?utm_source=facebook&utm_medium=social&utm_campaign=news_20261111&utm_content=riverside-ftc-processor-fees",
+   "media": [
+    "checks/regression/riverside-r1/slide-1-single.jpg"
+   ],
+   "alt": [
+    "Glossy 3D numerals reading $2,250 on a light background. Text: One shop paid about $2,250 to lease a card machine that cost about $400 new. Over 4 years, at about $47 a month. Source: FTC complaint, FTC and Washington v. Riverside Payments, Nov 2, 2026. SVPay is not affiliated with Riverside Payments."
+   ]
+  },
+  "instagram": {
+   "text": "One shop paid about $2,250 to lease a card machine that cost about $400 new, per an FTC complaint against Riverside Payments.\n\nThe Federal Trade Commission (FTC) says Riverside's quote sheets at times promised to cut up to 60% of a shop's card fees, but shops that switched typically paid more. Swipe for the fine print and 4 things to get in writing before you sign with any processor, SVPay included.\n\nRiverside agreed to a proposed $600,000 settlement with the FTC and Washington state. If a judge approves it, customers get 60 days to end the processing contract with no termination fee.\n\nSVPay makes money from paid software plans, never from a cut of your sales. Source: FTC complaint and press release, Nov 2, 2026. SVPay is not affiliated with Riverside Payments.\n\nSee what your shop would keep: link in bio. Is your card machine leased or owned?\n\n#SmallBusiness #ShopOwners",
+   "media": [
+    "checks/regression/riverside-r1/slide-1.jpg",
+    "checks/regression/riverside-r1/slide-2.jpg",
+    "checks/regression/riverside-r1/slide-3.jpg",
+    "checks/regression/riverside-r1/slide-4.jpg",
+    "checks/regression/riverside-r1/slide-5.jpg",
+    "checks/regression/riverside-r1/slide-6.jpg"
+   ],
+   "alt": [
+    "Glossy 3D numerals reading $2,250 on a light background. Slide 1 of 6. Text: One shop paid about $2,250 to lease a card machine that cost about $400 new. Over 4 years, at about $47 a month. Source: FTC complaint, FTC and Washington v. Riverside Payments, Nov 2, 2026. SVPay is not affiliated with Riverside Payments. Read the fine print.",
+    "Slide 2 of 6. Glossy 3D numerals reading 60% on a light background. Text: The pitch: cut your card fees by 40% to 60%. The FTC says shops that switched typically paid more. Source: FTC press release, FTC and Washington v. Riverside Payments, Nov 2, 2026.",
+    "Slide 3 of 6. Glossy 3D numerals reading $695. Text: The FTC says leaving cost $695. Fees left off the quote. A 26-page contract. 3 years, then it renews. Lease runs a year longer. Source: FTC complaint and press release, Nov 2, 2026.",
+    "Slide 4 of 6. A stack of glossy blue coins beside the text: Proposed settlement. $600,000 to settle with the FTC and Washington. If a judge approves, customers get 60 days to end the processing contract, no termination fee. Machine leases aren't covered. Sources: FTC press release, Nov 2, 2026; OPB, Nov 6, 2026.",
+    "Slide 5 of 6. A glossy 3D question mark beside a card listing 4 answers to get in writing before you sign: your all-in rate; every fee, by name; contract length and renewal; the cost to leave, lease included. Ask every processor, SVPay included.",
+    "Slide 6 of 6. A large glossy SVPay coin. Text: See what your shop would keep. Savings calculator at www.svpay.app/savings-calculator. Payments, without the fee. SVPay makes money from paid software plans, never from a cut of your sales."
+   ]
+  },
+  "x": {
+   "text": "One business paid about $2,250 over 4 years to lease a card machine that cost about $400 new, per a Federal Trade Commission complaint filed Nov 2, 2026 against processor Riverside Payments.\n\nBefore you sign, ask about every card fee and whether the machine is leased.",
+   "reply": "Source, the FTC: https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-washington-take-action-against-payment-processor-deceiving-small-businesses-about-costs\n\nSee what your shop would keep: https://www.svpay.app/savings-calculator?utm_source=x&utm_medium=social&utm_campaign=news_20261111&utm_content=riverside-ftc-processor-fees",
+   "media": [
+    "checks/regression/riverside-r1/slide-1-single.jpg"
+   ],
+   "alt": [
+    "Glossy 3D numerals reading $2,250 on a light background. Text: One shop paid about $2,250 to lease a card machine that cost about $400 new. Over 4 years, at about $47 a month. Source: FTC complaint, FTC and Washington v. Riverside Payments, Nov 2, 2026. SVPay is not affiliated with Riverside Payments."
+   ]
+  },
+  "threads": {
+   "text": "One business paid about $47 a month for 4 years to lease a card machine, roughly $2,250 for a terminal that cost about $400 new. That's from a Federal Trade Commission (FTC) complaint filed Nov 2 against Riverside Payments.\n\nThe FTC says Riverside's quotes at times promised to cut up to 60% of card fees, yet shops that switched typically paid more, and leaving cost $695. Riverside agreed to a proposed $600,000 settlement, pending a judge.\n\nIs your card machine leased or owned?\n\n#SmallBusiness",
+   "reply": "Source: https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-washington-take-action-against-payment-processor-deceiving-small-businesses-about-costs\n\nSee what your shop would keep: https://www.svpay.app/savings-calculator?utm_source=threads&utm_medium=social&utm_campaign=news_20261111&utm_content=riverside-ftc-processor-fees",
+   "media": [
+    "checks/regression/riverside-r1/slide-1-single.jpg"
+   ],
+   "alt": [
+    "Glossy 3D numerals reading $2,250 on a light background. Text: One shop paid about $2,250 to lease a card machine that cost about $400 new. Over 4 years, at about $47 a month. Source: FTC complaint, FTC and Washington v. Riverside Payments, Nov 2, 2026. SVPay is not affiliated with Riverside Payments."
+   ]
+  },
+  "gbp": {
+   "text": "One business paid about $2,250 over 4 years to lease a card machine that cost about $400 new, according to an FTC complaint filed Nov 2, 2026 against Riverside Payments. The FTC says the processor's quotes at times promised to cut up to 60% of card fees, while shops that switched typically paid more and faced a $695 fee to leave. Before you sign with any processor, get your all-in rate, every fee and the cost to leave in writing. SVPay's savings calculator shows your all-in rate and what your shop would keep. Run your numbers: https://www.svpay.app/savings-calculator?utm_source=google_business&utm_medium=social&utm_campaign=news_20261111&utm_content=riverside-ftc-processor-fees",
+   "media": [
+    "checks/regression/riverside-r1/slide-1-single.jpg"
+   ],
+   "alt": [
+    "Glossy 3D numerals reading $2,250 on a light background. Text: One shop paid about $2,250 to lease a card machine that cost about $400 new. Over 4 years, at about $47 a month. Source: FTC complaint, FTC and Washington v. Riverside Payments, Nov 2, 2026. SVPay is not affiliated with Riverside Payments."
+   ],
+   "cta_url": "https://www.svpay.app/savings-calculator?utm_source=google_business&utm_medium=social&utm_campaign=news_20261111&utm_content=riverside-ftc-processor-fees"
+  }
+ },
+ "facts": [
+  {
+   "text": "The FTC and Washington state sued Riverside Payments, its affiliate Cascade Equipment Leasing and operators Brandon Skinner and Jason Reese in the U.S. District Court for the Western District of Washington (2:26-cv-04228); announced Nov 2, 2026",
+   "numbers": [],
+   "source_url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-washington-take-action-against-payment-processor-deceiving-small-businesses-about-costs",
+   "source_date": "2026-11-02",
+   "confirmed_by": [
+    "https://www.paymentsdive.com/news/payment-processor-settle-ftc-alleged-deceptive-fees/873669/",
+    "https://www.opb.org/article/2026/11/06/vancouver-credit-card-processor-misleads-customers/"
+   ]
+  },
+  {
+   "text": "Riverside claimed businesses could save 40% to 60% by switching; businesses that switched typically paid more than with their prior provider (complaint para 43: 'over 40%, or nearly 60%')",
+   "numbers": [
+    "40%",
+    "60%"
+   ],
+   "source_url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-washington-take-action-against-payment-processor-deceiving-small-businesses-about-costs",
+   "source_date": "2026-11-02",
+   "confirmed_by": [
+    "https://www.paymentsdive.com/news/payment-processor-settle-ftc-alleged-deceptive-fees/873669/",
+    "https://www.opb.org/article/2026/11/06/vancouver-credit-card-processor-misleads-customers/",
+    "https://www.ftc.gov/system/files/ftc_gov/pdf/Riverside-Complaint.pdf"
+   ]
+  },
+  {
+   "text": "Quote sheets omitted activation fees, batch fees, and fees for alleged data-security non-compliance or inactive processing",
+   "numbers": [],
+   "source_url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-washington-take-action-against-payment-processor-deceiving-small-businesses-about-costs",
+   "source_date": "2026-11-02"
+  },
+  {
+   "text": "A roughly 26-page electronic contract; 3-year initial processing term with automatic renewal; $695 early termination fee (complaint paras 4, 47, 54, 56)",
+   "numbers": [
+    "$695"
+   ],
+   "source_url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-washington-take-action-against-payment-processor-deceiving-small-businesses-about-costs",
+   "source_date": "2026-11-02",
+   "confirmed_by": [
+    "https://www.ftc.gov/system/files/ftc_gov/pdf/Riverside-Complaint.pdf",
+    "https://www.paymentsdive.com/news/payment-processor-settle-ftc-alleged-deceptive-fees/873669/",
+    "https://www.opb.org/article/2026/11/06/vancouver-credit-card-processor-misleads-customers/"
+   ]
+  },
+  {
+   "text": "The equipment lease from Cascade auto-renews and runs one year longer than the processing contract",
+   "numbers": [],
+   "source_url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-washington-take-action-against-payment-processor-deceiving-small-businesses-about-costs",
+   "source_date": "2026-11-02",
+   "confirmed_by": [
+    "https://www.paymentsdive.com/news/payment-processor-settle-ftc-alleged-deceptive-fees/873669/"
+   ]
+  },
+  {
+   "text": "Complaint para 50: from 2020 to 2024 one small business in North Carolina paid approximately $47 per month for 4 years, a total of approximately $2,250, to lease a machine that would have cost around $400 to purchase new",
+   "numbers": [
+    "$47",
+    "$2,250",
+    "$400"
+   ],
+   "source_url": "https://www.ftc.gov/system/files/ftc_gov/pdf/Riverside-Complaint.pdf",
+   "source_date": "2026-11-02"
+  },
+  {
+   "text": "Complaint para 47: the defendants represent that clients can cancel at any time without any penalty (press release: a 'no-risk' cancellation promise)",
+   "numbers": [],
+   "source_url": "https://www.ftc.gov/system/files/ftc_gov/pdf/Riverside-Complaint.pdf",
+   "source_date": "2026-11-02",
+   "confirmed_by": [
+    "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-washington-take-action-against-payment-processor-deceiving-small-businesses-about-costs"
+   ]
+  },
+  {
+   "text": "Settlement: Riverside, Cascade, Skinner and Reese pay $600,000; a $32,083,921 judgment is suspended after that payment",
+   "numbers": [
+    "$600,000",
+    "$32,083,921",
+    "$32.1 million"
+   ],
+   "source_url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-washington-take-action-against-payment-processor-deceiving-small-businesses-about-costs",
+   "source_date": "2026-11-02",
+   "confirmed_by": [
+    "https://www.paymentsdive.com/news/payment-processor-settle-ftc-alleged-deceptive-fees/873669/",
+    "https://www.opb.org/article/2026/11/06/vancouver-credit-card-processor-misleads-customers/"
+   ]
+  },
+  {
+   "text": "For 60 days Riverside waives the early termination fee and any penalty for rescinding processing agreements; the order takes effect when the district court judge approves and signs it",
+   "numbers": [],
+   "source_url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-washington-take-action-against-payment-processor-deceiving-small-businesses-about-costs",
+   "source_date": "2026-11-02",
+   "confirmed_by": [
+    "https://www.paymentsdive.com/news/payment-processor-settle-ftc-alleged-deceptive-fees/873669/"
+   ]
+  },
+  {
+   "text": "Case status: FTC and Washington v. Riverside Payments, matter 2523018, W.D. Wash.; complaint and stipulated proposed order filed Nov 2, 2026; FTC case page lists the case as Pending and does not show the order as entered (re-checked Nov 11, 2026)",
+   "type": "law_status",
+   "checked_on": "2026-11-11",
+   "numbers": [],
+   "source_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/2523018-riverside-payments-inc",
+   "source_date": "2026-11-02"
+  },
+  {
+   "text": "OPB: the settlement does not cover the equipment leased by businesses; it goes to the chief magistrate judge in the Western District of Washington and could be approved any day",
+   "numbers": [],
+   "source_url": "https://www.opb.org/article/2026/11/06/vancouver-credit-card-processor-misleads-customers/",
+   "source_date": "2026-11-06"
+  },
+  {
+   "text": "SVPay pricing: 'Simple pricing. Never per sale.' Processing and cash-out cost nothing on any plan; Starter is free, Growth and Pro are paid. Approved line used: SVPay makes money from paid software plans, never from a cut of your sales.",
+   "numbers": [],
+   "source_url": "https://www.svpay.app/pricing",
+   "source_date": "2026-11-11",
+   "own_data": true
+  }
+ ],
+ "math": [],
+ "slides": [
+  {
+   "file": "checks/regression/riverside-r1/slide-1.jpg",
+   "role": "hook",
+   "text": "FTC case, Nov 2026. One shop paid about $2,250 to lease a card machine that cost about $400 new. Over 4 years, at about $47 a month. Read the fine print.",
+   "has_stat": true,
+   "source_line": "Source: FTC complaint, FTC and Washington v. Riverside Payments, Nov 2, 2026",
+   "example": false
+  },
+  {
+   "file": "checks/regression/riverside-r1/slide-2.jpg",
+   "role": "stakes",
+   "text": "What the FTC says. The pitch: cut your card fees by 40% to 60%. The FTC says shops that switched typically paid more.",
+   "has_stat": true,
+   "source_line": "Source: FTC press release, FTC and Washington v. Riverside Payments, Nov 2, 2026",
+   "example": false
+  },
+  {
+   "file": "checks/regression/riverside-r1/slide-3.jpg",
+   "role": "proof",
+   "text": "The fine print. The FTC says leaving cost $695. Fees left off the quote. A 26-page contract. 3 years, then it renews. Lease runs a year longer.",
+   "has_stat": true,
+   "source_line": "Source: FTC complaint and press release, Nov 2, 2026",
+   "example": false
+  },
+  {
+   "file": "checks/regression/riverside-r1/slide-4.jpg",
+   "role": "payoff",
+   "text": "Proposed settlement. $600,000 to settle with the FTC and Washington. If a judge approves, customers get 60 days to end the processing contract, no termination fee. Machine leases aren't covered.",
+   "has_stat": true,
+   "source_line": "Sources: FTC press release, Nov 2, 2026; OPB, Nov 6, 2026",
+   "example": false
+  },
+  {
+   "file": "checks/regression/riverside-r1/slide-5.jpg",
+   "role": "howto",
+   "text": "Before you sign. Get 4 answers in writing. 1 Your all-in rate. 2 Every fee, by name. 3 Contract length and renewal. 4 The cost to leave, lease included. Ask every processor, SVPay included.",
+   "example": false
+  },
+  {
+   "file": "checks/regression/riverside-r1/slide-6.jpg",
+   "role": "cta",
+   "text": "See what your shop would keep. Savings calculator: www.svpay.app/savings-calculator. Payments, without the fee. SVPay makes money from paid software plans, never from a cut of your sales.",
+   "example": false
+  }
+ ],
+ "regression_note": "Rejected render of the Nov 11 Riverside post (V-I07), restored from git for the image-check regression set."
+}

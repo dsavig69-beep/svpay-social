@@ -1,0 +1,19 @@
+{
+ "_why": "SHA-256 of the brand font files the slides and the 3D numerals load (QR15, R-T04). Update only through review.",
+ "instrument-serif-latin-400-italic.woff": "9bc25f743ba6bf9091d37de465dedb2d2cb0c0614738bec1c551922fb2794d1d",
+ "instrument-serif-latin-400-italic.woff2": "5a51946dfffa82972bc98745359c46761515641fda557c25116459a9f83da4a7",
+ "inter-tight-latin-600-normal.woff": "e46b7e400dc11a1737bd03222d48e1ebe3990a9df721f1183f4dc00c82e1f560",
+ "inter-tight-latin-600-normal.woff2": "db1a039d03ed646ef6a899f9ff92bf2f6fe382a49f1b0992066e85caf88b5be9",
+ "inter-tight-latin-700-normal.woff": "c725b4f8b92197d2b1fd05fb03df3eb5efb43afd7d2cc48a4e67661bdcc7dfa5",
+ "inter-tight-latin-700-normal.woff2": "9c4f02f38678f2628292d66c4f7a1a6a06af7ffac4d279359b09074e7d0f1fe0",
+ "inter-tight-latin-800-normal.woff": "7c932d45dc8827853d43a51fb9feea60ce16d7a12c50d8eb21f776296189534d",
+ "inter-tight-latin-800-normal.woff2": "b4b4a0877ce8d65c2c194dec15236e4861d3b3c111b3aa3d54fc4efbe6171027",
+ "inter-latin-500-normal.woff": "9b42c108da48b5ed55a3072e815ffee2d271562e6c0dd6998910e8f9c09e0a3d",
+ "inter-latin-500-normal.woff2": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f",
+ "inter-latin-600-normal.woff": "6a9cb3a509b4eeaf12b7dda6c4aacac3e85d07f4201bf4dd716e332e692b87bd",
+ "inter-latin-600-normal.woff2": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a",
+ "inter-latin-700-normal.woff": "7c5ed5655730de337704d3fc94628515cd7e3d8d32368871709bf56ac0397e7a",
+ "inter-latin-700-normal.woff2": "6f56409fd3d64bb85f7d070bce20749db2d66b6d63cec586cc22d1c761be2491",
+ "inter-latin-800-normal.woff": "a2fdc5be8acd75fe8f3fd9de8179828d04fd884c155cd6b63fec23b33651ec88",
+ "inter-latin-800-normal.woff2": "a7d0a50f15d389cad679238466bdb5fc9787aa0715719064ce25abaff042820d"
+}

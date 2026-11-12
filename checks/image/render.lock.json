@@ -1,0 +1,6 @@
+{
+ "_why": "Pinned render environment (QR05, QR08, R-P04). Update through review when the renderer changes.",
+ "gpu": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+ "three": "160",
+ "chromium": "153.0.8010.12"
+}

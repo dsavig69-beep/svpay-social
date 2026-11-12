@@ -1,0 +1,956 @@
+{
+ "size": [
+  2160,
+  2700
+ ],
+ "text": [
+  {
+   "id": 0,
+   "mids": [
+    "0"
+   ],
+   "role": "headline",
+   "text": "One shop paid about",
+   "lines": [
+    {
+     "text": "One shop paid about",
+     "x": 144,
+     "y": 838,
+     "w": 1810.3125,
+     "h": 218,
+     "chars": [
+      [
+       "O",
+       144,
+       838,
+       140.8,
+       218
+      ],
+      [
+       "n",
+       284.8,
+       838,
+       113.5,
+       218
+      ],
+      [
+       "e",
+       398.3,
+       838,
+       107.2,
+       218
+      ],
+      [
+       "s",
+       543.1,
+       838,
+       102.4,
+       218
+      ],
+      [
+       "h",
+       645.5,
+       838,
+       113.8,
+       218
+      ],
+      [
+       "o",
+       759.3,
+       838,
+       110.4,
+       218
+      ],
+      [
+       "p",
+       869.7,
+       838,
+       113.8,
+       218
+      ],
+      [
+       "p",
+       1021.1,
+       838,
+       113.8,
+       218
+      ],
+      [
+       "a",
+       1134.8,
+       838,
+       105.2,
+       218
+      ],
+      [
+       "i",
+       1239.9,
+       838,
+       50.1,
+       218
+      ],
+      [
+       "d",
+       1290,
+       838,
+       113.8,
+       218
+      ],
+      [
+       "a",
+       1441.4,
+       838,
+       105.2,
+       218
+      ],
+      [
+       "b",
+       1546.5,
+       838,
+       113.8,
+       218
+      ],
+      [
+       "o",
+       1660.3,
+       838,
+       110.4,
+       218
+      ],
+      [
+       "u",
+       1770.7,
+       838,
+       113.3,
+       218
+      ],
+      [
+       "t",
+       1884,
+       838,
+       70.3,
+       218
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 838,
+    "w": 1810.3125,
+    "h": 218
+   },
+   "container": {
+    "x": 144,
+    "y": 860,
+    "w": 1810.3125,
+    "h": 176.375
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "nowrap",
+   "size": 180,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "0",
+     "text": "One shop paid about",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 180,
+     "letter_spacing": 3.96,
+     "line_height": 176.4,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 1,
+   "mids": [
+    "1",
+    "2"
+   ],
+   "role": "headline",
+   "text": "to lease a $400 terminal.",
+   "lines": [
+    {
+     "text": "to lease a $400 terminal.",
+     "x": 144,
+     "y": 1824,
+     "w": 1667.9375,
+     "h": 164,
+     "chars": [
+      [
+       "t",
+       144,
+       1824,
+       52.4,
+       164
+      ],
+      [
+       "o",
+       196.4,
+       1824,
+       83.4,
+       164
+      ],
+      [
+       "l",
+       308.3,
+       1824,
+       37.8,
+       164
+      ],
+      [
+       "e",
+       346.1,
+       1824,
+       81,
+       164
+      ],
+      [
+       "a",
+       427,
+       1824,
+       79.4,
+       164
+      ],
+      [
+       "s",
+       506.4,
+       1824,
+       77.4,
+       164
+      ],
+      [
+       "e",
+       583.8,
+       1824,
+       81,
+       164
+      ],
+      [
+       "a",
+       693.3,
+       1824,
+       79.5,
+       164
+      ],
+      [
+       "$",
+       801.2,
+       1824,
+       89,
+       164
+      ],
+      [
+       "4",
+       890.2,
+       1824,
+       93.1,
+       164
+      ],
+      [
+       "0",
+       983.2,
+       1824,
+       95.7,
+       164
+      ],
+      [
+       "0",
+       1078.8,
+       1824,
+       95.7,
+       164
+      ],
+      [
+       "t",
+       1208.4,
+       1824,
+       52.4,
+       164
+      ],
+      [
+       "e",
+       1260.8,
+       1824,
+       81,
+       164
+      ],
+      [
+       "r",
+       1341.8,
+       1824,
+       56.5,
+       164
+      ],
+      [
+       "m",
+       1398.3,
+       1824,
+       125.5,
+       164
+      ],
+      [
+       "i",
+       1523.7,
+       1824,
+       37.8,
+       164
+      ],
+      [
+       "n",
+       1561.5,
+       1824,
+       85.8,
+       164
+      ],
+      [
+       "a",
+       1647.2,
+       1824,
+       79.4,
+       164
+      ],
+      [
+       "l",
+       1726.6,
+       1824,
+       37.8,
+       164
+      ],
+      [
+       ".",
+       1764.4,
+       1824,
+       47.5,
+       164
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 1824,
+    "w": 1667.9375,
+    "h": 164
+   },
+   "container": {
+    "x": 144,
+    "y": 1836,
+    "w": 1880,
+    "h": 141.4375
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 136,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "1",
+     "text": "to lease a  terminal.",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 136,
+     "letter_spacing": 2.992,
+     "line_height": 141.44,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "2",
+     "text": "$400",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 136,
+     "letter_spacing": 2.992,
+     "line_height": 141.44,
+     "color": "rgba(0, 0, 0, 0)",
+     "fill": "rgba(0, 0, 0, 0)",
+     "gradient_text": "linear-gradient(100deg, rgb(184, 15, 85), rgb(163, 18, 122) 55%, rgb(122, 26, 174))",
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 2,
+   "mids": [
+    "3"
+   ],
+   "role": "body",
+   "text": "About $47 a month for 4 years.",
+   "lines": [
+    {
+     "text": "About $47 a month for 4 years.",
+     "x": 152,
+     "y": 2058,
+     "w": 842.21875,
+     "h": 68,
+     "chars": [
+      [
+       "A",
+       152,
+       2058,
+       40.8,
+       68
+      ],
+      [
+       "b",
+       192.7,
+       2058,
+       35,
+       68
+      ],
+      [
+       "o",
+       227.7,
+       2058,
+       34.1,
+       68
+      ],
+      [
+       "u",
+       261.8,
+       2058,
+       34.3,
+       68
+      ],
+      [
+       "t",
+       296.1,
+       2058,
+       19.8,
+       68
+      ],
+      [
+       "$",
+       329.9,
+       2058,
+       36.4,
+       68
+      ],
+      [
+       "4",
+       366.4,
+       2058,
+       37.3,
+       68
+      ],
+      [
+       "7",
+       403.7,
+       2058,
+       32.3,
+       68
+      ],
+      [
+       "a",
+       450,
+       2058,
+       32.2,
+       68
+      ],
+      [
+       "m",
+       496.3,
+       2058,
+       50.4,
+       68
+      ],
+      [
+       "o",
+       546.7,
+       2058,
+       34.1,
+       68
+      ],
+      [
+       "n",
+       580.8,
+       2058,
+       34.3,
+       68
+      ],
+      [
+       "t",
+       615.1,
+       2058,
+       19.9,
+       68
+      ],
+      [
+       "h",
+       635,
+       2058,
+       34.3,
+       68
+      ],
+      [
+       "f",
+       683.3,
+       2058,
+       20.5,
+       68
+      ],
+      [
+       "o",
+       703.8,
+       2058,
+       34.1,
+       68
+      ],
+      [
+       "r",
+       737.9,
+       2058,
+       22.3,
+       68
+      ],
+      [
+       "4",
+       774.2,
+       2058,
+       37.3,
+       68
+      ],
+      [
+       "y",
+       825.6,
+       2058,
+       31.9,
+       68
+      ],
+      [
+       "e",
+       857.5,
+       2058,
+       33.7,
+       68
+      ],
+      [
+       "a",
+       891.2,
+       2058,
+       32.2,
+       68
+      ],
+      [
+       "r",
+       923.3,
+       2058,
+       22.3,
+       68
+      ],
+      [
+       "s",
+       945.6,
+       2058,
+       30.8,
+       68
+      ],
+      [
+       ".",
+       976.3,
+       2058,
+       17.9,
+       68
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 152,
+    "y": 2058,
+    "w": 842.21875,
+    "h": 68
+   },
+   "container": {
+    "x": 152,
+    "y": 2056,
+    "w": 1880,
+    "h": 72.78125
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 56,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "3",
+     "text": "About $47 a month for 4 years.",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 56,
+     "letter_spacing": 0,
+     "line_height": 72.8,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 3,
+   "mids": [
+    "4"
+   ],
+   "role": "footer",
+   "text": "www.svpay.app",
+   "lines": [
+    {
+     "text": "www.svpay.app",
+     "x": 1664.15625,
+     "y": 2502,
+     "w": 351.84375,
+     "h": 58,
+     "chars": [
+      [
+       "w",
+       1664.2,
+       2502,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1702.9,
+       2502,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1741.7,
+       2502,
+       35.3,
+       58
+      ],
+      [
+       ".",
+       1776.9,
+       2502,
+       14.2,
+       58
+      ],
+      [
+       "s",
+       1791,
+       2502,
+       24.9,
+       58
+      ],
+      [
+       "v",
+       1815.9,
+       2502,
+       26.1,
+       58
+      ],
+      [
+       "p",
+       1842,
+       2502,
+       28.2,
+       58
+      ],
+      [
+       "a",
+       1870.2,
+       2502,
+       25.1,
+       58
+      ],
+      [
+       "y",
+       1895.2,
+       2502,
+       24.3,
+       58
+      ],
+      [
+       ".",
+       1919.5,
+       2502,
+       14.2,
+       58
+      ],
+      [
+       "a",
+       1933.6,
+       2502,
+       26,
+       58
+      ],
+      [
+       "p",
+       1959.6,
+       2502,
+       28.3,
+       58
+      ],
+      [
+       "p",
+       1987.8,
+       2502,
+       28.2,
+       58
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1664.15625,
+    "y": 2502,
+    "w": 351.84375,
+    "h": 58
+   },
+   "container": {
+    "x": 1664.15625,
+    "y": 2508,
+    "w": 351.84375,
+    "h": 48
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 48,
+   "family": "\"Inter Tight\"",
+   "weight": 700,
+   "color": "rgb(30, 39, 70)",
+   "runs": [
+    {
+     "mid": "4",
+     "text": "www.svpay.app",
+     "family": "\"Inter Tight\"",
+     "weight": 700,
+     "style": "normal",
+     "size": 48,
+     "letter_spacing": -0.48,
+     "line_height": 48,
+     "color": "rgb(30, 39, 70)",
+     "fill": "rgb(30, 39, 70)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  }
+ ],
+ "panels": [],
+ "images": [
+  {
+   "src": "rv_hero_1.png",
+   "cls": "hero",
+   "complete": true,
+   "natural": [
+    2160,
+    2700
+   ],
+   "x": 0,
+   "y": 0,
+   "w": 2160,
+   "h": 2700
+  },
+  {
+   "src": "svpay-logo.png",
+   "cls": "logo",
+   "complete": true,
+   "natural": [
+    1774,
+    759
+   ],
+   "x": 144,
+   "y": 2448,
+   "w": 355.25,
+   "h": 152
+  }
+ ],
+ "svgs": [],
+ "hero": "rv_hero_1.png",
+ "fonts": {
+  "status": "loaded",
+  "faces": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "status": "loaded"
+   }
+  ],
+  "files": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "src": "node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2"
+   }
+  ]
+ },
+ "images_complete": true,
+ "slide": "slide-1-gbp",
+ "section": "s1G",
+ "file": "slides-riverside.html",
+ "failed_requests": [],
+ "capture": {
+  "scale": 2,
+  "viewport": [
+   1080,
+   1400
+  ],
+  "width": 2160,
+  "height": 2700,
+  "chromium": "153.0.8010.12",
+  "fonts_ready_before_capture": true
+ }
+}

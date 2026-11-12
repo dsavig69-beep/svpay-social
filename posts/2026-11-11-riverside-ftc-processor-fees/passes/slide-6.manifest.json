@@ -1,0 +1,2099 @@
+{
+ "size": [
+  2160,
+  2700
+ ],
+ "text": [
+  {
+   "id": 0,
+   "mids": [
+    "0"
+   ],
+   "role": "label",
+   "text": "YOUR SHOP",
+   "lines": [
+    {
+     "text": "YOUR SHOP",
+     "x": 198,
+     "y": 152,
+     "w": 314.6875,
+     "h": 52,
+     "chars": [
+      [
+       "Y",
+       198,
+       152,
+       35.8,
+       52
+      ],
+      [
+       "O",
+       233.8,
+       152,
+       40,
+       52
+      ],
+      [
+       "U",
+       273.8,
+       152,
+       38.6,
+       52
+      ],
+      [
+       "R",
+       312.3,
+       152,
+       34.9,
+       52
+      ],
+      [
+       "S",
+       364.4,
+       152,
+       34.8,
+       52
+      ],
+      [
+       "H",
+       399.2,
+       152,
+       39,
+       52
+      ],
+      [
+       "O",
+       438.1,
+       152,
+       40,
+       52
+      ],
+      [
+       "P",
+       478.1,
+       152,
+       34.6,
+       52
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 198,
+    "y": 152,
+    "w": 314.6875,
+    "h": 52
+   },
+   "container": {
+    "x": 144,
+    "y": 156,
+    "w": 368.6875,
+    "h": 44
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 44,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "0",
+     "text": "Your shop",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 6.16,
+     "line_height": 44,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "uppercase",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 1,
+   "mids": [
+    "1",
+    "2"
+   ],
+   "role": "counter",
+   "text": "6 / 6",
+   "lines": [
+    {
+     "text": "6 / 6",
+     "x": 1913.1875,
+     "y": 152,
+     "w": 102.8125,
+     "h": 52,
+     "chars": [
+      [
+       "6",
+       1913.2,
+       152,
+       31.3,
+       52
+      ],
+      [
+       "/",
+       1955.8,
+       152,
+       18.4,
+       52
+      ],
+      [
+       "6",
+       1985.6,
+       152,
+       30.4,
+       52
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1913.1875,
+    "y": 152,
+    "w": 102.8125,
+    "h": 52
+   },
+   "container": {
+    "x": 1913.1875,
+    "y": 156,
+    "w": 102.8125,
+    "h": 44
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 44,
+   "family": "\"Inter Tight\"",
+   "weight": 700,
+   "color": "rgb(46, 55, 86)",
+   "runs": [
+    {
+     "mid": "1",
+     "text": "/ 6",
+     "family": "\"Inter Tight\"",
+     "weight": 700,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 2.64,
+     "line_height": 44,
+     "color": "rgb(46, 55, 86)",
+     "fill": "rgb(46, 55, 86)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "2",
+     "text": "6",
+     "family": "\"Inter Tight\"",
+     "weight": 900,
+     "style": "normal",
+     "size": 44,
+     "letter_spacing": 2.64,
+     "line_height": 44,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 2,
+   "mids": [
+    "3",
+    "4"
+   ],
+   "role": "headline",
+   "text": "Is the card machine on your counter leased or owned?",
+   "lines": [
+    {
+     "text": "Is the card machine",
+     "x": 144,
+     "y": 578,
+     "w": 1829.75,
+     "h": 232,
+     "chars": [
+      [
+       "I",
+       144,
+       578,
+       53.7,
+       232
+      ],
+      [
+       "s",
+       197.6,
+       578,
+       109.3,
+       232
+      ],
+      [
+       "t",
+       347.1,
+       578,
+       77.2,
+       232
+      ],
+      [
+       "h",
+       424.2,
+       578,
+       121.3,
+       232
+      ],
+      [
+       "e",
+       545.5,
+       578,
+       114.3,
+       232
+      ],
+      [
+       "c",
+       700.1,
+       578,
+       113.3,
+       232
+      ],
+      [
+       "a",
+       813.3,
+       578,
+       112.2,
+       232
+      ],
+      [
+       "r",
+       925.4,
+       578,
+       74.3,
+       232
+      ],
+      [
+       "d",
+       999.7,
+       578,
+       121.3,
+       232
+      ],
+      [
+       "m",
+       1161.3,
+       578,
+       177.1,
+       232
+      ],
+      [
+       "a",
+       1338.3,
+       578,
+       112.2,
+       232
+      ],
+      [
+       "c",
+       1450.5,
+       578,
+       113.3,
+       232
+      ],
+      [
+       "h",
+       1563.7,
+       578,
+       121.3,
+       232
+      ],
+      [
+       "i",
+       1685,
+       578,
+       53.4,
+       232
+      ],
+      [
+       "n",
+       1738.4,
+       578,
+       121.1,
+       232
+      ],
+      [
+       "e",
+       1859.4,
+       578,
+       114.3,
+       232
+      ]
+     ]
+    },
+    {
+     "text": "on your counter",
+     "x": 144,
+     "y": 766.15625,
+     "w": 1488.28125,
+     "h": 232,
+     "chars": [
+      [
+       "o",
+       144,
+       766.2,
+       117.8,
+       232
+      ],
+      [
+       "n",
+       261.8,
+       766.2,
+       121.1,
+       232
+      ],
+      [
+       "y",
+       423,
+       766.2,
+       109.9,
+       232
+      ],
+      [
+       "o",
+       532.9,
+       766.2,
+       117.8,
+       232
+      ],
+      [
+       "u",
+       650.6,
+       766.2,
+       120.9,
+       232
+      ],
+      [
+       "r",
+       771.5,
+       766.2,
+       79.7,
+       232
+      ],
+      [
+       "c",
+       891.4,
+       766.2,
+       113.3,
+       232
+      ],
+      [
+       "o",
+       1004.7,
+       766.2,
+       117.8,
+       232
+      ],
+      [
+       "u",
+       1122.4,
+       766.2,
+       120.9,
+       232
+      ],
+      [
+       "n",
+       1243.3,
+       766.2,
+       121.1,
+       232
+      ],
+      [
+       "t",
+       1364.3,
+       766.2,
+       74,
+       232
+      ],
+      [
+       "e",
+       1438.3,
+       766.2,
+       114.3,
+       232
+      ],
+      [
+       "r",
+       1552.6,
+       766.2,
+       79.7,
+       232
+      ]
+     ]
+    },
+    {
+     "text": "leased or owned?",
+     "x": 144,
+     "y": 954.3125,
+     "w": 1649.71875,
+     "h": 232,
+     "chars": [
+      [
+       "l",
+       144,
+       954.3,
+       53.4,
+       232
+      ],
+      [
+       "e",
+       197.3,
+       954.3,
+       114.3,
+       232
+      ],
+      [
+       "a",
+       311.6,
+       954.3,
+       112.2,
+       232
+      ],
+      [
+       "s",
+       423.8,
+       954.3,
+       109.3,
+       232
+      ],
+      [
+       "e",
+       533,
+       954.3,
+       114.3,
+       232
+      ],
+      [
+       "d",
+       647.3,
+       954.3,
+       121.4,
+       232
+      ],
+      [
+       "o",
+       808.8,
+       954.3,
+       117.8,
+       232
+      ],
+      [
+       "r",
+       926.6,
+       954.3,
+       79.7,
+       232
+      ],
+      [
+       "o",
+       1046.5,
+       954.3,
+       115.6,
+       232
+      ],
+      [
+       "w",
+       1162.1,
+       954.3,
+       164.5,
+       232
+      ],
+      [
+       "n",
+       1326.5,
+       954.3,
+       121.1,
+       232
+      ],
+      [
+       "e",
+       1447.6,
+       954.3,
+       114.3,
+       232
+      ],
+      [
+       "d",
+       1561.8,
+       954.3,
+       121.3,
+       232
+      ],
+      [
+       "?",
+       1683.2,
+       954.3,
+       110.6,
+       232
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 578,
+    "w": 1829.75,
+    "h": 608.3125
+   },
+   "container": {
+    "x": 144,
+    "y": 600,
+    "w": 1880,
+    "h": 564.46875
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "nowrap",
+   "size": 192,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "3",
+     "text": "Is the card machineon your counter",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 192,
+     "letter_spacing": 4.224,
+     "line_height": 188.16,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "4",
+     "text": "leased or owned?",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 192,
+     "letter_spacing": 4.224,
+     "line_height": 188.16,
+     "color": "rgba(0, 0, 0, 0)",
+     "fill": "rgba(0, 0, 0, 0)",
+     "gradient_text": "linear-gradient(100deg, rgb(11, 47, 214) 0%, rgb(42, 31, 203) 40%, rgb(90, 27, 184) 75%, rgb(138, 20, 144) 100%)",
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 3,
+   "mids": [
+    "5"
+   ],
+   "role": "body",
+   "text": "Find the lease this week. Check who it’s with, how many months are left and what it costs to end.",
+   "lines": [
+    {
+     "text": "Find the lease this week. Check who it’s with,",
+     "x": 144,
+     "y": 1526,
+     "w": 1468,
+     "h": 82,
+     "chars": [
+      [
+       "F",
+       144,
+       1526,
+       40.1,
+       82
+      ],
+      [
+       "i",
+       184.1,
+       1526,
+       17.2,
+       82
+      ],
+      [
+       "n",
+       201.2,
+       1526,
+       40.9,
+       82
+      ],
+      [
+       "d",
+       242.1,
+       1526,
+       42.1,
+       82
+      ],
+      [
+       "t",
+       302.3,
+       1526,
+       23.3,
+       82
+      ],
+      [
+       "h",
+       325.5,
+       1526,
+       40.9,
+       82
+      ],
+      [
+       "e",
+       366.4,
+       1526,
+       40,
+       82
+      ],
+      [
+       "l",
+       424.4,
+       1526,
+       17.2,
+       82
+      ],
+      [
+       "e",
+       441.6,
+       1526,
+       40.6,
+       82
+      ],
+      [
+       "a",
+       482.2,
+       1526,
+       38.7,
+       82
+      ],
+      [
+       "s",
+       520.8,
+       1526,
+       36.7,
+       82
+      ],
+      [
+       "e",
+       557.4,
+       1526,
+       40,
+       82
+      ],
+      [
+       "t",
+       615.5,
+       1526,
+       23.3,
+       82
+      ],
+      [
+       "h",
+       638.7,
+       1526,
+       40.9,
+       82
+      ],
+      [
+       "i",
+       679.6,
+       1526,
+       17.2,
+       82
+      ],
+      [
+       "s",
+       696.8,
+       1526,
+       36.7,
+       82
+      ],
+      [
+       "w",
+       751.5,
+       1526,
+       55.3,
+       82
+      ],
+      [
+       "e",
+       806.8,
+       1526,
+       40,
+       82
+      ],
+      [
+       "e",
+       846.7,
+       1526,
+       40,
+       82
+      ],
+      [
+       "k",
+       886.6,
+       1526,
+       38.1,
+       82
+      ],
+      [
+       ".",
+       924.7,
+       1526,
+       19.9,
+       82
+      ],
+      [
+       "C",
+       962.7,
+       1526,
+       49.9,
+       82
+      ],
+      [
+       "h",
+       1012.6,
+       1526,
+       40.9,
+       82
+      ],
+      [
+       "e",
+       1053.5,
+       1526,
+       40,
+       82
+      ],
+      [
+       "c",
+       1093.4,
+       1526,
+       39.3,
+       82
+      ],
+      [
+       "k",
+       1132.7,
+       1526,
+       38,
+       82
+      ],
+      [
+       "w",
+       1188.8,
+       1526,
+       56.4,
+       82
+      ],
+      [
+       "h",
+       1245.2,
+       1526,
+       40.9,
+       82
+      ],
+      [
+       "o",
+       1286.1,
+       1526,
+       41.1,
+       82
+      ],
+      [
+       "i",
+       1345.3,
+       1526,
+       17.2,
+       82
+      ],
+      [
+       "t",
+       1362.4,
+       1526,
+       23.4,
+       82
+      ],
+      [
+       "’",
+       1385.8,
+       1526,
+       13.8,
+       82
+      ],
+      [
+       "s",
+       1399.7,
+       1526,
+       36.7,
+       82
+      ],
+      [
+       "w",
+       1454.4,
+       1526,
+       56.4,
+       82
+      ],
+      [
+       "i",
+       1510.8,
+       1526,
+       17.2,
+       82
+      ],
+      [
+       "t",
+       1527.9,
+       1526,
+       23.2,
+       82
+      ],
+      [
+       "h",
+       1551.1,
+       1526,
+       40.9,
+       82
+      ],
+      [
+       ",",
+       1592,
+       1526,
+       20,
+       82
+      ]
+     ]
+    },
+    {
+     "text": "how many months are left and what it costs to",
+     "x": 144,
+     "y": 1622.53125,
+     "w": 1489.15625,
+     "h": 82,
+     "chars": [
+      [
+       "h",
+       144,
+       1622.5,
+       40.9,
+       82
+      ],
+      [
+       "o",
+       184.9,
+       1622.5,
+       40,
+       82
+      ],
+      [
+       "w",
+       224.8,
+       1622.5,
+       56.4,
+       82
+      ],
+      [
+       "m",
+       299.3,
+       1622.5,
+       60.4,
+       82
+      ],
+      [
+       "a",
+       359.8,
+       1622.5,
+       38.6,
+       82
+      ],
+      [
+       "n",
+       398.3,
+       1622.5,
+       39.9,
+       82
+      ],
+      [
+       "y",
+       438.2,
+       1622.5,
+       39.2,
+       82
+      ],
+      [
+       "m",
+       495.4,
+       1622.5,
+       60.4,
+       82
+      ],
+      [
+       "o",
+       555.8,
+       1622.5,
+       41.1,
+       82
+      ],
+      [
+       "n",
+       596.9,
+       1622.5,
+       40.9,
+       82
+      ],
+      [
+       "t",
+       637.8,
+       1622.5,
+       23.3,
+       82
+      ],
+      [
+       "h",
+       661,
+       1622.5,
+       40.9,
+       82
+      ],
+      [
+       "s",
+       701.9,
+       1622.5,
+       36.7,
+       82
+      ],
+      [
+       "a",
+       756.7,
+       1622.5,
+       38.6,
+       82
+      ],
+      [
+       "r",
+       795.3,
+       1622.5,
+       25,
+       82
+      ],
+      [
+       "e",
+       820.3,
+       1622.5,
+       40,
+       82
+      ],
+      [
+       "l",
+       878.4,
+       1622.5,
+       17.2,
+       82
+      ],
+      [
+       "e",
+       895.5,
+       1622.5,
+       40,
+       82
+      ],
+      [
+       "f",
+       935.4,
+       1622.5,
+       23.4,
+       82
+      ],
+      [
+       "t",
+       958.8,
+       1622.5,
+       23.2,
+       82
+      ],
+      [
+       "a",
+       1000.1,
+       1622.5,
+       38.7,
+       82
+      ],
+      [
+       "n",
+       1038.7,
+       1622.5,
+       40.9,
+       82
+      ],
+      [
+       "d",
+       1079.6,
+       1622.5,
+       42.1,
+       82
+      ],
+      [
+       "w",
+       1139.8,
+       1622.5,
+       56.4,
+       82
+      ],
+      [
+       "h",
+       1196.1,
+       1622.5,
+       40.9,
+       82
+      ],
+      [
+       "a",
+       1237,
+       1622.5,
+       38.7,
+       82
+      ],
+      [
+       "t",
+       1275.7,
+       1622.5,
+       23.2,
+       82
+      ],
+      [
+       "i",
+       1316.9,
+       1622.5,
+       17.2,
+       82
+      ],
+      [
+       "t",
+       1334.1,
+       1622.5,
+       23.2,
+       82
+      ],
+      [
+       "c",
+       1375.3,
+       1622.5,
+       39.3,
+       82
+      ],
+      [
+       "o",
+       1414.6,
+       1622.5,
+       41.1,
+       82
+      ],
+      [
+       "s",
+       1455.7,
+       1622.5,
+       36.6,
+       82
+      ],
+      [
+       "t",
+       1492.3,
+       1622.5,
+       22.6,
+       82
+      ],
+      [
+       "s",
+       1514.8,
+       1622.5,
+       36.7,
+       82
+      ],
+      [
+       "t",
+       1569.6,
+       1622.5,
+       22.5,
+       82
+      ],
+      [
+       "o",
+       1592,
+       1622.5,
+       41.1,
+       82
+      ]
+     ]
+    },
+    {
+     "text": "end.",
+     "x": 144,
+     "y": 1719.0625,
+     "w": 143.53125,
+     "h": 82,
+     "chars": [
+      [
+       "e",
+       144,
+       1719.1,
+       40,
+       82
+      ],
+      [
+       "n",
+       183.9,
+       1719.1,
+       40.9,
+       82
+      ],
+      [
+       "d",
+       224.8,
+       1719.1,
+       42.1,
+       82
+      ],
+      [
+       ".",
+       266.9,
+       1719.1,
+       20.7,
+       82
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 1526,
+    "w": 1489.15625,
+    "h": 275.0625
+   },
+   "container": {
+    "x": 144,
+    "y": 1520,
+    "w": 1520,
+    "h": 289.59375
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 68,
+   "family": "Inter",
+   "weight": 500,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "5",
+     "text": "Find the lease this week. Check who it’s with, how many months are left and what it costs to end.",
+     "family": "Inter",
+     "weight": 500,
+     "style": "normal",
+     "size": 68,
+     "letter_spacing": 0,
+     "line_height": 96.56,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 4,
+   "mids": [
+    "6",
+    "7"
+   ],
+   "role": "source",
+   "text": "Sources: FTC complaint and press release, Nov 2, 2026; OPB, Nov 6, 2026",
+   "lines": [
+    {
+     "text": "Sources: FTC complaint and press release, Nov 2, 2026;",
+     "x": 152,
+     "y": 2190,
+     "w": 1023.9375,
+     "h": 46,
+     "chars": [
+      [
+       "S",
+       152,
+       2190,
+       24.7,
+       46
+      ],
+      [
+       "o",
+       176.7,
+       2190,
+       23.2,
+       46
+      ],
+      [
+       "u",
+       199.8,
+       2190,
+       23.3,
+       46
+      ],
+      [
+       "r",
+       223.1,
+       2190,
+       14.3,
+       46
+      ],
+      [
+       "c",
+       237.3,
+       2190,
+       22.2,
+       46
+      ],
+      [
+       "e",
+       259.5,
+       2190,
+       22.5,
+       46
+      ],
+      [
+       "s",
+       282,
+       2190,
+       20.9,
+       46
+      ],
+      [
+       ":",
+       302.8,
+       2190,
+       12.1,
+       46
+      ],
+      [
+       "F",
+       325.1,
+       2190,
+       22.4,
+       46
+      ],
+      [
+       "T",
+       347.5,
+       2190,
+       23.7,
+       46
+      ],
+      [
+       "C",
+       371.1,
+       2190,
+       27.9,
+       46
+      ],
+      [
+       "c",
+       409.1,
+       2190,
+       22,
+       46
+      ],
+      [
+       "o",
+       431.1,
+       2190,
+       23,
+       46
+      ],
+      [
+       "m",
+       454,
+       2190,
+       33.8,
+       46
+      ],
+      [
+       "p",
+       487.8,
+       2190,
+       23.5,
+       46
+      ],
+      [
+       "l",
+       511.3,
+       2190,
+       9.6,
+       46
+      ],
+      [
+       "a",
+       520.8,
+       2190,
+       21.6,
+       46
+      ],
+      [
+       "i",
+       542.4,
+       2190,
+       9.6,
+       46
+      ],
+      [
+       "n",
+       552,
+       2190,
+       22.9,
+       46
+      ],
+      [
+       "t",
+       574.8,
+       2190,
+       13,
+       46
+      ],
+      [
+       "a",
+       597.9,
+       2190,
+       21.6,
+       46
+      ],
+      [
+       "n",
+       619.5,
+       2190,
+       22.9,
+       46
+      ],
+      [
+       "d",
+       642.3,
+       2190,
+       23.5,
+       46
+      ],
+      [
+       "p",
+       676,
+       2190,
+       23.5,
+       46
+      ],
+      [
+       "r",
+       699.5,
+       2190,
+       14,
+       46
+      ],
+      [
+       "e",
+       713.4,
+       2190,
+       22.3,
+       46
+      ],
+      [
+       "s",
+       735.8,
+       2190,
+       20.5,
+       46
+      ],
+      [
+       "s",
+       756.2,
+       2190,
+       20.5,
+       46
+      ],
+      [
+       "r",
+       786.8,
+       2190,
+       14,
+       46
+      ],
+      [
+       "e",
+       800.8,
+       2190,
+       22.4,
+       46
+      ],
+      [
+       "l",
+       823.1,
+       2190,
+       9.6,
+       46
+      ],
+      [
+       "e",
+       832.7,
+       2190,
+       22.7,
+       46
+      ],
+      [
+       "a",
+       855.4,
+       2190,
+       21.6,
+       46
+      ],
+      [
+       "s",
+       877,
+       2190,
+       20.5,
+       46
+      ],
+      [
+       "e",
+       897.4,
+       2190,
+       22.3,
+       46
+      ],
+      [
+       ",",
+       919.8,
+       2190,
+       11.2,
+       46
+      ],
+      [
+       "N",
+       941,
+       2190,
+       28.8,
+       46
+      ],
+      [
+       "o",
+       969.8,
+       2190,
+       22.3,
+       46
+      ],
+      [
+       "v",
+       992,
+       2190,
+       21.9,
+       46
+      ],
+      [
+       "2",
+       1023.9,
+       2190,
+       23.5,
+       46
+      ],
+      [
+       ",",
+       1047.4,
+       2190,
+       11.2,
+       46
+      ],
+      [
+       "2",
+       1068.6,
+       2190,
+       23.4,
+       46
+      ],
+      [
+       "0",
+       1092,
+       2190,
+       24.6,
+       46
+      ],
+      [
+       "2",
+       1116.6,
+       2190,
+       23.5,
+       46
+      ],
+      [
+       "6",
+       1140,
+       2190,
+       24,
+       46
+      ],
+      [
+       ";",
+       1163.9,
+       2190,
+       12,
+       46
+      ]
+     ]
+    },
+    {
+     "text": "OPB, Nov 6, 2026",
+     "x": 152,
+     "y": 2243.1875,
+     "w": 321.96875,
+     "h": 46,
+     "chars": [
+      [
+       "O",
+       152,
+       2243.2,
+       29.2,
+       46
+      ],
+      [
+       "P",
+       181.1,
+       2243.2,
+       24.4,
+       46
+      ],
+      [
+       "B",
+       205.5,
+       2243.2,
+       25,
+       46
+      ],
+      [
+       ",",
+       230.4,
+       2243.2,
+       11.2,
+       46
+      ],
+      [
+       "N",
+       251.7,
+       2243.2,
+       28.8,
+       46
+      ],
+      [
+       "o",
+       280.5,
+       2243.2,
+       22.3,
+       46
+      ],
+      [
+       "v",
+       302.7,
+       2243.2,
+       21.9,
+       46
+      ],
+      [
+       "6",
+       334.7,
+       2243.2,
+       22.8,
+       46
+      ],
+      [
+       ",",
+       357.4,
+       2243.2,
+       11.2,
+       46
+      ],
+      [
+       "2",
+       378.6,
+       2243.2,
+       23.4,
+       46
+      ],
+      [
+       "0",
+       402,
+       2243.2,
+       24.6,
+       46
+      ],
+      [
+       "2",
+       426.6,
+       2243.2,
+       23.5,
+       46
+      ],
+      [
+       "6",
+       450,
+       2243.2,
+       24,
+       46
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 152,
+    "y": 2190,
+    "w": 1023.9375,
+    "h": 99.1875
+   },
+   "container": {
+    "x": 152,
+    "y": 2188,
+    "w": 1120,
+    "h": 106.375
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 38,
+   "family": "Inter",
+   "weight": 500,
+   "color": "rgb(20, 27, 56)",
+   "runs": [
+    {
+     "mid": "6",
+     "text": "FTC complaint and press release, Nov 2, 2026; OPB, Nov 6, 2026",
+     "family": "Inter",
+     "weight": 500,
+     "style": "normal",
+     "size": 38,
+     "letter_spacing": 0,
+     "line_height": 53.2,
+     "color": "rgb(20, 27, 56)",
+     "fill": "rgb(20, 27, 56)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "7",
+     "text": "Sources:",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 38,
+     "letter_spacing": 0,
+     "line_height": 53.2,
+     "color": "rgb(30, 39, 70)",
+     "fill": "rgb(30, 39, 70)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 5,
+   "mids": [
+    "8"
+   ],
+   "role": "footer",
+   "text": "www.svpay.app",
+   "lines": [
+    {
+     "text": "www.svpay.app",
+     "x": 1664.15625,
+     "y": 2502,
+     "w": 351.84375,
+     "h": 58,
+     "chars": [
+      [
+       "w",
+       1664.2,
+       2502,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1702.9,
+       2502,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1741.7,
+       2502,
+       35.3,
+       58
+      ],
+      [
+       ".",
+       1776.9,
+       2502,
+       14.2,
+       58
+      ],
+      [
+       "s",
+       1791,
+       2502,
+       24.9,
+       58
+      ],
+      [
+       "v",
+       1815.9,
+       2502,
+       26.1,
+       58
+      ],
+      [
+       "p",
+       1842,
+       2502,
+       28.2,
+       58
+      ],
+      [
+       "a",
+       1870.2,
+       2502,
+       25.1,
+       58
+      ],
+      [
+       "y",
+       1895.2,
+       2502,
+       24.3,
+       58
+      ],
+      [
+       ".",
+       1919.5,
+       2502,
+       14.2,
+       58
+      ],
+      [
+       "a",
+       1933.6,
+       2502,
+       26,
+       58
+      ],
+      [
+       "p",
+       1959.6,
+       2502,
+       28.3,
+       58
+      ],
+      [
+       "p",
+       1987.8,
+       2502,
+       28.2,
+       58
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1664.15625,
+    "y": 2502,
+    "w": 351.84375,
+    "h": 58
+   },
+   "container": {
+    "x": 1664.15625,
+    "y": 2508,
+    "w": 351.84375,
+    "h": 48
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 48,
+   "family": "\"Inter Tight\"",
+   "weight": 700,
+   "color": "rgb(30, 39, 70)",
+   "runs": [
+    {
+     "mid": "8",
+     "text": "www.svpay.app",
+     "family": "\"Inter Tight\"",
+     "weight": 700,
+     "style": "normal",
+     "size": 48,
+     "letter_spacing": -0.48,
+     "line_height": 48,
+     "color": "rgb(30, 39, 70)",
+     "fill": "rgb(30, 39, 70)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  }
+ ],
+ "panels": [],
+ "images": [
+  {
+   "src": "bg_6.png",
+   "cls": "hero",
+   "complete": true,
+   "natural": [
+    2160,
+    2700
+   ],
+   "x": 0,
+   "y": 0,
+   "w": 2160,
+   "h": 2700
+  },
+  {
+   "src": "svpay-logo.png",
+   "cls": "logo",
+   "complete": true,
+   "natural": [
+    1774,
+    759
+   ],
+   "x": 144,
+   "y": 2448,
+   "w": 355.25,
+   "h": 152
+  }
+ ],
+ "svgs": [],
+ "hero": "bg_6.png",
+ "fonts": {
+  "status": "loaded",
+  "faces": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "status": "loaded"
+   }
+  ],
+  "files": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "src": "node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2"
+   }
+  ]
+ },
+ "images_complete": true,
+ "slide": "slide-6",
+ "section": "s6",
+ "file": "slides-riverside.html",
+ "failed_requests": [],
+ "capture": {
+  "scale": 2,
+  "viewport": [
+   1080,
+   1400
+  ],
+  "width": 2160,
+  "height": 2700,
+  "chromium": "153.0.8010.12",
+  "fonts_ready_before_capture": true
+ }
+}

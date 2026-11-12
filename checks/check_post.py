@@ -14,7 +14,10 @@ runs where this script cannot reach the web itself. A link it lists as true or 2
 it doesn't list is fetched here, and a network error counts as a failure.
 
 Exit code: 0 when no gate fails, 1 when any gate fails, 2 when the package itself is malformed.
-The IDs match checks/criteria.json (887 criteria, from the Nov 11, 2026 research).
+The IDs match checks/criteria.json. The image checks (the Nov 11, 2026 image research round) live in checks/image/ and
+read the render passes in posts/<folder>/passes/ (pipeline --passes). A gate the passes are missing for is reported
+"needs_passes" and counts as failing. After publishing, the package may carry "delivery" (the read-back, or a path to
+it) for the delivery checks.
 """
 from __future__ import annotations
 
@@ -164,15 +167,15 @@ class Report:
     def __init__(self):
         self.results: list[dict] = []
 
-    def add(self, cid: str, ok: bool | None, detail: str = "", where: str = "post", value=None):
+    def add(self, cid: str, ok, detail: str = "", where: str = "post", value=None):
         c = CRITERIA.get(cid, {})
-        status = "na" if ok is None else ("pass" if ok else "fail")
+        status = "na" if ok is None else "needs_passes" if ok == "needs_passes" else ("pass" if ok else "fail")
         self.results.append({"id": cid, "where": where, "status": status, "gate": bool(c.get("gate")),
                              "weight": c.get("weight", 1), "category": c.get("category", "unmapped"),
                              "test": c.get("test", ""), "detail": detail, "value": value})
 
     def gates_failed(self):
-        return [r for r in self.results if r["gate"] and r["status"] == "fail"]
+        return [r for r in self.results if r["gate"] and r["status"] in ("fail", "needs_passes")]
 
 
 # ----------------------------------------------------------------------------------------------- word lists
@@ -633,7 +636,7 @@ def check_package(pkg: dict, rep: Report, history: list[dict] | None, private_te
         rep.add("V-A14", len(nets["threads"].get("media", [])) <= 10, "", "threads")
     if "instagram" in nets:
         k = len(nets["instagram"].get("media", []))
-        rep.add("V-A15", k <= 20, "", "instagram", k)
+        rep.add("V-A15", 1 <= k <= 10, f"{k} images (Graph API: 1, or a carousel of 2-10)", "instagram", k)
         rep.add("V-F08", 5 <= k <= 10, "", "instagram", k)
     li = nets.get("linkedin", {})
     if li.get("pdf_pages") is not None:
@@ -650,6 +653,7 @@ def check_package(pkg: dict, rep: Report, history: list[dict] | None, private_te
 
     check_files(rep, nets)
     check_slides(rep, slides, nets, kind)
+    check_images(rep, pkg, history, link_results)
     check_facts(rep, pkg, facts, all_text, slide_text)
     if not offline:
         check_links(rep, nets, link_results or {})
@@ -673,6 +677,23 @@ def check_package(pkg: dict, rep: Report, history: list[dict] | None, private_te
         sk = pkg.get("skeleton")
         if sk:
             rep.add("W-N03", all(h.get("skeleton") != sk for h in history[-5:]), "", "all")
+
+
+def check_images(rep: Report, pkg: dict, history, link_results):
+    """The image checks (checks/image): pixels, render passes, files, crops, money visuals and compliance on images."""
+    sys.path.insert(0, HERE)
+    import image
+    delivery = pkg.get("delivery")
+    if isinstance(delivery, str) and os.path.exists(delivery):
+        delivery = json.load(open(delivery, encoding="utf-8"))
+    og = pkg.get("og_audit")
+    if isinstance(og, str) and os.path.exists(og):
+        og = json.load(open(og, encoding="utf-8"))
+    extra = {"delivery": delivery, "og": og, "link_results": link_results or {}, "report_dir": REPORT_DIR[0]}
+    image.run(rep, pkg, base_dir=os.path.dirname(HERE), history=history or [], extra=extra)
+
+
+REPORT_DIR = [None]
 
 
 def check_files(rep: Report, nets: dict):
@@ -701,7 +722,7 @@ def check_files(rep: Report, nets: dict):
                 if net == "instagram":
                     rep.add("V-A07", w >= 1080, f"{w}px", net, w)
                 if net in ("linkedin", "instagram", "threads", "facebook"):
-                    rep.add("V-A01", (w, h) == (2160, 2700) or abs(w / h - 0.8) < 0.01 or abs(w / h - 0.75) < 0.01, f"{w}x{h}", net)
+                    rep.add("V-A01", w * 5 == h * 4, f"{w}x{h} (4:5 only; no 3:4 file)", net)
                 light_checks(rep, im, net, os.path.basename(m))
     for net, ds in dims.items():
         rep.add("V-A02", len(ds) <= 1, f"{sorted(ds)}", net)
@@ -910,9 +931,10 @@ def main():
     history = json.load(open(a.history, encoding="utf-8")) if a.history and os.path.exists(a.history) else None
     terms = [l.strip() for l in open(a.private_terms, encoding="utf-8")] if a.private_terms and os.path.exists(a.private_terms) else []
     rep = Report()
+    REPORT_DIR[0] = os.path.dirname(os.path.abspath(a.out)) if a.out else None
     links = json.load(open(a.link_results, encoding="utf-8")) if a.link_results and os.path.exists(a.link_results) else {}
     check_package(pkg, rep, history, terms, a.offline, links)
-    fails = [r for r in rep.results if r["status"] == "fail"]
+    fails = [r for r in rep.results if r["status"] in ("fail", "needs_passes")]
     gates = rep.gates_failed()
     out = {"package": os.path.basename(a.package), "checks_run": len(rep.results),
            "distinct_criteria": len({r["id"] for r in rep.results}), "failed": len(fails),
