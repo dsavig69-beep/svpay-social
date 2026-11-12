@@ -3,3 +3,4 @@ pipeline/node_modules
 pipeline/*.png
 !pipeline/assets/*.png
 pipeline/info_*.json
+__pycache__/
