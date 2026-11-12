@@ -55,7 +55,9 @@ scene.environmentIntensity = P('envk', 1.0);
 
 const key = new THREE.DirectionalLight(0xffffff, P('key', 2.2));
 key.castShadow = true; key.shadow.mapSize.set(4096, 4096); key.shadow.radius = 48; key.shadow.blurSamples = 64; key.shadow.bias = -0.0003; key.shadow.normalBias = 0.02;
-const kc = key.shadow.camera; kc.left = -30; kc.right = 30; kc.top = 30; kc.bottom = -30; kc.near = 1; kc.far = 120;
+// Nov 11, 2026 (V-I07): at +-30 the edge of the shadow camera drew a faint stair-stepped line across the floor
+// behind big numerals. Wider bounds put that edge outside every frame.
+const kc = key.shadow.camera; kc.left = -90; kc.right = 90; kc.top = 90; kc.bottom = -90; kc.near = 1; kc.far = 300;
 scene.add(key, key.target);
 const rim = new THREE.DirectionalLight(0xb7a2ff, 1.2); scene.add(rim, rim.target);
 const fill = new THREE.DirectionalLight(0x9fe0ff, 0.7); scene.add(fill, fill.target);

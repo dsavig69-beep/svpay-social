@@ -110,6 +110,7 @@ The first post under the algorithm (FTC v. Riverside Payments) went through two 
 - **Attribute every allegation** ("the FTC says", "the complaint says") and keep the source's own hedges ("about", "approximately") on every number.
 - **No set-piece closers or bridge lines** ("This case shows why.", "Those answers take a few minutes..."), no "my advice is simple", no closing question repeated across networks.
 - **3D:** only extruded numerals have rendered clean so far. Arrows, question marks and coins showed seams and stair-step bevels (V-I07). Data marks are flat 2D. Every glyph is extruded on its own with even gaps.
+- **Shadow floor:** a faint stair-stepped line across the background behind the numerals was the edge of the light's shadow camera (V-I07, Nov 11). The bounds are now +-90; zoom to 300% behind every 3D object and check for any line before review.
 - **Text on slides:** measure contrast on the rendered pixels and check letter spacing in crops before review; the script tier does not measure either yet.
 
 ## Known limits (Nov 11, 2026)
