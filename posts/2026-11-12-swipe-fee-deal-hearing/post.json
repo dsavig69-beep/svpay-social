@@ -1,10 +1,10 @@
 {
  "date": "2026-11-12",
  "slug": "swipe-fee-deal-hearing",
- "kind": "data",
+ "kind": "news",
  "topic": "swipe-fee-deal-hearing",
- "format": "data",
- "skeleton": "open-loop-hook/pricing-catch/other-terms/objectors/action",
+ "format": "image",
+ "skeleton": "pain-hook/news/what-it-means/take/ask",
  "closing_question_format": "your-choice",
  "why_now": "The court holds the final approval hearing on Monday, Nov 16, 2026 (Payments Dive, Oct 16; still on the calendar in the Nov 11 report). No story from Nov 5-12 cleared the two-source bar with a dollar angle, so this is a data breakdown of what the deal would change for a shop.",
  "test": {
@@ -13,93 +13,47 @@
  },
  "networks": {
   "linkedin": {
-   "text": "Visa and Mastercard's proposed swipe-fee deal has its final hearing Monday, 21 years after merchants first sued.\nIf it's approved, a lot of small shops on flat-rate pricing may never see the cut.\n\nThe deal trims the card-issuing banks' part of the fee on Visa and Mastercard credit cards by 0.1 percentage point for 5 years. On a $40 haircut paid by one of those cards, for example, that's about 4 cents.\n\nWhether you get it depends on how you're priced. If your processor passes card fees through at cost plus a set markup (often called interchange-plus), the lower bank fee reaches you automatically. If you pay one flat or tiered rate, it stays where it is unless your processor lowers it. Network fees and the markup sit on top either way. The deal has other terms too, like letting shops turn down some premium cards.\n\nAbout 1,000 merchants, Walmart among them, asked Judge Brian Cogan to say no; they say the cut only takes rates back to their 2023 level. The ruling may come after Monday, and it can be appealed.\n\nI'd take the 4 cents, and I'd want every shop to know whether it's getting them. That's part of why I started SVPay: when customers pay with SVPay instead of a card, the shop pays no processing fee and $0 to cash out, and SVPay makes money from paid software plans, never from a cut of your sales. Customers pay no SVPay fee to pay a shop; adding money with a card or Apple Pay carries Stripe's fee.\n\nSo this week, ask your processor one thing: which pricing am I on?\n\n#SmallBusiness #Payments",
+   "text": "Restaurant and shop owners on a flat rate: Monday's swipe-fee hearing may not change your statement at all.\n\nA federal judge holds the final approval hearing Monday on Visa and Mastercard's proposed settlement with merchants. If he approves it, the card-issuing banks' part of credit card swipe fees comes down 0.1 percentage point for five years.\n\nWhether your shop sees that depends on how your processor prices you.\n\nOn cost-plus pricing (the banks' fee passed through at cost plus a set markup, often called interchange-plus), the cut reaches you on its own.\n\nOn one flat or tiered rate, your rate moves only if your processor lowers it.\n\nAbout 1,000 merchants, Walmart among them, asked the judge to say no, arguing the cut only takes the average rate back to its 2023 level. The ruling may come after Monday, and it can be appealed.\n\nI'd still take the cut. I'd also call my processor this week, ask which pricing I'm on, and if it's a flat rate, ask whether they'll pass the 0.1 point along.\n\nWhich is on your statement right now: one flat rate, tiered, or cost-plus?\n\n#SmallBusiness #Payments",
    "first_comment": "Sources: Payments Dive, Oct 16, 2026 (the terms and Monday's final approval hearing): https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/\nPayments Dive, Sept 15, 2026 (about 1,000 objectors): https://www.paymentsdive.com/news/walmart-slams-card-fee-pact-again/830395/\n\nSee what your shop would keep: https://www.svpay.app/savings-calculator?utm_source=linkedin&utm_medium=social&utm_campaign=news_20261112&utm_content=swipe-fee-deal-hearing",
    "media": [
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-1.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-2.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-3.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-4.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-5.jpg"
-   ],
-   "alt": [
-    "Slide 1 of 5. Visa and Mastercard swipe-fee deal: on flat-rate pricing, will your shop see it? A large glossy blue-to-violet 3D numeral 4 stands on a light floor beside a flat dark cent sign: about 4 cents less on a $40 haircut, for example, paid by Visa or Mastercard credit card, if the cut reaches your rate. Label: PROPOSED DEAL, FINAL HEARING MONDAY. A button reads What it means for your shop, with an arrow. Source: Payments Dive, Oct 16, 2026. SVPay logo and www.svpay.app.",
-    "Slide 2 of 5. Proposed Visa and Mastercard swipe-fee deal. It depends how you're priced. Two white cards side by side: cost plus a set markup (interchange-plus), the cut reaches you, automatic; one flat or tiered rate, only if your processor lowers your rate, ask. Source: Ecommerce Paradise, Nov 11, 2026. SVPay logo and www.svpay.app.",
-    "Slide 3 of 5. Proposed Visa and Mastercard swipe-fee deal. Also in the deal, three numbered lines: 1, turn down some premium and commercial credit cards. 2, card-issuing banks' part capped at 1.25% on standard consumer credit cards, for 8 years. 3, more room to surcharge or offer a discount. Not legal advice; check your state's rules. Source: Payments Dive, Oct 16, 2026. SVPay logo and www.svpay.app.",
-    "Slide 4 of 5. Proposed Visa and Mastercard swipe-fee deal. About 1,000 objectors asked the judge to say no. Walmart is one of them. They say the cut only takes rates back to their 2023 level. Large blue and dark type on a light background, the last line set off by a blue bar. Sources: Payments Dive, Sept 15, 2026; Merchants Payments Coalition objection, Sept 14, 2026. SVPay logo and www.svpay.app.",
-    "Slide 5 of 5. Proposed Visa and Mastercard swipe-fee deal. This week: ask your processor which pricing you're on, in large type. Below, smaller: SVPay makes money from paid software plans, never from a cut of your sales. See what your shop would keep: www.svpay.app/savings-calculator. Source: www.svpay.app/pricing, Nov 12, 2026. SVPay logo and www.svpay.app."
-   ],
-   "pdf_title": "On flat-rate pricing, will your shop see the cut?",
-   "pdf_pages": 5,
-   "pdf": "posts/2026-11-12-swipe-fee-deal-hearing/linkedin.pdf"
-  },
-  "facebook": {
-   "text": "Visa and Mastercard's proposed swipe-fee deal has its final hearing Monday. Whether your shop sees the cut depends on how you're priced.\n\nThe deal would trim the card-issuing banks' part of the fee on Visa and Mastercard credit cards by 0.1 percentage point for 5 years. On a $40 haircut paid by one of those cards, for example, that's about 4 cents. If your processor passes card fees through at cost plus a set markup, it reaches you automatically; on one flat or tiered rate, only if your processor lowers it.\n\nAbout 1,000 merchants asked the judge to say no. The ruling may come later, and it can be appealed.\n\nDo you know which pricing your processor has you on?\n\n#SmallBusiness #ShopLocal",
-   "first_comment": "See what your shop would keep: https://www.svpay.app/savings-calculator?utm_source=facebook&utm_medium=social&utm_campaign=news_20261112&utm_content=swipe-fee-deal-hearing\n\nSource: Payments Dive, Oct 16, 2026: https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/",
-   "media": [
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-1.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-2.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-3.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-4.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-5.jpg"
-   ],
-   "alt": [
-    "Slide 1 of 5. Visa and Mastercard swipe-fee deal: on flat-rate pricing, will your shop see it? A large glossy blue-to-violet 3D numeral 4 stands on a light floor beside a flat dark cent sign: about 4 cents less on a $40 haircut, for example, paid by Visa or Mastercard credit card, if the cut reaches your rate. Label: PROPOSED DEAL, FINAL HEARING MONDAY. A button reads What it means for your shop, with an arrow. Source: Payments Dive, Oct 16, 2026. SVPay logo and www.svpay.app.",
-    "Slide 2 of 5. Proposed Visa and Mastercard swipe-fee deal. It depends how you're priced. Two white cards side by side: cost plus a set markup (interchange-plus), the cut reaches you, automatic; one flat or tiered rate, only if your processor lowers your rate, ask. Source: Ecommerce Paradise, Nov 11, 2026. SVPay logo and www.svpay.app.",
-    "Slide 3 of 5. Proposed Visa and Mastercard swipe-fee deal. Also in the deal, three numbered lines: 1, turn down some premium and commercial credit cards. 2, card-issuing banks' part capped at 1.25% on standard consumer credit cards, for 8 years. 3, more room to surcharge or offer a discount. Not legal advice; check your state's rules. Source: Payments Dive, Oct 16, 2026. SVPay logo and www.svpay.app.",
-    "Slide 4 of 5. Proposed Visa and Mastercard swipe-fee deal. About 1,000 objectors asked the judge to say no. Walmart is one of them. They say the cut only takes rates back to their 2023 level. Large blue and dark type on a light background, the last line set off by a blue bar. Sources: Payments Dive, Sept 15, 2026; Merchants Payments Coalition objection, Sept 14, 2026. SVPay logo and www.svpay.app.",
-    "Slide 5 of 5. Proposed Visa and Mastercard swipe-fee deal. This week: ask your processor which pricing you're on, in large type. Below, smaller: SVPay makes money from paid software plans, never from a cut of your sales. See what your shop would keep: www.svpay.app/savings-calculator. Source: www.svpay.app/pricing, Nov 12, 2026. SVPay logo and www.svpay.app."
-   ]
-  },
-  "instagram": {
-   "text": "Visa and Mastercard's proposed swipe-fee deal has its final hearing Monday. On a $40 haircut paid by Visa or Mastercard credit card, for example, the cut is about 4 cents. Will your shop actually get it?\n\nOnly if the cut reaches your rate. If your processor passes card fees through at cost plus a set markup, it does, automatically. On one flat or tiered rate, only if your processor lowers it. The ruling may come later.\n\nSwipe for the catch, the rest of the deal and the one thing to ask this week.\n\nSource: Payments Dive, Oct 16, 2026.\n\nSee what your shop would keep: link in bio. Which pricing are you on?\n\n#SmallBusiness #ShopOwners",
-   "media": [
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-1.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-2.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-3.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-4.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-5.jpg"
-   ],
-   "alt": [
-    "Slide 1 of 5. Visa and Mastercard swipe-fee deal: on flat-rate pricing, will your shop see it? A large glossy blue-to-violet 3D numeral 4 stands on a light floor beside a flat dark cent sign: about 4 cents less on a $40 haircut, for example, paid by Visa or Mastercard credit card, if the cut reaches your rate. Label: PROPOSED DEAL, FINAL HEARING MONDAY. A button reads What it means for your shop, with an arrow. Source: Payments Dive, Oct 16, 2026. SVPay logo and www.svpay.app.",
-    "Slide 2 of 5. Proposed Visa and Mastercard swipe-fee deal. It depends how you're priced. Two white cards side by side: cost plus a set markup (interchange-plus), the cut reaches you, automatic; one flat or tiered rate, only if your processor lowers your rate, ask. Source: Ecommerce Paradise, Nov 11, 2026. SVPay logo and www.svpay.app.",
-    "Slide 3 of 5. Proposed Visa and Mastercard swipe-fee deal. Also in the deal, three numbered lines: 1, turn down some premium and commercial credit cards. 2, card-issuing banks' part capped at 1.25% on standard consumer credit cards, for 8 years. 3, more room to surcharge or offer a discount. Not legal advice; check your state's rules. Source: Payments Dive, Oct 16, 2026. SVPay logo and www.svpay.app.",
-    "Slide 4 of 5. Proposed Visa and Mastercard swipe-fee deal. About 1,000 objectors asked the judge to say no. Walmart is one of them. They say the cut only takes rates back to their 2023 level. Large blue and dark type on a light background, the last line set off by a blue bar. Sources: Payments Dive, Sept 15, 2026; Merchants Payments Coalition objection, Sept 14, 2026. SVPay logo and www.svpay.app.",
-    "Slide 5 of 5. Proposed Visa and Mastercard swipe-fee deal. This week: ask your processor which pricing you're on, in large type. Below, smaller: SVPay makes money from paid software plans, never from a cut of your sales. See what your shop would keep: www.svpay.app/savings-calculator. Source: www.svpay.app/pricing, Nov 12, 2026. SVPay logo and www.svpay.app."
-   ]
-  },
-  "x": {
-   "text": "Visa and Mastercard's proposed swipe-fee deal, final hearing Monday: 0.1 point off the banks' part of credit card fees. If your processor passes fees through at cost, you get it; on a flat rate, only if it lowers your rate. Which are you on?",
-   "reply": "Source, Payments Dive (Oct 16, 2026): https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/\n\nSee what your shop would keep: https://www.svpay.app/savings-calculator?utm_source=x&utm_medium=social&utm_campaign=news_20261112&utm_content=swipe-fee-deal-hearing",
-   "media": [
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-1-x.jpg",
     "posts/2026-11-12-swipe-fee-deal-hearing/slide-2-x.jpg"
    ],
    "alt": [
-    "Visa and Mastercard card-fee deal: on flat-rate pricing, will your shop see it? A large glossy blue-to-violet 3D numeral 4 stands on a light floor beside a flat dark cent sign: about 4 cents less on a $40 haircut, for example, paid by Visa or Mastercard credit card, if the cut reaches your rate. Label: PROPOSED DEAL, FINAL HEARING MONDAY. Source: Payments Dive, Oct 16, 2026. SVPay logo and www.svpay.app.",
-    "Proposed Visa and Mastercard card-fee deal. It depends how you're priced. Two white cards side by side: cost plus a set markup (interchange-plus), the cut reaches you, automatic; one flat or tiered rate, only if your processor lowers your rate, ask. Source: Ecommerce Paradise, Nov 11, 2026. SVPay logo and www.svpay.app."
+    "Proposed Visa and Mastercard card-fee deal. Headline: It depends how you're priced. Two white cards side by side. Left card, cost plus a set markup: the cut reaches you (interchange-plus), Automatic. Right card, one flat or tiered rate: only if your processor lowers your rate, Ask. Source: Ecommerce Paradise, Nov 11, 2026. SVPay logo and www.svpay.app."
+   ]
+  },
+  "facebook": {
+   "text": "Monday, a federal judge holds the final approval hearing on Visa and Mastercard's proposed swipe-fee settlement. If it's approved, the card-issuing banks' part of credit card fees drops 0.1 percentage point for five years.\n\nFor a local shop, the catch is pricing. If your processor charges you one flat rate, you see that cut only if they lower your rate. If you're on cost-plus pricing (often called interchange-plus), it comes through on its own.\n\nA five-minute call to your processor this week settles it. Do you know which pricing you're on?\n\n#SmallBusiness #ShopLocal",
+   "first_comment": "See what your shop would keep: https://www.svpay.app/savings-calculator?utm_source=facebook&utm_medium=social&utm_campaign=news_20261112&utm_content=swipe-fee-deal-hearing\n\nSource: Payments Dive, Oct 16, 2026: https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/",
+   "media": [
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-2-x.jpg"
+   ],
+   "alt": [
+    "Proposed Visa and Mastercard card-fee deal. Headline: It depends how you're priced. Two white cards side by side. Left card, cost plus a set markup: the cut reaches you (interchange-plus), Automatic. Right card, one flat or tiered rate: only if your processor lowers your rate, Ask. Source: Ecommerce Paradise, Nov 11, 2026. SVPay logo and www.svpay.app."
+   ]
+  },
+  "x": {
+   "text": "Visa and Mastercard's proposed swipe-fee deal has its final approval hearing Monday: 0.1 point off the banks' part of credit card fees for 5 years. On a flat rate, you see it only if your processor lowers your rate. Do you know which pricing you're on?",
+   "reply": "Source, Payments Dive (Oct 16, 2026): https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/\n\nSee what your shop would keep: https://www.svpay.app/savings-calculator?utm_source=x&utm_medium=social&utm_campaign=news_20261112&utm_content=swipe-fee-deal-hearing",
+   "media": [
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-2-x.jpg"
+   ],
+   "alt": [
+    "Proposed Visa and Mastercard card-fee deal. Headline: It depends how you're priced. Two white cards side by side. Left card, cost plus a set markup: the cut reaches you (interchange-plus), Automatic. Right card, one flat or tiered rate: only if your processor lowers your rate, Ask. Source: Ecommerce Paradise, Nov 11, 2026. SVPay logo and www.svpay.app."
    ]
   },
   "threads": {
-   "text": "Visa and Mastercard's proposed swipe-fee deal has its final hearing Monday, 21 years after merchants sued. It would trim credit card fees 0.1 point for 5 years.\n\nThe catch: on one flat or tiered rate, yours only drops if your processor lowers it. If your processor passes card fees through at cost plus a markup, it drops on its own. The ruling may come later.\n\nDo you know which one you're on?\n\n#SmallBusiness",
+   "text": "Monday a judge holds the final approval hearing on Visa and Mastercard's swipe-fee deal with merchants. It would trim the banks' part of credit card fees 0.1 point for five years.\n\nIf your processor charges one flat rate, that cut only reaches you if they lower your rate. On cost-plus pricing it shows up on its own.\n\nDo you know which one you're on?\n\n#SmallBusiness",
    "reply": "Source, Payments Dive (Oct 16, 2026): https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/\n\nSee what your shop would keep: https://www.svpay.app/savings-calculator?utm_source=threads&utm_medium=social&utm_campaign=news_20261112&utm_content=swipe-fee-deal-hearing",
    "media": [
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-1.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-2.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-3.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-4.jpg",
-    "posts/2026-11-12-swipe-fee-deal-hearing/slide-5.jpg"
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-2-x.jpg"
    ],
    "alt": [
-    "Slide 1 of 5. Visa and Mastercard swipe-fee deal: on flat-rate pricing, will your shop see it? A large glossy blue-to-violet 3D numeral 4 stands on a light floor beside a flat dark cent sign: about 4 cents less on a $40 haircut, for example, paid by Visa or Mastercard credit card, if the cut reaches your rate. Label: PROPOSED DEAL, FINAL HEARING MONDAY. A button reads What it means for your shop, with an arrow. Source: Payments Dive, Oct 16, 2026. SVPay logo and www.svpay.app.",
-    "Slide 2 of 5. Proposed Visa and Mastercard swipe-fee deal. It depends how you're priced. Two white cards side by side: cost plus a set markup (interchange-plus), the cut reaches you, automatic; one flat or tiered rate, only if your processor lowers your rate, ask. Source: Ecommerce Paradise, Nov 11, 2026. SVPay logo and www.svpay.app.",
-    "Slide 3 of 5. Proposed Visa and Mastercard swipe-fee deal. Also in the deal, three numbered lines: 1, turn down some premium and commercial credit cards. 2, card-issuing banks' part capped at 1.25% on standard consumer credit cards, for 8 years. 3, more room to surcharge or offer a discount. Not legal advice; check your state's rules. Source: Payments Dive, Oct 16, 2026. SVPay logo and www.svpay.app.",
-    "Slide 4 of 5. Proposed Visa and Mastercard swipe-fee deal. About 1,000 objectors asked the judge to say no. Walmart is one of them. They say the cut only takes rates back to their 2023 level. Large blue and dark type on a light background, the last line set off by a blue bar. Sources: Payments Dive, Sept 15, 2026; Merchants Payments Coalition objection, Sept 14, 2026. SVPay logo and www.svpay.app.",
-    "Slide 5 of 5. Proposed Visa and Mastercard swipe-fee deal. This week: ask your processor which pricing you're on, in large type. Below, smaller: SVPay makes money from paid software plans, never from a cut of your sales. See what your shop would keep: www.svpay.app/savings-calculator. Source: www.svpay.app/pricing, Nov 12, 2026. SVPay logo and www.svpay.app."
+    "Proposed Visa and Mastercard card-fee deal. Headline: It depends how you're priced. Two white cards side by side. Left card, cost plus a set markup: the cut reaches you (interchange-plus), Automatic. Right card, one flat or tiered rate: only if your processor lowers your rate, Ask. Source: Ecommerce Paradise, Nov 11, 2026. SVPay logo and www.svpay.app."
    ]
   },
   "gbp": {
-   "text": "For barbers, salons, coffee shops and restaurants: Visa and Mastercard's proposed swipe-fee deal, with its final hearing Monday, Nov 16, would trim the card-issuing banks' part of credit card fees by 0.1 percentage point for 5 years. Whether a shop sees it depends on pricing: passed through at cost plus a markup, it flows through; on one flat or tiered rate, only if the processor lowers it. The ruling may come later. SVPay makes money from paid software plans, never from a cut of your sales. Run your numbers: https://www.svpay.app/savings-calculator?utm_source=google_business&utm_medium=social&utm_campaign=news_20261112&utm_content=swipe-fee-deal-hearing",
+   "text": "For restaurants, salons, barbers and coffee shops: Visa and Mastercard's proposed swipe-fee settlement has its final approval hearing Monday, Nov 16. If approved, the card-issuing banks' part of credit card fees drops 0.1 percentage point for five years, and the ruling may come later. Shops on cost-plus pricing see the cut automatically. Shops on one flat or tiered rate see it only if their processor lowers the rate, so it is worth asking yours this week. SVPay's savings calculator shows what card fees cost your shop each year. Run your numbers: https://www.svpay.app/savings-calculator?utm_source=google_business&utm_medium=social&utm_campaign=news_20261112&utm_content=swipe-fee-deal-hearing",
    "media": [
     "posts/2026-11-12-swipe-fee-deal-hearing/slide-1-gbp.jpg"
    ],
@@ -418,5 +372,8 @@
    "source_line": "Source: www.svpay.app/pricing, Nov 12, 2026",
    "alt": "Slide 5 of 5. Proposed Visa and Mastercard swipe-fee deal. This week: ask your processor which pricing you're on, in large type. Below, smaller: SVPay makes money from paid software plans, never from a cut of your sales. See what your shop would keep: www.svpay.app/savings-calculator. Source: www.svpay.app/pricing, Nov 12, 2026. SVPay logo and www.svpay.app."
   }
- ]
+ ],
+ "dropped_networks": {
+  "instagram": "News take today: Instagram needs 5-10 slides and the carousel cover failed the panel; skipped for this post."
+ }
 }
