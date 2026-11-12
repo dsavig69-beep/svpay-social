@@ -1,7 +1,7 @@
 {
  "_why": "Provenance of this post's files (pipeline/export.py; QM09). Private facts never go here.",
  "template": "slides-swipefee.html",
- "git_commit": "ae716c4c15dcd7a5c6460ec064c12237d662329a",
+ "git_commit": "356549ea2a665f180332ebb8f3ba84de194c8a9a",
  "chromium": "153.0.8010.12",
  "playwright": "1.63.0",
  "three": "0.160.0",
@@ -26,27 +26,27 @@
  "inputs": [
   {
    "file": "pipeline/out1.png",
-   "sha256": "0a8d1d6db6e06e41c80809d1c5c836d77b853efed9e7f4401085c94e7b023f66",
+   "sha256": "29e92a9cead442468b9d5485f9992bce6ba01dd1bb000a43eb9136eb26f210e4",
    "icc": "sRGB (untagged)"
   },
   {
    "file": "pipeline/out2.png",
-   "sha256": "ab2ac8ca280614999de262921fe0e805687fd18967973ab9c9736b05c89d9b4b",
+   "sha256": "7c92271bc76900986c140fb75ec3042b7d219b743c209ee1030af226263a2a0c",
    "icc": "sRGB (untagged)"
   },
   {
    "file": "pipeline/out3.png",
-   "sha256": "ef7bbd1839f8189b5d90a4442eb88b1354ff84a822d61b889d64b7d466df6245",
+   "sha256": "c02ac2e856f575e46fd2652eb62a10989254713cce707e117ecc44845e6041ba",
    "icc": "sRGB (untagged)"
   },
   {
    "file": "pipeline/out4.png",
-   "sha256": "9f7dae3d616f7e5612672a48f1b45bcf91df1e74d40c77582bb14668c455c214",
+   "sha256": "9f14988bad2ba7e8cd6bb8134c27f6122d2d4eb7b009be8e96e7be34f30f2df8",
    "icc": "sRGB (untagged)"
   },
   {
    "file": "pipeline/out5.png",
-   "sha256": "46a150e1d56e57b3e16a9168cc87d87ab573a4e9ce8496045b61274e1908b54f",
+   "sha256": "275a13f02422b1ef09458d0fd17f71f62017466c654a0db8a359de07f9d41a11",
    "icc": "sRGB (untagged)"
   }
  ],
@@ -122,6 +122,34 @@
    "file": "slide-5-1440.jpg",
    "encode_chain": [
     "png master",
+    "area downscale 1440x1800",
+    "jpeg q92 4:4:4"
+   ]
+  },
+  {
+   "file": "slide-1-x.jpg",
+   "encode_chain": [
+    "jpeg master"
+   ]
+  },
+  {
+   "file": "slide-1-x-1440.jpg",
+   "encode_chain": [
+    "jpeg master",
+    "area downscale 1440x1800",
+    "jpeg q92 4:4:4"
+   ]
+  },
+  {
+   "file": "slide-2-x.jpg",
+   "encode_chain": [
+    "jpeg master"
+   ]
+  },
+  {
+   "file": "slide-2-x-1440.jpg",
+   "encode_chain": [
+    "jpeg master",
     "area downscale 1440x1800",
     "jpeg q92 4:4:4"
    ]

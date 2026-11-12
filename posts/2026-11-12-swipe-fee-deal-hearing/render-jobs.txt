@@ -25,3 +25,17 @@ python3 pipeline/export.py posts/2026-11-12-swipe-fee-deal-hearing --png pipelin
 P=../posts/2026-11-12-swipe-fee-deal-hearing/passes; env SCENE=scene-swipefee.html node run3d.js "3:hero_3:gap=26&ry=0.25" --passes $P
 env IDS=1,2,3,4,5,1G node render.js 2 slides-swipefee.html out --passes $P --names 1:slide-1,2:slide-2,3:slide-3,4:slide-4,5:slide-5,1G:slide-1-gbp
 python3 pack_passes.py $P
+# REWRITE 2 (panel: SG-H05 3/3, V-L07): the approved Nov 4 deck's numeral treatment (jelly face and sides, its camera, floor and reflection) without pink, "$500" filling the frame, a narrow 4-segment bevel; slides 2-5 typographic; a blue-only 5-slide background (bgpano-swipefee2.html); no lock (coordinator), one Chromium at a time
+node shot.js bgpano-swipefee2.html 5400 1350 2 bg_pano.png   # then cut into bg_1..bg_5.png
+P=../posts/2026-11-12-swipe-fee-deal-hearing/passes; env SCENE=scene-swipefee.html node run3d.js "1:hero_1:gap=24" --passes $P
+env IDS=1,2,3,4,5,1G node render.js 2 slides-swipefee.html out --passes $P --names 1:slide-1,2:slide-2,3:slide-3,4:slide-4,5:slide-5,1G:slide-1-gbp
+python3 pack_passes.py $P
+python3 pipeline/export.py posts/2026-11-12-swipe-fee-deal-hearing --png pipeline/out --update-post --template slides-swipefee.html   # cwd: repo root; slide-1-gbp.jpg from out1G.png; masters back in the carousel media lists
+# Rewrite 2, visual-judge pass: one big glossy "4" (about 4 cents on a $40 haircut; the cent sign is flat type), no bevel, depth 1.8, ry 0.22, floor shadow 0.34; X copies without counters (1X, 2X); a 4:3 Google Business image without 3D (1G)
+P=../posts/2026-11-12-swipe-fee-deal-hearing/passes; env SCENE=scene-swipefee.html node run3d.js "1:hero_1" --passes $P
+env IDS=1,2,3,4,5,1X,2X,1G node render.js 2 slides-swipefee.html out --passes $P --names 1:slide-1,2:slide-2,3:slide-3,4:slide-4,5:slide-5,1X:slide-1-x,2X:slide-2-x,1G:slide-1-gbp
+python3 pack_passes.py $P
+# then slide-1-x.jpg, slide-2-x.jpg and slide-1-gbp.jpg from out1X.png, out2X.png, out1G.png (q92 4:4:4), export.py, linkedin.pdf from slide-1..5.jpg
+python3 (PIL + pikepdf): linkedin.pdf from slide-1.jpg .. slide-5.jpg, Lang en-US, DisplayDocTitle, title "Will your shop actually get the swipe-fee cut?"
+# Rewrite 2, last fixes (R-S02 floor shadow 0.34 -> 0.22; V-D01 the cent sign in solid ink; F-TN15 "card-fee deal" on the single-image copies): same run3d, render.js, pack_passes, variants, export and PDF commands as above
+# Rewrite 2, final: floor shadow 0.22 -> 0.16 (R-S02); text-judge edits (slide 1 question, slide 2 plain labels); same commands as above

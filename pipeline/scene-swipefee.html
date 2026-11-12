@@ -193,7 +193,7 @@ const gloss = () => jelly(HOLO, { roughness: P('rg', 0.18), clearcoatRoughness: 
 // Each glyph is extruded on its own and placed with the same gap between neighbouring glyph boxes, so the spacing
 // reads even ("5" and "0" were crowded with font kerning); baselines stay shared, and the gradient runs across the word.
 async function fitNumerals(str, width, ry = 0) {
-  const f = await font(); const depth = P('dp', 2.0), bevel = P('bv', 0.4), ratio = P('br', 0.015), gap = P('gap', 13);   // Nov 12: br 0.18 -> 0.015, so the bevel's sideways reach (0.15 font units) stays under the thinnest strokes (R-D01) and the front-to-side turn is one crisp crease (R-N01)   // font units (size 100)
+  const f = await font(); const depth = P('dp', 1.8), bevel = P('bv', 0.3), ratio = P('br', 0.04), gap = P('gap', 13);   // Nov 12: br 0.18 -> 0.015, so the bevel's sideways reach (0.15 font units) stays under the thinnest strokes (R-D01) and the front-to-side turn is one crisp crease (R-N01)   // font units (size 100)
   const geos = []; let x = 0;
   for (const ch of str) {
     const path = f.getPath(ch, 0, 0, 100); const sp = new THREE.ShapePath();
@@ -201,15 +201,17 @@ async function fitNumerals(str, width, ry = 0) {
       if (c.type === 'M') sp.moveTo(c.x, -c.y); else if (c.type === 'L') sp.lineTo(c.x, -c.y);
       else if (c.type === 'Q') sp.quadraticCurveTo(c.x1, -c.y1, c.x, -c.y); else if (c.type === 'C') sp.bezierCurveTo(c.x1, -c.y1, c.x2, -c.y2, c.x, -c.y);
     }
-    const g = new THREE.ExtrudeGeometry(sp.toShapes(false), { depth: depth * 25, bevelEnabled: P('bev', 0) > 0, bevelThickness: bevel * 25, bevelSize: bevel * ratio * 25, bevelSegments: 8, curveSegments: 32 });   // Nov 12: no bevel; its sub-pixel strips left isolated pixels in the id pass (R-Z04)
+    const g = new THREE.ExtrudeGeometry(sp.toShapes(false), { depth: depth * 25, bevelEnabled: P('bev', 0) > 0, bevelThickness: bevel * 25, bevelSize: bevel * ratio * 25, bevelSegments: P('bs', 4), curveSegments: 32 });   // no bevel: with one, thin wall slivers and isolated id pixels came back (T-D04, R-Z04); the gloss comes from the clearcoat
     g.computeBoundingBox(); const bb = g.boundingBox; g.translate(x - bb.min.x, 0, 0); x += (bb.max.x - bb.min.x) + gap; geos.push(g);
   }
   const all = new THREE.Box3(); geos.forEach(g => { g.computeBoundingBox(); all.union(g.boundingBox); });
   const W0 = all.max.x - all.min.x, H0 = all.max.y - all.min.y, k = width / W0;
-  const grp = new THREE.Group(); const mat = gloss();
-  // Nov 12 rewrite: coloured, glossy side walls (a deeper cut of the same gradient), like the approved Nov 4 deck, not plain pearl
-  const sideTex = gradTex(['#121c8c', '#211582', '#390f74', '#560b66', '#720a52']);   // a deeper shade of the face gradient, so the face-to-side edge reads
-  const sideMat = new THREE.MeshPhysicalMaterial({ map: sideTex, emissive: 0xffffff, emissiveMap: sideTex, emissiveIntensity: P('se', 0.8), roughness: 0.45, metalness: 0.0, clearcoat: 0.35, clearcoatRoughness: 0.2, envMapIntensity: 0.35 });
+  // Rewrite 2: the approved Nov 4 deck's materials (its numerals() used jelly on face and sides), with the pink end of
+  // the gradient dropped (the panel read candy pink as a discount ad)
+  const BLUE = ['#0f3dff', '#2f2bff', '#4a2cff', '#6a2dff', '#8a2bf0'];
+  // the Nov 4 gloss(): jelly, roughness 0.05, clearcoat roughness 0.02, iridescence 0.6, on the face; its jelly on the sides
+  const grp = new THREE.Group(); const mat = jelly(BLUE, { roughness: 0.05, clearcoatRoughness: 0.02, iridescence: 0.6 });
+  const sideMat = jelly(BLUE, { roughness: 0.08, clearcoatRoughness: 0.03 });
   for (const g of geos) {
     g.translate(-(all.min.x + all.max.x) / 2, -all.min.y, -(all.min.z + all.max.z) / 2);
     const pos = g.attributes.position, uv = g.attributes.uv;
@@ -242,10 +244,16 @@ async function numberAt(str, width, look, ry, tx = 0) {
   aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
   window.__info = { box: bounds(t) };
 }
-const s1 = () => numberAt('$10', 7.6, 2.0, 0.22);     // $10 less in fees per $10,000 of credit card sales
-const s3 = () => numberAt('$500', 9.2, 2.0, 0.22);    // the worked example, a year
+async function s1() {   // rewrite 2: one big "4" (about 4 cents on a $40 haircut), the Nov 4 camera, floor and reflection;
+  // a darker floor shadow so the glyph sits on the floor (V-I01); the cent sign is flat type in the slide layer
+  await setupCamera(26, [0, 5, 40], [0, P('look', 3.0), 0]);
+  const t = await fitNumerals('4', P('w', 5.6), P('ry', 0.22)); t.position.x = P('tx', -1.6); scene.add(t);
+  reflect(t, P('rf', 2.0), P('rs', 0.2)); shadowFloor(P('sf', 0.16));   // 0.34 and 0.22 left a straight shadow edge under the flat base of the 4 (R-S02, 2.3 levels)
+  aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
+  window.__info = { box: bounds(t) };
+}
 
-await ({ 1: s1, 3: s3 })[slide]();
+await ({ 1: s1 })[slide]();
 renderer.render(scene, cam);
 window.__done = true;
 </script>
