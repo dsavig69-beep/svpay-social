@@ -1,7 +1,7 @@
 {
  "_why": "Provenance of this post's files (pipeline/export.py; QM09). Private facts never go here.",
  "template": "slides-swipefee.html",
- "git_commit": "4eef8bd4bfb3a1cb9031ff788901e12f22d3f74a",
+ "git_commit": "ae716c4c15dcd7a5c6460ec064c12237d662329a",
  "chromium": "153.0.8010.12",
  "playwright": "1.63.0",
  "three": "0.160.0",
@@ -26,42 +26,27 @@
  "inputs": [
   {
    "file": "pipeline/out1.png",
-   "sha256": "9c0a76fe8222bd706ce8ae44b61df8d67f42d9157614841f3fa053be48bdbdb1",
+   "sha256": "0a8d1d6db6e06e41c80809d1c5c836d77b853efed9e7f4401085c94e7b023f66",
    "icc": "sRGB (untagged)"
   },
   {
    "file": "pipeline/out2.png",
-   "sha256": "04c5d735f7bd326e220304b042027d22c9b582661cb1208ea8af4fcc0ce21156",
+   "sha256": "ab2ac8ca280614999de262921fe0e805687fd18967973ab9c9736b05c89d9b4b",
    "icc": "sRGB (untagged)"
   },
   {
    "file": "pipeline/out3.png",
-   "sha256": "230d16406dbfd74aa61b4534159decd85a58fa89ba3854ad60a070834c41f502",
+   "sha256": "ef7bbd1839f8189b5d90a4442eb88b1354ff84a822d61b889d64b7d466df6245",
    "icc": "sRGB (untagged)"
   },
   {
    "file": "pipeline/out4.png",
-   "sha256": "b6cc8dfadaf8d71f8600f0b1a2068daf3306e2c88d480039fea46cde6f7efe0b",
+   "sha256": "9f7dae3d616f7e5612672a48f1b45bcf91df1e74d40c77582bb14668c455c214",
    "icc": "sRGB (untagged)"
   },
   {
    "file": "pipeline/out5.png",
-   "sha256": "ab3b72110b4e5b5a8525ac259871ad853292b81302c84c3f4330ac43992c1056",
-   "icc": "sRGB (untagged)"
-  },
-  {
-   "file": "pipeline/out6.png",
-   "sha256": "7b9c5ad50397362c45b1b887dc55c70034d14bf5dfd762c21b506fcffa901846",
-   "icc": "sRGB (untagged)"
-  },
-  {
-   "file": "pipeline/out7.png",
-   "sha256": "28cdaa304eb36cc17232e4b95bb2d31dc6691e32bbe290218834617795d568b4",
-   "icc": "sRGB (untagged)"
-  },
-  {
-   "file": "pipeline/out8.png",
-   "sha256": "65709dbffde32e66b28aff14dc5c65ef3dfd4984965e98d43ae83a3f475a2f90",
+   "sha256": "46a150e1d56e57b3e16a9168cc87d87ab573a4e9ce8496045b61274e1908b54f",
    "icc": "sRGB (untagged)"
   }
  ],
@@ -135,51 +120,6 @@
   },
   {
    "file": "slide-5-1440.jpg",
-   "encode_chain": [
-    "png master",
-    "area downscale 1440x1800",
-    "jpeg q92 4:4:4"
-   ]
-  },
-  {
-   "file": "slide-6.jpg",
-   "encode_chain": [
-    "png master",
-    "jpeg q92 4:4:4"
-   ]
-  },
-  {
-   "file": "slide-6-1440.jpg",
-   "encode_chain": [
-    "png master",
-    "area downscale 1440x1800",
-    "jpeg q92 4:4:4"
-   ]
-  },
-  {
-   "file": "slide-7.jpg",
-   "encode_chain": [
-    "png master",
-    "jpeg q92 4:4:4"
-   ]
-  },
-  {
-   "file": "slide-7-1440.jpg",
-   "encode_chain": [
-    "png master",
-    "area downscale 1440x1800",
-    "jpeg q92 4:4:4"
-   ]
-  },
-  {
-   "file": "slide-8.jpg",
-   "encode_chain": [
-    "png master",
-    "jpeg q92 4:4:4"
-   ]
-  },
-  {
-   "file": "slide-8-1440.jpg",
    "encode_chain": [
     "png master",
     "area downscale 1440x1800",

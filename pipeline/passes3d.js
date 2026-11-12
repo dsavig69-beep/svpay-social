@@ -2,7 +2,7 @@
 // It needs window.__THREE, __scene, __renderer and __cam (run3d.js exposes them in every scene file it serves).
 //
 // Passes (all at the drawing-buffer size, no anti-aliasing, no tone mapping):
-//   id      the visible surface: R = part (one per extruded shape, 1-254), G = 1 front/back cap, 2 bevel and side wall,
+//   id      the visible surface (2x2 samples per pixel, majority id): R = part (one per extruded shape, 1-254), G = 1 front/back cap, 2 bevel and side wall,
 //           3 other surface, B = object (mesh, 1-254). Background, floor and floor reflections are left out.
 //   idj     the same ID pass from a camera moved sideways by 1e-4 of its distance and with near x 1.1 (R-Z03)
 //   cover   each part's full silhouette ignoring the other parts, one bit per part (R bits = parts 1-8, G 9-16, B 17-24,
@@ -132,6 +132,21 @@ async function passes3d(opt) {
   const rt = new THREE.WebGLRenderTarget(W, H, { samples: 0, type: THREE.UnsignedByteType, depthBuffer: true });
   const scratch = new THREE.Scene();
   const read = () => { const buf = new Uint8Array(W * H * 4); renderer.readRenderTargetPixels(rt, 0, 0, W, H, buf); return buf; };
+  // Nov 12, 2026: the id passes are rendered at 2x2 samples per output pixel and keep the id most samples agree on
+  // (ties: the first sample). The beauty render is multisampled, so a silhouette pixel there is a blend; a single
+  // aliased sample at that edge used to land as an isolated pixel of the wrong surface (R-A08, R-Z04) that the
+  // published image does not show.
+  const rt2 = new THREE.WebGLRenderTarget(2 * W, 2 * H, { samples: 0, type: THREE.UnsignedByteType, depthBuffer: true });
+  function majority2x(buf2) {
+    const out = new Uint8Array(W * H * 4), W2 = 2 * W, k = [0, 0, 0, 0], c = [0, 0, 0, 0];
+    for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+      const b0 = ((2 * y) * W2 + 2 * x) * 4; k[0] = b0; k[1] = b0 + 4; k[2] = b0 + W2 * 4; k[3] = b0 + W2 * 4 + 4;
+      for (let i = 0; i < 4; i++) { c[i] = 0; for (let j = 0; j < 4; j++) if (buf2[k[i]] === buf2[k[j]] && buf2[k[i] + 1] === buf2[k[j] + 1] && buf2[k[i] + 2] === buf2[k[j] + 2] && buf2[k[i] + 3] === buf2[k[j] + 3]) c[i]++; }
+      let best = 0; for (let i = 1; i < 4; i++) if (c[i] > c[best]) best = i;
+      const o = (y * W + x) * 4; out[o] = buf2[k[best]]; out[o + 1] = buf2[k[best] + 1]; out[o + 2] = buf2[k[best] + 2]; out[o + 3] = buf2[k[best] + 3];
+    }
+    return out;
+  }
   const png = (buf, opaque = true) => { const c = document.createElement('canvas'); c.width = W; c.height = H; const x = c.getContext('2d'); const img = x.createImageData(W, H);
     for (let y = 0; y < H; y++) { const s = (H - 1 - y) * W * 4; img.data.set(buf.subarray(s, s + W * 4), y * W * 4); }
     if (opaque) for (let i = 3; i < img.data.length; i += 4) img.data[i] = 255;
@@ -144,16 +159,23 @@ async function passes3d(opt) {
     renderer.setRenderTarget(rt); renderer.setClearColor(new THREE.Color().setRGB(clear[0], clear[1], clear[2], THREE.LinearSRGBColorSpace), clear[3]); renderer.clear(true, true, true);
     renderer.render(scratch, camera); renderer.setRenderTarget(null); return read();
   }
+  function renderParts2x(matFor, camera = cam) {
+    while (scratch.children.length) scratch.remove(scratch.children[0]);
+    for (const p of parts) { if (!p.draw) continue; const m = p.mesh; m.material = matFor(p); scratch.add(m); }
+    renderer.setRenderTarget(rt2); renderer.setClearColor(new THREE.Color(0, 0, 0), 0); renderer.clear(true, true, true);
+    renderer.render(scratch, camera); renderer.setRenderTarget(null);
+    const buf2 = new Uint8Array(4 * W * H * 4); renderer.readRenderTargetPixels(rt2, 0, 0, 2 * W, 2 * H, buf2); return majority2x(buf2);
+  }
   const idMat = p => { const isEx = p.src.geometry.type === 'ExtrudeGeometry';
     return isEx ? [flat(lin(p.part, 1, p.object)), flat(lin(p.part, 2, p.object))] : flat(lin(p.part, 3, p.object)); };
   parts.forEach(p => p.draw = true);
 
   // id
-  out.images.id = png(renderParts(idMat));
+  out.images.id = png(renderParts2x(idMat));
   // idj: camera nudged sideways and near plane moved
   const cj = cam.clone(); const dist = cam.position.length(); const right = new THREE.Vector3().setFromMatrixColumn(cam.matrixWorld, 0);
   cj.position.addScaledVector(right, 1e-4 * dist); cj.near = cam.near * 1.1; cj.updateProjectionMatrix(); cj.updateMatrixWorld(true);
-  out.images.idj = png(renderParts(idMat, cj));
+  out.images.idj = png(renderParts2x(idMat, cj));
   // normal
   out.images.normal = png(renderParts(() => new THREE.MeshNormalMaterial()));
   // cover: each part alone, one bit per part
