@@ -7,8 +7,10 @@ const fs = require('fs');
   await p.goto('file://' + process.cwd() + '/' + file);
   await p.evaluate(() => document.fonts.ready);
   await p.evaluate(() => Promise.all([...document.images].map(i => i.complete ? 0 : new Promise(r => { i.onload = i.onerror = r; }))));
-  await p.evaluate(I3 => window.place(I3), JSON.parse(fs.readFileSync('info_3.json', 'utf8')));
+  if (await p.evaluate(() => typeof window.place === 'function'))
+    await p.evaluate(I3 => window.place(I3), JSON.parse(fs.readFileSync('info_3.json', 'utf8')));
   await p.waitForTimeout(400);
-  for (const n of [1, 2, 3, 4, 5, 6]) await (await p.$('#s' + n)).screenshot({ path: `${pre}${n}.png` });
+  // IDS picks the sections to shoot (default 1-6); "1L" shoots <section id="s1L"> to <pre>1L.png
+  for (const n of (process.env.IDS || '1,2,3,4,5,6').split(',')) await (await p.$('#s' + n)).screenshot({ path: `${pre}${n}.png` });
   await b.close();
 })();

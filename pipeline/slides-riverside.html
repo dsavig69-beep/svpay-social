@@ -1,0 +1,161 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>SVPay Riverside FTC carousel</title>
+<style>
+@font-face{font-family:"Inter Tight";font-weight:600;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:700;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:800;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:500;src:url(node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:600;src:url(node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;src:url(node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2) format("woff2")}
+:root{
+  --ink:#0A1230; --ink2:#323D5C; --ink3:#5F6A88;
+  --blue:#2350FF; --pink:#FF2F8F;
+  --holo:linear-gradient(100deg,#0F3DFF 0%,#3B2BFF 30%,#7A2DFF 60%,#D23BD0 82%,#FF3F98 100%);
+  --hot:linear-gradient(100deg,#FF1F7A,#FF3D9E 55%,#D93CFF);
+  --glass:rgba(255,255,255,.62); --glass-line:rgba(255,255,255,.95);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#E9ECF5;font-family:"Inter",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:#F6F7FC;margin:0 0 40px}
+.hero{position:absolute;inset:0;width:1080px;height:1350px;display:block}
+.abs{position:absolute}
+.top{position:absolute;left:72px;right:72px;top:60px;height:58px;display:flex;align-items:center;justify-content:space-between}
+.chip{display:flex;align-items:center;gap:16px;height:58px;padding:0 22px 0 20px;border-radius:999px}
+.chip img{height:30px;width:auto;display:block}
+.chip .sep{width:2px;height:26px;background:rgba(10,18,48,.14);border-radius:2px}
+.chip span{font:600 21px/1 "Inter";letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+.tag{display:flex;align-items:center;gap:14px;font:600 22px/1 "Inter";letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.tag i{width:13px;height:13px;border-radius:50%;background:var(--holo);box-shadow:0 0 0 6px rgba(35,80,255,.13)}
+.count{font:700 22px/1 "Inter Tight";letter-spacing:.06em;color:var(--ink3)}
+.count b{color:var(--ink)}
+.glass{background:var(--glass);border:2px solid var(--glass-line);
+  box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 30px 70px -30px rgba(40,50,150,.34),0 8px 24px -12px rgba(40,50,150,.2);
+  backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%)}
+.d{font-family:"Inter Tight";font-weight:800;letter-spacing:-.04em;line-height:.94;color:var(--ink)}
+.serif{font-family:"Instrument Serif";font-style:italic;font-weight:400;letter-spacing:-.01em;color:var(--blue)}
+.kick{font:600 20px/1 "Inter";letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
+.holo{background:var(--holo);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-right:.04em}
+.hot{background:var(--hot);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-right:.04em}
+.body{font:500 28px/1.42 "Inter";color:var(--ink2)}
+.src{font:500 19px/1.4 "Inter";color:var(--ink3)}
+.src b{font-weight:600;color:var(--ink2)}
+.logo{position:absolute;left:72px;bottom:50px;height:76px;width:auto;display:block}
+.url{position:absolute;right:72px;bottom:72px;font:700 24px/1 "Inter Tight";letter-spacing:-.01em;color:var(--ink2)}
+.pill{display:inline-flex;align-items:center;gap:12px;height:62px;padding:0 26px;border-radius:999px;font:600 24px/1 "Inter";color:var(--ink)}
+.lead{position:absolute;height:2px;background:linear-gradient(90deg,rgba(10,18,48,.0),rgba(10,18,48,.35))}
+.dot{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(10,18,48,.18)}
+.ul{list-style:none;margin:0;padding:0}
+.ul li{display:flex;gap:16px;align-items:flex-start;font:600 27px/1.3 "Inter";color:var(--ink);margin-top:20px}
+.ul li:first-child{margin-top:0}
+.ul li b{flex:none;width:44px;height:44px;border-radius:50%;background:var(--holo);color:#fff;font:800 22px/44px "Inter Tight";text-align:center;margin-top:-4px}
+.fp{display:flex;flex-wrap:wrap;gap:14px}
+.fp .pill{height:58px;font-size:23px;padding:0 24px}
+</style></head><body>
+
+<!-- 1 · HOOK -->
+<section class="slide" id="s1">
+<img class="hero" src="rv_hero_1.png" alt="">
+<div class="top"><div class="chip glass"><span>FTC case · Nov 2026</span></div><div class="count"><b>1</b> / 6</div></div>
+<div class="abs d" style="left:72px;top:var(--h1t,290px);font-size:112px">One shop<br>paid about</div>
+<div class="abs d" style="left:72px;top:var(--b1t,920px);font-size:54px;letter-spacing:-.03em;line-height:1.06;width:940px">to lease a card machine that<br>cost about $400 new.</div>
+<div class="abs src" style="left:76px;top:var(--s1t,1058px);width:560px">Over 4 years, at about $47 a month.<br><b>Source:</b> FTC complaint, FTC and Washington v. Riverside Payments, Nov 2, 2026</div>
+<div class="abs pill glass" style="right:72px;top:1072px;gap:14px">Read the fine print <svg width="26" height="26" viewBox="0 0 24 24" fill="none" style="display:block"><path d="M4 12h15M13 5.5 19.5 12 13 18.5" stroke="#3B2BFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="abs src" style="right:72px;bottom:112px;font-size:16px">SVPay is not affiliated with Riverside Payments.</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 1L · the same hook as one image (LinkedIn, Facebook, X, Google Business Profile): no counter, no swipe pill -->
+<section class="slide" id="s1L">
+<img class="hero" src="rv_hero_1.png" alt="">
+<div class="top"><div class="chip glass"><span>FTC case · Nov 2026</span></div></div>
+<div class="abs d" style="left:72px;top:var(--h1t,290px);font-size:112px">One shop<br>paid about</div>
+<div class="abs d" style="left:72px;top:var(--b1t,920px);font-size:54px;letter-spacing:-.03em;line-height:1.06;width:940px">to lease a card machine that<br>cost about $400 new.</div>
+<div class="abs src" style="left:76px;top:var(--s1t,1058px);width:560px">Over 4 years, at about $47 a month.<br><b>Source:</b> FTC complaint, FTC and Washington v. Riverside Payments, Nov 2, 2026</div>
+<div class="abs src" style="right:72px;bottom:112px;font-size:16px">SVPay is not affiliated with Riverside Payments.</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 2 · THE PITCH -->
+<section class="slide" id="s2">
+<img class="hero" src="rv_hero_2.png" alt="">
+<div class="top"><div class="tag"><i></i>What the FTC says</div><div class="count"><b>2</b> / 6</div></div>
+<div class="abs" style="left:72px;top:var(--h2t,262px);width:940px">
+ <div class="serif" style="font-size:56px">The pitch:</div>
+ <div class="d" style="font-size:88px;margin-top:8px;letter-spacing:-.035em;line-height:1.0">cut your card fees<br>by 40% to</div>
+</div>
+<div class="abs d" style="left:72px;top:var(--b2t,920px);font-size:60px;letter-spacing:-.03em;line-height:1.06;width:940px">The FTC says shops that<br>switched <span class="hot">typically paid more.</span></div>
+<div class="abs src" style="left:76px;top:var(--s2t,1076px);width:760px"><b>Source:</b> FTC press release, FTC and Washington v. Riverside Payments, Nov 2, 2026</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 3 · THE FINE PRINT -->
+<section class="slide" id="s3">
+<img class="hero" src="rv_hero_3.png" alt="">
+<div class="top"><div class="tag"><i></i>The fine print</div><div class="count"><b>3</b> / 6</div></div>
+<div class="abs" style="left:72px;top:var(--h3t,262px);width:940px">
+ <div class="serif" style="font-size:56px">The FTC says</div>
+ <div class="d" style="font-size:104px;margin-top:6px">leaving cost</div>
+</div>
+<div class="abs fp" style="left:72px;top:var(--b3t,920px);width:940px">
+ <div class="pill glass">Fees left off the quote</div><div class="pill glass">A 26-page contract</div>
+ <div class="pill glass">3 years, then it renews</div><div class="pill glass">Lease runs a year longer</div>
+</div>
+<div class="abs src" style="left:76px;top:var(--s3t,1092px);width:760px"><b>Source:</b> FTC complaint and press release, Nov 2, 2026</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 4 · THE SETTLEMENT -->
+<section class="slide" id="s4">
+<img class="hero" src="rv_hero_4.png" alt="">
+<div class="top"><div class="tag"><i></i>Proposed settlement</div><div class="count"><b>4</b> / 6</div></div>
+<div class="abs" style="left:72px;top:190px;width:560px">
+ <div class="d hot" style="display:inline-block;font-size:120px;letter-spacing:-.04em">$600,000</div>
+ <div class="d" style="font-size:52px;letter-spacing:-.03em;line-height:1.06;margin-top:14px">to settle with the FTC<br>and Washington.</div>
+ <p class="body" style="margin-top:34px;width:500px">If a judge approves, customers get <b style="color:var(--ink)">60 days</b> to end the processing contract, no termination fee.</p>
+ <p class="body" style="margin-top:18px;width:500px">Machine leases aren’t covered.</p>
+</div>
+<div class="abs src" style="left:76px;top:1086px;width:760px"><b>Sources:</b> FTC press release, Nov 2, 2026; OPB, Nov 6, 2026</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 5 · BEFORE YOU SIGN -->
+<section class="slide" id="s5">
+<img class="hero" src="rv_hero_5.png" alt="">
+<div class="top"><div class="tag"><i></i>Before you sign</div><div class="count"><b>5</b> / 6</div></div>
+<div class="abs d" style="left:72px;top:170px;font-size:96px">Get 4 answers<br><span class="holo">in writing.</span></div>
+<div class="abs glass" style="left:72px;top:450px;width:500px;padding:34px 34px 34px;border-radius:32px">
+ <ul class="ul">
+  <li><b>1</b><span>Your all-in rate</span></li>
+  <li><b>2</b><span>Every fee, by name</span></li>
+  <li><b>3</b><span>Contract length and renewal</span></li>
+  <li><b>4</b><span>The cost to leave, lease included</span></li>
+ </ul>
+</div>
+<div class="abs" style="left:76px;top:var(--b5t,820px);width:560px">
+ <p class="body" style="font-size:28px;color:var(--ink)"><b>Ask every processor, SVPay included.</b></p>
+</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 6 · CTA -->
+<section class="slide" id="s6">
+<img class="hero" src="rv_hero_6.png" alt="">
+<div class="top"><div class="tag"><i></i>Your shop</div><div class="count"><b>6</b> / 6</div></div>
+<div class="abs d" style="left:72px;top:170px;font-size:88px;width:520px">See what<br>your shop<br>would <span class="holo">keep.</span></div>
+<div class="abs" style="left:72px;top:520px;width:430px;border-radius:30px;padding:24px 24px 24px 28px;background:var(--holo);display:flex;align-items:center;justify-content:space-between;gap:14px;box-shadow:0 30px 60px -24px rgba(70,50,230,.55),0 1px 0 rgba(255,255,255,.5) inset">
+ <div><div style="font:600 20px/1 Inter;color:rgba(255,255,255,.92)">Savings calculator</div><div style="font:800 27px/1.1 'Inter Tight';color:#fff;letter-spacing:-.02em;margin-top:10px">www.svpay.app/<br>savings-calculator</div></div>
+ <div style="width:66px;height:66px;flex:none;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" style="display:block"><path d="M4 12h15M13 5.5 19.5 12 13 18.5" stroke="#2350FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+<div class="abs" style="left:72px;top:740px;width:470px">
+ <div style="font:800 46px/1.05 'Inter Tight';letter-spacing:-.03em">Payments,<br><span class="serif" style="font-size:58px">without the fee.</span></div>
+ <div style="font:600 24px/1.4 Inter;color:var(--ink2);margin-top:22px">SVPay makes money from paid software plans, never from a cut of your sales.</div>
+</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+</body></html>

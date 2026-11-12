@@ -2,6 +2,7 @@ const { chromium } = require('playwright');
 const http = require('http'); const fs = require('fs'); const path = require('path');
 const types = { '.html':'text/html', '.js':'text/javascript', '.png':'image/png', '.woff2':'font/woff2', '.woff':'font/woff', '.json':'application/json' };
 const root = process.cwd();
+const SCENE = process.env.SCENE || 'scene.html';   // a post's own scene file, e.g. SCENE=scene-riverside.html
 const srv = http.createServer((req, res) => {
   const f = path.join(root, decodeURIComponent(req.url.split('?')[0]));
   fs.readFile(f, (e, d) => { if (e) { res.writeHead(404); return res.end(); } res.writeHead(200, { 'Content-Type': types[path.extname(f)] || 'application/octet-stream' }); res.end(d); });
@@ -14,7 +15,7 @@ const srv = http.createServer((req, res) => {
     p.on('pageerror', e => console.log(job, 'ERR', e.message));
     p.on('console', m => { if (m.type() === 'error' || m.text().startsWith('INFO')) console.log(job, m.text()); });
     const t0 = Date.now();
-    await p.goto(`http://localhost:8767/scene.html?slide=${n}${extra ? '&' + extra : ''}`);
+    await p.goto(`http://localhost:8767/${SCENE}?slide=${n}${extra ? '&' + extra : ''}`);
     try { await p.waitForFunction(() => window.__done === true, null, { timeout: 600000 }); } catch (e) { console.log(job, 'TIMEOUT'); await p.close(); continue; }
     const info = await p.evaluate(() => window.__info || null);
     const out = (outName || `hero_${n}`) + '.png';
