@@ -1,0 +1,380 @@
+{
+ "date": "2026-11-12",
+ "slug": "swipe-fee-deal-hearing",
+ "kind": "data",
+ "topic": "swipe-fee-deal-hearing",
+ "format": "data",
+ "skeleton": "story-hook/terms/plain-money/example/both-sides/how-to/ask/cta",
+ "closing_question_format": "your-choice",
+ "why_now": "The court holds the final approval hearing on Monday, Nov 16, 2026 (Payments Dive, Oct 16; still on the calendar in the Nov 11 report). No story from Nov 5-12 cleared the two-source bar with a dollar angle, so this is a data breakdown of what the deal would change for a shop.",
+ "test": {
+  "name": "T1 LinkedIn hook: number vs story (contrarian arm retired)",
+  "arm": "story"
+ },
+ "networks": {
+  "linkedin": {
+   "text": "In 2005, merchants sued Visa and Mastercard over card fees.\nOn Monday, 21 years later, a federal judge in Brooklyn holds the final hearing on a proposed settlement.\n\nJudge Brian Cogan gave the deal preliminary approval in June, calling it \"fair, reasonable, and adequate.\" If he approves it for good, credit card swipe fees drop 0.1 percentage point for 5 years, and standard consumer cards get a 1.25% rate for 8 years. Shops could also turn down some premium and commercial credit cards, and add a surcharge or offer a discount on credit cards.\n\nIn plain money, 0.1 point is $10 on every $10,000 of credit card sales. A shop with $500,000 a year in credit card sales would pay about $500 a year less, if the full cut reaches its rate.\n\nAbout 1,000 merchants, Walmart among them, asked the judge to say no. Merchant groups say the cut would only take the average rate back to its 2023 level. Visa and Mastercard are urging him to approve it.\n\nI'd take the $500. I started SVPay because a cut of every sale shouldn't be the only way a shop gets paid. When customers pay with SVPay instead of a card, the shop pays 0% in processing fees and $0 to cash out; SVPay makes money from paid software plans instead.\n\nWhatever happens Monday, ask your processor this week if your rate will drop by the full 0.1 point. And if the deal lets you turn down premium rewards cards, will you?\n\n#SmallBusiness #Payments",
+   "first_comment": "Sources: Payments Dive, Oct 16, 2026 (final approval hearing Nov 16; the terms): https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/\nPayments Dive, Sept 15, 2026 (about 1,000 merchants object): https://www.paymentsdive.com/news/walmart-slams-card-fee-pact-again/830395/\nReuters, June 10, 2026 (preliminary approval): https://www.investing.com/news/stock-market-news/us-judge-oks-visa-mastercard-38-billion-swipe-fee-settlement-4733778\n\nSee what your shop would keep: https://www.svpay.app/savings-calculator?utm_source=linkedin&utm_medium=social&utm_campaign=news_20261112&utm_content=swipe-fee-deal-hearing",
+   "media": [
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-1.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-2.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-3.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-4.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-5.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-6.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-7.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-8.jpg"
+   ],
+   "alt": [
+    "Slide 1 of 8. Merchants sued Visa and Mastercard over card fees in 2005; on Monday, a judge weighs final approval of the proposed settlement. Glossy blue-to-violet 3D numerals read 2005 on a light background. Label: SWIPE-FEE CASE. Source: Payments Dive, Jun 9 and Oct 16, 2026. SVPay is not affiliated with Visa or Mastercard. A button reads What it means. SVPay logo and www.svpay.app.",
+    "Slide 2 of 8. What would change if the judge approves, listed on a frosted glass card: 1, credit card swipe fees: 0.1 point lower for 5 years. 2, standard consumer cards: a 1.25% rate for 8 years. 3, the right to refuse some premium and commercial cards. 4, more room to surcharge or discount credit cards. Label: IF THE JUDGE APPROVES. Sources: Payments Dive, Jun 9 and Oct 16, 2026; Reuters, Jun 10, 2026. Proposed terms, not final.",
+    "Slide 3 of 8. The cut of 0.1 percentage point is $10 less on every $10,000 of credit card sales, for 5 years, if the full cut reaches your rate. Glossy 3D numerals read $10. Label: IN PLAIN MONEY. Source: Payments Dive, Oct 16, 2026. The math: 0.1 percentage point of $10,000 = $10.",
+    "Slide 4 of 8. Example: a shop with $500,000 a year in credit card sales would pay about $500 less a year. Glossy 3D numerals read $500, with an Example label. Say the rate goes from 2.5% to 2.4%: $500,000 times 0.1 percentage point equals $500 a year. Example only: assumes the full cut reaches the shop's rate. Label: WHAT IT COULD MEAN. Source: Payments Dive, Oct 16, 2026.",
+    "Slide 5 of 8. About 1,000 objectors asked the judge to say no. Large dark and blue-to-violet text on a light background. Walmart is one of them. Merchant groups say the cut would only take the average rate back to its 2023 level. A glass card, The other side: Visa and Mastercard are urging the court to approve the deal. Label: THE FIGHT. Sources: Payments Dive, Sept 15 and Oct 16, 2026; Merchants Payments Coalition, Sept 14, 2026.",
+    "Slide 6 of 8. Three questions for this week, on a frosted glass card: 1, if the cut is approved, will my rate drop by the full 0.1 point? 2, does my rate move when Visa and Mastercard change their fees? 3, which card types cost me the most each month? Label: ASK YOUR PROCESSOR.",
+    "Slide 7 of 8. Would you turn down premium rewards cards if you could? Large dark and blue-to-violet text on a light background. The settlement would let shops decline some higher-cost premium and commercial credit cards. Label: YOUR CALL. Source: Payments Dive, Oct 16, 2026.",
+    "Slide 8 of 8. Payments, without the fee. Glossy 3D numerals read 0%. When customers pay with SVPay instead of a card, the shop pays 0% in processing fees and $0 to cash out; SVPay makes money from paid software plans instead. Source: www.svpay.app/pricing, checked Nov 12, 2026. A button reads See what your shop would keep: www.svpay.app/savings-calculator. Label: ANOTHER WAY TO GET PAID. SVPay logo and www.svpay.app."
+   ],
+   "pdf_title": "What Monday's swipe-fee hearing means for your shop",
+   "pdf_pages": 8
+  },
+  "facebook": {
+   "text": "Card fees go back before a judge on Monday.\n\nA federal court in Brooklyn holds the final hearing on a proposed Visa and Mastercard settlement, in a case merchants started in 2005. If the judge approves it, credit card swipe fees drop 0.1 percentage point for 5 years. That's $10 on every $10,000. A shop with $500,000 a year in credit card sales would pay about $500 a year less, if the full cut reaches its rate. Shops could also turn down some premium and commercial credit cards.\n\nAbout 1,000 merchants asked the judge to reject the deal, saying the cut is too small. Visa and Mastercard want it approved.\n\nWe'd welcome the cut. When customers pay with SVPay instead of a card, the shop pays 0% in processing fees and $0 to cash out; SVPay makes money from paid software plans instead.\n\nHow many of your customers pay with premium rewards cards?\n\n#SmallBusiness #ShopLocal",
+   "first_comment": "See what your shop would keep: https://www.svpay.app/savings-calculator?utm_source=facebook&utm_medium=social&utm_campaign=news_20261112&utm_content=swipe-fee-deal-hearing\n\nSources: Payments Dive, Oct 16, 2026: https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/",
+   "media": [
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-1.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-2.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-3.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-4.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-5.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-6.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-7.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-8.jpg"
+   ],
+   "alt": [
+    "Slide 1 of 8. Merchants sued Visa and Mastercard over card fees in 2005; on Monday, a judge weighs final approval of the proposed settlement. Glossy blue-to-violet 3D numerals read 2005 on a light background. Label: SWIPE-FEE CASE. Source: Payments Dive, Jun 9 and Oct 16, 2026. SVPay is not affiliated with Visa or Mastercard. A button reads What it means. SVPay logo and www.svpay.app.",
+    "Slide 2 of 8. What would change if the judge approves, listed on a frosted glass card: 1, credit card swipe fees: 0.1 point lower for 5 years. 2, standard consumer cards: a 1.25% rate for 8 years. 3, the right to refuse some premium and commercial cards. 4, more room to surcharge or discount credit cards. Label: IF THE JUDGE APPROVES. Sources: Payments Dive, Jun 9 and Oct 16, 2026; Reuters, Jun 10, 2026. Proposed terms, not final.",
+    "Slide 3 of 8. The cut of 0.1 percentage point is $10 less on every $10,000 of credit card sales, for 5 years, if the full cut reaches your rate. Glossy 3D numerals read $10. Label: IN PLAIN MONEY. Source: Payments Dive, Oct 16, 2026. The math: 0.1 percentage point of $10,000 = $10.",
+    "Slide 4 of 8. Example: a shop with $500,000 a year in credit card sales would pay about $500 less a year. Glossy 3D numerals read $500, with an Example label. Say the rate goes from 2.5% to 2.4%: $500,000 times 0.1 percentage point equals $500 a year. Example only: assumes the full cut reaches the shop's rate. Label: WHAT IT COULD MEAN. Source: Payments Dive, Oct 16, 2026.",
+    "Slide 5 of 8. About 1,000 objectors asked the judge to say no. Large dark and blue-to-violet text on a light background. Walmart is one of them. Merchant groups say the cut would only take the average rate back to its 2023 level. A glass card, The other side: Visa and Mastercard are urging the court to approve the deal. Label: THE FIGHT. Sources: Payments Dive, Sept 15 and Oct 16, 2026; Merchants Payments Coalition, Sept 14, 2026.",
+    "Slide 6 of 8. Three questions for this week, on a frosted glass card: 1, if the cut is approved, will my rate drop by the full 0.1 point? 2, does my rate move when Visa and Mastercard change their fees? 3, which card types cost me the most each month? Label: ASK YOUR PROCESSOR.",
+    "Slide 7 of 8. Would you turn down premium rewards cards if you could? Large dark and blue-to-violet text on a light background. The settlement would let shops decline some higher-cost premium and commercial credit cards. Label: YOUR CALL. Source: Payments Dive, Oct 16, 2026.",
+    "Slide 8 of 8. Payments, without the fee. Glossy 3D numerals read 0%. When customers pay with SVPay instead of a card, the shop pays 0% in processing fees and $0 to cash out; SVPay makes money from paid software plans instead. Source: www.svpay.app/pricing, checked Nov 12, 2026. A button reads See what your shop would keep: www.svpay.app/savings-calculator. Label: ANOTHER WAY TO GET PAID. SVPay logo and www.svpay.app."
+   ]
+  },
+  "instagram": {
+   "text": "On Monday, a judge weighs final approval of a Visa and Mastercard deal to cut credit card swipe fees 0.1 percentage point for 5 years.\n\nThat's $10 per $10,000. On $500,000 a year in credit card sales, it's about $500 a year, if the full cut reaches your rate. Shops could also turn down some premium and commercial credit cards. About 1,000 merchants asked the judge to say no. Visa and Mastercard want it approved.\n\nSwipe for what would change and three questions for your processor.\n\nWhen customers pay with SVPay instead of a card, the shop pays 0% in processing fees and $0 to cash out; SVPay makes money from paid software plans instead.\n\nSources: Payments Dive, Oct 16 and Sept 15, 2026; Reuters, June 10, 2026.\n\nSee what your shop would keep: link in bio. Do you know which cards cost your shop the most?\n\n#SmallBusiness #ShopOwners",
+   "media": [
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-1.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-2.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-3.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-4.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-5.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-6.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-7.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-8.jpg"
+   ],
+   "alt": [
+    "Slide 1 of 8. Merchants sued Visa and Mastercard over card fees in 2005; on Monday, a judge weighs final approval of the proposed settlement. Glossy blue-to-violet 3D numerals read 2005 on a light background. Label: SWIPE-FEE CASE. Source: Payments Dive, Jun 9 and Oct 16, 2026. SVPay is not affiliated with Visa or Mastercard. A button reads What it means. SVPay logo and www.svpay.app.",
+    "Slide 2 of 8. What would change if the judge approves, listed on a frosted glass card: 1, credit card swipe fees: 0.1 point lower for 5 years. 2, standard consumer cards: a 1.25% rate for 8 years. 3, the right to refuse some premium and commercial cards. 4, more room to surcharge or discount credit cards. Label: IF THE JUDGE APPROVES. Sources: Payments Dive, Jun 9 and Oct 16, 2026; Reuters, Jun 10, 2026. Proposed terms, not final.",
+    "Slide 3 of 8. The cut of 0.1 percentage point is $10 less on every $10,000 of credit card sales, for 5 years, if the full cut reaches your rate. Glossy 3D numerals read $10. Label: IN PLAIN MONEY. Source: Payments Dive, Oct 16, 2026. The math: 0.1 percentage point of $10,000 = $10.",
+    "Slide 4 of 8. Example: a shop with $500,000 a year in credit card sales would pay about $500 less a year. Glossy 3D numerals read $500, with an Example label. Say the rate goes from 2.5% to 2.4%: $500,000 times 0.1 percentage point equals $500 a year. Example only: assumes the full cut reaches the shop's rate. Label: WHAT IT COULD MEAN. Source: Payments Dive, Oct 16, 2026.",
+    "Slide 5 of 8. About 1,000 objectors asked the judge to say no. Large dark and blue-to-violet text on a light background. Walmart is one of them. Merchant groups say the cut would only take the average rate back to its 2023 level. A glass card, The other side: Visa and Mastercard are urging the court to approve the deal. Label: THE FIGHT. Sources: Payments Dive, Sept 15 and Oct 16, 2026; Merchants Payments Coalition, Sept 14, 2026.",
+    "Slide 6 of 8. Three questions for this week, on a frosted glass card: 1, if the cut is approved, will my rate drop by the full 0.1 point? 2, does my rate move when Visa and Mastercard change their fees? 3, which card types cost me the most each month? Label: ASK YOUR PROCESSOR.",
+    "Slide 7 of 8. Would you turn down premium rewards cards if you could? Large dark and blue-to-violet text on a light background. The settlement would let shops decline some higher-cost premium and commercial credit cards. Label: YOUR CALL. Source: Payments Dive, Oct 16, 2026.",
+    "Slide 8 of 8. Payments, without the fee. Glossy 3D numerals read 0%. When customers pay with SVPay instead of a card, the shop pays 0% in processing fees and $0 to cash out; SVPay makes money from paid software plans instead. Source: www.svpay.app/pricing, checked Nov 12, 2026. A button reads See what your shop would keep: www.svpay.app/savings-calculator. Label: ANOTHER WAY TO GET PAID. SVPay logo and www.svpay.app."
+   ]
+  },
+  "x": {
+   "text": "A judge holds the final hearing Monday on a proposed Visa and Mastercard deal. It would cut credit card swipe fees 0.1 percentage point for 5 years.\n\nThat's $10 on every $10,000 of credit card sales.",
+   "reply": "Source, Payments Dive (Oct 16, 2026): https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/\n\nSee what your shop would keep: https://www.svpay.app/savings-calculator?utm_source=x&utm_medium=social&utm_campaign=news_20261112&utm_content=swipe-fee-deal-hearing",
+   "media": [
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-3.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-4.jpg"
+   ],
+   "alt": [
+    "Slide 3 of 8. The cut of 0.1 percentage point is $10 less on every $10,000 of credit card sales, for 5 years, if the full cut reaches your rate. Glossy 3D numerals read $10. Label: IN PLAIN MONEY. Source: Payments Dive, Oct 16, 2026. The math: 0.1 percentage point of $10,000 = $10.",
+    "Slide 4 of 8. Example: a shop with $500,000 a year in credit card sales would pay about $500 less a year. Glossy 3D numerals read $500, with an Example label. Say the rate goes from 2.5% to 2.4%: $500,000 times 0.1 percentage point equals $500 a year. Example only: assumes the full cut reaches the shop's rate. Label: WHAT IT COULD MEAN. Source: Payments Dive, Oct 16, 2026."
+   ]
+  },
+  "threads": {
+   "text": "Merchants sued Visa and Mastercard over card fees back in 2005. On Monday, a judge in Brooklyn holds the final hearing on a proposed settlement.\n\nThe headline change: credit card swipe fees down 0.1 percentage point for 5 years. On $500,000 a year in credit card sales, that's about $500 a year, if your processor passes the full cut on.\n\nHas your processor ever lowered your rate without you asking?\n\n#SmallBusiness",
+   "reply": "Source, Payments Dive (Oct 16, 2026): https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/\n\nSee what your shop would keep: https://www.svpay.app/savings-calculator?utm_source=threads&utm_medium=social&utm_campaign=news_20261112&utm_content=swipe-fee-deal-hearing",
+   "media": [
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-1.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-2.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-3.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-4.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-5.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-6.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-7.jpg",
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-8.jpg"
+   ],
+   "alt": [
+    "Slide 1 of 8. Merchants sued Visa and Mastercard over card fees in 2005; on Monday, a judge weighs final approval of the proposed settlement. Glossy blue-to-violet 3D numerals read 2005 on a light background. Label: SWIPE-FEE CASE. Source: Payments Dive, Jun 9 and Oct 16, 2026. SVPay is not affiliated with Visa or Mastercard. A button reads What it means. SVPay logo and www.svpay.app.",
+    "Slide 2 of 8. What would change if the judge approves, listed on a frosted glass card: 1, credit card swipe fees: 0.1 point lower for 5 years. 2, standard consumer cards: a 1.25% rate for 8 years. 3, the right to refuse some premium and commercial cards. 4, more room to surcharge or discount credit cards. Label: IF THE JUDGE APPROVES. Sources: Payments Dive, Jun 9 and Oct 16, 2026; Reuters, Jun 10, 2026. Proposed terms, not final.",
+    "Slide 3 of 8. The cut of 0.1 percentage point is $10 less on every $10,000 of credit card sales, for 5 years, if the full cut reaches your rate. Glossy 3D numerals read $10. Label: IN PLAIN MONEY. Source: Payments Dive, Oct 16, 2026. The math: 0.1 percentage point of $10,000 = $10.",
+    "Slide 4 of 8. Example: a shop with $500,000 a year in credit card sales would pay about $500 less a year. Glossy 3D numerals read $500, with an Example label. Say the rate goes from 2.5% to 2.4%: $500,000 times 0.1 percentage point equals $500 a year. Example only: assumes the full cut reaches the shop's rate. Label: WHAT IT COULD MEAN. Source: Payments Dive, Oct 16, 2026.",
+    "Slide 5 of 8. About 1,000 objectors asked the judge to say no. Large dark and blue-to-violet text on a light background. Walmart is one of them. Merchant groups say the cut would only take the average rate back to its 2023 level. A glass card, The other side: Visa and Mastercard are urging the court to approve the deal. Label: THE FIGHT. Sources: Payments Dive, Sept 15 and Oct 16, 2026; Merchants Payments Coalition, Sept 14, 2026.",
+    "Slide 6 of 8. Three questions for this week, on a frosted glass card: 1, if the cut is approved, will my rate drop by the full 0.1 point? 2, does my rate move when Visa and Mastercard change their fees? 3, which card types cost me the most each month? Label: ASK YOUR PROCESSOR.",
+    "Slide 7 of 8. Would you turn down premium rewards cards if you could? Large dark and blue-to-violet text on a light background. The settlement would let shops decline some higher-cost premium and commercial credit cards. Label: YOUR CALL. Source: Payments Dive, Oct 16, 2026.",
+    "Slide 8 of 8. Payments, without the fee. Glossy 3D numerals read 0%. When customers pay with SVPay instead of a card, the shop pays 0% in processing fees and $0 to cash out; SVPay makes money from paid software plans instead. Source: www.svpay.app/pricing, checked Nov 12, 2026. A button reads See what your shop would keep: www.svpay.app/savings-calculator. Label: ANOTHER WAY TO GET PAID. SVPay logo and www.svpay.app."
+   ]
+  },
+  "gbp": {
+   "text": "Card fees could drop $10 per $10,000 in credit card sales if a federal judge approves a Visa and Mastercard settlement. The final hearing on the proposed deal is Monday, Nov 16. It would cut credit card swipe fees by 0.1 percentage point for 5 years. For a shop with $500,000 a year in credit card sales, that is about $500 a year. When customers pay with SVPay instead of a card, the shop pays 0% in processing fees and $0 to cash out; SVPay makes money from paid software plans instead. Run your numbers: https://www.svpay.app/savings-calculator?utm_source=google_business&utm_medium=social&utm_campaign=news_20261112&utm_content=swipe-fee-deal-hearing",
+   "media": [
+    "posts/2026-11-12-swipe-fee-deal-hearing/slide-1-gbp.jpg"
+   ],
+   "alt": [
+    "Card fees could drop $10 per $10,000 of credit card sales, if a judge approves the Visa and Mastercard deal on Monday. Glossy 3D numerals read $10 on a light background. SVPay logo and www.svpay.app."
+   ],
+   "cta_url": "https://www.svpay.app/savings-calculator?utm_source=google_business&utm_medium=social&utm_campaign=news_20261112&utm_content=swipe-fee-deal-hearing"
+  }
+ },
+ "facts": [
+  {
+   "text": "The interchange-fee litigation against Visa and Mastercard dates to 2005 (Payments Dive: 'litigation dating to mid-2005'; 'The litigation dates to 2005')",
+   "numbers": [
+    "2005"
+   ],
+   "source_url": "https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/",
+   "source_date": "2026-10-16",
+   "confirmed_by": [
+    "https://www.paymentsdive.com/news/court-approves-visa-mastercard-settlement/822440/",
+    "https://www.pymnts.com/credit-cards/2026/judge-signals-approval-for-visa-and-mastercard-swipe-fee-settlement/"
+   ]
+  },
+  {
+   "text": "Visa-Mastercard Rule 23(b)(2) settlement, In re Payment Card Interchange Fee and Merchant Discount Antitrust Litigation, MDL 1720 (E.D.N.Y.): preliminary approval June 9, 2026 by U.S. District Judge Brian Cogan; final approval hearing set for Monday, Nov 16, 2026 in Brooklyn; not yet final. Re-checked Nov 12, 2026: the Nov 11 report still lists the Nov 16 hearing. The official settlement site (www.interchangeequitablereliefsettlement.com) could not be fetched from this run (client error), and PACER is not reachable, so the status rests on the two reports.",
+   "type": "law_status",
+   "checked_on": "2026-11-12",
+   "numbers": [],
+   "source_url": "https://ecommerceparadise.com/visa-mastercard-swipe-fee-final-hearing/",
+   "source_date": "2026-11-11",
+   "confirmed_by": [
+    "https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/",
+    "https://www.paymentsdive.com/news/walmart-slams-card-fee-pact-again/830395/"
+   ]
+  },
+  {
+   "text": "Judge Brian Cogan granted preliminary approval in June 2026 and called the settlement 'fair, reasonable, and adequate'",
+   "quote": "fair, reasonable, and adequate",
+   "quote_found": true,
+   "numbers": [],
+   "source_url": "https://www.investing.com/news/stock-market-news/us-judge-oks-visa-mastercard-38-billion-swipe-fee-settlement-4733778",
+   "source_date": "2026-06-10",
+   "confirmed_by": [
+    "https://www.pymnts.com/credit-cards/2026/judge-signals-approval-for-visa-and-mastercard-swipe-fee-settlement/",
+    "https://www.paymentsdive.com/news/court-approves-visa-mastercard-settlement/822440/"
+   ]
+  },
+  {
+   "text": "The settlement would trim credit interchange (swipe) fee rates by 10 basis points, 0.1 percentage point, for five years",
+   "numbers": [
+    "0.1",
+    "5"
+   ],
+   "source_url": "https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/",
+   "source_date": "2026-10-16",
+   "confirmed_by": [
+    "https://www.paymentsdive.com/news/court-approves-visa-mastercard-settlement/822440/",
+    "https://www.investing.com/news/stock-market-news/us-judge-oks-visa-mastercard-38-billion-swipe-fee-settlement-4733778"
+   ]
+  },
+  {
+   "text": "It would impose a 1.25% rate for standard consumer cards for eight years",
+   "numbers": [
+    "1.25%",
+    "8"
+   ],
+   "source_url": "https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/",
+   "source_date": "2026-10-16",
+   "confirmed_by": [
+    "https://www.paymentsdive.com/news/court-approves-visa-mastercard-settlement/822440/",
+    "https://www.investing.com/news/stock-market-news/us-judge-oks-visa-mastercard-38-billion-swipe-fee-settlement-4733778"
+   ]
+  },
+  {
+   "text": "It would give merchants the right to decline some higher-cost Visa and Mastercard premium and commercial credit cards",
+   "numbers": [],
+   "source_url": "https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/",
+   "source_date": "2026-10-16",
+   "confirmed_by": [
+    "https://www.paymentsdive.com/news/court-approves-visa-mastercard-settlement/822440/",
+    "https://www.investing.com/news/stock-market-news/us-judge-oks-visa-mastercard-38-billion-swipe-fee-settlement-4733778"
+   ]
+  },
+  {
+   "text": "Merchants would gain new rights to add surcharges and offer discounts for credit cards",
+   "numbers": [],
+   "source_url": "https://www.paymentsdive.com/news/walmart-slams-card-fee-pact-again/830395/",
+   "source_date": "2026-09-15",
+   "confirmed_by": [
+    "https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/",
+    "https://www.investing.com/news/stock-market-news/us-judge-oks-visa-mastercard-38-billion-swipe-fee-settlement-4733778"
+   ]
+  },
+  {
+   "text": "Walmart and about 1,000 other merchants asked the judge to reject final approval (978 signers on the Sept 10 objection letter, plus Walmart)",
+   "numbers": [
+    "1,000"
+   ],
+   "source_url": "https://www.paymentsdive.com/news/walmart-slams-card-fee-pact-again/830395/",
+   "source_date": "2026-09-15",
+   "confirmed_by": [
+    "https://merchantspaymentscoalition.com/nearly-1000-merchants-tell-judge-proposed-settlement-visamastercard-lawsuit-riddled-loopholes",
+    "https://ecommerceparadise.com/visa-mastercard-swipe-fee-final-hearing/"
+   ]
+  },
+  {
+   "text": "Merchant objectors say the rate cut 'would merely return the average Visa/Mastercard rate to its 2023 level' (paraphrased in the posts, no quotation marks)",
+   "quote": "would merely return the average Visa/Mastercard rate to its 2023 level",
+   "quote_found": true,
+   "numbers": [],
+   "source_url": "https://merchantspaymentscoalition.com/nearly-1000-merchants-tell-judge-proposed-settlement-visamastercard-lawsuit-riddled-loopholes",
+   "source_date": "2026-09-14"
+  },
+  {
+   "text": "Visa and Mastercard urged the court to grant final approval (filing a month before the Nov 16 hearing)",
+   "numbers": [],
+   "source_url": "https://www.paymentsdive.com/news/visa-mastercard-urge-court-to-approve-fee-settlement/833241/",
+   "source_date": "2026-10-16",
+   "confirmed_by": [
+    "https://www.pymnts.com/credit-cards/2026/judge-signals-approval-for-visa-and-mastercard-swipe-fee-settlement/"
+   ]
+  },
+  {
+   "text": "Worked example: $500,000 a year in credit card sales x 0.1 percentage point = $500 a year, if the full cut reaches the shop's rate",
+   "numbers": [
+    "$500,000",
+    "$500",
+    "0.1"
+   ],
+   "example": true
+  },
+  {
+   "text": "0.1 percentage point of $10,000 is $10",
+   "numbers": [
+    "$10",
+    "$10,000"
+   ],
+   "example": true
+  },
+  {
+   "text": "Example rates for the worked example: a 2.5% rate falling 0.1 percentage point to 2.4%",
+   "numbers": [
+    "2.5%",
+    "2.4%"
+   ],
+   "example": true
+  },
+  {
+   "text": "2026 - 2005 = 21 years",
+   "numbers": [],
+   "example": true
+  },
+  {
+   "text": "SVPay pricing (approved line, checks/approved_lines.json pricing_one_line): 0% processing fees and $0 to cash out on payments made with SVPay, on every plan; SVPay makes money from paid software plans",
+   "numbers": [
+    "0%",
+    "$0"
+   ],
+   "source_url": "https://www.svpay.app/pricing",
+   "source_date": "2026-11-12",
+   "own_data": true
+  }
+ ],
+ "math": [
+  {
+   "expr": "500000*0.001",
+   "shown": "$500"
+  },
+  {
+   "expr": "10000*0.001",
+   "shown": "$10"
+  },
+  {
+   "expr": "2.5-0.1",
+   "shown": "2.4%"
+  },
+  {
+   "expr": "2026-2005",
+   "shown": "21"
+  }
+ ],
+ "slides": [
+  {
+   "file": "posts/2026-11-12-swipe-fee-deal-hearing/slide-1.jpg",
+   "role": "hook",
+   "text": "Merchants sued Visa and Mastercard over card fees in 2005. On Monday, a judge weighs final approval of the proposed settlement. Swipe-fee case. What it means.",
+   "example": false,
+   "has_stat": true,
+   "source_line": "Source: Payments Dive, Jun 9 and Oct 16, 2026. SVPay is not affiliated with Visa or Mastercard.",
+   "alt": "Slide 1 of 8. Merchants sued Visa and Mastercard over card fees in 2005; on Monday, a judge weighs final approval of the proposed settlement. Glossy blue-to-violet 3D numerals read 2005 on a light background. Label: SWIPE-FEE CASE. Source: Payments Dive, Jun 9 and Oct 16, 2026. SVPay is not affiliated with Visa or Mastercard. A button reads What it means. SVPay logo and www.svpay.app."
+  },
+  {
+   "file": "posts/2026-11-12-swipe-fee-deal-hearing/slide-2.jpg",
+   "role": "terms",
+   "text": "What would change. 1 Credit card swipe fees: 0.1 point lower for 5 years. 2 Standard consumer cards: a 1.25% rate for 8 years. 3 The right to refuse some premium and commercial cards. 4 More room to surcharge or discount credit cards.",
+   "example": false,
+   "has_stat": true,
+   "source_line": "Sources: Payments Dive, Jun 9 and Oct 16, 2026; Reuters, Jun 10, 2026. Proposed terms, not final.",
+   "alt": "Slide 2 of 8. What would change if the judge approves, listed on a frosted glass card: 1, credit card swipe fees: 0.1 point lower for 5 years. 2, standard consumer cards: a 1.25% rate for 8 years. 3, the right to refuse some premium and commercial cards. 4, more room to surcharge or discount credit cards. Label: IF THE JUDGE APPROVES. Sources: Payments Dive, Jun 9 and Oct 16, 2026; Reuters, Jun 10, 2026. Proposed terms, not final."
+  },
+  {
+   "file": "posts/2026-11-12-swipe-fee-deal-hearing/slide-3.jpg",
+   "role": "what-it-means",
+   "text": "The cut of 0.1 percentage point is $10 less on every $10,000 of credit card sales. For 5 years, if the full cut reaches your rate.",
+   "example": false,
+   "has_stat": true,
+   "source_line": "Source: Payments Dive, Oct 16, 2026. The math: 0.1 percentage point of $10,000 = $10.",
+   "alt": "Slide 3 of 8. The cut of 0.1 percentage point is $10 less on every $10,000 of credit card sales, for 5 years, if the full cut reaches your rate. Glossy 3D numerals read $10. Label: IN PLAIN MONEY. Source: Payments Dive, Oct 16, 2026. The math: 0.1 percentage point of $10,000 = $10."
+  },
+  {
+   "file": "posts/2026-11-12-swipe-fee-deal-hearing/slide-4.jpg",
+   "role": "example",
+   "text": "Example. A shop with $500,000 a year in credit card sales would pay about $500 less a year. Say the rate goes from 2.5% to 2.4%: $500,000 × 0.1 percentage point = $500 a year. Example only: assumes the full cut reaches the shop's rate.",
+   "example": true,
+   "has_stat": true,
+   "source_line": "Source: Payments Dive, Oct 16, 2026.",
+   "alt": "Slide 4 of 8. Example: a shop with $500,000 a year in credit card sales would pay about $500 less a year. Glossy 3D numerals read $500, with an Example label. Say the rate goes from 2.5% to 2.4%: $500,000 times 0.1 percentage point equals $500 a year. Example only: assumes the full cut reaches the shop's rate. Label: WHAT IT COULD MEAN. Source: Payments Dive, Oct 16, 2026."
+  },
+  {
+   "file": "posts/2026-11-12-swipe-fee-deal-hearing/slide-5.jpg",
+   "role": "stakes",
+   "text": "About 1,000 objectors asked the judge to say no. Walmart is one of them. Merchant groups say the cut would only take the average rate back to its 2023 level. Visa and Mastercard are urging the court to approve the deal.",
+   "example": false,
+   "has_stat": true,
+   "source_line": "Sources: Payments Dive, Sept 15 and Oct 16, 2026; Merchants Payments Coalition, Sept 14, 2026.",
+   "alt": "Slide 5 of 8. About 1,000 objectors asked the judge to say no. Large dark and blue-to-violet text on a light background. Walmart is one of them. Merchant groups say the cut would only take the average rate back to its 2023 level. A glass card, The other side: Visa and Mastercard are urging the court to approve the deal. Label: THE FIGHT. Sources: Payments Dive, Sept 15 and Oct 16, 2026; Merchants Payments Coalition, Sept 14, 2026."
+  },
+  {
+   "file": "posts/2026-11-12-swipe-fee-deal-hearing/slide-6.jpg",
+   "role": "how-to",
+   "text": "Three questions for this week. 1 If the cut is approved, will my rate drop by the full 0.1 point? 2 Does my rate move when Visa and Mastercard change their fees? 3 Which card types cost me the most each month?",
+   "example": false,
+   "has_stat": false,
+   "source_line": "",
+   "alt": "Slide 6 of 8. Three questions for this week, on a frosted glass card: 1, if the cut is approved, will my rate drop by the full 0.1 point? 2, does my rate move when Visa and Mastercard change their fees? 3, which card types cost me the most each month? Label: ASK YOUR PROCESSOR."
+  },
+  {
+   "file": "posts/2026-11-12-swipe-fee-deal-hearing/slide-7.jpg",
+   "role": "ask",
+   "text": "Would you turn down premium rewards cards if you could? The settlement would let shops decline some higher-cost premium and commercial credit cards.",
+   "example": false,
+   "has_stat": false,
+   "source_line": "Source: Payments Dive, Oct 16, 2026",
+   "alt": "Slide 7 of 8. Would you turn down premium rewards cards if you could? Large dark and blue-to-violet text on a light background. The settlement would let shops decline some higher-cost premium and commercial credit cards. Label: YOUR CALL. Source: Payments Dive, Oct 16, 2026."
+  },
+  {
+   "file": "posts/2026-11-12-swipe-fee-deal-hearing/slide-8.jpg",
+   "role": "cta",
+   "text": "Payments, without the fee. 0% When customers pay with SVPay instead of a card, the shop pays 0% in processing fees and $0 to cash out; SVPay makes money from paid software plans instead. See what your shop would keep: www.svpay.app/savings-calculator",
+   "example": false,
+   "has_stat": true,
+   "source_line": "Source: www.svpay.app/pricing, checked Nov 12, 2026",
+   "alt": "Slide 8 of 8. Payments, without the fee. Glossy 3D numerals read 0%. When customers pay with SVPay instead of a card, the shop pays 0% in processing fees and $0 to cash out; SVPay makes money from paid software plans instead. Source: www.svpay.app/pricing, checked Nov 12, 2026. A button reads See what your shop would keep: www.svpay.app/savings-calculator. Label: ANOTHER WAY TO GET PAID. SVPay logo and www.svpay.app."
+  }
+ ]
+}

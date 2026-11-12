@@ -1,0 +1,251 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Swipe-fee hearing 3D</title>
+<style>html,body{margin:0;background:transparent}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/","opentype":"./node_modules/opentype.js/dist/opentype.module.js"}}</script>
+</head><body>
+<script type="module">
+import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+import opentype from 'opentype';
+
+const q = new URLSearchParams(location.search);
+const slide = +(q.get('slide') || 1);
+const W = 2160, H = 2700;
+const P = (k, d) => (q.has(k) ? +q.get(k) : d);   // tuning knobs from the URL
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(W, H);
+renderer.setClearColor(0x000000, 0);
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = P('exp', 1.0);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.VSMShadowMap;
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+
+// ---------- studio: bright pearl dome with coloured soft boxes, so glossy edges pick up a holographic sheen
+function studioEnv() {
+  const env = new THREE.Scene();
+  env.add(new THREE.Mesh(new THREE.SphereGeometry(60, 64, 32), new THREE.ShaderMaterial({
+    side: THREE.BackSide, depthWrite: false,
+    vertexShader: 'varying vec3 vP; void main(){ vP = normalize(position); gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.0); }',
+    fragmentShader: `varying vec3 vP;
+      void main(){
+        float y = vP.y*0.5+0.5; float a = atan(vP.z, vP.x)/6.2831+0.5;
+        vec3 top = vec3(1.0); vec3 mid = vec3(0.80,0.82,1.0); vec3 low = vec3(0.62,0.60,0.92);
+        vec3 c = mix(low, mid, smoothstep(0.0,0.5,y)); c = mix(c, top, smoothstep(0.5,1.0,y));
+        vec3 band = mix(mix(vec3(0.35,0.75,1.0), vec3(0.55,0.45,1.0), smoothstep(0.0,0.5,a)), vec3(1.0,0.55,0.80), smoothstep(0.5,1.0,a));
+        c = mix(c, band, 0.6*exp(-pow((y-0.5)*5.0,2.0)));
+        gl_FragColor = vec4(c,1.0);
+      }`
+  })));
+  const box = (w, h, color, k, pos) => { const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: new THREE.Color(color).multiplyScalar(k), side: THREE.DoubleSide })); m.position.set(...pos); m.lookAt(0, 0, 0); env.add(m); };
+  box(34, 10, 0xffffff, 6.0, [0, 36, 14]);        // overhead strip
+  box(4, 34, 0xffffff, P('ls', 6.5), [-26, 8, 30]);        // left strip -> long edge highlight
+  box(4, 34, 0xffffff, 5.0, [28, 8, 26]);         // right strip
+  box(16, 30, 0x6fa2ff, 3.0, [-36, 4, 6]);        // cobalt card left
+  box(16, 30, 0xff7cc8, 3.0, [36, 4, 4]);         // pink card right
+  box(20, 10, 0x8be3ff, 2.6, [-10, -14, 34]);     // cyan bounce low front
+  box(20, 10, 0xb48cff, 2.6, [14, -12, 34]);      // violet bounce low front
+  box(30, 14, 0xffffff, 2.2, [0, 6, -40]);        // back fill
+  const pm = new THREE.PMREMGenerator(renderer);
+  return pm.fromScene(env, 0.015).texture;
+}
+scene.environment = studioEnv();
+scene.environmentIntensity = P('envk', 1.25);
+
+const key = new THREE.DirectionalLight(0xffffff, P('key', 2.2));
+key.castShadow = true; key.shadow.mapSize.set(4096, 4096); key.shadow.radius = 48; key.shadow.blurSamples = 64; key.shadow.bias = -0.0003; key.shadow.normalBias = 0.02;
+// Nov 11, 2026 (V-I07): at +-30 the edge of the shadow camera drew a faint stair-stepped line across the floor
+// behind big numerals. Wider bounds put that edge outside every frame.
+const kc = key.shadow.camera; kc.left = -90; kc.right = 90; kc.top = 90; kc.bottom = -90; kc.near = 1; kc.far = 300;
+scene.add(key, key.target);
+const rim = new THREE.DirectionalLight(0xb7a2ff, 1.2); scene.add(rim, rim.target);
+const fill = new THREE.DirectionalLight(0x9fe0ff, 0.7); scene.add(fill, fill.target);
+const aim = (l, p, t = [0, 0, 0]) => { l.position.set(...p); l.target.position.set(...t); };
+
+// ---------- textures + helpers
+function canvasTex(w, h, draw, srgb = true) {
+  const c = document.createElement('canvas'); c.width = w; c.height = h; draw(c.getContext('2d'), w, h);
+  const t = new THREE.CanvasTexture(c); if (srgb) t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 16; return t;
+}
+const HOLO = ['#0f3dff', '#2f2bff', '#6a2dff', '#b52fd6', '#ff3f98'];
+const gradTex = (stops = HOLO, vertical = false) => canvasTex(vertical ? 16 : 1024, vertical ? 1024 : 16, (x, w, h) => {
+  const g = vertical ? x.createLinearGradient(0, h, 0, 0) : x.createLinearGradient(0, 0, w, 0);
+  stops.forEach((c, i) => g.addColorStop(i / (stops.length - 1), c)); x.fillStyle = g; x.fillRect(0, 0, w, h);
+});
+const loadTex = src => new Promise(r => new THREE.TextureLoader().load(src, t => { t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 16; r(t); }));
+const loadImg = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.src = src; });
+
+// background plane fixed to the camera (so glass has something to bend, and colours stay true)
+let cam;
+async function setupCamera(fov, pos, look) {
+  cam = new THREE.PerspectiveCamera(fov, W / H, 0.1, 500);
+  cam.position.set(...pos); cam.lookAt(...look);
+  const bg = await loadTex(`bg_${slide}.png`);
+  const d = 400, hh = 2 * d * Math.tan(THREE.MathUtils.degToRad(fov / 2)), ww = hh * W / H;
+  const plane = new THREE.Mesh(new THREE.PlaneGeometry(ww, hh), new THREE.MeshBasicMaterial({ map: bg, toneMapped: false, depthWrite: false }));
+  plane.position.set(0, 0, -d); plane.renderOrder = -10; cam.add(plane); scene.add(cam);
+}
+function shadowFloor(opacity) {
+  const g = new THREE.Mesh(new THREE.PlaneGeometry(200, 200), new THREE.ShadowMaterial({ opacity, depthWrite: false }));
+  g.rotation.x = -Math.PI / 2; g.receiveShadow = true; g.renderOrder = 5; scene.add(g); return g;
+}
+// a glossy-floor reflection: a mirrored copy whose materials fade out with depth below the floor
+function fadeMat(m, fade, strength) {
+  const c = m.clone(); c.transparent = true; c.depthWrite = false;
+  if (c.transmission) { c.transmission = 0; c.opacity = 1; }
+  c.onBeforeCompile = sh => {
+    sh.uniforms.uFade = { value: fade }; sh.uniforms.uStr = { value: strength };
+    sh.vertexShader = sh.vertexShader.replace('#include <common>', '#include <common>\nvarying float vWY;')
+      .replace('#include <project_vertex>', '#include <project_vertex>\nvWY = (modelMatrix * vec4(transformed, 1.0)).y;');
+    sh.fragmentShader = sh.fragmentShader.replace('#include <common>', '#include <common>\nvarying float vWY; uniform float uFade; uniform float uStr;')
+      .replace('#include <dithering_fragment>', '#include <dithering_fragment>\ngl_FragColor.a *= uStr * pow(1.0 - smoothstep(0.0, uFade, -vWY), 1.6);');
+  };
+  return c;
+}
+function reflect(obj, fade = 2.5, strength = 0.32) {
+  const r = obj.clone(true);
+  r.traverse(o => { if (o.isMesh) { o.castShadow = false; o.receiveShadow = false; o.material = Array.isArray(o.material) ? o.material.map(m => fadeMat(m, fade, strength)) : fadeMat(o.material, fade, strength); o.renderOrder = 1; } });
+  const holder = new THREE.Group(); holder.scale.y = -1; holder.add(r); scene.add(holder); return holder;
+}
+
+// ---------- 3D type from the real Inter Tight ExtraBold
+let FONT;
+async function font() { if (!FONT) { const buf = await (await fetch('node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff')).arrayBuffer(); FONT = opentype.parse(buf); } return FONT; }
+// bevelRatio: how far the bevel reaches sideways, as a share of its depth. Big numerals use a small ratio: a wide
+// sideways bevel spikes at the sharp inner corners of 6, 9, 0, $ and % and the glyph cuts through itself (V-I07,
+// Nov 11, 2026), and positive tracking keeps neighbouring glyphs from overlapping.
+async function text3D(str, { size = 4, depth = 1.0, bevel = 0.08, track = -0.04, bevelRatio = 0.7, front, side }) {
+  const f = await font();
+  const path = f.getPath(str, 0, 0, 100, { kerning: true, letterSpacing: track });
+  const sp = new THREE.ShapePath();
+  for (const c of path.commands) {
+    if (c.type === 'M') sp.moveTo(c.x, -c.y);
+    else if (c.type === 'L') sp.lineTo(c.x, -c.y);
+    else if (c.type === 'Q') sp.quadraticCurveTo(c.x1, -c.y1, c.x, -c.y);
+    else if (c.type === 'C') sp.bezierCurveTo(c.x1, -c.y1, c.x2, -c.y2, c.x, -c.y);
+  }
+  const shapes = sp.toShapes(false);
+  const k = size / 100;
+  const geo = new THREE.ExtrudeGeometry(shapes, { depth: depth / k, bevelEnabled: true, bevelThickness: bevel / k, bevelSize: bevel * bevelRatio / k, bevelSegments: 8, curveSegments: 32 });
+  geo.scale(k, k, k); geo.computeBoundingBox();
+  const bb = geo.boundingBox; geo.translate(-(bb.min.x + bb.max.x) / 2, -bb.min.y, -(bb.min.z + bb.max.z) / 2);
+  geo.computeBoundingBox(); geo.computeVertexNormals();
+  // planar UVs across the whole word, so the gradient runs left to right over every letter (front, bevel and sides)
+  const bb2 = geo.boundingBox, w = bb2.max.x - bb2.min.x, h = bb2.max.y - bb2.min.y;
+  const pos = geo.attributes.position, uv = geo.attributes.uv;
+  for (let i = 0; i < pos.count; i++) uv.setXY(i, (pos.getX(i) - bb2.min.x) / w, (pos.getY(i) - bb2.min.y) / h);
+  uv.needsUpdate = true;
+  const m = new THREE.Mesh(geo, [front, side]); m.castShadow = true; m.receiveShadow = true;
+  return m;
+}
+const candyFront = (stops = HOLO) => { const t = gradTex(stops); return new THREE.MeshPhysicalMaterial({ map: t, emissive: 0xffffff, emissiveMap: t, emissiveIntensity: P('emi', 0.22), roughness: 0.28, metalness: 0.0, clearcoat: 1, clearcoatRoughness: 0.05, iridescence: 0.35, iridescenceIOR: 1.4, iridescenceThicknessRange: [200, 700] }); };
+const pearlSide = () => new THREE.MeshPhysicalMaterial({ color: 0xe9e6ff, roughness: 0.16, metalness: 0.3, clearcoat: 1, clearcoatRoughness: 0.04, iridescence: 1, iridescenceIOR: 1.6, iridescenceThicknessRange: [320, 1000], sheen: 0.6, sheenColor: new THREE.Color(0xc9b8ff), sheenRoughness: 0.35 });
+const glass = (o = {}) => new THREE.MeshPhysicalMaterial(Object.assign({ color: 0xffffff, roughness: 0.04, transmission: 1, thickness: 1.0, ior: 1.5, iridescence: 0.7, iridescenceIOR: 1.4, iridescenceThicknessRange: [180, 820], clearcoat: 1, clearcoatRoughness: 0.03, attenuationColor: new THREE.Color(0x9a8cff), attenuationDistance: 2.4 }, o));
+
+// =====================================================================
+const jelly = (stops = HOLO, o = {}) => { const t = gradTex(stops); return new THREE.MeshPhysicalMaterial(Object.assign({ map: t, roughness: 0.12, transmission: P('jt', 0.38), thickness: 2.5, ior: 1.45, attenuationColor: new THREE.Color(0x6a3dff), attenuationDistance: 1.2, clearcoat: 1, clearcoatRoughness: 0.03, iridescence: 0.5, iridescenceThicknessRange: [200, 700] }, o)); };
+const pearl = (o = {}) => new THREE.MeshPhysicalMaterial(Object.assign({ color: 0xf1efff, roughness: 0.2, metalness: 0.25, clearcoat: 1, clearcoatRoughness: 0.04, iridescence: 1, iridescenceIOR: 1.6, iridescenceThicknessRange: [320, 1100], sheen: 0.5, sheenColor: new THREE.Color(0xd2c4ff), sheenRoughness: 0.4 }, o));
+// project a world point to 1080x1350 slide coordinates (for the text overlay)
+const toSlide = v => { const p = v.clone().project(cam); return [Math.round((p.x * 0.5 + 0.5) * 1080), Math.round((-p.y * 0.5 + 0.5) * 1350)]; };
+function planarUV(geo) {
+  geo.computeBoundingBox(); const b = geo.boundingBox, w = b.max.x - b.min.x, h = b.max.y - b.min.y;
+  const pos = geo.attributes.position, uv = geo.attributes.uv;
+  for (let i = 0; i < pos.count; i++) uv.setXY(i, (pos.getX(i) - b.min.x) / w, (pos.getY(i) - b.min.y) / h);
+  uv.needsUpdate = true;
+}
+function sector(R, a0, a1, depth, bevel) {
+  const sh = new THREE.Shape(); sh.moveTo(0, 0); sh.absarc(0, 0, R, a0, a1, false); sh.lineTo(0, 0);
+  const g = new THREE.ExtrudeGeometry(sh, { depth, bevelEnabled: true, bevelThickness: bevel, bevelSize: bevel * 0.8, bevelSegments: 10, curveSegments: 160 });
+  g.translate(0, 0, -depth / 2); planarUV(g); g.computeVertexNormals(); return g;
+}
+function numerals(str, size, ry) {
+  return text3D(str, { size, depth: 1.8, bevel: 0.3, bevelRatio: 0.25, track: P('tr', 0.1), front: jelly(), side: jelly() }).then(t => { t.rotation.y = ry; return t; });
+}
+// ---------- one coin design used across the carousel
+const silver = () => new THREE.MeshPhysicalMaterial({ color: 0xeeeeff, metalness: 1.0, roughness: P('cr', 0.17), iridescence: 1, iridescenceIOR: 1.7, iridescenceThicknessRange: [260, 900], clearcoat: 1, clearcoatRoughness: 0.04 });
+const coinGeoCache = {};
+function disc(R, depth, bevel) {   // a whole coin body from a plain circle: sector() starts at the centre, which leaves a seam on the face
+  const sh = new THREE.Shape(); sh.absarc(0, 0, R, 0, Math.PI * 2, false);
+  const g = new THREE.ExtrudeGeometry(sh, { depth, bevelEnabled: true, bevelThickness: bevel, bevelSize: bevel * 0.8, bevelSegments: 10, curveSegments: 160 });
+  g.translate(0, 0, -depth / 2); planarUV(g); g.computeVertexNormals(); return g;
+}
+function coinBody(R, D) { const k = R + ':' + D; if (!coinGeoCache[k]) coinGeoCache[k] = disc(R, D, Math.min(0.18, D * 0.3)); return coinGeoCache[k]; }
+async function coin(R, D, bodyMat, dollarMat, faces = 2) {
+  const g = new THREE.Group();
+  const b = new THREE.Mesh(coinBody(R, D), bodyMat); b.castShadow = true; b.receiveShadow = true; g.add(b);
+  // a raised rim ring on each face
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(R * 0.86, R * 0.035, 16, 160), dollarMat);
+  for (let f = 0; f < faces; f++) {
+    const z = (f ? -1 : 1) * (D / 2 + Math.min(0.18, D * 0.3) * 0.9);
+    const r2 = ring.clone(); r2.position.z = z; g.add(r2);
+    const d = await text3D('$', { size: R * 1.05, depth: R * 0.05, bevel: R * 0.018, front: dollarMat, side: dollarMat });
+    d.geometry.computeBoundingBox(); const h = d.geometry.boundingBox.max.y;
+    d.position.set(0, -h / 2, z); if (f) { d.rotation.y = Math.PI; } d.castShadow = true; g.add(d);
+  }
+  return g;
+}
+
+// ---------- Nov 11, 2026 post (FTC and Washington v. Riverside Payments)
+// Numerals: a deep extrusion (chunky, like the Nov 4 deck) with a narrow bevel and tracking 0.16, so no glyph cuts
+// through itself or its neighbour (V-I07); each number is scaled to a set width so it never crowds the text.
+const gloss = () => jelly(HOLO, { roughness: P('rg', 0.18), clearcoatRoughness: P('ccr', 0.12), iridescence: 0.6 });   // Nov 12: softer clearcoat, so studio reflections don't draw crisp edges across the faces (R-N01)   // the Nov 4 jelly, a touch shinier
+// Each glyph is extruded on its own and placed with the same gap between neighbouring glyph boxes, so the spacing
+// reads even ("5" and "0" were crowded with font kerning); baselines stay shared, and the gradient runs across the word.
+async function fitNumerals(str, width, ry = 0) {
+  const f = await font(); const depth = P('dp', 1.6), bevel = P('bv', 0.4), ratio = P('br', 0.015), gap = P('gap', 13);   // Nov 12: br 0.18 -> 0.015, so the bevel's sideways reach (0.15 font units) stays under the thinnest strokes (R-D01) and the front-to-side turn is one crisp crease (R-N01)   // font units (size 100)
+  const geos = []; let x = 0;
+  for (const ch of str) {
+    const path = f.getPath(ch, 0, 0, 100); const sp = new THREE.ShapePath();
+    for (const c of path.commands) {
+      if (c.type === 'M') sp.moveTo(c.x, -c.y); else if (c.type === 'L') sp.lineTo(c.x, -c.y);
+      else if (c.type === 'Q') sp.quadraticCurveTo(c.x1, -c.y1, c.x, -c.y); else if (c.type === 'C') sp.bezierCurveTo(c.x1, -c.y1, c.x2, -c.y2, c.x, -c.y);
+    }
+    const g = new THREE.ExtrudeGeometry(sp.toShapes(false), { depth: depth * 25, bevelEnabled: P('bev', 0) > 0, bevelThickness: bevel * 25, bevelSize: bevel * ratio * 25, bevelSegments: 8, curveSegments: 32 });   // Nov 12: no bevel; its sub-pixel strips left isolated pixels in the id pass (R-Z04)
+    g.computeBoundingBox(); const bb = g.boundingBox; g.translate(x - bb.min.x, 0, 0); x += (bb.max.x - bb.min.x) + gap; geos.push(g);
+  }
+  const all = new THREE.Box3(); geos.forEach(g => { g.computeBoundingBox(); all.union(g.boundingBox); });
+  const W0 = all.max.x - all.min.x, H0 = all.max.y - all.min.y, k = width / W0;
+  const grp = new THREE.Group(); const mat = gloss();
+  for (const g of geos) {
+    g.translate(-(all.min.x + all.max.x) / 2, -all.min.y, -(all.min.z + all.max.z) / 2);
+    const pos = g.attributes.position, uv = g.attributes.uv;
+    for (let i = 0; i < pos.count; i++) uv.setXY(i, (pos.getX(i) + W0 / 2) / W0, pos.getY(i) / H0);
+    uv.needsUpdate = true; g.computeVertexNormals();
+    const m = new THREE.Mesh(g, mat); m.castShadow = true; m.receiveShadow = true; grp.add(m);
+  }
+  grp.scale.setScalar(k); grp.rotation.y = ry; return grp;
+}
+function bounds(obj) {   // the object's box on the 1080x1350 slide, for checking text clearance
+  scene.updateMatrixWorld(true); const b = new THREE.Box3().setFromObject(obj); const pts = [];
+  for (const x of [b.min.x, b.max.x]) for (const y of [b.min.y, b.max.y]) for (const z of [b.min.z, b.max.z]) pts.push(toSlide(new THREE.Vector3(x, y, z)));
+  return { x0: Math.min(...pts.map(p => p[0])), x1: Math.max(...pts.map(p => p[0])), y0: Math.min(...pts.map(p => p[1])), y1: Math.max(...pts.map(p => p[1])) };
+}
+async function numberSlide(str, width, look, ry) {
+  await setupCamera(26, [0, P('cy', 6.2), 40], [0, look, 0]);
+  const t = await fitNumerals(str, P('w', width), P('ry', ry)); scene.add(t);
+  reflect(t, P('rf', 1.1), P('rs', 0.12)); shadowFloor(0.2);   // a short, faint reflection: the text below never sits on it
+  aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
+  window.__info = { box: bounds(t) };
+}
+// ---------- Nov 12, 2026 post (Visa and Mastercard swipe-fee settlement, final approval hearing Nov 16)
+// 3D only on numerals (digits, $, %, comma, decimal point inside a number); every glyph extruded on its own with an
+// even gap (fitNumerals). Turned about 0.2 rad: past the camera's perspective angle (~0.11 rad at the outer glyphs), so
+// only one side wall of each glyph and counter shows, and it is thick enough to read (T-D04 slivers at 0.08).
+async function numberAt(str, width, look, ry, tx = 0) {
+  await setupCamera(26, [0, P('cy', 6.2), 40], [0, P('look', look), 0]);
+  const t = await fitNumerals(str, P('w', width), P('ry', ry)); t.position.x = P('tx', tx); scene.add(t);
+  reflect(t, P('rf', 1.1), P('rs', 0.12)); shadowFloor(0.2);
+  aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
+  window.__info = { box: bounds(t) };
+}
+const s1 = () => numberAt('2005', 9.6, 2.0, 0.22);    // the year merchants sued
+const s3 = () => numberAt('$10', 7.4, 2.0, 0.22);    // per $10,000 of credit card sales ("$0.10" reads as a "$0" claim to MC-K01)
+const s4 = () => numberAt('$500', 8.8, 2.0, 0.22);    // the worked example, a year
+const s8 = () => numberAt('0%', 6.0, 2.0, 0.22);     // processing fees on SVPay payments
+
+await ({ 1: s1, 3: s3, 4: s4, 8: s8 })[slide]();
+renderer.render(scene, cam);
+window.__done = true;
+</script>
+</body></html>

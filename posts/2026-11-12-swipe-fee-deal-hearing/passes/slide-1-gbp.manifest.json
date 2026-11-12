@@ -1,0 +1,1187 @@
+{
+ "size": [
+  2160,
+  2700
+ ],
+ "text": [
+  {
+   "id": 0,
+   "mids": [
+    "0"
+   ],
+   "role": "headline",
+   "text": "Card fees could drop",
+   "lines": [
+    {
+     "text": "Card fees could drop",
+     "x": 144,
+     "y": 886,
+     "w": 1613.53125,
+     "h": 194,
+     "chars": [
+      [
+       "C",
+       144,
+       886,
+       120.4,
+       194
+      ],
+      [
+       "a",
+       264.4,
+       886,
+       93.2,
+       194
+      ],
+      [
+       "r",
+       357.5,
+       886,
+       61.6,
+       194
+      ],
+      [
+       "d",
+       419.1,
+       886,
+       100.8,
+       194
+      ],
+      [
+       "f",
+       553,
+       886,
+       59.5,
+       194
+      ],
+      [
+       "e",
+       612.5,
+       886,
+       95,
+       194
+      ],
+      [
+       "e",
+       707.4,
+       886,
+       94.9,
+       194
+      ],
+      [
+       "s",
+       802.3,
+       886,
+       90.8,
+       194
+      ],
+      [
+       "c",
+       926.2,
+       886,
+       94.1,
+       194
+      ],
+      [
+       "o",
+       1020.3,
+       886,
+       97.8,
+       194
+      ],
+      [
+       "u",
+       1118.1,
+       886,
+       100.4,
+       194
+      ],
+      [
+       "l",
+       1218.5,
+       886,
+       44.2,
+       194
+      ],
+      [
+       "d",
+       1262.6,
+       886,
+       100.8,
+       194
+      ],
+      [
+       "d",
+       1396.6,
+       886,
+       100.8,
+       194
+      ],
+      [
+       "r",
+       1497.4,
+       886,
+       61.6,
+       194
+      ],
+      [
+       "o",
+       1558.9,
+       886,
+       97.8,
+       194
+      ],
+      [
+       "p",
+       1656.8,
+       886,
+       100.8,
+       194
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 886,
+    "w": 1613.53125,
+    "h": 194
+   },
+   "container": {
+    "x": 144,
+    "y": 902,
+    "w": 1880,
+    "h": 163.1875
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 160,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "0",
+     "text": "Card fees could drop",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 160,
+     "letter_spacing": 3.2,
+     "line_height": 163.2,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 1,
+   "mids": [
+    "1",
+    "2"
+   ],
+   "role": "headline",
+   "text": "per $10,000 of credit card sales.",
+   "lines": [
+    {
+     "text": "per $10,000 of credit card sales.",
+     "x": 144,
+     "y": 1730,
+     "w": 1774.5,
+     "h": 136,
+     "chars": [
+      [
+       "p",
+       144,
+       1730,
+       70.6,
+       136
+      ],
+      [
+       "e",
+       214.5,
+       1730,
+       66.5,
+       136
+      ],
+      [
+       "r",
+       281,
+       1730,
+       46.3,
+       136
+      ],
+      [
+       "$",
+       350.5,
+       1730,
+       73.1,
+       136
+      ],
+      [
+       "1",
+       423.5,
+       1730,
+       48.7,
+       136
+      ],
+      [
+       "0",
+       472.2,
+       1730,
+       75.1,
+       136
+      ],
+      [
+       ",",
+       547.3,
+       1730,
+       37.3,
+       136
+      ],
+      [
+       "0",
+       584.5,
+       1730,
+       78.6,
+       136
+      ],
+      [
+       "0",
+       663,
+       1730,
+       78.6,
+       136
+      ],
+      [
+       "0",
+       741.5,
+       1730,
+       78.6,
+       136
+      ],
+      [
+       "o",
+       843.3,
+       1730,
+       68.5,
+       136
+      ],
+      [
+       "f",
+       911.8,
+       1730,
+       43.6,
+       136
+      ],
+      [
+       "c",
+       978.6,
+       1730,
+       65.9,
+       136
+      ],
+      [
+       "r",
+       1044.4,
+       1730,
+       43.1,
+       136
+      ],
+      [
+       "e",
+       1087.5,
+       1730,
+       66.5,
+       136
+      ],
+      [
+       "d",
+       1154,
+       1730,
+       70.6,
+       136
+      ],
+      [
+       "i",
+       1224.5,
+       1730,
+       30.9,
+       136
+      ],
+      [
+       "t",
+       1255.4,
+       1730,
+       43.6,
+       136
+      ],
+      [
+       "c",
+       1322.2,
+       1730,
+       65.9,
+       136
+      ],
+      [
+       "a",
+       1388,
+       1730,
+       65.2,
+       136
+      ],
+      [
+       "r",
+       1453.2,
+       1730,
+       43.1,
+       136
+      ],
+      [
+       "d",
+       1496.3,
+       1730,
+       70.6,
+       136
+      ],
+      [
+       "s",
+       1590.1,
+       1730,
+       63.5,
+       136
+      ],
+      [
+       "a",
+       1653.6,
+       1730,
+       65.2,
+       136
+      ],
+      [
+       "l",
+       1718.8,
+       1730,
+       30.9,
+       136
+      ],
+      [
+       "e",
+       1749.7,
+       1730,
+       66.5,
+       136
+      ],
+      [
+       "s",
+       1816.1,
+       1730,
+       63.5,
+       136
+      ],
+      [
+       ".",
+       1879.6,
+       1730,
+       38.9,
+       136
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 1730,
+    "w": 1774.5,
+    "h": 136
+   },
+   "container": {
+    "x": 144,
+    "y": 1742,
+    "w": 1880,
+    "h": 114.21875
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 112,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "1",
+     "text": "per  of credit card sales.",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 112,
+     "letter_spacing": 2.24,
+     "line_height": 114.24,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "2",
+     "text": "$10,000",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 112,
+     "letter_spacing": 2.24,
+     "line_height": 114.24,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 2,
+   "mids": [
+    "3"
+   ],
+   "role": "body",
+   "text": "If a judge approves the Visa and Mastercard deal on Monday.",
+   "lines": [
+    {
+     "text": "If a judge approves the Visa and Mastercard deal on Monday.",
+     "x": 144,
+     "y": 2126,
+     "w": 1751.96875,
+     "h": 72,
+     "chars": [
+      [
+       "I",
+       144,
+       2126,
+       16.4,
+       72
+      ],
+      [
+       "f",
+       160.3,
+       2126,
+       22.8,
+       72
+      ],
+      [
+       "a",
+       199.1,
+       2126,
+       34.1,
+       72
+      ],
+      [
+       "j",
+       249.2,
+       2126,
+       15.2,
+       72
+      ],
+      [
+       "u",
+       264.3,
+       2126,
+       36.1,
+       72
+      ],
+      [
+       "d",
+       300.4,
+       2126,
+       37.1,
+       72
+      ],
+      [
+       "g",
+       337.5,
+       2126,
+       37.2,
+       72
+      ],
+      [
+       "e",
+       374.6,
+       2126,
+       35.3,
+       72
+      ],
+      [
+       "a",
+       425.9,
+       2126,
+       34.1,
+       72
+      ],
+      [
+       "p",
+       459.9,
+       2126,
+       37.1,
+       72
+      ],
+      [
+       "p",
+       497,
+       2126,
+       37.1,
+       72
+      ],
+      [
+       "r",
+       534.1,
+       2126,
+       22.1,
+       72
+      ],
+      [
+       "o",
+       556.2,
+       2126,
+       35.1,
+       72
+      ],
+      [
+       "v",
+       591.3,
+       2126,
+       33.4,
+       72
+      ],
+      [
+       "e",
+       624.6,
+       2126,
+       35.3,
+       72
+      ],
+      [
+       "s",
+       659.9,
+       2126,
+       32.3,
+       72
+      ],
+      [
+       "t",
+       708.2,
+       2126,
+       20.5,
+       72
+      ],
+      [
+       "h",
+       728.7,
+       2126,
+       36.1,
+       72
+      ],
+      [
+       "e",
+       764.8,
+       2126,
+       35.3,
+       72
+      ],
+      [
+       "V",
+       816,
+       2126,
+       42.6,
+       72
+      ],
+      [
+       "i",
+       858.5,
+       2126,
+       15.2,
+       72
+      ],
+      [
+       "s",
+       873.7,
+       2126,
+       32.3,
+       72
+      ],
+      [
+       "a",
+       906,
+       2126,
+       34.1,
+       72
+      ],
+      [
+       "a",
+       956,
+       2126,
+       34.1,
+       72
+      ],
+      [
+       "n",
+       990.1,
+       2126,
+       36.1,
+       72
+      ],
+      [
+       "d",
+       1026.2,
+       2126,
+       37.1,
+       72
+      ],
+      [
+       "M",
+       1079.3,
+       2126,
+       54.8,
+       72
+      ],
+      [
+       "a",
+       1134,
+       2126,
+       34.1,
+       72
+      ],
+      [
+       "s",
+       1168.1,
+       2126,
+       32.3,
+       72
+      ],
+      [
+       "t",
+       1200.4,
+       2126,
+       19.8,
+       72
+      ],
+      [
+       "e",
+       1220.3,
+       2126,
+       35.3,
+       72
+      ],
+      [
+       "r",
+       1255.5,
+       2126,
+       22.1,
+       72
+      ],
+      [
+       "c",
+       1277.6,
+       2126,
+       35.3,
+       72
+      ],
+      [
+       "a",
+       1312.8,
+       2126,
+       34.1,
+       72
+      ],
+      [
+       "r",
+       1346.8,
+       2126,
+       22.1,
+       72
+      ],
+      [
+       "d",
+       1368.9,
+       2126,
+       37.1,
+       72
+      ],
+      [
+       "d",
+       1422,
+       2126,
+       37.1,
+       72
+      ],
+      [
+       "e",
+       1459.1,
+       2126,
+       35.8,
+       72
+      ],
+      [
+       "a",
+       1494.9,
+       2126,
+       34.1,
+       72
+      ],
+      [
+       "l",
+       1529,
+       2126,
+       15.2,
+       72
+      ],
+      [
+       "o",
+       1560.1,
+       2126,
+       36.3,
+       72
+      ],
+      [
+       "n",
+       1596.3,
+       2126,
+       36.1,
+       72
+      ],
+      [
+       "M",
+       1648.4,
+       2126,
+       54.8,
+       72
+      ],
+      [
+       "o",
+       1703.2,
+       2126,
+       36.3,
+       72
+      ],
+      [
+       "n",
+       1739.4,
+       2126,
+       36.1,
+       72
+      ],
+      [
+       "d",
+       1775.5,
+       2126,
+       37.1,
+       72
+      ],
+      [
+       "a",
+       1812.6,
+       2126,
+       33.2,
+       72
+      ],
+      [
+       "y",
+       1845.8,
+       2126,
+       32,
+       72
+      ],
+      [
+       ".",
+       1877.8,
+       2126,
+       18.2,
+       72
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 2126,
+    "w": 1751.96875,
+    "h": 72
+   },
+   "container": {
+    "x": 144,
+    "y": 2120,
+    "w": 1800,
+    "h": 84
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 60,
+   "family": "Inter",
+   "weight": 500,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "3",
+     "text": "If a judge approves the Visa and Mastercard deal on Monday.",
+     "family": "Inter",
+     "weight": 500,
+     "style": "normal",
+     "size": 60,
+     "letter_spacing": 0,
+     "line_height": 84,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 3,
+   "mids": [
+    "4"
+   ],
+   "role": "footer",
+   "text": "www.svpay.app",
+   "lines": [
+    {
+     "text": "www.svpay.app",
+     "x": 1664.15625,
+     "y": 2502,
+     "w": 351.84375,
+     "h": 58,
+     "chars": [
+      [
+       "w",
+       1664.2,
+       2502,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1702.9,
+       2502,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1741.7,
+       2502,
+       35.3,
+       58
+      ],
+      [
+       ".",
+       1776.9,
+       2502,
+       14.2,
+       58
+      ],
+      [
+       "s",
+       1791,
+       2502,
+       24.9,
+       58
+      ],
+      [
+       "v",
+       1815.9,
+       2502,
+       26.1,
+       58
+      ],
+      [
+       "p",
+       1842,
+       2502,
+       28.2,
+       58
+      ],
+      [
+       "a",
+       1870.2,
+       2502,
+       25.1,
+       58
+      ],
+      [
+       "y",
+       1895.2,
+       2502,
+       24.3,
+       58
+      ],
+      [
+       ".",
+       1919.5,
+       2502,
+       14.2,
+       58
+      ],
+      [
+       "a",
+       1933.6,
+       2502,
+       26,
+       58
+      ],
+      [
+       "p",
+       1959.6,
+       2502,
+       28.3,
+       58
+      ],
+      [
+       "p",
+       1987.8,
+       2502,
+       28.2,
+       58
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1664.15625,
+    "y": 2502,
+    "w": 351.84375,
+    "h": 58
+   },
+   "container": {
+    "x": 1664.15625,
+    "y": 2508,
+    "w": 351.84375,
+    "h": 48
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 2700
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 48,
+   "family": "\"Inter Tight\"",
+   "weight": 700,
+   "color": "rgb(30, 39, 70)",
+   "runs": [
+    {
+     "mid": "4",
+     "text": "www.svpay.app",
+     "family": "\"Inter Tight\"",
+     "weight": 700,
+     "style": "normal",
+     "size": 48,
+     "letter_spacing": -0.48,
+     "line_height": 48,
+     "color": "rgb(30, 39, 70)",
+     "fill": "rgb(30, 39, 70)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  }
+ ],
+ "panels": [],
+ "images": [
+  {
+   "src": "hero_3.png",
+   "cls": "hero",
+   "complete": true,
+   "natural": [
+    2160,
+    2700
+   ],
+   "x": 0,
+   "y": 0,
+   "w": 2160,
+   "h": 2700
+  },
+  {
+   "src": "svpay-logo.png",
+   "cls": "logo",
+   "complete": true,
+   "natural": [
+    1774,
+    759
+   ],
+   "x": 144,
+   "y": 2448,
+   "w": 355.25,
+   "h": 152
+  }
+ ],
+ "svgs": [],
+ "hero": "hero_3.png",
+ "fonts": {
+  "status": "loaded",
+  "faces": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "status": "loaded"
+   }
+  ],
+  "files": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "src": "node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2"
+   }
+  ]
+ },
+ "images_complete": true,
+ "slide": "slide-1-gbp",
+ "section": "s1G",
+ "file": "slides-swipefee.html",
+ "failed_requests": [],
+ "capture": {
+  "scale": 2,
+  "viewport": [
+   1080,
+   1400
+  ],
+  "width": 2160,
+  "height": 2700,
+  "chromium": "153.0.8010.12",
+  "fonts_ready_before_capture": true
+ }
+}

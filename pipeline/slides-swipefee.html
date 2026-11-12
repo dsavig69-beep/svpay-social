@@ -1,0 +1,191 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>SVPay swipe-fee hearing deck</title>
+<style>
+@font-face{font-family:"Inter Tight";font-weight:600;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:700;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:800;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:500;src:url(node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:600;src:url(node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;src:url(node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2) format("woff2")}
+:root{
+  --ink:#0A1230; --ink2:#1E2746; --ink3:#2E3756;
+  --holo-ink:linear-gradient(100deg,#0B2FD6 0%,#2A1FCB 40%,#5A1BB8 75%,#8A1490 100%);
+  --hot:linear-gradient(100deg,#B80F55,#A3127A 55%,#7A1AAE);
+  --holo:linear-gradient(100deg,#0F3DFF 0%,#3B2BFF 30%,#7A2DFF 60%,#D23BD0 82%,#FF3F98 100%);
+  --glass:rgba(255,255,255,.66); --glass-line:rgba(255,255,255,.95);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#E9ECF5;font-family:"Inter",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:#F6F7FC;margin:0 0 40px}
+.hero{position:absolute;inset:0;width:1080px;height:1350px;display:block}
+.abs{position:absolute}
+.top{position:absolute;left:72px;right:72px;top:60px;height:58px;display:flex;align-items:center;justify-content:space-between}
+.chip{display:flex;align-items:center;gap:16px;height:58px;padding:0 24px;border-radius:999px}
+.chip span{font:600 21px/1 "Inter";letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+.tag{display:flex;align-items:center;gap:14px;font:600 22px/1 "Inter";letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.tag i{width:13px;height:13px;border-radius:50%;background:var(--holo);box-shadow:0 0 0 6px rgba(35,80,255,.13)}
+.count{font:700 22px/1 "Inter Tight";letter-spacing:.06em;color:var(--ink3)}
+.count b{color:var(--ink)}
+.glass{background:var(--glass);border:2px solid var(--glass-line);
+  box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 30px 70px -30px rgba(40,50,150,.34),0 8px 24px -12px rgba(40,50,150,.2);
+  backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%)}
+.d{font-family:"Inter Tight";font-weight:800;letter-spacing:.02em;line-height:1.02;color:var(--ink)}
+.serif{font-family:"Instrument Serif";font-style:italic;font-weight:400;letter-spacing:0;color:#1631B8}
+.kick{font:600 20px/1 "Inter";letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
+.holo{background:var(--holo-ink);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-right:.04em}
+.hot{background:var(--hot);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-right:.04em}
+.body{font:500 30px/1.4 "Inter";color:var(--ink2)}
+.src{font:500 19px/1.4 "Inter";color:#141B38}
+.src b{font-weight:600;color:var(--ink2)}
+.logo{position:absolute;left:72px;bottom:50px;height:76px;width:auto;display:block}
+.url{position:absolute;right:72px;bottom:72px;font:700 24px/1 "Inter Tight";letter-spacing:-.01em;color:var(--ink2)}
+.pill{display:inline-flex;align-items:center;gap:12px;height:62px;padding:0 26px;border-radius:999px;font:600 24px/1 "Inter";color:var(--ink)}
+.ul{list-style:none;margin:0;padding:0}
+.ul li{display:flex;gap:20px;align-items:flex-start;font:600 31px/1.3 "Inter";color:var(--ink);margin-top:30px}
+.ul li:first-child{margin-top:0}
+.ul li b{flex:none;width:46px;height:46px;border-radius:50%;background:var(--holo);color:#fff;font:800 23px/46px "Inter Tight";text-align:center;margin-top:-3px}
+.nw{white-space:nowrap}
+.exl{display:inline-flex;align-items:center;height:50px;padding:0 22px;border-radius:999px;font:700 22px/1 "Inter";letter-spacing:.12em;text-transform:uppercase;color:#0A1230}
+</style>
+<script>
+// Text above and below each 3D numeral follows the numeral's box from run3d.js (info_N.json): [data-above="N"] ends
+// GAP px above the box, [data-below="N"] starts GAP px below it, so no text ever sits on the glyphs or their reflection.
+window.place = (I3, A) => {
+  const GAP = 34;
+  for (const e of document.querySelectorAll('[data-above]')) { const b = A[e.dataset.above]; if (!b) continue; const box = b.box; e.style.top = (box.y0 - GAP - e.offsetHeight) + 'px'; }
+  for (const e of document.querySelectorAll('[data-below]')) { const b = A[e.dataset.below]; if (!b) continue; const box = b.box; e.style.top = (box.y1 + GAP + (+e.dataset.extra || 0)) + 'px'; }
+};
+</script>
+</head><body>
+
+<!-- 1 · HOOK (story): the case began in 2005; the judge weighs the deal Monday -->
+<section class="slide" id="s1">
+<img class="hero" src="hero_1.png" alt="">
+<div class="top"><div class="chip glass"><span>Swipe-fee case</span></div><div class="count"><b>1</b> / 8</div></div>
+<div class="abs d" data-above="1" style="left:72px;top:200px;font-size:74px;width:940px">Merchants sued Visa and Mastercard over card fees in</div>
+<div class="abs d" data-below="1" style="left:72px;top:900px;font-size:52px;width:940px;line-height:1.08">On Monday, a judge weighs final approval of the proposed settlement.</div>
+<div class="abs src" style="left:76px;top:1112px;width:600px"><b>Source:</b> Payments Dive, Jun 9 and Oct 16, 2026. SVPay is not affiliated with Visa or Mastercard.</div>
+<div class="abs pill glass" style="right:72px;top:1112px;gap:14px">What it means <svg width="26" height="26" viewBox="0 0 24 24" fill="none" style="display:block"><path d="M4 12h15M13 5.5 19.5 12 13 18.5" stroke="#3B2BFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 2 · WHAT WOULD CHANGE: four terms, in plain words -->
+<section class="slide" id="s2">
+<img class="hero" src="bg_2.png" alt="">
+<div class="top"><div class="tag"><i></i>If the judge approves</div><div class="count"><b>2</b> / 8</div></div>
+<div class="abs d" style="left:72px;top:176px;font-size:92px">What would<br><span class="holo">change</span></div>
+<div class="abs glass" style="left:72px;top:430px;width:936px;padding:44px 42px;border-radius:32px">
+ <ul class="ul">
+  <li><b>1</b><span>Credit card swipe fees: <span class="nw">0.1 point</span> lower for 5 years</span></li>
+  <li><b>2</b><span>Standard consumer cards: a <span class="nw">1.25% rate</span> for 8 years</span></li>
+  <li><b>3</b><span>The right to refuse some premium and commercial cards</span></li>
+  <li><b>4</b><span>More room to surcharge or discount credit cards</span></li>
+ </ul>
+</div>
+<div class="abs src" style="left:76px;top:1112px;width:640px"><b>Sources:</b> Payments Dive, Jun 9 and Oct 16, 2026; Reuters, Jun 10, 2026. Proposed terms, not final.</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 3 · IN PLAIN MONEY: 0.1 point is $0.10 per $100 -->
+<section class="slide" id="s3">
+<img class="hero" src="hero_3.png" alt="">
+<div class="top"><div class="tag"><i></i>In plain money</div><div class="count"><b>3</b> / 8</div></div>
+<div class="abs" data-above="3" style="left:72px;top:250px;width:940px">
+ <div class="serif" style="font-size:62px;color:#0E1C78">The cut of 0.1 percentage point is</div>
+</div>
+<div class="abs" data-below="3" style="left:72px;top:900px;width:940px">
+ <div class="d" style="font-size:56px">less on every <span class="nw">$10,000</span> of credit card sales.</div>
+ <div class="body" style="margin-top:18px;color:var(--ink)">For 5 years, if the full cut reaches your rate.</div>
+</div>
+<div class="abs src" style="left:76px;top:1112px;width:640px"><b>Source:</b> Payments Dive, Oct 16, 2026. The math: 0.1 percentage point of $10,000 = $10.</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 4 · EXAMPLE: $500,000 in credit card sales, 0.1 point, a year -->
+<section class="slide" id="s4">
+<img class="hero" src="hero_4.png" alt="">
+<div class="top"><div class="tag"><i></i>What it could mean</div><div class="count"><b>4</b> / 8</div></div>
+<div class="abs" data-above="4" style="left:72px;top:200px;width:940px">
+ <div class="exl glass">Example</div>
+ <div class="d" style="font-size:58px;margin-top:22px">A shop with <span class="nw">$500,000</span> a year in credit card sales would pay about</div>
+</div>
+<div class="abs" data-below="4" style="left:72px;top:900px;width:940px">
+ <div class="d" style="font-size:64px">less a year.</div>
+ <div class="body" style="margin-top:16px;color:var(--ink);font-weight:600">Say the rate goes from <span class="nw">2.5%</span> to <span class="nw">2.4%</span>: <span class="nw">$500,000</span> × <span class="nw">0.1 percentage point</span> = <span class="nw">$500</span> a year</div>
+</div>
+<div class="abs src" style="left:76px;top:1112px;width:620px">Example only: assumes the full cut reaches the shop’s rate. <b>Source:</b> Payments Dive, Oct 16, 2026.</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 5 · THE OTHER SIDE: objectors, and the networks -->
+<section class="slide" id="s5">
+<img class="hero" src="bg_5.png" alt="">
+<div class="top"><div class="tag"><i></i>The fight</div><div class="count"><b>5</b> / 8</div></div>
+<div class="abs d" style="left:72px;top:190px;font-size:150px;line-height:1"><span class="holo nw">About 1,000</span></div>
+<div class="abs d" style="left:72px;top:370px;font-size:70px;width:940px">objectors asked the judge to say no.</div>
+<div class="abs body" style="left:72px;top:590px;width:900px;font-size:33px;color:var(--ink)">Walmart is one of them. Merchant groups say the cut would only take the average rate back to its 2023 level.</div>
+<div class="abs glass" style="left:72px;top:800px;width:936px;padding:30px 36px;border-radius:28px">
+ <div class="kick" style="font-size:18px">The other side</div>
+ <div style="font:600 31px/1.32 Inter;color:var(--ink);margin-top:12px">Visa and Mastercard are urging the court to approve the deal.</div>
+</div>
+<div class="abs src" style="left:76px;top:1112px;width:640px"><b>Sources:</b> Payments Dive, Sept 15 and Oct 16, 2026; Merchants Payments Coalition, Sept 14, 2026.</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 6 · ASK YOUR PROCESSOR -->
+<section class="slide" id="s6">
+<img class="hero" src="bg_6.png" alt="">
+<div class="top"><div class="tag"><i></i>Ask your processor</div><div class="count"><b>6</b> / 8</div></div>
+<div class="abs d" style="left:72px;top:176px;font-size:88px">Three questions<br><span class="holo">for this week</span></div>
+<div class="abs glass" style="left:72px;top:430px;width:936px;padding:44px 42px;border-radius:32px">
+ <ul class="ul">
+  <li style="font-size:33px"><b>1</b><span>If the cut is approved, will my rate drop by the full <span class="nw">0.1 point?</span></span></li>
+  <li style="font-size:33px;margin-top:36px"><b>2</b><span>Does my rate move when Visa and Mastercard change their fees?</span></li>
+  <li style="font-size:33px;margin-top:36px"><b>3</b><span>Which card types cost me the most each month?</span></li>
+ </ul>
+</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 7 · YOUR CALL: one question -->
+<section class="slide" id="s7">
+<img class="hero" src="bg_7.png" alt="">
+<div class="top"><div class="tag"><i></i>Your call</div><div class="count"><b>7</b> / 8</div></div>
+<div class="abs d" style="left:72px;top:250px;font-size:98px;width:940px">Would you turn down <span class="holo">premium rewards cards</span> if you could?</div>
+<div class="abs body" style="left:72px;top:800px;width:820px;font-size:34px;color:var(--ink)">The settlement would let shops decline some higher-cost premium and commercial credit cards.</div>
+<div class="abs src" style="left:76px;top:1112px;width:560px"><b>Source:</b> Payments Dive, Oct 16, 2026</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 8 · CALL TO ACTION: 0% on SVPay payments, with the approved line beside it -->
+<section class="slide" id="s8">
+<img class="hero" src="hero_8.png" alt="">
+<div class="top"><div class="tag"><i></i>Another way to get paid</div><div class="count"><b>8</b> / 8</div></div>
+<div class="abs d" data-above="8" style="left:72px;top:200px;font-size:84px;width:940px">Payments, <span class="holo">without the fee.</span></div>
+<div class="abs" data-below="8" style="left:72px;top:900px;width:936px">
+ <div style="font:600 30px/1.38 Inter;color:var(--ink)">When customers pay with SVPay instead of a card, the shop pays 0% in processing fees and $0 to cash out; SVPay makes money from paid software plans instead.</div>
+ <div class="src" style="margin-top:12px"><b>Source:</b> www.svpay.app/pricing, checked Nov 12, 2026</div>
+</div>
+<div class="abs pill glass" style="left:72px;top:1104px">See what your shop would keep: www.svpay.app/savings-calculator</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<!-- 1G · Google Business Profile: one clean, low-text image -->
+<section class="slide" id="s1G">
+<img class="hero" src="hero_3.png" alt="">
+<div class="abs d" data-above="3" style="left:72px;top:250px;font-size:80px;width:940px">Card fees could drop</div>
+<div class="abs d" data-below="3" style="left:72px;top:900px;font-size:56px;width:940px">per <span class="nw">$10,000</span> of credit card sales.</div>
+<div class="abs body" style="left:72px;top:1060px;width:900px;font-size:30px;color:var(--ink)">If a judge approves the Visa and Mastercard deal on Monday.</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+</body></html>

@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+/* Nov 12, 2026 post (swipe-fee settlement hearing): an 8-slide panorama, 8640x1350 CSS px, cut into bg_1..bg_8.png.
+   Number slides (1, 3, 4, 8) get the colour behind the 3D numerals; text slides (2, 5, 6, 7) keep it low and to the
+   edges, so the text sits on near-white (contrast is measured on the pixels, T-C). */
+*{margin:0}body{width:8640px;height:1350px;overflow:hidden;background:#F7F8FD;position:relative}
+.b{position:absolute;border-radius:50%;filter:blur(110px)}
+.s{position:absolute;border-radius:50%;filter:blur(60px)}
+.noise{position:absolute;inset:0;opacity:.05;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.12 0 0 0 0 0.3 0 0 0 1 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+.top{position:absolute;left:0;right:0;top:0;height:470px;background:linear-gradient(180deg,rgba(255,255,255,.8),rgba(255,255,255,0))}
+</style></head><body>
+<!-- S1 (0-1080): hero numerals centred ~y 640 -->
+<div class="b" style="width:1100px;height:700px;left:-20px;top:340px;background:radial-gradient(closest-side,#86A6FF 0%,rgba(150,120,255,.8) 45%,rgba(255,140,205,0) 100%)"></div>
+<div class="s" style="width:480px;height:400px;left:660px;top:420px;background:radial-gradient(closest-side,rgba(255,128,196,.85),transparent)"></div>
+<div class="s" style="width:480px;height:400px;left:-60px;top:560px;background:radial-gradient(closest-side,rgba(96,214,255,.8),transparent)"></div>
+<!-- S2 (1080-2160): text slide, colour low right -->
+<div class="b" style="width:900px;height:620px;left:1700px;top:980px;background:radial-gradient(closest-side,#9DB2FF 0%,rgba(176,140,255,.6) 50%,transparent 100%)"></div>
+<div class="s" style="width:420px;height:380px;left:1880px;top:1080px;background:radial-gradient(closest-side,rgba(255,150,205,.6),transparent)"></div>
+<!-- S3 (2160-3240) -->
+<div class="b" style="width:1100px;height:720px;left:2150px;top:360px;background:radial-gradient(closest-side,#86A0FF 0%,rgba(160,120,255,.8) 48%,transparent 100%)"></div>
+<div class="s" style="width:480px;height:420px;left:2240px;top:400px;background:radial-gradient(closest-side,rgba(255,150,205,.8),transparent)"></div>
+<div class="s" style="width:480px;height:420px;left:2820px;top:620px;background:radial-gradient(closest-side,rgba(98,216,255,.8),transparent)"></div>
+<!-- S4 (3240-4320) -->
+<div class="b" style="width:1100px;height:720px;left:3240px;top:380px;background:radial-gradient(closest-side,#7FA0FF 0%,rgba(156,120,255,.8) 48%,transparent 100%)"></div>
+<div class="s" style="width:520px;height:420px;left:3820px;top:380px;background:radial-gradient(closest-side,rgba(255,132,200,.85),transparent)"></div>
+<div class="s" style="width:480px;height:400px;left:3260px;top:640px;background:radial-gradient(closest-side,rgba(98,216,255,.8),transparent)"></div>
+<!-- S5 (4320-5400): text slide, colour at the left edge low -->
+<div class="b" style="width:900px;height:640px;left:4060px;top:1000px;background:radial-gradient(closest-side,#9AB0FF 0%,rgba(170,130,255,.6) 50%,transparent 100%)"></div>
+<div class="s" style="width:420px;height:380px;left:4300px;top:1120px;background:radial-gradient(closest-side,rgba(98,216,255,.55),transparent)"></div>
+<!-- S6 (5400-6480): text slide, colour low right -->
+<div class="b" style="width:900px;height:620px;left:6020px;top:1000px;background:radial-gradient(closest-side,#A0B4FF 0%,rgba(180,140,255,.6) 50%,transparent 100%)"></div>
+<div class="s" style="width:420px;height:380px;left:6200px;top:1100px;background:radial-gradient(closest-side,rgba(255,146,204,.55),transparent)"></div>
+<!-- S7 (6480-7560): the question, colour low left -->
+<div class="b" style="width:900px;height:640px;left:6280px;top:1000px;background:radial-gradient(closest-side,#9CB2FF 0%,rgba(168,124,255,.6) 50%,transparent 100%)"></div>
+<div class="s" style="width:420px;height:380px;left:6520px;top:1120px;background:radial-gradient(closest-side,rgba(255,140,200,.55),transparent)"></div>
+<!-- S8 (7560-8640): the 0% hero -->
+<div class="b" style="width:1000px;height:700px;left:7660px;top:300px;background:radial-gradient(closest-side,#86A2FF 0%,rgba(165,122,255,.8) 48%,transparent 100%)"></div>
+<div class="s" style="width:480px;height:420px;left:8160px;top:340px;background:radial-gradient(closest-side,rgba(255,140,200,.85),transparent)"></div>
+<div class="s" style="width:480px;height:420px;left:7700px;top:560px;background:radial-gradient(closest-side,rgba(98,216,255,.8),transparent)"></div>
+<div class="top"></div><div class="noise"></div>
+</body></html>
