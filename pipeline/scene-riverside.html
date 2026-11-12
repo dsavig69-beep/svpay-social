@@ -244,10 +244,10 @@ async function s5() {   // a jelly question mark, right of the glass card (never
   window.__info = { box: bounds(t) };
 }
 
-async function s6() {   // one SVPay coin, top right, beside the headline
+async function s6() {   // one coin, bottom right, under the closing question
   await setupCamera(26, [0, 4, 40], [0, 4.6, 0]);
-  const c = await coin(P('R', 1.75), 0.5, jelly(HOLO, { transmission: 0.35 }), pearl());
-  c.rotation.set(P('rx', -0.12), P('ry', -0.42), P('rz', 0.1)); c.position.set(P('tx', 3.75), P('ty', 8.6), 0); scene.add(c);
+  const c = await coin(P('R', 2.1), 0.56, jelly(HOLO, { transmission: 0.35 }), pearl());
+  c.rotation.set(P('rx', -0.12), P('ry', -0.42), P('rz', 0.1)); c.position.set(P('tx', 3.45), P('ty', 1.7), 0); scene.add(c);
   aim(key, [8, 22, 16]); aim(rim, [-18, 8, -10]); aim(fill, [10, 2, 20]);
   window.__info = { box: bounds(c) };
 }
