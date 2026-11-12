@@ -1,0 +1,40 @@
+{
+ "_why": "What the regression set must show (checks/regression/run.py). The rejected Nov 11 Riverside renders were rejected for V-I07 (3D artifacts); each slide must fail a gate that names that artifact. The approved Nov 4 deck must fail no image gate except the compliance and number gates listed in 'allowed' (ruling 4 keeps those as gates).",
+ "cases": {
+  "nov4": {
+   "package": "checks/regression/nov4-rerender/post.json",
+   "no_gates": ["V-", "F-", "T-", "R-", "MC-", "QF", "QM", "QB", "QS", "QA", "QR", "QD", "SC"],
+   "allowed": []
+  },
+  "riverside-r1": {
+   "package": "checks/regression/riverside-r1/post.json",
+   "fail_on": {
+    "slide 2": ["R-D01", "R-D02", "R-A08", "T-D04", "R-N01"],
+    "slide 3": ["R-D01", "R-D02", "R-A08", "T-D04", "R-N01", "R-S02"],
+    "slide 6": ["R-N01", "R-N07", "R-D11", "R-Z06"]
+   }
+  },
+  "riverside-r2": {
+   "package": "checks/regression/riverside-r2/post.json",
+   "fail_on": {
+    "slide 2": ["R-N01", "R-N07", "R-D11"],
+    "slide 4": ["R-N01", "R-N07", "R-D11"],
+    "slide 5": ["R-N01", "R-N07", "R-D11", "R-D01"],
+    "slide 6": ["R-N01", "R-N07", "R-D11", "R-Z06"]
+   }
+  },
+  "riverside-r3": {
+   "package": "posts/2026-11-11-riverside-ftc-processor-fees/post.json",
+   "fail_on": {
+    "slide 1": ["R-S02", "R-S01"],
+    "slide 1-single": ["R-S02", "R-S01"],
+    "slide 1-gbp": ["R-S02", "R-S01"],
+    "slide 3": ["R-S02", "R-S01"]
+   }
+  },
+  "tax-tips": {
+   "package": "checks/labels/2026-11-11-tax-tips-REJECTED.json",
+   "gates_fail": ["W-B05", "W-C01", "W-G05", "W-B04", "W-H07", "V-A18", "CR11", "PP12", "CR06", "CR13"]
+  }
+ }
+}

@@ -158,7 +158,7 @@ def shadow_strength(sl):
 
 
 # ------------------------------------------------------------------ scene settings (asserts on scene.json)
-@check("R-P01", scope="slide")
+@check("R-P01", scope="image")
 def passes_exist(post, sl):
     need = ["manifest", "bg", "mask", "unclipped"]
     miss = [n for n in need if not sl.has(n)]
@@ -208,7 +208,7 @@ def webgl_layer(post, sl):
     return ok(not r.get("context_lost") and cov > 0, f"context lost {r.get('context_lost')}, 3D coverage {cov}px")
 
 
-@check("V-I23", scope="slide")
+@check("V-I23", scope="image")
 @gate3d
 def native_resolution(post, sl):
     r = sl.scene["renderer"]
@@ -216,14 +216,14 @@ def native_resolution(post, sl):
     return ok(good, f"buffer {r['drawing_buffer']} at ratio {r['pixel_ratio']}")
 
 
-@check("R-A07", scope="slide")
+@check("R-A07", scope="image")
 @gate3d
 def aa_kept(post, sl):
     r = sl.scene["renderer"]
     return ok(r.get("antialias") and r.get("max_samples", 0) >= 4, f"antialias {r.get('antialias')}, samples {r.get('max_samples')}")
 
 
-@check("R-A12", scope="slide")
+@check("R-A12", scope="image")
 @gate3d
 def texture_filtering(post, sl):
     mx = sl.scene["renderer"]["max_anisotropy"]
@@ -234,7 +234,7 @@ def texture_filtering(post, sl):
     return ok(not bad, f"anisotropy below {mx} on {len(bad)} maps")
 
 
-@check("R-S01", scope="slide")
+@check("R-S01", scope="image")
 @gate3d
 def shadow_camera_covers(post, sl):
     L = key_light(sl)
@@ -246,7 +246,7 @@ def shadow_camera_covers(post, sl):
     return ok(vf["outside_95pct"] == 0, f"{vf['outside_95pct']} of {vf['samples']} visible floor samples within 5% of or past the shadow camera edge", vf["outside_95pct"])
 
 
-@check("R-T02", scope="slide")
+@check("R-T02", scope="image")
 @gate3d
 def shadow_bundle(post, sl):
     L = key_light(sl)
@@ -258,7 +258,7 @@ def shadow_bundle(post, sl):
     return ok(good, f"map {ms}, radius {s['radius']}, bias {s['bias']}, normal bias {s['normal_bias']}")
 
 
-@check("R-S07", scope="slide")
+@check("R-S07", scope="image")
 @gate3d
 def texel_density(post, sl):
     L = key_light(sl)
@@ -274,41 +274,41 @@ def texel_density(post, sl):
     return ok(v <= lim, f"{v:.2f}px per shadow texel at the glyphs", round(v, 3))
 
 
-@check("R-S08", scope="slide")
+@check("R-S08", scope="image")
 @gate3d
 def shadow_type_valid(post, sl):
     t = sl.scene["renderer"]["shadow_type"]
     return ok(t != "BasicShadowMap", t)
 
 
-@check("R-S09", scope="slide")
+@check("R-S09", scope="image")
 @gate3d
 def no_vsm(post, sl):
     t = sl.scene["renderer"]["shadow_type"]
     return ok(t != "VSMShadowMap", t)
 
 
-@check("R-X03", scope="slide")
+@check("R-X03", scope="image")
 @gate3d
 def tone_mapper(post, sl):
     t = sl.scene["renderer"]["tone_mapping"]
     return ok(t in ("NeutralToneMapping", "AgXToneMapping"), t)
 
 
-@check("R-X07", scope="slide")
+@check("R-X07", scope="image")
 @gate3d
 def color_space(post, sl):
     r = sl.scene["renderer"]
     return ok(r["output_color_space"] == "srgb" and r["color_management"], f"{r['output_color_space']}, management {r['color_management']}")
 
 
-@check("R-X08", scope="slide")
+@check("R-X08", scope="image")
 @gate3d
 def bloom(post, sl):
     return na("no post-processing (bloom) in the scene")
 
 
-@check("R-N03", scope="slide")
+@check("R-N03", scope="image")
 @gate3d
 def mikktspace(post, sl):
     nm = [m for o in sl.objects() for m in o["material"] if m.get("normal_map")]
@@ -317,28 +317,28 @@ def mikktspace(post, sl):
     return ok(all(m.get("has_tangents") for m in nm), "")
 
 
-@check("R-N06", scope="slide")
+@check("R-N06", scope="image")
 @gate3d
 def env_map(post, sl):
     env = scene_val(sl, "environment", default={})
     return ok(env.get("present"), "environment " + ("present" if env.get("present") else "missing"))
 
 
-@check("R-N07", scope="slide")
+@check("R-N07", scope="image")
 @gate3d
 def front_side(post, sl):
     bad = [o["text"] or o["geometry"] for o in sl.objects() if o.get("role") in ("numeral", "glyph") and any(m["side"] != 0 for m in o["material"])]
     return ok(not bad, ", ".join(bad))
 
 
-@check("R-G03", scope="slide")
+@check("R-G03", scope="image")
 @gate3d
 def transparency_flags(post, sl):
     bad = [o["text"] or o["geometry"] for o in sl.objects() for m in o["material"] if m.get("transmission", 0) > 0 and m.get("transparent")]
     return ok(not bad, "transmissive and transparent: " + ", ".join(bad))
 
 
-@check("R-Z01", scope="slide")
+@check("R-Z01", scope="image")
 @gate3d
 def depth_precision(post, sl):
     c = sl.scene["camera"]
@@ -346,7 +346,7 @@ def depth_precision(post, sl):
     return ok(good, f"far/near {c['far'] / c['near']:.0f}, near {c['near']} at distance {c['distance']:.1f}")
 
 
-@check("R-Z07", scope="slide")
+@check("R-Z07", scope="image")
 @gate3d
 def no_sinking(post, sl):
     fy = floor_y(sl)
@@ -360,7 +360,7 @@ def no_sinking(post, sl):
     return ok(not bad, ", ".join(bad))
 
 
-@check("R-Z08", scope="slide")
+@check("R-Z08", scope="image")
 @gate3d
 def near_clip(post, sl):
     c = sl.scene["camera"]
@@ -372,20 +372,20 @@ def near_clip(post, sl):
     return ok(d >= 1.05 * c["near"], f"closest vertex {d:.2f}", round(float(d), 3))
 
 
-@check("R-Z09", scope="slide")
+@check("R-Z09", scope="image")
 @gate3d
 def card_thickness(post, sl):
     return na("glass cards are HTML panels, not 3D meshes")
 
 
-@check("R-Z05", scope="slide")
+@check("R-Z05", scope="image")
 @gate3d
 def glyph_card_clearance(post, sl):
     cards = [o for o in sl.objects() if o.get("role") == "card"]
     return na("no 3D cards (glass cards are HTML panels; R-G02 covers glyphs behind them)") if not cards else ok(False, "3D cards need a plane test")
 
 
-@check("R-T03", scope="slide")
+@check("R-T03", scope="image")
 @gate3d
 def floor_edge(post, sl):
     fl = scene_val(sl, "floors", default=[])
@@ -420,7 +420,7 @@ def lighting_preset(post):
     return ok(not bad, "; ".join(bad))
 
 
-@check("R-T06", scope="slide")
+@check("R-T06", scope="image")
 @gate3d
 def env_lighting(post, sl):
     lights = scene_val(sl, "lights", default=[])
@@ -465,7 +465,7 @@ def clean_ring(r):
     return out
 
 
-@check("R-D01", scope="slide")
+@check("R-D01", scope="image")
 @gate3d
 def bevel_feasible(post, sl):
     """The outline offset by the bevel's reach, outward and inward, keeps its topology (research method: shapely
@@ -548,7 +548,7 @@ def font_overlaps(post):
     return ok(not bad, "overlapping contours in: " + "".join(bad))
 
 
-@check("R-D04", scope="slide")
+@check("R-D04", scope="image")
 @gate3d
 def holes_winding(post, sl):
     font = font_outlines(post, sl)
@@ -619,7 +619,7 @@ def font_outlines(post, sl):
     return out
 
 
-@check("R-D05", scope="slide")
+@check("R-D05", scope="image")
 @gate3d
 def tessellation(post, sl):
     errs = []
@@ -641,7 +641,7 @@ def tessellation(post, sl):
     return ok(max(errs) <= 0.25, f"max chord deviation {max(errs):.2f}px", round(max(errs), 3))
 
 
-@check("R-D06", scope="slide")
+@check("R-D06", scope="image")
 @gate3d
 def bevel_segments(post, sl):
     bad = []
@@ -657,7 +657,7 @@ def bevel_segments(post, sl):
     return ok(not bad, "; ".join(bad)) if any(o.get("extrude") for o in sl.objects()) else na("no extruded glyphs")
 
 
-@check("T-D06", scope="slide")
+@check("T-D06", scope="image")
 @gate3d
 def bevel_proportion(post, sl):
     bad, n = [], 0
@@ -676,7 +676,7 @@ def bevel_proportion(post, sl):
     return na("no extruded digits") if not n else ok(not bad, "; ".join(bad))
 
 
-@check("R-D10", scope="slide")
+@check("R-D10", scope="image")
 @gate3d
 def one_mesh_per_glyph(post, sl):
     multi = [o["text"] for o in sl.objects() if o.get("role") in ("numeral", "glyph") and len(o.get("text") or "") > 1]
@@ -696,7 +696,7 @@ def number_groups(sl):
     return out
 
 
-@check("R-D11", scope="slide")
+@check("R-D11", scope="image")
 @gate3d
 def numerals_only(post, sl):
     if post.date and post.date < NUMERAL_RULE_FROM:
@@ -714,7 +714,7 @@ def numerals_only(post, sl):
     return ok(not bad, "3D object that is not a numeral: " + ", ".join(sorted(set(bad))))
 
 
-@check("R-D12", scope="slide")
+@check("R-D12", scope="image")
 @gate3d
 def baseline_scale(post, sl):
     bad = []
@@ -746,7 +746,7 @@ def same_geometry(post):
     return ok(len(exs) == 1, f"{len(exs)} different extrusion settings")
 
 
-@check("R-D16", scope="slide")
+@check("R-D16", scope="image")
 @gate3d
 def counters_open(post, sl):
     from scipy import ndimage as ndi
@@ -770,7 +770,7 @@ def counters_open(post, sl):
 
 
 # ------------------------------------------------------------------ silhouettes and topology (R-A08, T-D04, R-Z)
-@check("R-A08", scope="slide")
+@check("R-A08", scope="image")
 def glyph_topology(post, sl):
     h = has3d(sl)
     if h is None:
@@ -792,7 +792,7 @@ def glyph_topology(post, sl):
     return na("no glyphs") if not n else ok(not bad, "; ".join(bad[:5]), len(bad))
 
 
-@check("T-D04", scope="slide")
+@check("T-D04", scope="image")
 @gate3d
 def no_slivers(post, sl):
     from scipy import ndimage as ndi
@@ -833,7 +833,7 @@ def boundary(a):
     return b, lab
 
 
-@check("R-Z03", scope="slide")
+@check("R-Z03", scope="image")
 @gate3d
 def jitter(post, sl):
     a, j = sl.raw("id"), sl.raw("idj")
@@ -850,7 +850,7 @@ def jitter(post, sl):
     return ok(not big, f"{int(sum(big))} px in {len(big)} regions changed object with a tiny camera move", int(sum(big)))
 
 
-@check("R-Z04", scope="slide")
+@check("R-Z04", scope="image")
 @gate3d
 def speckle(post, sl):
     a = sl.raw("id")
@@ -870,7 +870,7 @@ def speckle(post, sl):
     return ok(n == 0, f"{n} speckle pixels inside surfaces", n)
 
 
-@check("R-Z02", scope="slide")
+@check("R-Z02", scope="image")
 @gate3d
 def coplanar(post, sl):
     pairs = sl.scene.get("coplanar_pairs")
@@ -881,7 +881,7 @@ def coplanar(post, sl):
     return ok(not big, "; ".join(f"{parts[p['a']].get('char') or p['a']}/{parts[p['b']].get('char') or p['b']} share {p['shared_planes']} planes" for p in big[:4]))
 
 
-@check("R-Z06", scope="slide")
+@check("R-Z06", scope="image")
 @gate3d
 def glyph_clearance3d(post, sl):
     pairs = sl.scene.get("part_pairs", [])
@@ -897,7 +897,7 @@ def glyph_clearance3d(post, sl):
     return ok(not bad, "; ".join(bad[:5]), len(bad))
 
 
-@check("R-G01", scope="slide")
+@check("R-G01", scope="image")
 @gate3d
 def transmissive_overlap(post, sl):
     trans = [o for o in sl.objects() if any(m.get("transmission", 0) > 0 for m in o["material"])]
@@ -916,7 +916,7 @@ def transmissive_overlap(post, sl):
     return ok(not bad, "; ".join(bad[:4]))
 
 
-@check("R-G02", scope="slide")
+@check("R-G02", scope="image")
 @gate3d
 def glyph_behind_glass(post, sl):
     panels = (sl.manifest or {}).get("panels", [])
@@ -975,7 +975,7 @@ def exclusion(sl, pad=24):
     return ndi.binary_dilation(ex, iterations=pad)
 
 
-@check("R-S02", scope="slide")
+@check("R-S02", scope="image")
 def shadow_edge_line(post, sl):
     h = has3d(sl)
     if h is None:
@@ -1013,7 +1013,7 @@ def shadow_edge_line(post, sl):
     return ok(not real, f"{len(real)} straight shadow lines" + (f", longest {real[0][0]}px at y {real[0][2]} ({real[0][3]:.1f} levels)" if real else ""), len(real))
 
 
-@check("R-A05", scope="slide")
+@check("R-A05", scope="image")
 @gate3d
 def shadow_stairs(post, sl):
     s = shadow_strength(sl)
@@ -1033,7 +1033,7 @@ def shadow_stairs(post, sl):
     return ok(v <= 0.30, f"RMS {v:.2f}px", round(v, 3))
 
 
-@check("R-S06", scope="slide")
+@check("R-S06", scope="image")
 @gate3d
 def contact_or_float(post, sl):
     fy = floor_y(sl)
@@ -1052,7 +1052,7 @@ def contact_or_float(post, sl):
     return ok(not bad, "; ".join(bad))
 
 
-@check("R-S12", scope="slide")
+@check("R-S12", scope="image")
 @gate3d
 def shadow_density(post, sl):
     s = shadow_strength(sl)
@@ -1065,7 +1065,7 @@ def shadow_density(post, sl):
     return ok(L.min() >= 55, f"darkest floor shadow L* {L.min():.0f}", round(float(L.min()), 1))
 
 
-@check("R-S13", scope="slide")
+@check("R-S13", scope="image")
 @gate3d
 def one_shadow(post, sl):
     s = shadow_strength(sl)
@@ -1080,7 +1080,7 @@ def one_shadow(post, sl):
     return ok(lobes <= max(1, casters) * max(1, nl) * max(1, len(sl.objects())), f"{lobes} shadow lobes")
 
 
-@check("R-S14", scope="slide")
+@check("R-S14", scope="image")
 @gate3d
 def shadow_direction(post, sl):
     s = shadow_strength(sl)
@@ -1110,7 +1110,7 @@ def shadow_direction(post, sl):
     return ok(ang <= 15, f"shadow direction off by {ang:.0f}°", round(ang, 1))
 
 
-@check("R-S17", scope="slide")
+@check("R-S17", scope="image")
 @gate3d
 def shadow_current(post, sl):
     s = shadow_strength(sl)
@@ -1132,7 +1132,7 @@ def shadow_current(post, sl):
     return ok(off <= 0.05, f"shadow centroid {off:.1%} of the width from where the light puts it", round(off, 4))
 
 
-@check("R-C08", scope="slide")
+@check("R-C08", scope="image")
 @gate3d
 def shadow_over_text(post, sl):
     s = shadow_strength(sl)
@@ -1148,7 +1148,7 @@ def shadow_over_text(post, sl):
     return ok(not bad, "; ".join(bad[:4]))
 
 
-@check("R-C07", scope="slide")
+@check("R-C07", scope="image")
 @gate3d
 def glyph_text_clearance(post, sl):
     if not sl.has("mask", "manifest"):
@@ -1167,7 +1167,7 @@ def glyph_text_clearance(post, sl):
     return ok(hit == 0, f"{hit} text px within 48px of a 3D object or its shadow", int(hit))
 
 
-@check("V-C18", scope="slide")
+@check("V-C18", scope="image")
 @gate3d
 def text_over_3d(post, sl):
     if not sl.has("mask", "manifest"):
@@ -1182,7 +1182,7 @@ def text_over_3d(post, sl):
     return ok(hit == 0, f"{hit} text px over a 3D silhouette", hit)
 
 
-@check("R-C05", scope="slide")
+@check("R-C05", scope="image")
 @gate3d
 def tangents(post, sl):
     cov = union_cover(sl, sl.parts())
@@ -1211,7 +1211,7 @@ def tangents(post, sl):
     return ok(not bad, "; ".join(bad[:4]))
 
 
-@check("R-C06", scope="slide")
+@check("R-C06", scope="image")
 @gate3d
 def overlap_decisive(post, sl):
     panels = (sl.manifest or {}).get("panels", [])
@@ -1235,7 +1235,7 @@ def obj_mask(sl):
     return None if a is None else a[..., 2] > 0
 
 
-@check("V-I06", scope="slide")
+@check("V-I06", scope="image")
 @gate3d
 def aa_coverage(post, sl):
     m = obj_mask(sl)
@@ -1255,7 +1255,7 @@ def aa_coverage(post, sl):
     return ok(ratio >= 0.8, f"partial-coverage ratio {ratio:.2f}", round(float(ratio), 3))
 
 
-@check("R-A02", scope="slide")
+@check("R-A02", scope="image")
 @gate3d
 def edge_profile(post, sl):
     m = obj_mask(sl)
@@ -1277,7 +1277,7 @@ def edge_profile(post, sl):
     return ok(0.9 <= med <= 2.2 and p95 <= 3.0, f"median {med:.1f}px, P95 {p95:.1f}px", med)
 
 
-@check("R-A04", scope="slide")
+@check("R-A04", scope="image")
 @gate3d
 def sparkle(post, sl):
     m = obj_mask(sl)
@@ -1294,7 +1294,7 @@ def sparkle(post, sl):
     return ok(len(specks) <= 10, f"{len(specks)} isolated specks", len(specks))
 
 
-@check("R-A09", scope="slide")
+@check("R-A09", scope="image")
 @gate3d
 def texture_alias(post, sl):
     m = obj_mask(sl)
@@ -1311,7 +1311,7 @@ def texture_alias(post, sl):
     return ok(hi <= 0.15, f"share of surface detail finer than 0.4 cycles/px {hi:.1%}", round(float(hi), 4))
 
 
-@check("R-A10", scope="slide")
+@check("R-A10", scope="image")
 @gate3d
 def thin_features(post, sl):
     from scipy import ndimage as ndi
@@ -1330,7 +1330,7 @@ def thin_features(post, sl):
     return ok(not bad, "; ".join(bad))
 
 
-@check("R-N01", scope="slide")
+@check("R-N01", scope="image")
 @gate3d
 def seams(post, sl):
     a = sl.id_map
@@ -1373,7 +1373,7 @@ def seams(post, sl):
     return ok(not bad, "; ".join(bad[:4]))
 
 
-@check("R-N02", scope="slide")
+@check("R-N02", scope="image")
 @gate3d
 def normal_continuity(post, sl):
     nrm = sl.img("normal")
@@ -1390,7 +1390,7 @@ def normal_continuity(post, sl):
     return ok(share <= 0.002, f"{share:.2%} of glyph pixels jump 3-20°", round(float(share), 5))
 
 
-@check("R-D07", scope="slide")
+@check("R-D07", scope="image")
 @gate3d
 def facet_histogram(post, sl):
     nrm = sl.img("normal")
@@ -1416,7 +1416,7 @@ def facet_histogram(post, sl):
     return ok(worst <= 3, f"histogram max/mean {worst:.1f}", round(worst, 2)) if worst else na("no bevels in view")
 
 
-@check("R-N08", scope="slide")
+@check("R-N08", scope="image")
 @gate3d
 def crisp_edge(post, sl):
     nrm = sl.img("normal")
@@ -1442,7 +1442,7 @@ def crisp_edge(post, sl):
     return ok(max(widths) <= 6, f"front-to-side ramp {max(widths):.1f}px", round(max(widths), 2)) if widths else na("no front-side edges")
 
 
-@check("R-N05", scope="slide")
+@check("R-N05", scope="image")
 @gate3d
 def smooth_faces(post, sl):
     L = lstar(sl.final)
@@ -1459,7 +1459,7 @@ def smooth_faces(post, sl):
     return ok(max(vals) <= 1.0, f"face residual sd {max(vals):.2f}", round(max(vals), 3)) if vals else na("no large faces")
 
 
-@check("R-X01", scope="slide")
+@check("R-X01", scope="image")
 @gate3d
 def silhouette_separation(post, sl):
     from scipy import ndimage as ndi
@@ -1503,7 +1503,7 @@ def silhouette_separation(post, sl):
     return ok(not bad, "; ".join(bad[:4]))
 
 
-@check("R-X02", scope="slide")
+@check("R-X02", scope="image")
 @gate3d
 def highlight_rolloff(post, sl):
     m = obj_mask(sl)
@@ -1517,7 +1517,7 @@ def highlight_rolloff(post, sl):
     return ok(share <= 0.0005, f"largest clipped area {share:.3%} of the frame", round(float(share), 6))
 
 
-@check("R-X04", scope="slide")
+@check("R-X04", scope="image")
 @gate3d
 def highlight_hue(post, sl):
     m0 = obj_mask(sl)
@@ -1540,7 +1540,7 @@ def highlight_hue(post, sl):
     return ok(d <= 10, f"highlight hue off by {d:.0f}°", round(d, 1))
 
 
-@check("R-X05", scope="slide")
+@check("R-X05", scope="image")
 @gate3d
 def tonal_range(post, sl):
     m = obj_mask(sl)
@@ -1564,7 +1564,7 @@ def exposure_parity(post):
     return ok(not bad, f"median {med:.0f}; " + ", ".join(bad))
 
 
-@check("R-F01", scope="slide")
+@check("R-F01", scope="image")
 @gate3d
 def fireflies(post, sl):
     L = lstar(sl.final)
@@ -1579,7 +1579,7 @@ def fireflies(post, sl):
     return ok(n <= 3, f"{n} isolated hot pixels", n)
 
 
-@check("R-F02", scope="slide")
+@check("R-F02", scope="image")
 def grain_character(post, sl):
     lab = to_lab(sl.final[::2, ::2])
     flat = cv2.GaussianBlur(lab[..., 0], (0, 0), 3)
@@ -1592,7 +1592,7 @@ def grain_character(post, sl):
     return ok(chroma <= 0.5 * luma, f"chroma sd {chroma:.2f} vs luma sd {luma:.2f}")
 
 
-@check("R-F03", scope="slide")
+@check("R-F03", scope="image")
 @gate3d
 def same_grain(post, sl):
     L = lstar(sl.final).astype(np.float32)
@@ -1695,7 +1695,7 @@ def blur_blockiness(post, sl):
     return ok(not bad, "even/odd gradient ratio " + ", ".join(bad))
 
 
-@check("R-G10", scope="slide")
+@check("R-G10", scope="image")
 @gate3d
 def dispersion(post, sl):
     m = obj_mask(sl)
@@ -1707,12 +1707,12 @@ def dispersion(post, sl):
     return ok(share <= 0.05, f"{share:.1%} of edge pixels split red from blue", round(share, 4))
 
 
-@check("R-K10", scope="slide")
+@check("R-K10", scope="image")
 def clip_stub_k10(post, sl):
     return na("tool not installed: CLIP (zero-shot classifier)")
 
 
-@check("R-Q01", scope="slide")
+@check("R-Q01", scope="image")
 @gate3d
 def material_count(post, sl):
     kinds = {(m["type"], m.get("transmission", 0) > 0) for o in sl.objects() for m in o["material"]}
@@ -1729,7 +1729,7 @@ def view_light(sl):
     return v / np.linalg.norm(v)
 
 
-@check("R-Q02", scope="slide")
+@check("R-Q02", scope="image")
 @gate3d
 def light_ratio(post, sl):
     nrm = sl.img("normal")
@@ -1747,7 +1747,7 @@ def light_ratio(post, sl):
     return ok(1.8 <= r <= 5, f"lit/away {r:.2f}", round(r, 2))
 
 
-@check("R-Q04", scope="slide")
+@check("R-Q04", scope="image")
 @gate3d
 def bevels_catch_light(post, sl):
     bad, n = [], 0
@@ -1767,7 +1767,7 @@ def bevels_catch_light(post, sl):
     return na("no glyphs") if not n else ok(not bad, "bevel share of the brightest pixels: " + ", ".join(bad[:4]))
 
 
-@check("R-Q05", scope="slide")
+@check("R-Q05", scope="image")
 @gate3d
 def soft_highlights(post, sl):
     from scipy import ndimage as ndi
@@ -1786,7 +1786,7 @@ def soft_highlights(post, sl):
     return na("no glyphs") if not n else ok(not bad, ", ".join(bad[:4]))
 
 
-@check("R-C03", scope="slide")
+@check("R-C03", scope="image")
 @gate3d
 def shadow_length(post, sl):
     s = shadow_strength(sl)
@@ -1811,7 +1811,7 @@ def shadow_length(post, sl):
     return ok(dev <= 0.10, f"max deviation {dev:.0%}", round(dev, 3))
 
 
-@check("R-B07", scope="slide")
+@check("R-B07", scope="image")
 @gate3d
 def hue_steps(post, sl):
     bad = 0
@@ -1836,7 +1836,7 @@ def hue_steps(post, sl):
     return na("no glyph faces") if not tot else ok(bad / tot <= 0.01, f"{bad} of {tot} hue samples step more than 4°", bad)
 
 
-@check("T-D05", scope="slide")
+@check("T-D05", scope="image")
 @gate3d
 def shading_creases(post, sl):
     from scipy import ndimage as ndi
@@ -1856,7 +1856,7 @@ def shading_creases(post, sl):
     return ok(not bad, "; ".join(bad[:4]))
 
 
-@check("T-D07", scope="slide")
+@check("T-D07", scope="image")
 @gate3d
 def face_reads(post, sl):
     from scipy import ndimage as ndi
@@ -1882,7 +1882,7 @@ def face_reads(post, sl):
     return na("no glyph faces") if not n else ok(not bad, "; ".join(bad[:4]))
 
 
-@check("T-D09", scope="slide")
+@check("T-D09", scope="image")
 @gate3d
 def pose(post, sl):
     bad = []
@@ -1905,7 +1905,7 @@ def pose(post, sl):
     return ok(not bad, "; ".join(sorted(set(bad))[:4])) if any(o.get("role") in ("numeral", "glyph") for o in sl.objects()) else na("no glyphs")
 
 
-@check("T-D10", scope="slide")
+@check("T-D10", scope="image")
 @gate3d
 def highlight_erase(post, sl):
     from scipy import ndimage as ndi
@@ -1925,7 +1925,7 @@ def highlight_erase(post, sl):
     return na("no glyph faces") if not n else ok(not bad, "; ".join(bad[:4]))
 
 
-@check("V-D13", scope="slide")
+@check("V-D13", scope="image")
 @gate3d
 def specular_clip(post, sl):
     m = obj_mask(sl)
@@ -1934,7 +1934,7 @@ def specular_clip(post, sl):
     return ok(share <= 0.01, f"{share:.2%} of 3D pixels pure white", round(float(share), 4))
 
 
-@check("R-K15", scope="slide")
+@check("R-K15", scope="image")
 def iridescence_on_meaning(post, sl):
     lab = to_lab(sl.final[::2, ::2])
     c = np.hypot(lab[..., 1], lab[..., 2])

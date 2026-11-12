@@ -115,11 +115,19 @@ def logged_values(post):
                 if v is not None:
                     vals.add((round(v, 6), p))
                     vals.add((round(v, 6), not p))
+        # a number written in the fact's own sourced text maps to that fact too
+        for tok, a, b in numbers(f.get("text", "")):
+            v, p = norm_value(tok)
+            if v is not None:
+                vals.add((round(v, 6), p))
+                vals.add((round(v, 6), not p))
     for m in post.pkg.get("math", []):
-        v, p = norm_value(str(m.get("shown", "")))
-        if v is not None:
-            vals.add((round(v, 6), p))
-            vals.add((round(v, 6), not p))
+        # the shown result and the logged inputs of each calculation
+        for tok in [str(m.get("shown", ""))] + re.findall(r"\d+(?:\.\d+)?", str(m.get("expr", ""))):
+            v, p = norm_value(tok)
+            if v is not None:
+                vals.add((round(v, 6), p))
+                vals.add((round(v, 6), not p))
     return vals
 
 
