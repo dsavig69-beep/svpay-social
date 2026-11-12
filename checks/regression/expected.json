@@ -24,7 +24,8 @@
     "MC-S01",
     "V-G08",
     "V-H17",
-    "V-K12"
+    "V-K12",
+    "V-D01"
    ],
    "allowed_why": {
     "MC-I08": "compliance: slide 4's worked example has no on-slide 'Example' label or footnote (V-H17 already failed it before)",
@@ -32,7 +33,8 @@
     "MC-S01": "number accuracy: '3 months', '20%', '$1,300' and '$50,000' are on the slides but not in the Nov 4 facts log",
     "V-G08": "compliance: slide 6's 'SVPay on the free Starter plan' is not an approved pricing line",
     "V-H17": "compliance, failed before this round: slide 4's hypothetical has no 'Example' label",
-    "V-K12": "compliance: the Toast logo slides carry 'SVPay is not affiliated with Toast.' at 32px, under the 61px rule"
+    "V-K12": "compliance: the Toast logo slides carry 'SVPay is not affiliated with Toast.' at 32px, under the 61px rule",
+    "V-D01": "founder rule, kept a gate: text contrast at least 4.5:1. The Nov 4 deck measures 2.5-3.9:1 on several lines; it was approved before contrast was measured on the pixels"
    }
   },
   "riverside-r1": {

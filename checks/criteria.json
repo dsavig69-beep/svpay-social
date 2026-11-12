@@ -5347,8 +5347,8 @@
   "pass": ">=4.5:1",
   "weight": 5,
   "tier": "Script",
-  "gate": false,
-  "evidence": "WCAG 2.2; SVPay rule",
+  "gate": true,
+  "evidence": "WCAG 2.2; founder rule (contrast at least 4.5:1), a gate because it is his standing design rule",
   "merged": [
    "T-C07"
   ],
