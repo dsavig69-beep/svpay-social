@@ -1,0 +1,574 @@
+{
+ "dropped_as_duplicate": {
+  "F-IG03": "T-L03",
+  "F-IG04": "T-F09",
+  "F-IG27": "MC-A05",
+  "F-IG37": "QB04",
+  "F-IG38": "V-A01",
+  "F-LD05": "MC-A06",
+  "F-LD08": "QF30",
+  "F-NI01": "V-J01",
+  "F-NI10": "ALL-13",
+  "F-NI11": "MC-L06",
+  "F-NI13": "QF01",
+  "F-TH01": "QF01",
+  "F-GB02": "QF05",
+  "F-GB03": "QF05",
+  "F-GB04": "QF08",
+  "F-GB13": "F-X09",
+  "F-SW08": "V-B08",
+  "F-TN02": "T-O01",
+  "F-TN08": "T-O03",
+  "F-TN18": "QM02",
+  "T-S01": "V-C02",
+  "T-S03": "V-C03",
+  "T-S04": "V-C01",
+  "T-S11": "F-IG36",
+  "T-S13": "MC-I03",
+  "T-C02": "V-D05",
+  "T-C07": "V-D01",
+  "T-C14": "R-K06",
+  "T-C21": "R-G05",
+  "T-C23": "QA01",
+  "T-L16": "F-IG23",
+  "T-L19": "F-IG16",
+  "T-N11": "MC-D02",
+  "T-N17": "MC-S05",
+  "T-D01": "R-D01",
+  "T-D02": "R-A08",
+  "T-D03": "R-D16",
+  "T-D08": "R-Z06",
+  "T-J01": "QF09",
+  "T-J02": "QF29",
+  "T-J03": "T-O01",
+  "T-J11": "QF01",
+  "T-J12": "R-P06",
+  "T-O13": "R-P02",
+  "T-F13": "QR15",
+  "R-P03": "QR04",
+  "R-P05": "QR01",
+  "R-P07": "QR11",
+  "R-P08": "QR16",
+  "R-P09": "QR05",
+  "R-A01": "V-I06",
+  "R-A11": "T-J04",
+  "R-S05": "R-T02",
+  "R-S15": "R-S02",
+  "R-C02": "R-S14",
+  "R-C09": "T-D09",
+  "R-B02": "QF19",
+  "R-M05": "T-J10",
+  "R-M06": "T-J08",
+  "R-M07": "QB27",
+  "R-M08": "QB29",
+  "R-K14": "F-IG19",
+  "R-D08": "T-D06",
+  "R-T01": "V-I23",
+  "MC-D05": "T-N16",
+  "MC-D06": "T-N13",
+  "MC-D07": "T-N05",
+  "MC-D10": "T-N04",
+  "MC-G02": "QA02",
+  "MC-G03": "QA03",
+  "MC-M08": "V-K15",
+  "MC-P01": "SC25",
+  "MC-P02": "SC25",
+  "MC-P03": "SC25",
+  "MC-P05": "SC25",
+  "MC-S09": "SC25",
+  "MC-P09": "SC07",
+  "MC-S02": "CR09",
+  "MC-R01": "QM09",
+  "QF13": "QF29",
+  "QF17": "T-O01",
+  "QF18": "T-C08",
+  "QF20": "T-J05",
+  "QF25": "V-A15",
+  "QB10": "V-K17",
+  "QB25": "R-D11",
+  "QS03": "R-T04",
+  "QA10": "V-M06",
+  "QR09": "R-X07",
+  "QR13": "R-P06",
+  "QR14": "T-O10",
+  "QR18": "R-P06"
+ },
+ "existing_replaced": {
+  "V-C12": "T-K01",
+  "V-C25": "T-L08",
+  "V-E12": "F-IG20"
+ },
+ "rewritten": {
+  "V-A01": {
+   "why": "ruling 3: Instagram 4:5 only on the API path",
+   "before": {
+    "test": "Master canvas is 2160×2700 (4:5); LinkedIn, Instagram, Threads and Facebook get portrait 4:5 (Instagram may use 3:4)",
+    "pass": "exact",
+    "weight": 4,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "V-A14": {
+   "why": "ruling 3: keep the house cap of 10, note the API's 2-20",
+   "before": {
+    "test": "Threads post has at most 10 images until Meta's limit is confirmed",
+    "pass": "<=10",
+    "weight": 3,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "V-A15": {
+   "why": "ruling 3: Instagram carousels at most 10 slides (Graph API); breaking it breaks the post",
+   "before": {
+    "test": "Instagram carousel has at most 20 slides",
+    "pass": "<=20",
+    "weight": 2,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "V-H12": {
+   "why": "ruling 3: 3D only on numerals; coins, phones, arrows and question marks are flat 2D",
+   "before": {
+    "test": "At least 1 slide per money deck carries a number with a recognizable object (coin stack, receipt, phone screen)",
+    "pass": ">=1",
+    "weight": 3,
+    "gate": false,
+    "tier": "Judge"
+   }
+  },
+  "V-I17": {
+   "why": "ruling 3: 3D only on numerals",
+   "before": {
+    "test": "Each 3D object is a story metaphor (coin = cashback, numeral = the key figure, phone = the app)",
+    "pass": "100%",
+    "weight": 4,
+    "gate": false,
+    "tier": "Judge"
+   }
+  },
+  "V-C01": {
+   "why": "merged T-S04 (measured x-height)",
+   "before": {
+    "test": "Smallest text on any slide is at least 61px (11pt display)",
+    "pass": ">=61px",
+    "weight": 5,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "V-C02": {
+   "why": "merged T-S01 (measured x-height)",
+   "before": {
+    "test": "Body and supporting text is at least 94px (17pt display)",
+    "pass": ">=94px",
+    "weight": 5,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "V-C03": {
+   "why": "merged T-S03 (measured x-height)",
+   "before": {
+    "test": "Slide headline is at least 187px (34pt display)",
+    "pass": ">=187px",
+    "weight": 4,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "V-D01": {
+   "why": "merged T-C07 (measure on the background plate)",
+   "before": {
+    "test": "Every text element is at least 4.5:1 against the worst-case background pixel under its box",
+    "pass": ">=4.5:1",
+    "weight": 5,
+    "gate": true,
+    "tier": "Script"
+   }
+  },
+  "V-D05": {
+   "why": "merged T-C02",
+   "before": {
+    "test": "Body text reaches 7:1 where the layout allows",
+    "pass": ">=7:1 (bonus)",
+    "weight": 2,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "V-I06": {
+   "why": "merged R-A01 (measurable coverage ratio)",
+   "before": {
+    "test": "Edges are anti-aliased: render at 2x supersampling or better, no stair-stepping at 100%",
+    "pass": "pass",
+    "weight": 4,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "V-I23": {
+   "why": "merged R-T01",
+   "before": {
+    "test": "3D layer is rendered at final output resolution, not upscaled",
+    "pass": "pass",
+    "weight": 4,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "V-B08": {
+   "why": "merged F-SW08",
+   "before": {
+    "test": "Elements that bleed into the next slide align within 2px across the seam",
+    "pass": "<=2px",
+    "weight": 2,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "V-J01": {
+   "why": "merged F-NI01",
+   "before": {
+    "test": "Posts in a rolling 4-week window that feature a real person (founder, or a real merchant with a signed release)",
+    "pass": "≥25%",
+    "weight": 3,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "V-K15": {
+   "why": "merged MC-M08",
+   "before": {
+    "test": "Brand names spelled per owner rules ('Mastercard'; 'Visa' as an adjective, not possessive or plural)",
+    "pass": "100%",
+    "weight": 3,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "V-K17": {
+   "why": "merged QB10",
+   "before": {
+    "test": "SVPay logo is the current transparent master, with the same position and size on every slide",
+    "pass": "pass",
+    "weight": 4,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "V-M06": {
+   "why": "merged QA10",
+   "before": {
+    "test": "Motion versions have no flashes above 3 per second",
+    "pass": "0",
+    "weight": 3,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "SC25": {
+   "why": "ruling 5: copy rules for public images; merged MC-P01, MC-P02, MC-P03, MC-P05, MC-S09, which assumed USDC, bank or insurance wording could appear",
+   "before": {
+    "test": "Banned words are also absent from Canva slide text and image file names",
+    "pass": "0",
+    "weight": 5,
+    "gate": true,
+    "tier": "Script"
+   }
+  },
+  "SC07": {
+   "why": "ruling 5: merged MC-P09, which allowed the custody claim when counsel-checked",
+   "before": {
+    "test": "Never \"SVPay never holds your money\" or synonyms",
+    "pass": "0",
+    "weight": 5,
+    "gate": true,
+    "tier": "Script"
+   }
+  },
+  "CR09": {
+   "why": "merged MC-S02",
+   "before": {
+    "test": "All arithmetic recomputed by script (rate × ticket = dollars shown)",
+    "pass": "100% correct",
+    "weight": 5,
+    "gate": true,
+    "tier": "Script"
+   }
+  },
+  "ALL-13": {
+   "why": "merged F-NI10 (news freshness on the image)",
+   "before": {
+    "test": "News is fresh when published",
+    "pass": "≤48 h old, or the post says why it matters now (max 14 days)",
+    "weight": 3,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "R-D11": {
+   "why": "ruling 3: add a gate, no 3D object other than a numeral; merged QB25",
+   "before": {
+    "test": "Only numerals in 3D: every 3D mesh is a digit 0–9. \"$\", \"%\", \"?\", arrows and coins are flat (HTML or 2D)",
+    "pass": "100%",
+    "weight": 5,
+    "gate": true,
+    "tier": "Script"
+   }
+  },
+  "QF26": {
+   "why": "ruling 3: LinkedIn PDF pages stay 4:5 (V-A11); delivery check added",
+   "before": {
+    "test": "A 4:5 LinkedIn PDF renders without letterboxing: one test document upload per quarter",
+    "pass": "the LinkedIn viewer shows the page with no added bars",
+    "weight": 3,
+    "gate": false,
+    "tier": "Judge"
+   }
+  },
+  "QF01": {
+   "why": "ruling 3: pre-size the files; merged T-J11, F-TH01, F-NI13",
+   "before": {
+    "test": "Meta file is pre-sized to 1440x1800: pixel size of the file sent to Instagram, Threads and Facebook",
+    "pass": "exactly 1440x1800",
+    "weight": 4,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "QF29": {
+   "why": "ruling 3: pre-size the files; merged T-J02, QF13 (QF13's PNG rule conflicts with the JPEG ruling)",
+   "before": {
+    "test": "Master goes to LinkedIn and X when it fits: the file chosen for LinkedIn and X",
+    "pass": "2160x2700 if <= 0.9 x 5 MB, otherwise 1440x1800",
+    "weight": 2,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "F-IG02": {
+   "why": "ruling 3",
+   "before": {
+    "test": "Slide-1 headline word count",
+    "pass": "≤7 words",
+    "weight": 3,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "F-LD10": {
+   "why": "ruling 3",
+   "before": {
+    "test": "Document share of LinkedIn posts while the founder has under 5,000 followers",
+    "pass": "≤50% in any rolling 4 weeks; the rest are single 4:5 images",
+    "weight": 3,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "T-K01": {
+   "why": "ruling 3: replaces V-C12",
+   "before": {
+    "test": "Glyph clearance (replaces the bbox-overlap logic): minimum pixel distance between adjacent glyphs within a word",
+    "pass": "≥ max(2 px, 0.04·h) at master and at SIM1 (scaled) †",
+    "weight": 4,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "MC-H05": {
+   "why": "ruling 5: savings are 'up to' with a footnote and the every-sale assumption next to the figure",
+   "before": {
+    "test": "A savings figure counts only card fees avoided on sales actually paid through SVPay, and the slide states the share assumption in plain words (\"if all $500,000 is paid with SVPay\")",
+    "pass": "present",
+    "weight": 5,
+    "gate": true,
+    "tier": "Judge"
+   }
+  },
+  "MC-K01": {
+   "why": "ruling 5: pricing words only from approved_lines.json",
+   "before": {
+    "test": "\"$0\", \"free\" and \"no fee\" claims always name the fee type (\"$0 transaction fees\", \"$0 cash-out fees\"). Bare \"free\" or \"no fees\" fails",
+    "pass": "0 bare claims",
+    "weight": 5,
+    "gate": true,
+    "tier": "Script"
+   }
+  },
+  "MC-P06": {
+   "why": "ruling 5: the research's 'SVPay is not a bank.' line uses a banned word",
+   "before": {
+    "test": "Any slide showing balances, wallets or \"keep your money\" claims carries \"SVPay is not a bank.\" at ≥61px",
+    "pass": "100%",
+    "weight": 4,
+    "gate": false,
+    "tier": "Script"
+   }
+  },
+  "MC-K05": {
+   "why": "ruling 5: offer words from the approved lines (SC21)",
+   "before": {
+    "test": "Sign-up offers (\"$5 back\", \"first order up to $20 on us\") state \"first order only\" and any end date on the image",
+    "pass": "present",
+    "weight": 5,
+    "gate": true,
+    "tier": "Script"
+   }
+  },
+  "MC-H07": {
+   "why": "ruling 5: plan wording from the pricing source",
+   "before": {
+    "test": "The \"up to\" footnote includes four elements: sales volume, competitor rate with its source date, the SVPay plan price assumed, and \"Your savings depend on your sales and current rates.\"",
+    "pass": "all 4",
+    "weight": 5,
+    "gate": true,
+    "tier": "Script"
+   }
+  }
+ },
+ "gates_demoted_at_merge": {
+  "F-IG31": "engagement bait is a reach and quality problem, not misleading, unlawful or broken",
+  "F-GB09": "a repeated GBP photo is a quality problem; Google does not reject the post",
+  "R-P01": "a process check: missing passes already fail every pass-dependent gate as 'needs passes'",
+  "R-P02": "a check on the checker, not on the post",
+  "R-P04": "a process check (three.js upgrades)",
+  "R-S06": "a floating glyph is a craft issue, not broken geometry",
+  "R-G04": "a render-stability test; the shipped frame is what is judged",
+  "R-D06": "a scene setting; the visible result is judged by R-N01, R-D07 and V-I07",
+  "R-D09": "uneven gaps are a craft issue, not broken 3D",
+  "R-D10": "a scene-construction rule; collisions are gated by R-Z06",
+  "R-K19": "an AI-look opinion panel, not a gate category",
+  "R-K20": "an AI-look opinion panel, not a gate category",
+  "QB26": "an inline UI icon is not broken; V-L04 (Judge gate) still bans hand-drawn art",
+  "QD16": "a site-wide Open Graph audit, not a property of the post",
+  "QD28": "a process step after publishing",
+  "QR01": "a process check (golden images)",
+  "QR04": "a process check (determinism)",
+  "QR05": "a process check (pinned WebGL renderer)"
+ },
+ "gates_demoted_at_calibration": {},
+ "gates_kept": [
+  "F-GB07",
+  "F-IG07",
+  "F-IG20",
+  "F-LD07",
+  "F-SW05",
+  "F-TN15",
+  "F-X04",
+  "F-X05",
+  "MC-B01",
+  "MC-B02",
+  "MC-B06",
+  "MC-C05",
+  "MC-E04",
+  "MC-E06",
+  "MC-F02",
+  "MC-F06",
+  "MC-H01",
+  "MC-H02",
+  "MC-H03",
+  "MC-H04",
+  "MC-H05",
+  "MC-H06",
+  "MC-H07",
+  "MC-H08",
+  "MC-H12",
+  "MC-I01",
+  "MC-I03",
+  "MC-I04",
+  "MC-I05",
+  "MC-I08",
+  "MC-I11",
+  "MC-J01",
+  "MC-J02",
+  "MC-J03",
+  "MC-J04",
+  "MC-J10",
+  "MC-K01",
+  "MC-K02",
+  "MC-K03",
+  "MC-K05",
+  "MC-K07",
+  "MC-L01",
+  "MC-L02",
+  "MC-L03",
+  "MC-L04",
+  "MC-L05",
+  "MC-M01",
+  "MC-M02",
+  "MC-M04",
+  "MC-M05",
+  "MC-N01",
+  "MC-N02",
+  "MC-N03",
+  "MC-O01",
+  "MC-O02",
+  "MC-O03",
+  "MC-O04",
+  "MC-P04",
+  "MC-P07",
+  "MC-P08",
+  "MC-P11",
+  "MC-Q01",
+  "MC-Q02",
+  "MC-Q03",
+  "MC-Q04",
+  "MC-Q05",
+  "MC-Q08",
+  "MC-Q09",
+  "MC-R02",
+  "MC-R03",
+  "MC-R04",
+  "MC-R07",
+  "MC-S01",
+  "MC-S03",
+  "MC-S04",
+  "MC-S05",
+  "MC-S06",
+  "MC-S11",
+  "QD01",
+  "QD02",
+  "QD03",
+  "QD04",
+  "QD10",
+  "QD17",
+  "QF02",
+  "QF03",
+  "QF04",
+  "QF05",
+  "QF08",
+  "QF30",
+  "QM02",
+  "QR06",
+  "R-A08",
+  "R-D01",
+  "R-D02",
+  "R-D03",
+  "R-D11",
+  "R-G01",
+  "R-G02",
+  "R-N01",
+  "R-P06",
+  "R-S01",
+  "R-S02",
+  "R-X01",
+  "R-Z03",
+  "R-Z04",
+  "R-Z05",
+  "R-Z06",
+  "T-D04",
+  "T-N06",
+  "T-N08",
+  "T-O01",
+  "T-O03",
+  "T-O05",
+  "T-O09",
+  "T-O10",
+  "T-O11",
+  "T-S05"
+ ]
+}
