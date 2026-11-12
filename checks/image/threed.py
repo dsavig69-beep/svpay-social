@@ -1520,8 +1520,13 @@ def highlight_rolloff(post, sl):
 @check("R-X04", scope="slide")
 @gate3d
 def highlight_hue(post, sl):
-    m = obj_mask(sl)
-    lab = to_lab(sl.final)
+    m0 = obj_mask(sl)
+    ys, xs = np.nonzero(m0)
+    if not len(ys):
+        return na("no 3D object")
+    y0, y1, x0, x1 = max(0, ys.min() - 12), ys.max() + 12, max(0, xs.min() - 12), xs.max() + 12
+    m = m0[y0:y1, x0:x1]
+    lab = to_lab(sl.final[y0:y1, x0:x1])
     hl = m & (lab[..., 0] > 92) & (np.hypot(lab[..., 1], lab[..., 2]) > 4)
     if hl.sum() < 50:
         return na("no colored highlights")
@@ -1809,7 +1814,6 @@ def shadow_length(post, sl):
 @check("R-B07", scope="slide")
 @gate3d
 def hue_steps(post, sl):
-    lab = to_lab(sl.final)
     bad = 0
     tot = 0
     for gl in glyphs(sl):
@@ -1821,7 +1825,8 @@ def hue_steps(post, sl):
         row = np.nonzero(cap[y])[0]
         if len(row) < 12:
             continue
-        a, b = lab[y, row, 1], lab[y, row, 2]
+        lrow = to_lab(sl.final[y:y + 1, row])[0]
+        a, b = lrow[:, 1], lrow[:, 2]
         c = np.hypot(a, b)
         h = np.degrees(np.arctan2(b, a))
         d = np.abs((h[4:] - h[:-4] + 180) % 360 - 180)

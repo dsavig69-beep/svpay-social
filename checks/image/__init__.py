@@ -29,45 +29,53 @@ def check(cid, scope="slide"):
 
 
 def _load():
-    from . import files, words, textpx, threed, layout, brand, charts, delivery, stubs  # noqa: F401  (registers checks)
+    from . import files, words, textpx, threed, layout, brand, charts, delivery, vseries, extras, stubs  # noqa: F401  (registers checks)
 
 
 def run(rep, pkg, base_dir=None, history=None, extra=None, only=None):
     """Run every registered image check on the package and add the results to rep (check_post.Report)."""
     _load()
     post = core.Post(pkg, base_dir=base_dir, history=history, extra=extra)
+    items = []
     for cid, fns in sorted(REGISTRY.items()):
         if only and cid not in only:
             continue
         crit = CRITERIA.get(cid)
         if crit is None:
             continue
-        gate = bool(crit.get("gate"))
         for fn, scope in fns:
-            targets = [(None, "post")] if scope == "post" else \
-                [(s, s.where) for s in post.slides] if scope == "slide" else \
-                [(s, s.where) for s in post.all_images()]
-            for sl, where in targets:
-                try:
-                    out = fn(post) if sl is None else fn(post, sl)
-                except Exception as e:  # a crashing check is reported, never silently passed
-                    out = Outcome(False if gate else None, f"check error: {type(e).__name__}: {e}"[:200])
-                    if os.environ.get("SVPAY_CHECK_DEBUG"):
-                        traceback.print_exc()
-                if out is None:
-                    continue
-                if isinstance(out, list):
-                    outs = out
-                else:
-                    outs = [out]
-                for o in outs:
-                    status, detail = o.ok, o.detail
-                    if status == NEEDS and not gate:
-                        status, detail = None, detail      # a non-gate without its passes is not scored
-                    elif o.estimated and gate and status is True:
-                        status, detail = NEEDS, "needs passes: " + detail
-                    rep.add(cid, status, detail, o.where or where, o.value)
+            items.append((cid, bool(crit.get("gate")), fn, scope))
+    # one image at a time, then its caches are dropped: full-size passes for a whole deck do not fit next to the
+    # other builders on an 8 GB machine
+    deck = {id(s) for s in post.slides}
+    for sl in post.all_images():
+        for cid, gate, fn, scope in items:
+            if scope == "image" or (scope == "slide" and id(sl) in deck):
+                _one(rep, cid, gate, fn, post, sl, sl.where)
+        sl.release()
+    for cid, gate, fn, scope in items:
+        if scope == "post":
+            _one(rep, cid, gate, fn, post, None, "post")
+            post.release()
     return post
+
+
+def _one(rep, cid, gate, fn, post, sl, where):
+    try:
+        out = fn(post) if sl is None else fn(post, sl)
+    except Exception as e:  # a crashing check is reported, never silently passed
+        out = Outcome(False if gate else None, f"check error: {type(e).__name__}: {e}"[:200])
+        if os.environ.get("SVPAY_CHECK_DEBUG"):
+            traceback.print_exc()
+    if out is None:
+        return
+    for o in (out if isinstance(out, list) else [out]):
+        status, detail = o.ok, o.detail
+        if status == NEEDS and not gate:
+            status = None                     # a non-gate without its passes is not scored
+        elif o.estimated and gate and status is True:
+            status, detail = NEEDS, "needs passes: " + detail
+        rep.add(cid, status, detail, o.where or where, o.value)
 
 
 def registered_ids():

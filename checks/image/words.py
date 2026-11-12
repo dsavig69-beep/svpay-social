@@ -109,10 +109,12 @@ def logged_values(post):
     vals = set()
     for f in post.pkg.get("facts", []):
         for n in f.get("numbers", []):
-            v, p = norm_value(str(n))
-            if v is not None:
-                vals.add((round(v, 6), p))
-                vals.add((round(v, 6), not p))
+            toks = [t for t, a, b in numbers(str(n))] or [str(n)]
+            for tok in toks[:1]:
+                v, p = norm_value(tok)
+                if v is not None:
+                    vals.add((round(v, 6), p))
+                    vals.add((round(v, 6), not p))
     for m in post.pkg.get("math", []):
         v, p = norm_value(str(m.get("shown", "")))
         if v is not None:
@@ -157,7 +159,10 @@ def savings_claims(s):
 def footnotes(sl):
     if sl.manifest:
         return [e for e in sl.elements if e.get("role") in ("footnote", "source", "legal") or re.match(r"^[*†‡]|^(Example|Assumes|Figures are|Savings|Your savings)", e["text"])]
-    return [{"text": l} for l in re.split(r"(?<=[.])\s+", sl.text or "") if re.match(r"^[*†‡]|^(Example|Assumes|Figures are|Savings|Your savings)", l)]
+    t = sl.text or ""
+    marked = [{"text": m.group(1).strip()} for m in re.finditer(r"(?:^|(?<=\s))([*†‡][^\s*†‡][^*†‡]*)", t)]
+    plain = [{"text": l} for l in re.split(r"(?<=[.])\s+", t) if re.match(r"^(Example|Assumes|Figures are|Savings|Your savings)", l)]
+    return marked + plain
 
 
 # ------------------------------------------------------------------ copy rules on every image (ruling 5)
@@ -827,7 +832,7 @@ def court_source(post, sl):
     s = " ".join(source_lines(sl))
     if not re.search(r"\bv\.\s", s):
         return na("no court source")
-    parts = {"court": re.search(r"(?i)\b(court|district|circuit|N\.D\.|S\.D\.|W\.D\.|E\.D\.)\b", s), "docket": re.search(r"(?i)\b(no\.|case|docket)\s*[\d:-]+|\d:\d{2}-cv-\d+", s),
+    parts = {"court": re.search(r"(?i)\b(court|district|circuit)\b|(?<!\w)[NSWEC]\.\s?D\.", s), "docket": re.search(r"(?i)\b(no\.|case|docket)\s*[\d:-]+|\d:\d{2}-cv-\d+", s),
              "date": re.search(rf"\b({MONTHS})\b", s)}
     missing = [k for k, v in parts.items() if not v]
     return ok(not missing, "missing " + ", ".join(missing) if missing else "")
@@ -1441,12 +1446,13 @@ def numbers_traced(post, sl):
 @check("MC-S03", scope="image")
 def points_wording(post, sl):
     t = img_text(post, sl)
-    bad = []
-    for m in re.finditer(r"(?i)(\d+(?:\.\d+)?)%\s+to\s+(\d+(?:\.\d+)?)%[^.]{0,40}?\b(up|down|rise|fall|increase|decrease|drop|cut)\w*\s+(?:of\s+|by\s+)?(\d+(?:\.\d+)?)\s*(%|percent|percentage points?|points?)", t):
+    bad, seen = [], 0
+    for m in re.finditer(r"(?i)(\d+(?:\.\d+)?)%\s+to\s+(\d+(?:\.\d+)?)%[^.]{0,40}?\b(up|down|rise|fall|increase|decrease|drop|cut)\w*\s+(?:of\s+|by\s+)?(\d+(?:\.\d+)?)\s*(percentage points?|points?|percent|%)", t):
+        seen += 1
         a, b, n, unit = float(m.group(1)), float(m.group(2)), float(m.group(4)), m.group(5).lower()
         if abs(abs(b - a) - n) < 1e-6 and unit in ("%", "percent"):
             bad.append(m.group(0))
-    return ok(not bad, " | ".join(bad)) if bad else na("no rate change stated")
+    return ok(not bad, " | ".join(bad)) if seen else na("no rate change stated")
 
 
 @check("MC-S04", scope="image")

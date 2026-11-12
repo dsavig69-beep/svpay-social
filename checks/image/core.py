@@ -260,6 +260,11 @@ class Slide:
         self.text = spec.get("text", "")
         self._c = {}
 
+    def release(self):
+        """Drop the full-size images; keep the small parsed files (manifest, scene)."""
+        keep = {k: v for k, v in self._c.items() if k in ("man", "scene")}
+        self._c = keep
+
     # ---- files
     def _p(self, name):
         return os.path.join(self.pdir, f"{self.stem}.{name}")
@@ -495,6 +500,10 @@ class Post:
 
     def all_images(self):
         return list(self.by_file.values())
+
+    def release(self):
+        for s in self.by_file.values():
+            s.release()
 
     @property
     def deck_text(self):

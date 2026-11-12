@@ -1230,12 +1230,13 @@ def numbers_one_line(post, sl):
         return estimate(True, "no line boxes without the manifest") if t else na("no text")
     bad = []
     for e in sl.elements:
-        full = e["text"]
-        for m in NUMTOK.finditer(full):
-            tok = m.group(0)
+        intended = e["text"]          # the element's rendered text in reading order (runs come in DOM-walk order)
+        lines = [re.sub(r"\s+", " ", l["text"]) for l in e["lines"]]
+        for m in NUMTOK.finditer(intended):
+            tok = m.group(0).rstrip(".,")
             if len(tok) < 2:
                 continue
-            if not any(tok in l["text"] for l in e["lines"]):
+            if not any(tok in l for l in lines):
                 bad.append(tok)
     return ok(not bad, "split across lines: " + ", ".join(bad))
 
