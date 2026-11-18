@@ -1,0 +1,141 @@
+{
+ "date": "2026-11-18",
+ "slug": "ftc-square-frozen-accounts",
+ "kind": "news",
+ "topic": "ftc-square-frozen-accounts",
+ "format": "image",
+ "skeleton": "number-hook/news/status/what-it-means/checklist/ask",
+ "closing_question_format": "your-experience",
+ "why_now": "Block's first answers to the FTC were due Nov 13 and more are due Nov 30 (joint filing reported by Payments Dive on Nov 10, 2026); the swipe-fee hearing and the Illinois tax-and-tip lawsuit were the other shortlisted stories but both continue stories posted Nov 11-12.",
+ "test": {
+  "name": "T11 LinkedIn hook: number vs story",
+  "arm": "number"
+ },
+ "networks": {
+  "linkedin": {
+   "text": "About 1,500 complaints say Block froze or shut Square accounts without notice. That's the FTC's count, and the agency is now in federal court to get Block's records on them.\n\nThe FTC's filing says those complaints \"allege that Block has wrongfully withheld at least $2.5 million of Square users' payment proceeds since 2022.\"\n\nWhere it stands: the FTC is investigating and hasn't charged Block. It asked a federal court in California on Oct. 7 to make Block answer. Block disputes the claims and agreed to send its answers by Nov. 13 and more by Nov. 30.\n\nA held payout lands on a Friday, when payroll, rent and the produce order are due. That's why I'd check three things this week, whatever you use to take cards:\n\n1. The hold section of your processor agreement: when they can hold your money, for how long, and how they have to tell you.\n2. A second way to take payments, set up and tested before you need it.\n3. If a hold starts: put it in writing, save every email, and file a complaint with the FTC if it drags on.\n\nFull disclosure: I started SVPay, which is another way for shops to get paid, so weigh my take with that in mind.\n\nHas a processor ever held your payouts, and for how long?\n\n#SmallBusiness",
+   "first_comment": "Sources: Payments Dive, Nov 10, 2026: https://www.paymentsdive.com/news/block-to-provide-data-to-ftc/874156/\nBloomberg's report via Quartz, Oct 8, 2026: https://finance.yahoo.com/technology/ai/articles/ftc-investigating-block-over-frozen-180246491.html\nThe court docket, FTC v. Block, Inc., 4:26-mc-80299 (N.D. Cal.): https://dockets.justia.com/docket/california/candce/4:2026mc80299/480685\n\nIf you're comparing ways to get paid: https://www.svpay.app/savings-calculator?utm_source=linkedin&utm_medium=social&utm_campaign=news_20261118&utm_content=ftc-square-frozen-accounts",
+   "media": [
+    "posts/2026-11-18-ftc-square-frozen-accounts/slide-1.jpg"
+   ],
+   "alt": [
+    "Frozen Square accounts. Headline: About 1,500 complaints that Block froze or shut Square accounts without notice, the FTC says. A white card titled Before a hold hits your shop lists three steps: 1, read the hold rules in your agreement; 2, keep a second way to take payments ready; 3, put any hold in writing and save every email. Status line: Where it stands: an FTC investigation with no charges filed. FTC v. Block, filed Oct 7, 2026, in federal court. Label: FTC investigation, Block disputes the claims. Source: Payments Dive, Nov 10, 2026. SVPay logo and www.svpay.app."
+   ]
+  },
+  "facebook": {
+   "text": "The FTC says it has about 1,500 complaints that Block froze or shut Square accounts without notice, and it's in federal court to get Block's records. The FTC hasn't charged Block, and Block disputes the claims.\n\nWhatever your shop uses to take cards, the rules for holding your money sit in your processor agreement. We'd read that section this week, keep a second way to take payments ready, and put any hold in writing.\n\nHas your shop ever had payouts held?\n\n#SmallBusiness #ShopLocal",
+   "first_comment": "If you're comparing ways to get paid: https://www.svpay.app/savings-calculator?utm_source=facebook&utm_medium=social&utm_campaign=news_20261118&utm_content=ftc-square-frozen-accounts\n\nSource: Payments Dive, Nov 10, 2026: https://www.paymentsdive.com/news/block-to-provide-data-to-ftc/874156/",
+   "media": [
+    "posts/2026-11-18-ftc-square-frozen-accounts/slide-1.jpg"
+   ],
+   "alt": [
+    "Frozen Square accounts. Headline: About 1,500 complaints that Block froze or shut Square accounts without notice, the FTC says. A white card titled Before a hold hits your shop lists three steps: 1, read the hold rules in your agreement; 2, keep a second way to take payments ready; 3, put any hold in writing and save every email. Status line: Where it stands: an FTC investigation with no charges filed. FTC v. Block, filed Oct 7, 2026, in federal court. Label: FTC investigation, Block disputes the claims. Source: Payments Dive, Nov 10, 2026. SVPay logo and www.svpay.app."
+   ]
+  },
+  "x": {
+   "text": "The FTC says about 1,500 complaints claim Block froze or shut Square accounts without notice. The FTC hasn't charged Block, and Block disputes the claims.\n\nDo you know when your processor can hold your payouts, and for how long?",
+   "reply": "Source, Payments Dive (Nov 10, 2026): https://www.paymentsdive.com/news/block-to-provide-data-to-ftc/874156/\n\nIf you're comparing ways to get paid: https://www.svpay.app/savings-calculator?utm_source=x&utm_medium=social&utm_campaign=news_20261118&utm_content=ftc-square-frozen-accounts",
+   "media": [
+    "posts/2026-11-18-ftc-square-frozen-accounts/slide-1.jpg"
+   ],
+   "alt": [
+    "Frozen Square accounts. Headline: About 1,500 complaints that Block froze or shut Square accounts without notice, the FTC says. A white card titled Before a hold hits your shop lists three steps: 1, read the hold rules in your agreement; 2, keep a second way to take payments ready; 3, put any hold in writing and save every email. Status line: Where it stands: an FTC investigation with no charges filed. FTC v. Block, filed Oct 7, 2026, in federal court. Label: FTC investigation, Block disputes the claims. Source: Payments Dive, Nov 10, 2026. SVPay logo and www.svpay.app."
+   ]
+  },
+  "threads": {
+   "text": "About 1,500 complaints to the FTC say Block froze or shut Square accounts without notice. The agency went to federal court for Block's records. No charges so far, and Block disputes the claims.\n\nWhoever runs your card payments, the hold rules are in your agreement. Worth ten minutes before you ever need them.\n\nShop owners: has a processor ever held your money? How long until you got it back?\n\n#SmallBusiness",
+   "reply": "Source: Payments Dive, Nov 10, 2026: https://www.paymentsdive.com/news/block-to-provide-data-to-ftc/874156/\nIf you're comparing ways to get paid: https://www.svpay.app/savings-calculator?utm_source=threads&utm_medium=social&utm_campaign=news_20261118&utm_content=ftc-square-frozen-accounts",
+   "media": [
+    "posts/2026-11-18-ftc-square-frozen-accounts/slide-1.jpg"
+   ],
+   "alt": [
+    "Frozen Square accounts. Headline: About 1,500 complaints that Block froze or shut Square accounts without notice, the FTC says. A white card titled Before a hold hits your shop lists three steps: 1, read the hold rules in your agreement; 2, keep a second way to take payments ready; 3, put any hold in writing and save every email. Status line: Where it stands: an FTC investigation with no charges filed. FTC v. Block, filed Oct 7, 2026, in federal court. Label: FTC investigation, Block disputes the claims. Source: Payments Dive, Nov 10, 2026. SVPay logo and www.svpay.app."
+   ]
+  },
+  "gbp": {
+   "text": "The FTC says about 1,500 complaints claim Block froze or shut Square accounts without notice. The agency went to federal court in October to get Block's records. The FTC has not charged Block, and Block disputes the claims. For any local shop, the rules for holding your money sit in your processor agreement. Read that section, keep a second way to take payments ready, and put any hold in writing. With SVPay, customers pay in the SVPay app by scanning the shop's QR code. https://www.svpay.app/savings-calculator?utm_source=google_business&utm_medium=social&utm_campaign=news_20261118&utm_content=ftc-square-frozen-accounts",
+   "media": [
+    "posts/2026-11-18-ftc-square-frozen-accounts/slide-1-gbp.jpg"
+   ],
+   "alt": [
+    "Frozen Square accounts, FTC investigation. Headline: About 1,500 complaints that Block froze or shut Square accounts without notice, the FTC says. No charges have been filed. Source: Payments Dive, Nov 10, 2026. SVPay logo and www.svpay.app."
+   ],
+   "cta_url": "https://www.svpay.app/savings-calculator?utm_source=google_business&utm_medium=social&utm_campaign=news_20261118&utm_content=ftc-square-frozen-accounts"
+  }
+ },
+ "facts": [
+  {
+   "text": "The FTC's inquiry covers about 1,500 merchant complaints that Block froze or deactivated Square user accounts without notice",
+   "numbers": [
+    "1,500"
+   ],
+   "source_url": "https://www.paymentsdive.com/news/block-to-provide-data-to-ftc/874156/",
+   "source_date": "2026-11-10"
+  },
+  {
+   "text": "The FTC began the investigation after more than 1,500 consumer complaints (Bloomberg, via Quartz)",
+   "numbers": [
+    "1,500"
+   ],
+   "source_url": "https://finance.yahoo.com/technology/ai/articles/ftc-investigating-block-over-frozen-180246491.html",
+   "source_date": "2026-10-08"
+  },
+  {
+   "text": "The FTC's Oct. 7 filing says the complaints allege Block wrongfully withheld at least $2.5 million of Square users' payment proceeds since 2022",
+   "quote": "allege that Block has wrongfully withheld at least $2.5 million of Square users' payment proceeds since 2022",
+   "quote_found": true,
+   "numbers": [
+    "$2.5 million",
+    "2022"
+   ],
+   "source_url": "https://www.paymentsdive.com/news/block-to-provide-data-to-ftc/874156/",
+   "source_date": "2026-11-10"
+  },
+  {
+   "text": "The records demand (civil investigative demand) was issued Jan. 22 and holds 47 questions, 21 document requests and four data requests",
+   "numbers": [
+    "47",
+    "21"
+   ],
+   "source_url": "https://www.paymentsdive.com/news/block-to-provide-data-to-ftc/874156/",
+   "source_date": "2026-11-10"
+  },
+  {
+   "text": "Block disputes and does not admit the allegations; under a joint filing it answers the 47 questions by Nov. 13 and sends more by Nov. 30",
+   "numbers": [
+    "Nov. 13",
+    "Nov. 30"
+   ],
+   "source_url": "https://www.paymentsdive.com/news/block-to-provide-data-to-ftc/874156/",
+   "source_date": "2026-11-10"
+  },
+  {
+   "text": "FTC v. Block, Inc., No. 4:26-mc-80299, U.S. District Court for the Northern District of California: a petition to enforce a civil investigative demand, filed Oct 7, 2026; no closing entry. An FTC investigation; no charges filed and no finding against Block.",
+   "type": "law_status",
+   "checked_on": "2026-11-18",
+   "numbers": [
+    "Oct 7, 2026"
+   ],
+   "source_url": "https://dockets.justia.com/docket/california/candce/4:2026mc80299/480685",
+   "source_date": "2026-10-07"
+  },
+  {
+   "text": "The petition was filed in the Northern District of California (Oakland), case No. 26-mc-80299 (Bloomberg, via Quartz)",
+   "numbers": [],
+   "source_url": "https://finance.yahoo.com/technology/ai/articles/ftc-investigating-block-over-frozen-180246491.html",
+   "source_date": "2026-10-08"
+  }
+ ],
+ "math": [],
+ "slides": [
+  {
+   "file": "posts/2026-11-18-ftc-square-frozen-accounts/slide-1.jpg",
+   "role": "hook",
+   "text": "FTC investigation · Block disputes the claims. Frozen Square accounts. About 1,500 complaints that Block froze or shut Square accounts without notice, the FTC says. Before a hold hits your shop: 1 Read the hold rules in your agreement. 2 Keep a second way to take payments ready. 3 Put any hold in writing and save every email. Where it stands: an FTC investigation with no charges filed. FTC v. Block, filed Oct 7, 2026, in federal court. Source: Payments Dive, Nov 10, 2026. www.svpay.app",
+   "example": false,
+   "has_stat": true,
+   "source_line": "Source: Payments Dive, Nov 10, 2026",
+   "alt": "Frozen Square accounts. Headline: About 1,500 complaints that Block froze or shut Square accounts without notice, the FTC says. A white card titled Before a hold hits your shop lists three steps: 1, read the hold rules in your agreement; 2, keep a second way to take payments ready; 3, put any hold in writing and save every email. Status line: Where it stands: an FTC investigation with no charges filed. FTC v. Block, filed Oct 7, 2026, in federal court. Label: FTC investigation, Block disputes the claims. Source: Payments Dive, Nov 10, 2026. SVPay logo and www.svpay.app."
+  }
+ ]
+}

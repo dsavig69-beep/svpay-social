@@ -1,0 +1,60 @@
+{
+ "_why": "Per-network files of this post (pipeline/export.py; QF27)",
+ "files": [
+  {
+   "network": "facebook",
+   "file": "slide-1-1440.jpg",
+   "w": 1440,
+   "h": 1800,
+   "bytes": 389599,
+   "format": "JPEG",
+   "subsampling": "4:4:4",
+   "icc": "sRGB (untagged)",
+   "sha256": "0e4590ffef25c8732de702936bd9055dc49a0cc9a2f152f842cec3a40dbfd441"
+  },
+  {
+   "network": "threads",
+   "file": "slide-1-1440.jpg",
+   "w": 1440,
+   "h": 1800,
+   "bytes": 389599,
+   "format": "JPEG",
+   "subsampling": "4:4:4",
+   "icc": "sRGB (untagged)",
+   "sha256": "0e4590ffef25c8732de702936bd9055dc49a0cc9a2f152f842cec3a40dbfd441"
+  },
+  {
+   "network": "linkedin",
+   "file": "slide-1.jpg",
+   "w": 2160,
+   "h": 2700,
+   "bytes": 822936,
+   "format": "JPEG",
+   "subsampling": "4:4:4",
+   "icc": "sRGB (untagged)",
+   "sha256": "e3ec9d2f79095f2282d94910982bad734b1109a187f3dbd3261edb9afdadddb8"
+  },
+  {
+   "network": "x",
+   "file": "slide-1.jpg",
+   "w": 2160,
+   "h": 2700,
+   "bytes": 822936,
+   "format": "JPEG",
+   "subsampling": "4:4:4",
+   "icc": "sRGB (untagged)",
+   "sha256": "e3ec9d2f79095f2282d94910982bad734b1109a187f3dbd3261edb9afdadddb8"
+  },
+  {
+   "network": "gbp",
+   "file": "slide-1-gbp.jpg",
+   "w": 2160,
+   "h": 1620,
+   "bytes": 526550,
+   "format": "JPEG",
+   "subsampling": "4:4:4",
+   "icc": "sRGB (untagged)",
+   "sha256": "1691f85837d2f38a0f92988b96df23362116a376888b199d5da88ccd980c4e31"
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+flock /home/claude/work/heavy.lock env IDS=1X,1G node render.js 2 slides-squarefreeze.html out --passes ../posts/2026-11-18-ftc-square-frozen-accounts/passes --names 1X:slide-1,1G:slide-1-gbp   # cwd: pipeline/; typographic news card (no 3D), background bg_2.png from the Nov 12 panorama

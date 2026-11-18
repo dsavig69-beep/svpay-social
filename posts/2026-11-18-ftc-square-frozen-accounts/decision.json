@@ -1,0 +1,312 @@
+{
+ "decision": "REWRITE",
+ "why": "gate failed: MC-J04",
+ "Q": 0.782,
+ "categories": {
+  "writing": 0.809,
+  "audience_value": 0.761,
+  "visuals": 0.728,
+  "platform_fit": 0.736,
+  "brand": 0.956,
+  "compliance": 0.913
+ },
+ "minimums": {
+  "writing": 0.85,
+  "audience_value": 0.75,
+  "visuals": 0.8,
+  "platform_fit": 0.75,
+  "brand": 0.8,
+  "compliance": 0.95
+ },
+ "process": "light",
+ "gates_failed": [
+  "MC-J04"
+ ],
+ "criteria_scored": 747,
+ "fix_list": [
+  {
+   "id": "MC-J04",
+   "gate": true,
+   "weight": 5,
+   "test": "A comparison with card processors states the material difference on the slide or in its footnote: customers pay with SVPay, not a card",
+   "why": [
+    "judge[linkedin]: GBP is fixed ('With SVPay, customers pay in the SVPay app by scanning the shop's QR code.' states the material difference). But the new LinkedI"
+   ]
+  },
+  {
+   "id": "W-C28",
+   "gate": false,
+   "weight": 5,
+   "test": "Rhetorical-device density: (C01 + C04 + C06/07 + C08 + C09) per 100 words",
+   "why": [
+    "script[facebook]: ",
+    "script[threads]: "
+   ]
+  },
+  {
+   "id": "T-C01",
+   "gate": false,
+   "weight": 5,
+   "test": "APCA body contrast: lc of each body element against its background",
+   "why": [
+    "script[slide 1]: Frozen Square accounts Lc 84 < 90; BEFORE A HOLD HITS YOUR  Lc 88 < 90; 1 Lc -85 < 90; 2 Lc -84 < 90",
+    "script[slide 1-gbp]: Frozen Square accounts · Lc 83 < 90"
+   ]
+  },
+  {
+   "id": "V-C01",
+   "gate": false,
+   "weight": 5,
+   "test": "Smallest text on any slide is at least 61px (11pt display), and its measured x-height is at least 34px",
+   "why": [
+    "script[slide 1]: FTC INVESTIGATION · BLOC (56px, x-height 41); BEFORE A HOLD HITS YOUR  (56px, x-height 41); 1 (54px, x-height 39); 2 (54px, x-height 40)",
+    "script[slide 1-gbp]: Source: Payments Dive, N (48px, x-height 26); www.svpay.app (48px, x-height 26)"
+   ]
+  },
+  {
+   "id": "V-C02",
+   "gate": false,
+   "weight": 5,
+   "test": "Body and supporting text is at least 94px (17pt display), and its measured median x-height is at least 46px",
+   "why": [
+    "script[slide 1]: Frozen Square accounts (76px, x-height 42); that Block froze or shut (80px, x-height 45); BEFORE A HOLD HITS YOUR  (56px, x-height 41); 1 (54px"
+   ]
+  },
+  {
+   "id": "W-F02",
+   "gate": false,
+   "weight": 5,
+   "test": "Swap test: replace Derrik/SVPay with a competitor; if the post still works, fail",
+   "why": [
+    "judge[all]: Still fails the swap test. Any processor founder could post the LinkedIn text with their own disclosure line, and the other networks contain nothing",
+    "panel: Still fails the swap test. Any processor founder could post the LinkedIn text with their own disclosure line, and the other networks contain nothing that"
+   ]
+  },
+  {
+   "id": "W-I03",
+   "gate": false,
+   "weight": 5,
+   "test": "Adds 1+ thing no news outlet has (local angle, SVPay data, owner quote, original calculation)",
+   "why": [
+    "judge[all]: Adds nothing an outlet doesn't have: no local angle, no SVPay data or SVPay-specific fact, no owner quote, no original calculation. The checklist (r"
+   ]
+  },
+  {
+   "id": "LI-02",
+   "gate": false,
+   "weight": 5,
+   "test": "At least one specific first-person detail only Derrik could know (a real event, conversation, shop visit, SVPay data point), not a credential label",
+   "why": [
+    "judge[linkedin]: Still fails: 'I started SVPay' is a credential label, not a detail only Derrik could know (a shop visit, a conversation, SVPay data). Full disc"
+   ]
+  },
+  {
+   "id": "LI-03",
+   "gate": false,
+   "weight": 5,
+   "test": "Panel answers LinkedIn's own labeling question: generic or original? ('Could any payments account post this unchanged?')",
+   "why": [
+    "judge[linkedin]: Still generic by LinkedIn's test: apart from the disclosure line, any payments account could post this unchanged. The specifics are Payments Di",
+    "panel: Still generic by LinkedIn's test: apart from the disclosure line, any payments account could post this unchanged. The specifics are Payments Dive's, the "
+   ]
+  },
+  {
+   "id": "SG-H05",
+   "gate": false,
+   "weight": 5,
+   "test": "Panel question \"Would a daily ChatGPT user flag this as AI-written?\"",
+   "why": [
+    "judge[linkedin]: Still yes, but narrower. The contrast reframe and the two-part question are gone, and the disclosure sounds human. Clue type: formulaic structu",
+    "panel: Still yes, but narrower. The contrast reframe and the two-part question are gone, and the disclosure sounds human. Clue type: formulaic structure. A 'Whe"
+   ]
+  },
+  {
+   "id": "R-K19",
+   "gate": false,
+   "weight": 5,
+   "test": "Designer \"two-click AI\" test: 5 designers see slide 1 for 3 seconds in a phone-feed mock and answer \"Could this have been made in a couple of clicks with an AI tool?\"",
+   "why": [
+    "judge[slide 1]: A designer would answer yes: a big gradient stat, a subhead, a white rounded card with three numbered steps, a source line and a logo is a stand",
+    "panel: A designer would answer yes: a big gradient stat, a subhead, a white rounded card with three numbered steps, a source line and a logo is a standard templ"
+   ]
+  },
+  {
+   "id": "W-E27",
+   "gate": false,
+   "weight": 4,
+   "test": "Paragraphs containing at least 1 concrete element (number, name, place, object, quote)",
+   "why": [
+    "script[linkedin]: ",
+    "script[facebook]: ",
+    "script[x]: "
+   ]
+  },
+  {
+   "id": "W-L01",
+   "gate": false,
+   "weight": 4,
+   "test": "Flesch-Kincaid grade level",
+   "why": [
+    "script[linkedin]: ",
+    "script[x]: ",
+    "script[threads]: "
+   ]
+  },
+  {
+   "id": "V-F01",
+   "gate": false,
+   "weight": 4,
+   "test": "Each slide is tagged with a role (hook, stakes, proof, payoff, CTA) and all roles are present",
+   "why": [
+    "script[slides]: hook"
+   ]
+  },
+  {
+   "id": "V-G02",
+   "gate": false,
+   "weight": 4,
+   "test": "Words on the hook slide (slide 1 or Reel frame 1)",
+   "why": [
+    "script[slide 1]: "
+   ]
+  },
+  {
+   "id": "V-C23",
+   "gate": false,
+   "weight": 4,
+   "test": "Hook headline is 10 words or fewer",
+   "why": [
+    "script[slide 1]: "
+   ]
+  },
+  {
+   "id": "MC-E01",
+   "gate": false,
+   "weight": 4,
+   "test": "Each source line names the publisher, the document or page title and a date (published or checked)",
+   "why": [
+    "script[slide 1]: missing title"
+   ]
+  },
+  {
+   "id": "QB09",
+   "gate": false,
+   "weight": 4,
+   "test": "Logo position is identical across posts and networks: the SVPay logo bounding box found in the pixels",
+   "why": [
+    "script[slide 1-gbp]: logo center 1068px from the canonical position"
+   ]
+  },
+  {
+   "id": "QB11",
+   "gate": false,
+   "weight": 4,
+   "test": "SVPay logo clear space: foreign pixels (text, 3D or panel edges) inside a clear-space zone of 0.5 x the logo height around the logo box",
+   "why": [
+    "script[slide 1]: 2682 foreign pixels in the logo's clear space"
+   ]
+  },
+  {
+   "id": "R-K02",
+   "gate": false,
+   "weight": 4,
+   "test": "No four-pointed sparkle stars: no four-pointed star (✦) shapes anywhere, including on the 3D layer, in decoration and as emoji-like glints",
+   "why": [
+    "script[slide 1]: 1 four-pointed star shapes"
+   ]
+  },
+  {
+   "id": "T-C08",
+   "gate": false,
+   "weight": 4,
+   "test": "Contrast survives delivery: WCAG ratio and Lc per element on SIM1",
+   "why": [
+    "script[slide 1]: FTC INVESTIGATION ·  16.6 -> 12.1; that Block froze or  15.4 -> 11.5; BEFORE A HOLD HITS Y 9.0 -> 7.6; Read the hold rules  17.4 -> 12.5",
+    "script[slide 1-gbp]: that Block froze or  15.0 -> 10.5; Source: Payments Div 12.7 -> 8.1; www.svpay.app 11.6 -> 7.3"
+   ]
+  },
+  {
+   "id": "T-K01",
+   "gate": false,
+   "weight": 4,
+   "test": "Glyph clearance (replaces V-C12's bounding-box overlap): minimum pixel distance between adjacent glyphs within a word, against a reference render",
+   "why": [
+    "script[slide 1]: 'ro' 1.8px in Frozen Square accoun; 're' 1.8px in Frozen Square accoun",
+    "script[slide 1-gbp]: 'ro' 1.0px in Frozen Square accoun; 're' 1.0px in Frozen Square accoun"
+   ]
+  },
+  {
+   "id": "T-K09",
+   "gate": false,
+   "weight": 4,
+   "test": "Line-to-line clearance: minimum distance between the descenders of one line and the ascenders, caps or accents of the next",
+   "why": [
+    "script[slide 1]: About 1,500 complain -16px",
+    "script[slide 1-gbp]: About 1,500 complain -13px"
+   ]
+  },
+  {
+   "id": "V-B02",
+   "gate": false,
+   "weight": 4,
+   "test": "All text keeps at least 130px (6%) from every slide edge",
+   "why": [
+    "script[slide 1-gbp]: 'Frozen Square accoun' 124px; 'www.svpay.app' 124px"
+   ]
+  },
+  {
+   "id": "V-C06",
+   "gate": false,
+   "weight": 4,
+   "test": "At most 3 type sizes per slide (excluding source and legal lines)",
+   "why": [
+    "script[slide 1]: 6 sizes: [224, 80, 76, 72, 56, 54]"
+   ]
+  },
+  {
+   "id": "F-GB05",
+   "gate": false,
+   "weight": 4,
+   "test": "On-image text area",
+   "why": [
+    "script[slide 1-gbp]: 19%"
+   ]
+  },
+  {
+   "id": "F-GB01",
+   "gate": false,
+   "weight": 4,
+   "test": "Native GBP layout, not the 4:5 slide",
+   "why": [
+    "script[gbp: slide-1-gbp.jpg]: 2160x1620"
+   ]
+  },
+  {
+   "id": "F-IG01",
+   "gate": false,
+   "weight": 4,
+   "test": "Slide-1 headline font size at 2160 px width",
+   "why": [
+    "script[post]: 224px"
+   ]
+  },
+  {
+   "id": "F-IG28",
+   "gate": false,
+   "weight": 4,
+   "test": "A \"send-worthy\" slide is flagged in post.json and stands alone: number, basis, source and SVPay mark all on that one slide",
+   "why": [
+    "script[post]: no slide is flagged send_worthy in post.json"
+   ]
+  },
+  {
+   "id": "QB16",
+   "gate": false,
+   "weight": 4,
+   "test": "Font sizes come only from type tokens: the computed `font-size` of every text node",
+   "why": [
+    "script[post]: 7 sizes; not a type token: [36, 38, 40, 112]"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1824 @@
+{
+ "size": [
+  2160,
+  1620
+ ],
+ "text": [
+  {
+   "id": 0,
+   "mids": [
+    "0"
+   ],
+   "role": "body",
+   "text": "Frozen Square accounts · FTC investigation",
+   "lines": [
+    {
+     "text": "Frozen Square accounts · FTC investigation",
+     "x": 144,
+     "y": 124,
+     "w": 1380.03125,
+     "h": 82,
+     "chars": [
+      [
+       "F",
+       144,
+       124,
+       37.2,
+       82
+      ],
+      [
+       "r",
+       181.1,
+       124,
+       24.8,
+       82
+      ],
+      [
+       "o",
+       205.9,
+       124,
+       40.3,
+       82
+      ],
+      [
+       "z",
+       246.2,
+       124,
+       36.7,
+       82
+      ],
+      [
+       "e",
+       282.8,
+       124,
+       39,
+       82
+      ],
+      [
+       "n",
+       321.8,
+       124,
+       41.4,
+       82
+      ],
+      [
+       "S",
+       375.9,
+       124,
+       43,
+       82
+      ],
+      [
+       "q",
+       418.9,
+       124,
+       41.5,
+       82
+      ],
+      [
+       "u",
+       460.3,
+       124,
+       41.3,
+       82
+      ],
+      [
+       "a",
+       501.7,
+       124,
+       38.3,
+       82
+      ],
+      [
+       "r",
+       539.9,
+       124,
+       24.8,
+       82
+      ],
+      [
+       "e",
+       564.7,
+       124,
+       39,
+       82
+      ],
+      [
+       "a",
+       616.4,
+       124,
+       38.3,
+       82
+      ],
+      [
+       "c",
+       654.6,
+       124,
+       38.6,
+       82
+      ],
+      [
+       "c",
+       693.2,
+       124,
+       38.7,
+       82
+      ],
+      [
+       "o",
+       731.8,
+       124,
+       40.3,
+       82
+      ],
+      [
+       "u",
+       772.1,
+       124,
+       41.3,
+       82
+      ],
+      [
+       "n",
+       813.4,
+       124,
+       41.4,
+       82
+      ],
+      [
+       "t",
+       854.7,
+       124,
+       24.7,
+       82
+      ],
+      [
+       "s",
+       879.4,
+       124,
+       37.2,
+       82
+      ],
+      [
+       "·",
+       929.3,
+       124,
+       22.3,
+       82
+      ],
+      [
+       "F",
+       964.3,
+       124,
+       37.9,
+       82
+      ],
+      [
+       "T",
+       1002.2,
+       124,
+       42,
+       82
+      ],
+      [
+       "C",
+       1044.1,
+       124,
+       49.8,
+       82
+      ],
+      [
+       "i",
+       1106.7,
+       124,
+       17.4,
+       82
+      ],
+      [
+       "n",
+       1124,
+       124,
+       40.1,
+       82
+      ],
+      [
+       "v",
+       1164.1,
+       124,
+       37.4,
+       82
+      ],
+      [
+       "e",
+       1201.5,
+       124,
+       39,
+       82
+      ],
+      [
+       "s",
+       1240.5,
+       124,
+       37.2,
+       82
+      ],
+      [
+       "t",
+       1277.7,
+       124,
+       25.1,
+       82
+      ],
+      [
+       "i",
+       1302.8,
+       124,
+       17.4,
+       82
+      ],
+      [
+       "g",
+       1320.1,
+       124,
+       41.7,
+       82
+      ],
+      [
+       "a",
+       1361.8,
+       124,
+       38.3,
+       82
+      ],
+      [
+       "t",
+       1400,
+       124,
+       25.1,
+       82
+      ],
+      [
+       "i",
+       1425,
+       124,
+       17.4,
+       82
+      ],
+      [
+       "o",
+       1442.4,
+       124,
+       40.2,
+       82
+      ],
+      [
+       "n",
+       1482.6,
+       124,
+       41.4,
+       82
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 124,
+    "w": 1380.03125,
+    "h": 82
+   },
+   "container": {
+    "x": 144,
+    "y": 128,
+    "w": 1880,
+    "h": 74.78125
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 1620
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 68,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(42, 31, 203)",
+   "runs": [
+    {
+     "mid": "0",
+     "text": "Frozen Square accounts · FTC investigation",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 68,
+     "letter_spacing": 0,
+     "line_height": 74.8,
+     "color": "rgb(42, 31, 203)",
+     "fill": "rgb(42, 31, 203)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 1,
+   "mids": [
+    "1",
+    "2"
+   ],
+   "role": "headline",
+   "text": "About 1,500 complaints",
+   "lines": [
+    {
+     "text": "About 1,500",
+     "x": 144,
+     "y": 236.78125,
+     "w": 1215.5,
+     "h": 242,
+     "chars": [
+      [
+       "A",
+       144,
+       236.8,
+       152.7,
+       242
+      ],
+      [
+       "b",
+       296.6,
+       236.8,
+       126,
+       242
+      ],
+      [
+       "o",
+       422.6,
+       236.8,
+       122.3,
+       242
+      ],
+      [
+       "u",
+       544.8,
+       236.8,
+       125.5,
+       242
+      ],
+      [
+       "t",
+       670.3,
+       236.8,
+       77.8,
+       242
+      ],
+      [
+       "1",
+       789.6,
+       236.8,
+       86.8,
+       242
+      ],
+      [
+       ",",
+       876.4,
+       236.8,
+       72.1,
+       242
+      ],
+      [
+       "5",
+       948.5,
+       236.8,
+       130.6,
+       242
+      ],
+      [
+       "0",
+       1079,
+       236.8,
+       140.3,
+       242
+      ],
+      [
+       "0",
+       1219.3,
+       236.8,
+       140.3,
+       242
+      ]
+     ]
+    },
+    {
+     "text": "complaints",
+     "x": 144,
+     "y": 460.78125,
+     "w": 1092.15625,
+     "h": 242,
+     "chars": [
+      [
+       "c",
+       144,
+       460.8,
+       117.6,
+       242
+      ],
+      [
+       "o",
+       261.6,
+       460.8,
+       122.3,
+       242
+      ],
+      [
+       "m",
+       383.8,
+       460.8,
+       184.1,
+       242
+      ],
+      [
+       "p",
+       567.9,
+       460.8,
+       126,
+       242
+      ],
+      [
+       "l",
+       693.9,
+       460.8,
+       55.2,
+       242
+      ],
+      [
+       "a",
+       749,
+       460.8,
+       116.4,
+       242
+      ],
+      [
+       "i",
+       865.4,
+       460.8,
+       55.2,
+       242
+      ],
+      [
+       "n",
+       920.6,
+       460.8,
+       125.7,
+       242
+      ],
+      [
+       "t",
+       1046.3,
+       460.8,
+       76.5,
+       242
+      ],
+      [
+       "s",
+       1122.8,
+       460.8,
+       113.4,
+       242
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 236.78125,
+    "w": 1215.5,
+    "h": 466
+   },
+   "container": {
+    "x": 144,
+    "y": 246.78125,
+    "w": 1880,
+    "h": 448
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 1620
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 200,
+   "family": "\"Inter Tight\"",
+   "weight": 800,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "1",
+     "text": "About  complaints",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 200,
+     "letter_spacing": 4,
+     "line_height": 224,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "2",
+     "text": "1,500",
+     "family": "\"Inter Tight\"",
+     "weight": 800,
+     "style": "normal",
+     "size": 200,
+     "letter_spacing": 4,
+     "line_height": 224,
+     "color": "rgba(0, 0, 0, 0)",
+     "fill": "rgba(0, 0, 0, 0)",
+     "gradient_text": "linear-gradient(100deg, rgb(11, 47, 214) 0%, rgb(42, 31, 203) 45%, rgb(74, 27, 192) 80%, rgb(90, 27, 184) 100%)",
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 2,
+   "mids": [
+    "3"
+   ],
+   "role": "body",
+   "text": "that Block froze or shut Square accounts without notice, the FTC says. No charges have been filed.",
+   "lines": [
+    {
+     "text": "that Block froze or shut Square accounts without notice, the",
+     "x": 144,
+     "y": 740.78125,
+     "w": 1847.84375,
+     "h": 78,
+     "chars": [
+      [
+       "t",
+       144,
+       740.8,
+       22.7,
+       78
+      ],
+      [
+       "h",
+       166.7,
+       740.8,
+       39.2,
+       78
+      ],
+      [
+       "a",
+       205.9,
+       740.8,
+       36.8,
+       78
+      ],
+      [
+       "t",
+       242.7,
+       740.8,
+       22.6,
+       78
+      ],
+      [
+       "B",
+       281.4,
+       740.8,
+       42.2,
+       78
+      ],
+      [
+       "l",
+       323.6,
+       740.8,
+       16.8,
+       78
+      ],
+      [
+       "o",
+       340.3,
+       740.8,
+       39,
+       78
+      ],
+      [
+       "c",
+       379.3,
+       740.8,
+       37.3,
+       78
+      ],
+      [
+       "k",
+       416.6,
+       740.8,
+       36.4,
+       78
+      ],
+      [
+       "f",
+       469.1,
+       740.8,
+       24.9,
+       78
+      ],
+      [
+       "r",
+       494,
+       740.8,
+       24,
+       78
+      ],
+      [
+       "o",
+       518,
+       740.8,
+       37.8,
+       78
+      ],
+      [
+       "z",
+       555.8,
+       740.8,
+       35.1,
+       78
+      ],
+      [
+       "e",
+       590.9,
+       740.8,
+       37.8,
+       78
+      ],
+      [
+       "o",
+       644.8,
+       740.8,
+       39,
+       78
+      ],
+      [
+       "r",
+       683.8,
+       740.8,
+       25.4,
+       78
+      ],
+      [
+       "s",
+       725.3,
+       740.8,
+       35.2,
+       78
+      ],
+      [
+       "h",
+       760.5,
+       740.8,
+       39.2,
+       78
+      ],
+      [
+       "u",
+       799.7,
+       740.8,
+       39.2,
+       78
+      ],
+      [
+       "t",
+       838.9,
+       740.8,
+       22.6,
+       78
+      ],
+      [
+       "S",
+       877.6,
+       740.8,
+       41.6,
+       78
+      ],
+      [
+       "q",
+       919.2,
+       740.8,
+       39.9,
+       78
+      ],
+      [
+       "u",
+       959.2,
+       740.8,
+       39.2,
+       78
+      ],
+      [
+       "a",
+       998.3,
+       740.8,
+       36.8,
+       78
+      ],
+      [
+       "r",
+       1035.1,
+       740.8,
+       24,
+       78
+      ],
+      [
+       "e",
+       1059.1,
+       740.8,
+       37.8,
+       78
+      ],
+      [
+       "a",
+       1113.1,
+       740.8,
+       36.8,
+       78
+      ],
+      [
+       "c",
+       1149.8,
+       740.8,
+       37.3,
+       78
+      ],
+      [
+       "c",
+       1187.1,
+       740.8,
+       37.3,
+       78
+      ],
+      [
+       "o",
+       1224.4,
+       740.8,
+       39,
+       78
+      ],
+      [
+       "u",
+       1263.3,
+       740.8,
+       39.2,
+       78
+      ],
+      [
+       "n",
+       1302.5,
+       740.8,
+       39.2,
+       78
+      ],
+      [
+       "t",
+       1341.7,
+       740.8,
+       22.1,
+       78
+      ],
+      [
+       "s",
+       1363.8,
+       740.8,
+       35.2,
+       78
+      ],
+      [
+       "w",
+       1415,
+       740.8,
+       53.7,
+       78
+      ],
+      [
+       "i",
+       1468.8,
+       740.8,
+       16.8,
+       78
+      ],
+      [
+       "t",
+       1485.5,
+       740.8,
+       22.7,
+       78
+      ],
+      [
+       "h",
+       1508.2,
+       740.8,
+       39.2,
+       78
+      ],
+      [
+       "o",
+       1547.4,
+       740.8,
+       39,
+       78
+      ],
+      [
+       "u",
+       1586.4,
+       740.8,
+       39.2,
+       78
+      ],
+      [
+       "t",
+       1625.6,
+       740.8,
+       22.6,
+       78
+      ],
+      [
+       "n",
+       1664.3,
+       740.8,
+       39.2,
+       78
+      ],
+      [
+       "o",
+       1703.4,
+       740.8,
+       39,
+       78
+      ],
+      [
+       "t",
+       1742.4,
+       740.8,
+       22.6,
+       78
+      ],
+      [
+       "i",
+       1765,
+       740.8,
+       16.8,
+       78
+      ],
+      [
+       "c",
+       1781.8,
+       740.8,
+       37.3,
+       78
+      ],
+      [
+       "e",
+       1819,
+       740.8,
+       37.8,
+       78
+      ],
+      [
+       ",",
+       1856.9,
+       740.8,
+       19.1,
+       78
+      ],
+      [
+       "t",
+       1892.1,
+       740.8,
+       22.7,
+       78
+      ],
+      [
+       "h",
+       1914.8,
+       740.8,
+       39.2,
+       78
+      ],
+      [
+       "e",
+       1954,
+       740.8,
+       37.8,
+       78
+      ]
+     ]
+    },
+    {
+     "text": "FTC says. No charges have been filed.",
+     "x": 144,
+     "y": 823.96875,
+     "w": 1183.15625,
+     "h": 78,
+     "chars": [
+      [
+       "F",
+       144,
+       824,
+       37.6,
+       78
+      ],
+      [
+       "T",
+       181.6,
+       824,
+       40.3,
+       78
+      ],
+      [
+       "C",
+       221.9,
+       824,
+       47.2,
+       78
+      ],
+      [
+       "s",
+       285.2,
+       824,
+       35.2,
+       78
+      ],
+      [
+       "a",
+       320.3,
+       824,
+       35.7,
+       78
+      ],
+      [
+       "y",
+       356,
+       824,
+       37.7,
+       78
+      ],
+      [
+       "s",
+       393.7,
+       824,
+       35.2,
+       78
+      ],
+      [
+       ".",
+       428.8,
+       824,
+       19.1,
+       78
+      ],
+      [
+       "N",
+       464,
+       824,
+       48.6,
+       78
+      ],
+      [
+       "o",
+       512.6,
+       824,
+       39,
+       78
+      ],
+      [
+       "c",
+       567.7,
+       824,
+       37.3,
+       78
+      ],
+      [
+       "h",
+       605,
+       824,
+       39.2,
+       78
+      ],
+      [
+       "a",
+       644.2,
+       824,
+       36.8,
+       78
+      ],
+      [
+       "r",
+       680.9,
+       824,
+       24,
+       78
+      ],
+      [
+       "g",
+       704.9,
+       824,
+       40,
+       78
+      ],
+      [
+       "e",
+       745,
+       824,
+       37.8,
+       78
+      ],
+      [
+       "s",
+       782.8,
+       824,
+       35.2,
+       78
+      ],
+      [
+       "h",
+       834.1,
+       824,
+       39.2,
+       78
+      ],
+      [
+       "a",
+       873.3,
+       824,
+       35.7,
+       78
+      ],
+      [
+       "v",
+       909,
+       824,
+       36.4,
+       78
+      ],
+      [
+       "e",
+       945.3,
+       824,
+       37.8,
+       78
+      ],
+      [
+       "b",
+       999.3,
+       824,
+       39.9,
+       78
+      ],
+      [
+       "e",
+       1039.3,
+       824,
+       37.8,
+       78
+      ],
+      [
+       "e",
+       1077.1,
+       824,
+       37.8,
+       78
+      ],
+      [
+       "n",
+       1114.9,
+       824,
+       39.2,
+       78
+      ],
+      [
+       "f",
+       1170.2,
+       824,
+       25.3,
+       78
+      ],
+      [
+       "i",
+       1195.5,
+       824,
+       16.8,
+       78
+      ],
+      [
+       "l",
+       1212.2,
+       824,
+       16.8,
+       78
+      ],
+      [
+       "e",
+       1229,
+       824,
+       37.8,
+       78
+      ],
+      [
+       "d",
+       1266.8,
+       824,
+       39.9,
+       78
+      ],
+      [
+       ".",
+       1306.8,
+       824,
+       20.4,
+       78
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 144,
+    "y": 740.78125,
+    "w": 1847.84375,
+    "h": 161.1875
+   },
+   "container": {
+    "x": 144,
+    "y": 738.78125,
+    "w": 1880,
+    "h": 166.375
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 1620
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 64,
+   "family": "Inter",
+   "weight": 600,
+   "color": "rgb(10, 18, 48)",
+   "runs": [
+    {
+     "mid": "3",
+     "text": "that Block froze or shut Square accounts without notice, the FTC says. No charges have been filed.",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 64,
+     "letter_spacing": 0,
+     "line_height": 83.2,
+     "color": "rgb(10, 18, 48)",
+     "fill": "rgb(10, 18, 48)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 3,
+   "mids": [
+    "4",
+    "5"
+   ],
+   "role": "source",
+   "text": "Source: Payments Dive, Nov 10, 2026",
+   "lines": [
+    {
+     "text": "Source: Payments Dive, Nov 10, 2026",
+     "x": 152,
+     "y": 1202,
+     "w": 861.34375,
+     "h": 58,
+     "chars": [
+      [
+       "S",
+       152,
+       1202,
+       31.2,
+       58
+      ],
+      [
+       "o",
+       183.2,
+       1202,
+       29.3,
+       58
+      ],
+      [
+       "u",
+       212.4,
+       1202,
+       29.4,
+       58
+      ],
+      [
+       "r",
+       241.8,
+       1202,
+       18,
+       58
+      ],
+      [
+       "c",
+       259.8,
+       1202,
+       28,
+       58
+      ],
+      [
+       "e",
+       287.8,
+       1202,
+       28.4,
+       58
+      ],
+      [
+       ":",
+       316.2,
+       1202,
+       15.3,
+       58
+      ],
+      [
+       "P",
+       344.3,
+       1202,
+       30.6,
+       58
+      ],
+      [
+       "a",
+       374.9,
+       1202,
+       26.5,
+       58
+      ],
+      [
+       "y",
+       401.4,
+       1202,
+       27.6,
+       58
+      ],
+      [
+       "m",
+       429,
+       1202,
+       42.7,
+       58
+      ],
+      [
+       "e",
+       471.6,
+       1202,
+       28.2,
+       58
+      ],
+      [
+       "n",
+       499.8,
+       1202,
+       28.9,
+       58
+      ],
+      [
+       "t",
+       528.7,
+       1202,
+       15.9,
+       58
+      ],
+      [
+       "s",
+       544.6,
+       1202,
+       25.9,
+       58
+      ],
+      [
+       "D",
+       583.3,
+       1202,
+       34.7,
+       58
+      ],
+      [
+       "i",
+       617.9,
+       1202,
+       12.1,
+       58
+      ],
+      [
+       "v",
+       630,
+       1202,
+       26.7,
+       58
+      ],
+      [
+       "e",
+       656.7,
+       1202,
+       28.2,
+       58
+      ],
+      [
+       ",",
+       684.8,
+       1202,
+       14.1,
+       58
+      ],
+      [
+       "N",
+       711.7,
+       1202,
+       36.3,
+       58
+      ],
+      [
+       "o",
+       748,
+       1202,
+       28.1,
+       58
+      ],
+      [
+       "v",
+       776.1,
+       1202,
+       27.6,
+       58
+      ],
+      [
+       "1",
+       816.5,
+       1202,
+       20,
+       58
+      ],
+      [
+       "0",
+       836.4,
+       1202,
+       29.7,
+       58
+      ],
+      [
+       ",",
+       866.1,
+       1202,
+       14.1,
+       58
+      ],
+      [
+       "2",
+       893,
+       1202,
+       29.6,
+       58
+      ],
+      [
+       "0",
+       922.5,
+       1202,
+       31,
+       58
+      ],
+      [
+       "2",
+       953.5,
+       1202,
+       29.6,
+       58
+      ],
+      [
+       "6",
+       983.1,
+       1202,
+       30.3,
+       58
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 152,
+    "y": 1202,
+    "w": 861.34375,
+    "h": 58
+   },
+   "container": {
+    "x": 152,
+    "y": 1200,
+    "w": 1240,
+    "h": 64.78125
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 1620
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 48,
+   "family": "Inter",
+   "weight": 500,
+   "color": "rgb(20, 27, 56)",
+   "runs": [
+    {
+     "mid": "4",
+     "text": "Payments Dive, Nov 10, 2026",
+     "family": "Inter",
+     "weight": 500,
+     "style": "normal",
+     "size": 48,
+     "letter_spacing": 0,
+     "line_height": 64.8,
+     "color": "rgb(20, 27, 56)",
+     "fill": "rgb(20, 27, 56)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    },
+    {
+     "mid": "5",
+     "text": "Source:",
+     "family": "Inter",
+     "weight": 600,
+     "style": "normal",
+     "size": 48,
+     "letter_spacing": 0,
+     "line_height": 64.8,
+     "color": "rgb(30, 39, 70)",
+     "fill": "rgb(30, 39, 70)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  },
+  {
+   "id": 4,
+   "mids": [
+    "6"
+   ],
+   "role": "footer",
+   "text": "www.svpay.app",
+   "lines": [
+    {
+     "text": "www.svpay.app",
+     "x": 1664.15625,
+     "y": 1438,
+     "w": 351.84375,
+     "h": 58,
+     "chars": [
+      [
+       "w",
+       1664.2,
+       1438,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1702.9,
+       1438,
+       38.8,
+       58
+      ],
+      [
+       "w",
+       1741.7,
+       1438,
+       35.3,
+       58
+      ],
+      [
+       ".",
+       1776.9,
+       1438,
+       14.2,
+       58
+      ],
+      [
+       "s",
+       1791,
+       1438,
+       24.9,
+       58
+      ],
+      [
+       "v",
+       1815.9,
+       1438,
+       26.1,
+       58
+      ],
+      [
+       "p",
+       1842,
+       1438,
+       28.2,
+       58
+      ],
+      [
+       "a",
+       1870.2,
+       1438,
+       25.1,
+       58
+      ],
+      [
+       "y",
+       1895.2,
+       1438,
+       24.3,
+       58
+      ],
+      [
+       ".",
+       1919.5,
+       1438,
+       14.2,
+       58
+      ],
+      [
+       "a",
+       1933.6,
+       1438,
+       26,
+       58
+      ],
+      [
+       "p",
+       1959.6,
+       1438,
+       28.3,
+       58
+      ],
+      [
+       "p",
+       1987.8,
+       1438,
+       28.2,
+       58
+      ]
+     ]
+    }
+   ],
+   "box": {
+    "x": 1664.15625,
+    "y": 1438,
+    "w": 351.84375,
+    "h": 58
+   },
+   "container": {
+    "x": 1664.15625,
+    "y": 1444,
+    "w": 351.84375,
+    "h": 48
+   },
+   "clip": {
+    "x": 0,
+    "y": 0,
+    "w": 2160,
+    "h": 1620
+   },
+   "align": "start",
+   "white_space": "normal",
+   "size": 48,
+   "family": "\"Inter Tight\"",
+   "weight": 700,
+   "color": "rgb(30, 39, 70)",
+   "runs": [
+    {
+     "mid": "6",
+     "text": "www.svpay.app",
+     "family": "\"Inter Tight\"",
+     "weight": 700,
+     "style": "normal",
+     "size": 48,
+     "letter_spacing": -0.48,
+     "line_height": 48,
+     "color": "rgb(30, 39, 70)",
+     "fill": "rgb(30, 39, 70)",
+     "gradient_text": null,
+     "opacity": 1,
+     "blend": "normal",
+     "text_shadow": "none",
+     "stroke": "0px",
+     "transform": "none",
+     "features": "normal",
+     "variant_numeric": "normal",
+     "text_transform": "none",
+     "decoration": "none",
+     "hyphens": "manual"
+    }
+   ],
+   "html_layer": true,
+   "platform_fonts": []
+  }
+ ],
+ "panels": [],
+ "images": [
+  {
+   "src": "bg_2.png",
+   "cls": "hero",
+   "complete": true,
+   "natural": [
+    2160,
+    2700
+   ],
+   "x": 0,
+   "y": 0,
+   "w": 2160,
+   "h": 1620
+  },
+  {
+   "src": "svpay-logo.png",
+   "cls": "logo",
+   "complete": true,
+   "natural": [
+    1774,
+    759
+   ],
+   "x": 144,
+   "y": 1380,
+   "w": 355.25,
+   "h": 152
+  }
+ ],
+ "svgs": [],
+ "hero": "bg_2.png",
+ "fonts": {
+  "status": "loaded",
+  "faces": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "status": "unloaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "status": "loaded"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "status": "unloaded"
+   }
+  ],
+  "files": [
+   {
+    "family": "Inter Tight",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "700",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2"
+   },
+   {
+    "family": "Inter Tight",
+    "weight": "800",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "500",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2"
+   },
+   {
+    "family": "Inter",
+    "weight": "600",
+    "style": "normal",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2"
+   },
+   {
+    "family": "Instrument Serif",
+    "weight": "400",
+    "style": "italic",
+    "src": "node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2"
+   }
+  ]
+ },
+ "images_complete": true,
+ "slide": "slide-1-gbp",
+ "section": "s1G",
+ "file": "slides-squarefreeze.html",
+ "failed_requests": [],
+ "capture": {
+  "scale": 2,
+  "viewport": [
+   1080,
+   1400
+  ],
+  "width": 2160,
+  "height": 1620,
+  "chromium": "153.0.8010.12",
+  "fonts_ready_before_capture": true
+ }
+}

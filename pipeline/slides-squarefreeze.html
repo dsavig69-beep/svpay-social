@@ -1,0 +1,108 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>SVPay frozen Square accounts news take</title>
+<style>
+@font-face{font-family:"Inter Tight";font-weight:600;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:700;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:800;src:url(node_modules/@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:500;src:url(node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:600;src:url(node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;src:url(node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2) format("woff2")}
+:root{
+  --ink:#0A1230; --ink2:#1E2746; --ink3:#2E3756;
+  --holo-ink:linear-gradient(100deg,#0B2FD6 0%,#2A1FCB 45%,#4A1BC0 80%,#5A1BB8 100%);
+  --hot:linear-gradient(100deg,#B80F55,#A3127A 55%,#7A1AAE);
+  --holo:linear-gradient(100deg,#0F3DFF 0%,#3B2BFF 40%,#6A2DFF 75%,#8A2BF0 100%);
+  --glass:rgba(255,255,255,.66); --glass-line:rgba(255,255,255,.95);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#E9ECF5;font-family:"Inter",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:#F6F7FC;margin:0 0 40px}
+.hero{position:absolute;inset:0;width:1080px;height:1350px;display:block}
+.abs{position:absolute}
+.top{position:absolute;left:72px;right:72px;top:60px;height:58px;display:flex;align-items:center;justify-content:space-between}
+.chip{display:flex;align-items:center;gap:16px;height:58px;padding:0 24px;border-radius:999px}
+.chip span{font:600 21px/1 "Inter";letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+.tag{display:flex;align-items:center;gap:14px;font:600 22px/1 "Inter";letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.tag i{width:13px;height:13px;border-radius:50%;background:var(--holo);box-shadow:0 0 0 6px rgba(35,80,255,.13)}
+.count{font:700 22px/1 "Inter Tight";letter-spacing:.06em;color:var(--ink3)}
+.count b{color:var(--ink)}
+.glass{background:var(--glass);border:2px solid var(--glass-line);
+  box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 30px 70px -30px rgba(40,50,150,.17),0 8px 24px -12px rgba(40,50,150,.1);
+  backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%)}
+.d{font-family:"Inter Tight";font-weight:800;letter-spacing:.02em;line-height:1.02;color:var(--ink)}
+.serif{font-family:"Instrument Serif";font-style:italic;font-weight:400;letter-spacing:0;color:#1631B8}
+.kick{font:600 20px/1 "Inter";letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
+.holo{background:var(--holo-ink);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-right:.04em}
+.hot{background:var(--hot);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-right:.04em}
+.body{font:500 30px/1.4 "Inter";color:var(--ink2)}
+.src{font:500 24px/1.35 "Inter";color:#141B38}
+.src b{font-weight:600;color:var(--ink2)}
+.logo{position:absolute;left:72px;bottom:50px;height:76px;width:auto;display:block}
+.url{position:absolute;right:72px;bottom:72px;font:700 24px/1 "Inter Tight";letter-spacing:-.01em;color:var(--ink2)}
+.pill{display:inline-flex;align-items:center;gap:12px;height:62px;padding:0 26px;border-radius:999px;font:600 24px/1 "Inter";color:var(--ink)}
+.ul{list-style:none;margin:0;padding:0}
+.ul li{display:flex;gap:22px;align-items:flex-start;font:600 38px/1.28 "Inter";color:var(--ink);margin-top:44px}
+.ul li:first-child{margin-top:0}
+.ul li b{flex:none;width:54px;height:54px;border-radius:50%;background:var(--holo);color:#fff;font:800 27px/54px "Inter Tight";text-align:center;margin-top:-2px}
+.nw{white-space:nowrap}
+.exl{display:inline-flex;align-items:center;height:50px;padding:0 22px;border-radius:999px;font:700 22px/1 "Inter";letter-spacing:.12em;text-transform:uppercase;color:#0A1230}
+</style>
+<script>
+// Text above and below each 3D numeral follows the numeral's box from run3d.js (info_N.json): [data-above="N"] ends
+// GAP px above the box, [data-below="N"] starts GAP px below it, so no text ever sits on the glyphs or their reflection.
+window.place = (I3, A) => {
+  const GAP = 34;
+  for (const e of document.querySelectorAll('[data-above]')) { const b = A[e.dataset.above]; if (!b) continue; const box = b.box; e.style.top = (box.y0 - GAP - e.offsetHeight) + 'px'; }
+  for (const e of document.querySelectorAll('[data-below]')) { const b = A[e.dataset.below]; if (!b) continue; const box = b.box; e.style.top = (box.y1 + GAP + (+e.dataset.extra || 0)) + 'px'; }
+};
+</script>
+<style>
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.col{border-radius:32px;padding:40px 36px;min-height:520px}
+.col h3{font:800 46px/1.05 "Inter Tight";letter-spacing:.01em;color:var(--ink);margin:0}
+.col .tagl{font:700 22px/1 Inter;letter-spacing:.12em;text-transform:uppercase;margin-bottom:22px}
+.col p{font:600 34px/1.3 Inter;color:var(--ink);margin-top:26px}
+.big{font:800 64px/1 "Inter Tight";margin-top:30px}
+.term{display:grid;grid-template-columns:96px 1fr;gap:26px;align-items:center;padding:40px 0;border-bottom:3px solid rgba(10,18,48,.10)}
+.term:last-child{border-bottom:0}
+.term .n{font:800 72px/1 "Inter Tight";color:#2A1FCB}
+.term div{font:700 44px/1.22 "Inter Tight";color:var(--ink)}
+</style>
+<style>.slide.g43{height:810px}.slide.g43 .hero{height:810px;object-fit:cover}</style>
+</head><body>
+
+<section class="slide" id="s1X">
+<img class="hero" src="bg_2.png" alt="">
+<div class="top"><div class="tag" style="font-size:28px"><i></i>FTC investigation · Block disputes the claims</div></div>
+<div class="abs" style="left:72px;top:160px;width:940px">
+ <div style="font:800 38px/1.1 'Inter Tight';color:#2A1FCB">Frozen Square accounts</div>
+ <div class="d" style="font-size:112px;margin-top:20px;line-height:1.12">About <span class="holo">1,500</span><br>complaints</div>
+ <div style="font:600 40px/1.28 Inter;color:var(--ink);margin-top:26px">that Block froze or shut Square accounts without notice, the FTC says</div>
+</div>
+<div class="abs glass" style="left:72px;top:640px;width:936px;border-radius:32px;padding:40px 40px 44px">
+ <div class="tagl" style="font:700 28px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:#1631B8;margin-bottom:30px">Before a hold hits your shop</div>
+ <ul class="ul">
+  <li style="font-size:36px;margin-top:30px"><b>1</b><span>Read the hold rules in your agreement</span></li>
+  <li style="font-size:36px;margin-top:30px"><b>2</b><span>Keep a second way to take payments ready</span></li>
+  <li style="font-size:36px;margin-top:30px"><b>3</b><span>Put any hold in writing and save every email</span></li>
+ </ul>
+</div>
+<div class="abs" style="left:76px;top:1078px;width:936px;font:600 27px/1.35 Inter;color:var(--ink2)">Where it stands: an FTC investigation with no charges filed. FTC v. Block, filed <span class="nw">Oct 7, 2026</span>, in federal court</div>
+<div class="abs src" style="left:76px;top:1170px;width:620px"><b>Source:</b> Payments Dive, Nov 10, 2026</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins">
+<div class="url">www.svpay.app</div>
+</section>
+
+<section class="slide g43" id="s1G">
+<img class="hero" src="bg_2.png" alt="">
+<div class="abs" style="left:72px;top:64px;width:940px">
+ <div style="font:800 34px/1.1 'Inter Tight';color:#2A1FCB">Frozen Square accounts · FTC investigation</div>
+ <div class="d" style="font-size:100px;margin-top:22px;line-height:1.12">About <span class="holo">1,500</span> complaints</div>
+ <div style="font:600 32px/1.3 Inter;color:var(--ink);margin-top:22px">that Block froze or shut Square accounts without notice, the FTC says. No charges have been filed.</div>
+</div>
+<div class="abs src" style="left:76px;top:600px;width:620px"><b>Source:</b> Payments Dive, Nov 10, 2026</div>
+<img class="logo" src="svpay-logo.png" alt="SVPay, Everybody Wins" style="bottom:44px">
+<div class="url" style="bottom:64px">www.svpay.app</div>
+</section>
+
+</body></html>
